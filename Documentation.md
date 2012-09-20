@@ -8,7 +8,6 @@
 * [Web resources](Web_resources) - user-contributed tutorials and articles about NLog
 
 ##What's new
-* [NLog 2.0 status](NLog_2_0_Status)
 * [What's new in NLog 2.0](What_is_new_in_NLog_2_0)
 * [List of breaking changes in NLog 2.0](Breaking_changes_NLog_2_0)
 
