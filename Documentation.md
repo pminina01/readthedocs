@@ -4,8 +4,8 @@
 * [Tools](Tools) - external tools that use or support NLog
 * [FAQ](FAQ) - answers to frequently asked questions
 * [Visual Studio support](Visual_Studio_support)
-* [Who is using NLog](Who_is_using_NLog) - are you using NLog? Tell the world about it!
-* [Web resources](Web_resources) - user-contributed tutorials and articles about NLog
+* [Who is using NLog](Who Is Using NLog) - are you using NLog? Tell the world about it!
+* [Web resources](Web resources) - user-contributed tutorials and articles about NLog
 
 ##What's new
 * [What's new in NLog 2.0](What_is_new_in_NLog_2_0)
