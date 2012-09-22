@@ -8,10 +8,10 @@ ${longdate}|${level:uppercase=true}|${logger}|${message}
 ##Pre-Defined Layouts
 
 Several pre-defined layouts exist:
-* CsvLayout - A specialized layout that renders CSV-formatted events.
-* LayoutWithHeaderAndFooter - A specialized layout that supports header and footer.
-* Log4JXmlEventLayout - A specialized layout that renders Log4j-compatible XML events.
-* SimpleLayout - Represents a string with embedded placeholders that can render contextual information.
+* [CsvLayout](CsvLayout) - A specialized layout that renders CSV-formatted events.
+* [LayoutWithHeaderAndFooter](LayoutWithHeaderAndFooter) - A specialized layout that supports header and footer.
+* [Log4JXmlEventLayout](Log4JXmlEventLayout) - A specialized layout that renders Log4j-compatible XML events.
+* [SimpleLayout](SimpleLayout) - Represents a string with embedded placeholders that can render contextual information.
 
 ##Example
 An example of a simple layout looks like:
