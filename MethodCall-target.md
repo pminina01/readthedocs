@@ -49,7 +49,7 @@ In order to send all logs to a static method, use the following configuration fi
 
 Per the configuration, the log method needs to be called "LogMethod" be declared in "SomeNamespace.MyClass" class. The class must be compiled to MyAssembly.dll. Each parameter of the log method must correspond to \<parameter /> entry in the target configuration.
 
-```
+```csharp
 namespace SomeNamespace
 {
     using System;
@@ -68,7 +68,7 @@ Names of parameters are not important, only their order is. The default type of 
 
 It is also possible to configure logging using [Configuration API](Configuration-API):
 
-```
+```csharp
 using System;
  
 using NLog;
