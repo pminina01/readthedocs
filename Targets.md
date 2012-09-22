@@ -13,7 +13,7 @@ Targets are used to display, store, or pass log messages to another destination.
 * [EventLog](EventLog-target) - Writes log message to the Event Log.
 * [File](File-target) - Writes log messages to one or more files.
 * [FormControl](FormControl-target) - Logs text to Windows.Forms.Control.Text property control of specified Name.
-* [LogReceiverService](LogReceiverService target) - Sends log messages to a NLog Receiver Service (using WCF or Web Services).
+* [LogReceiverService](LogReceiverService-target) - Sends log messages to a NLog Receiver Service (using WCF or Web Services).
 * [Mail](Mail-target) - Sends log messages by email using SMTP protocol.
 * [Memory](Memory-target) - Writes log messages to an ArrayList in memory for programmatic retrieval.
 * [MessageBox](MessageBox-target) - Pops up log messages as message boxes.
