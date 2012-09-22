@@ -1,15 +1,15 @@
 ##Using NLog
-* [Tutorial](Tutorial) - introduction to logging with NLog
-* [Examples](Examples) - examples of using NLog to solve real-world logging requirements
+* [Tutorial](wiki/Tutorial) - introduction to logging with NLog
+* [Examples](wiki/Examples) - examples of using NLog to solve real-world logging requirements
 * [Tools](wiki/Tools) - external tools that use or support NLog
-* [FAQ](FAQ) - answers to frequently asked questions
-* [Visual Studio support](Visual-Studio-support)
+* [FAQ](wiki/FAQ) - answers to frequently asked questions
+* [Visual Studio support](wiki/Visual-Studio-support)
 * [Who is using NLog](wiki/Who-Is-Using-NLog) - are you using NLog? Tell the world about it!
 * [Web resources](wiki/Web-resources) - user-contributed tutorials and articles about NLog
 
 ##What's new
-* [What's new in NLog 2.0](What is new in NLog 2.0)
-* [List of breaking changes in NLog 2.0](Breaking changes NLog 2.0)
+* [What's new in NLog 2.0](wiki/What-is-new-in-NLog_2.0)
+* [List of breaking changes in NLog 2.0](wiki/Breaking-changes-NLog-2.0)
 
 ##API Reference
 * [.NET logging API](http://nlog-project.org/wiki/.NET_logging_API)
@@ -20,8 +20,8 @@
 * [Configuration file](wiki/Configuration-file)
 * [Configuration API](wiki/Configuration-API)
 * [Targets](wiki/Targets)
-* [Layouts](Layouts)
-* [Layout Renderers](Layout-renderers)
-* [Filters](Filters)
-* [Conditions](Conditions)
+* [Layouts](wiki/Layouts)
+* [Layout Renderers](wiki/Layout-renderers)
+* [Filters](wiki/Filters)
+* [Conditions](wiki/Conditions)
 * [Log Levels](wiki/Log-levels)
