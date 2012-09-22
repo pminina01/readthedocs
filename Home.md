@@ -8,8 +8,8 @@
 * [Web resources](Web-resources) - user-contributed tutorials and articles about NLog
 
 ##What's new
-* [What's-new-in-NLog-2.0](What is new in NLog 2.0)
-* [List-of-breaking-changes-in-NLog-2.0](Breaking changes NLog 2.0)
+* [What's new in NLog 2.0](What is new in NLog 2.0)
+* [List of breaking changes in NLog 2.0](Breaking changes NLog 2.0)
 
 ##API Reference
 * [.NET logging API](http://nlog-project.org/wiki/.NET_logging_API)
