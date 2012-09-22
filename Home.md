@@ -19,7 +19,7 @@
 ##Configuration Reference
 * [Configuration file](wiki/Configuration-file)
 * [Configuration API](wiki/Configuration-API)
-* [Targets](Targets)
+* [Targets](wiki/Targets)
 * [Layouts](Layouts)
 * [Layout Renderers](Layout-renderers)
 * [Filters](Filters)
