@@ -46,4 +46,4 @@ Targets are used to display, store, or pass log messages to another destination.
 ##Custom Targets
 [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) ([NuGet](http://nuget.org/packages/NLog.RabbitMQ)) - sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
 
-NLog supports custom target. For more information, see: [How to write a Target](How to write a Target)
+NLog supports custom target. For more information, see: [How to write a Target](How-to-write-a-Target)
