@@ -1,4 +1,4 @@
-Conditions are filter expressions used with the when_filter. They consist of one or more tests. They are used in the when filter to determine if an action will be taken.
+Conditions are filter expressions used with the [when filter](whenFilter). They consist of one or more tests. They are used in the when filter to determine if an action will be taken.
 
 ##Language
 The filter expressions are written in a special mini-language. The language consists of:
@@ -21,7 +21,7 @@ The following condition functions are available:
 * starts-with(s1,s2) Determines whether the second string is a prefix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
 
 ##Examples
-Here are several when_filter examples with conditions:
+Here are several [when filter](whenFilter) examples with conditions:
 ```
 <rules>
     <logger name="*" writeTo="file">
