@@ -34,6 +34,6 @@ Note that “New Item” templates are supported on Visual Studio 2005 and highe
 
 ##Code Snippets
 NLog installs a Visual Studio 2005 Code Snippet called “nlogger” that can be used to quickly declare a logger instance. It inserts the following piece of text:
-```
+```csharp
 private static Logger logger = LogManager.GetCurrentClassLogger();
 ```
