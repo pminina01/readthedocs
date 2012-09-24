@@ -14,11 +14,11 @@ The filter expressions are written in a special mini-language. The language cons
 
 ##Functions
 The following condition functions are available:
-* contains(s1,s2) Determines whether the second string is a substring of the first one. Returns: true when the second string is a substring of the first string, false otherwise.
-* ends-with(s1,s2) Determines whether the second string is a suffix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
-* equals(o1,o2) Compares two objects for equality. Returns: true when two objects are equal, false otherwise.
-* length(s) Returns the length of a string.
-* starts-with(s1,s2) Determines whether the second string is a prefix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
+* `contains(s1,s2)` Determines whether the second string is a substring of the first one. Returns: true when the second string is a substring of the first string, false otherwise.
+* `ends-with(s1,s2)` Determines whether the second string is a suffix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
+* `equals(o1,o2)` Compares two objects for equality. Returns: true when two objects are equal, false otherwise.
+* `length(s)` Returns the length of a string.
+* `starts-with(s1,s2)` Determines whether the second string is a prefix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
 
 ##Examples
 Here are several [when filter](whenFilter) examples with conditions:
