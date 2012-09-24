@@ -1,4 +1,4 @@
-Conditions are filter expressions used with the [when filter](whenFilter). They consist of one or more tests. They are used in the when filter to determine if an action will be taken.
+Conditions are filter expressions used with the [when filter](when-Filter). They consist of one or more tests. They are used in the when filter to determine if an action will be taken.
 
 ##Language
 The filter expressions are written in a special mini-language. The language consists of:
