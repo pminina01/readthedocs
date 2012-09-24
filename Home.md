@@ -7,10 +7,6 @@
 * [Who is using NLog](wiki/Who-Is-Using-NLog) - are you using NLog? Tell the world about it!
 * [Web resources](wiki/Web-resources) - user-contributed tutorials and articles about NLog
 
-##What's new
-* [What's new in NLog 2.0](wiki/What-is-new-in-NLog_2.0)
-* [List of breaking changes in NLog 2.0](wiki/Breaking-changes-NLog-2.0)
-
 ##API Reference
 * [.NET logging API](http://nlog-project.org/wiki/.NET_logging_API)
 * [C/C++ logging API](http://nlog-project.org/wiki/C_logging_API)
