@@ -21,7 +21,7 @@ The following condition functions are available:
 * `starts-with(s1,s2)` Determines whether the second string is a prefix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
 
 ##Examples
-Here are several [when filter](whenFilter) examples with conditions:
+Here are several [when filter](when-Filter) examples with conditions:
 ```
 <rules>
     <logger name="*" writeTo="file">
