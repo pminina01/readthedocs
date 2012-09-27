@@ -6,6 +6,8 @@ The following open source software projects are using or supporting NLog:
 * Ninject - http://ninject.org/
 * Common Infrastructure Libraries for .NET - http://netcommon.sourceforge.net/
 * TeamCity Configuration Monitor - http://teamcityconfmonitor.codeplex.com/
+* MassTransit - http://masstransit-project.com/
+* Topshelf - http://topshelf-project.com/
 
 ##Commercial software
 * Gibraltar - http://nlog-project.org/blog/2009/11/01/gibraltar-adapter-for-nlog-released.html
