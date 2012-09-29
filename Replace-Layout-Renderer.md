@@ -15,5 +15,6 @@ ${replace:searchFor=String:wholeWords=Boolean:replaceWith=String
 * _replaceWith_ - Replacement string.
 * _ignoreCase_ - Indicates whether to ignore case. Boolean
 * _regex_ - Indicates whether regular expressions should be used. Boolean
+
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
