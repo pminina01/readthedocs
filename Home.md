@@ -17,7 +17,7 @@
 * [Configuration API](wiki/Configuration-API)
 * [Targets](wiki/Targets)
 * [Layouts](wiki/Layouts)
-* [Layout Renderers](wiki/Layout-renderers)
+* [Layout Renderers](http://nlog-project.org/wiki/Layout Renderers)
 * [Filters](wiki/Filters)
 * [Conditions](wiki/Conditions)
 * [Log Levels](wiki/Log-levels)
