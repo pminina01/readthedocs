@@ -1,3 +1,5 @@
+![NLog](http://nlog-project.org/NLog.png)
+
 ##Using NLog
 * [Tutorial](wiki/Tutorial) - introduction to logging with NLog
 * [Examples](wiki/Examples) - examples of using NLog to solve real-world logging requirements
