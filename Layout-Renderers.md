@@ -43,10 +43,10 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * ${qpc} - High precision timer, based on the value returned from QueryPerformanceCounter() optionally converted to seconds.
 * ${registry} - A value from the Registry.
 * ${shortdate} - The short date in a sortable format yyyy-MM-dd.
-* ${sl-appinfo} - Information about Silverlight application.
-* ${specialfolder} - System special folder path (includes My Documents, My Music, Program Files, Desktop, and more).
-* ${stacktrace} - Stack trace renderer.
-* ${tempdir} - A temporary directory.
+* [${sl-appinfo}](Sl-AppInfor-Layout-Renderer) - Information about Silverlight application.
+* [${specialfolder}](Special-Folder-Layout-Renderer) - System special folder path (includes My Documents, My Music, Program Files, Desktop, and more).
+* [${stacktrace}](Stack-Trace-Layout-Renderer) - Stack trace renderer.
+* [${tempdir}](TempDir-Layout-Renderer) - A temporary directory.
 * [${threadid}](ThreadId-Layout-Renderer) - The identifier of the current thread.
 * [${threadname}](ThreadName-Layout-Renderer) - The name of the current thread.
 * [${ticks}](Ticks-Layout-Renderer) - The Ticks value of current date and time.
