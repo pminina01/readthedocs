@@ -47,11 +47,11 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * ${specialfolder} - System special folder path (includes My Documents, My Music, Program Files, Desktop, and more).
 * ${stacktrace} - Stack trace renderer.
 * ${tempdir} - A temporary directory.
-* ${threadid} - The identifier of the current thread.
-* ${threadname} - The name of the current thread.
-* ${ticks} - The Ticks value of current date and time.
-* ${time} - The time in a 24-hour, sortable format HH:mm:ss.mmm.
-* ${windows-identity} - Thread Windows identity information (username).
+* [${threadid}](ThreadId-Layout-Renderer) - The identifier of the current thread.
+* [${threadname}](ThreadName-Layout-Renderer) - The name of the current thread.
+* [${ticks}](Ticks-Layout-Renderer) - The Ticks value of current date and time.
+* [${time}](Time-Layout-Renderer) - The time in a 24-hour, sortable format HH:mm:ss.mmm.
+* [${windows-identity}](Windows-Identity-Layout-Renderer) - Thread Windows identity information (username).
 
 ##Wrapper Layout Renderers
 * [${cached}](Cached-Layout-Renderer) - Applies caching to another layout output.
