@@ -38,11 +38,11 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * ${performancecounter} - The performance counter.
 * ${processid} - The identifier of the current process.
 * ${processinfo} - The information about the running process.
-* ${processname} - The name of the current process.
-* ${processtime} - The process time in format HH:mm:ss.mmm.
-* ${qpc} - High precision timer, based on the value returned from QueryPerformanceCounter() optionally converted to seconds.
-* ${registry} - A value from the Registry.
-* ${shortdate} - The short date in a sortable format yyyy-MM-dd.
+* [${processname}](ProcessName-Layout-Renderer) - The name of the current process.
+* [${processtime}](ProcessTime-Layout-Renderer) - The process time in format HH:mm:ss.mmm.
+* [${qpc}](QPC-Layout-Renderer) - High precision timer, based on the value returned from QueryPerformanceCounter() optionally converted to seconds.
+* [${registry}](Registry-Layout-Renderer) - A value from the Registry.
+* [${shortdate}](ShortDate-Layout-Renderer) - The short date in a sortable format yyyy-MM-dd.
 * [${sl-appinfo}](Sl-AppInfor-Layout-Renderer) - Information about Silverlight application.
 * [${specialfolder}](Special-Folder-Layout-Renderer) - System special folder path (includes My Documents, My Music, Program Files, Desktop, and more).
 * [${stacktrace}](Stack-Trace-Layout-Renderer) - Stack trace renderer.
