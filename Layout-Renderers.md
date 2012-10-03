@@ -21,6 +21,8 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * [${file-contents}](FileContents-Layout-Renderer) - Renders contents of the specified file.
 * [${gc}](Gc-Layout-Renderer) - The information about the garbage collector.
 * [${gdc}](Gdc-Layout-Renderer) - Thread identity information (name and authentication information).
+* [${guid}](Guid-Layout-Renderer) - Globally-unique identifier (GUID).
+* [${identity}](Identity-Layout-Renderer) - Thread identity information (name and authentication information).
 * [${install-context}](InstallContext-Layout-Renderer) - Installation parameter (passed to InstallNLogConfig).
 * [${level}](Level-Layout-Renderer) - The log level.
 * [${literal}](Literal-Layout-Renderer) - A string literal.
