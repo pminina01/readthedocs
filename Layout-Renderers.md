@@ -1,32 +1,30 @@
 Layout renderers are macros that are used in [Layouts](Layouts).
 
 ##Layout Renderers
-* ${asp-application} - ASP Application variable.
-* ${aspnet-application} - ASP.NET Application variable.
-* ${aspnet-request} - ASP.NET Request variable.
-* ${aspnet-session} - ASP.NET Session variable.
-* ${aspnet-sessionid} - ASP.NET Session ID.
-* ${aspnet-user-authtype} - ASP.NET User variable.
-* ${aspnet-user-identity} - ASP.NET User variable.
-* ${asp-request} - ASP Request variable.
-* ${asp-session} - ASP Session variable.
-* ${basedir} - The current application domain's base directory.
-* ${callsite} - The call site (class name, method name and source information).
-* ${counter} - A counter value (increases on each layout rendering).
-* ${date} - Current date and time.
-* ${document-uri} - URI of the HTML page which hosts the current Silverlight application.
-* ${environment} - The environment variable.
-* ${event-context} - Log event context data.
-* ${exception} - Exception information provided through a call to one of the Logger.*Exception() methods.
-* ${file-contents} - Renders contents of the specified file.
-* ${gc} - The information about the garbage collector.
-* ${gdc} - Global Diagnostics Context item. Provided for compatibility with log4net.
-* ${guid} - Globally-unique identifier (GUID).
-* ${identity} - Thread identity information (name and authentication information).
-* ${install-context} - Installation parameter (passed to InstallNLogConfig).
-* ${level} - The log level.
-* ${literal} - A string literal.
-* ${log4jxmlevent} - XML event description compatible with log4j, Chainsaw and NLogViewer.
+* [${asp-application}](AspApplication-Layout-Renderer) - ASP Application variable.
+* [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
+* [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
+* [${aspnet-session}](AspNetSession-Layout-Renderer) - ASP.NET Session variable.
+* [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
+* [${aspnet-user-authtype}](AspNetUserAuthType-Layout-Renderer) - ASP.NET User variable.
+* [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
+* [${asp-request}](AspRequest-Layout-Renderer) - ASP Request variable.
+* [${asp-session}](AspSession-Layout-Renderer) - ASP Session variable.
+* [${basedir}](Basedir-Layout-Renderer) - The current application domain's base directory.
+* [${callsite}](Callsite-Layout-Renderer) - The call site (class name, method name and source information).
+* [${counter}](Counter-Layout-Renderer) - A counter value (increases on each layout rendering).
+* [${date}](Date-Layout-Renderer) - Current date and time.
+* [${document-uri}](DocumentUri-Layout-Renderer) - URI of the HTML page which hosts the current Silverlight application.
+* [${environment}](Environment-Layout-Renderer) - The environment variable.
+* [${event-context}](EventContext-Layout-Renderer) - Log event context data.
+* [${exception}](Exception-Layout-Renderer) - Exception information provided through a call to one of the Logger.*Exception() methods.
+* [${file-contents}](FileContents-Layout-Renderer) - Renders contents of the specified file.
+* [${gc}](Gc-Layout-Renderer) - The information about the garbage collector.
+* [${gdc}](Gdc-Layout-Renderer) - Thread identity information (name and authentication information).
+* [${install-context}](InstallContext-Layout-Renderer) - Installation parameter (passed to InstallNLogConfig).
+* [${level}](Level-Layout-Renderer) - The log level.
+* [${literal}](Literal-Layout-Renderer) - A string literal.
+* [${log4jxmlevent}](Log4JXMLEvent-Layout-Renderer) - XML event description compatible with log4j, Chainsaw and NLogViewer.
 * [${logger}](Logger-Layout-Renderer) - The logger name.
 * [${longdate}](LongDate-Layout-Renderer) - The date and time in a long, sortable format yyyy-MM-dd HH:mm:ss.mmm.
 * [${machinename}](MachineName-Layout-Renderer) - The machine name that the process is running on.
