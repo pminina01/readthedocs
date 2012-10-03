@@ -35,9 +35,9 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * ${ndc} - Nested Diagnostic Context item. Provided for compatibility with log4net.
 * [${newline}](Newline-Layout-Renderer) - A newline literal.
 * [${nlogdir}](NLogDir-Layout-Renderer) - The directory where NLog.dll is located.
-* [${performancecounter}](PerformanceCount-Layout-Renderer) - The performance counter.
+* [${performancecounter}](PerformanceCounter-Layout-Renderer) - The performance counter.
 * [${processid}](ProcessId-Layout-Renderer) - The identifier of the current process.
-* [${processinfo}](ProcessInfo-Layout-Renderer) - The information about the running process. **HERE**
+* [${processinfo}](ProcessInfo-Layout-Renderer) - The information about the running process.
 * [${processname}](ProcessName-Layout-Renderer) - The name of the current process.
 * [${processtime}](ProcessTime-Layout-Renderer) - The process time in format HH:mm:ss.mmm.
 * [${qpc}](QPC-Layout-Renderer) - High precision timer, based on the value returned from QueryPerformanceCounter() optionally converted to seconds.
