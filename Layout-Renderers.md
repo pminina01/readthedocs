@@ -27,12 +27,12 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * ${level} - The log level.
 * ${literal} - A string literal.
 * ${log4jxmlevent} - XML event description compatible with log4j, Chainsaw and NLogViewer.
-* ${logger} - The logger name.
-* ${longdate} - The date and time in a long, sortable format yyyy-MM-dd HH:mm:ss.mmm.
-* ${machinename} - The machine name that the process is running on.
-* ${mdc} - Mapped Diagnostic Context item. Provided for compatibility with log4net.
-* ${message} - The formatted log message.
-* ${ndc} - Nested Diagnostic Context item. Provided for compatibility with log4net.
+* [${logger}](Logger-Layout-Renderer) - The logger name.
+* [${longdate}](LongDate-Layout-Renderer) - The date and time in a long, sortable format yyyy-MM-dd HH:mm:ss.mmm.
+* [${machinename}](MachineName-Layout-Renderer) - The machine name that the process is running on.
+* [${mdc}](Mdc-Layout-Renderer) - Mapped Diagnostic Context item. Provided for compatibility with log4net.
+* [${message}](Message-Layout-Renderer) - The formatted log message.
+* [${ndc}](Ndc-Layout-Renderer) - Nested Diagnostic Context item. Provided for compatibility with log4net.
 * [${newline}](Newline-Layout-Renderer) - A newline literal.
 * [${nlogdir}](NLogDir-Layout-Renderer) - The directory where NLog.dll is located.
 * [${performancecounter}](PerformanceCounter-Layout-Renderer) - The performance counter.
