@@ -21,6 +21,7 @@ ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSit
   > * NLog v1.0 for .NET Framework 2.0
 
 * **includeSourceInfo** - Indicates whether to include source info (file name and line number) in the information sent over the network. Boolean
+
   > This parameter is not supported in:
   > * NLog v1.0 for .NET Compact Framework 1.0
   > * NLog v1.0 for .NET Compact Framework 2.0
@@ -28,6 +29,7 @@ ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSit
   > * NLog v2.0 for .NET Compact Framework 3.5
 
 * **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. Boolean
+
   > This parameter is not supported in:
   > * NLog v1.0 for .NET Compact Framework 1.0
   > * NLog v1.0 for .NET Compact Framework 2.0
