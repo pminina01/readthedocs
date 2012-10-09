@@ -5,6 +5,7 @@ Logs produced by NLog can ba analyzed using a number of GUI tools:
 * Gibraltar (using Gibraltar Adapter for NLog) - http://nlog-project.org/2009/11/01/gibraltar-adapter-for-nlog-released.html
 * Sentinel - http://sentinel.codeplex.com/
 * NLogViewer - http://github.com/jkowalski/NLogViewer (functional, but no longer in development, not recommended)
+* LogEntries - http://www.logentries.com (service for cloud logging, has .net NLog target)
 
 ##Log4x-compatible viewers
 In general, any viewer supporting Log4J or Log4Net should work fine with NLog - see http://nlog-project.org/target.Chainsaw.html for information on configuring NLog for use with those viewers.
