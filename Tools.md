@@ -1,5 +1,5 @@
 ##Log Viewers/Analyzers
-Logs produced by NLog can ba analyzed using a number of GUI tools:
+Logs produced by NLog can be analyzed using a number of GUI tools:
 
 ##NLog-specific viewers
 * Gibraltar (using Gibraltar Adapter for NLog) - http://nlog-project.org/2009/11/01/gibraltar-adapter-for-nlog-released.html
