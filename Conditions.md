@@ -26,9 +26,9 @@ Here are several [when filter](when-Filter) examples with conditions:
 <rules>
     <logger name="*" writeTo="file">
         <filters>
-            <when condition="length(message) > 100" action="Ignore" />
+            <when condition="length('${message}') > 100" action="Ignore" />
             <when condition="equals('${logger}','MyApps.SomeClass')" action="Ignore" />
-            <when condition="(level >= LogLevel.Debug and contains(message,'PleaseDontLogThis')) or level==LogLevel.Warn" action="Ignore" />
+            <when condition="(level >= LogLevel.Debug and contains('${message}','PleaseDontLogThis')) or level==LogLevel.Warn" action="Ignore" />
             <when condition="not starts-with('${message}','PleaseLogThis')" action="Ignore" />
         </filters>
     </logger>
