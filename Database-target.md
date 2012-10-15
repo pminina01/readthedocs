@@ -58,7 +58,7 @@ _connectionStringName_ - Name of the connection string (as specified in .
 > * NLog v2.0 for .NET Compact Framework 2.0
 > * NLog v2.0 for .NET Compact Framework 3.5
 
-_connectionString_ - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase. [Layout](Layout)  
+_connectionString_ - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
 _keepConnection_ - Indicates whether to keep the database connection open between the log events. [Boolean](Data types) Default: True  
 _dbDatabase_ - Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string. [Layout](Data types)  
 _dbPassword_ - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
