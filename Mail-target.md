@@ -75,3 +75,19 @@ Possible values:
 _smtpServer_ - SMTP Server to be used for sending. [Layout](Data-types) Required.
 
 _smtpPort_ - Port number that SMTP Server is listening on. [Integer](Data-types) Default: 25
+
+##Remarks
+If the application config file contains mail settings, fx.:
+
+```
+<system.net>
+  <mailSettings>
+    <smtp from="mail@domain.com" deliveryMethod="SpecifiedPickupDirectory">
+      <network host="localhost" port="25"/>
+      <specifiedPickupDirectory pickupDirectoryLocation="C:/Temp/Email"/>
+    </smtp>
+  </mailSettings>
+</system.net>
+```
+
+These values will be used, if target doesn't override them.
