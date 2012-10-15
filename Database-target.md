@@ -31,7 +31,7 @@ Read more about using the [Configuration File](Configuration file).
 ###General Options
 _name_ - Name of the target.
 ###Connection Options
-_dbUserName_ - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)
+_dbUserName_ - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
 _dbProvider_ - Name of the database provider. Required. Default: sqlserver  
 The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
 * System.Data.SqlClient -
