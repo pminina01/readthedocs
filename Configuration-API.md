@@ -9,7 +9,7 @@ In order to configure NLog in code you must complete the following steps:
 ##Examples
 ###Multiple targets
 This sample demonstrates the programmatic creation of two targets: one is a colored console, and the other is a file and rules that send messages to them for messages whose level is Debug or higher.
-```
+```c#
 using NLog;
 using NLog.Targets;
 using NLog.Config;
