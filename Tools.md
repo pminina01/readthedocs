@@ -6,6 +6,7 @@ Logs produced by NLog can be analyzed using a number of GUI tools:
 * Sentinel - http://sentinel.codeplex.com/
 * NLogViewer - http://github.com/jkowalski/NLogViewer (functional, but no longer in development, not recommended)
 * LogEntries - http://www.logentries.com (service for cloud logging, has .net NLog target)
+* Legit Log Viewer - http://www.legitlog.com/ (Free and powerful log viewer.)
 
 ##Log4x-compatible viewers
 In general, any viewer supporting Log4J or Log4Net should work fine with NLog - see http://nlog-project.org/target.Chainsaw.html for information on configuring NLog for use with those viewers.
@@ -15,3 +16,4 @@ In general, any viewer supporting Log4J or Log4Net should work fine with NLog - 
 * Log4Net Dashboard - http://www.l4ndash.com/
 * Log4View - http://www.log4view.com/
 * Log2Console - http://log2console.codeplex.com/
+* Legit Log Viewer - http://www.legitlog.com/ (Free and powerful log viewer.)
