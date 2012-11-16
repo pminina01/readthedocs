@@ -1,6 +1,6 @@
 Global Diagnostics Context item. Provided for compatibility with log4net. 
 
-Supported in .NET, Silverligth, Compact Framework and Mono.
+Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ##Configuration Syntax
 ```
