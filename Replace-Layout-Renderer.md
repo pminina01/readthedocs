@@ -13,8 +13,8 @@ ${replace:searchFor=String:wholeWords=Boolean:replaceWith=String
 * _searchFor_ - Text to search for.
 * _wholeWords_ - Indicates whether to search for whole words. Boolean
 * _replaceWith_ - Replacement string.
-* _ignoreCase_ - Indicates whether to ignore case. Boolean
-* _regex_ - Indicates whether regular expressions should be used. Boolean
+* _ignoreCase_ - Indicates whether to ignore case when searching. Boolean
+* _regex_ - Indicates whether regular expressions should be used when searching. Boolean
 
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
