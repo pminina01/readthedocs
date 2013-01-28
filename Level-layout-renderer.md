@@ -6,6 +6,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ```
 ${level}
 ```
+Alternatively, add padding to align the message.
+```
+${pad:padding=5:inner=${level:uppercase=true}}
+```
 
 ##Examples
 ###Basic
