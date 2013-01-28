@@ -32,7 +32,7 @@ Targets are used to display, store, or pass log messages to another destination.
 * [AspNetBufferingWrapper](AspNetBufferingWrapper-target) - Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
 * [AutoFlushWrapper](AutoFlushWrapper-target) - Causes a flush after each write on a wrapped target.
-* [BufferingWrapper](BufferingWrapper-target) - A target that buffers log events and sends them in batches to the wrapped target.
+* [BufferingWrapper](BufferingWrapper-target) - A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.
 * [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
 * [FilteringWrapper](FilteringWrapper-target) - Filters log entries based on a condition.
 * [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
