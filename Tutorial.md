@@ -189,10 +189,10 @@ Second rule will send all remaining logs to the same log file with the restricti
 
 ##Wrappers
 NLog supports a special kind of targets, which don't do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
-* [ImpersonatingWrapper](ImpersonatingWrapper) - Impersonates another user for the duration of the write.
-* [AsyncWrapper](AsyncWrapper) - Provides asynchronous, buffered execution of target writes.
-* [FallbackGroup](FallbackGroup) - Provides fallback-on-error.
-* [FilteringWrapper](FilteringWrapper) - Filters log entries based on a condition.
+* [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
+* [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
+* [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
+* [FilteringWrapper](FilteringWrapper-target) - Filters log entries based on a condition.
 
 Many more wrappers are available. You can find the full list [here](Targets).
 
