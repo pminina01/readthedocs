@@ -67,7 +67,7 @@ This parameter is ignored when logging to existing form control. Tool windows ha
 
 _controlName_ - Name of RichTextBox to which Nlog will write.
 
-_formName_ - Name of the Form on which the control is located. If there is no open form of a specified name than NLog will create a new one.
+_formName_ - Name of the Form on which the control is located. If there is no open form of a specified name then NLog will create a new one.
 
 _width_ - Initial width of the form with rich text box.  
 This parameter is ignored when logging to existing form control.  
