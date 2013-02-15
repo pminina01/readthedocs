@@ -42,7 +42,7 @@ In order to send all logs to a static method, use the following configuration fi
     </targets>
  
     <rules>
-        <logger name="*" minlevel="Debug" writeTo="msgbox" />
+        <logger name="*" minlevel="Debug" writeTo="m" />
     </rules>
 </nlog>
 ```
