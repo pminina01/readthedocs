@@ -23,7 +23,7 @@ In order to use [Mail target](Mail-target) with GMail, you need to use the follo
   </rules>
 </nlog>
 ```
-(note that this is only supported in NLog 2.0 and higher, because NLog 1.0 does not support **enableSsl** parameter).
+(Note that this is only supported in NLog 2.0 and higher, because NLog 1.0 does not support **enableSsl** parameter).
 
 ##Using NLog with Growl for Windows
 [Ryan Farley](http://ryanfarley.com/blog/articles/about.aspx) has a great article on [how to use NLog with Growl for Windows](http://ryanfarley.com/blog/archive/2010/05/06/announcing-the-growl-for-windows-target-for-nlog.aspx)
