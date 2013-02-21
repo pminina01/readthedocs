@@ -17,9 +17,9 @@ Read more about using the [Configuration File](Configuration file).
 ###General Options
 _name_ - Name of the target.
 ###Layout Options
-_layout_ - Text to be rendered. [Layout](Layout) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}  
-_footer_ - Footer. [Layout](Layout)  
-_header_ - Header. [Layout](Layout)
+_layout_ - Text to be rendered. [Layout](Layouts) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}  
+_footer_ - Footer. [Layout](Layouts)  
+_header_ - Header. [Layout](Layouts)
 ###Console Options
 _error_ - Indicates whether to send the log messages to the standard error instead of the standard output. [Boolean](Data types) Default: False
 > This parameter is not supported in:
