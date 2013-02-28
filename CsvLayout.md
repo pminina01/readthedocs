@@ -39,7 +39,7 @@ Possible values:
 
 _quoteChar_ - Quote Character. Default: "
 
-_withHeader_ - Indicates whether CVS should include header.Boolean
+_withHeader_ - Indicates whether CSV should include header.Boolean
 
 _customColumnDelimiter_ - Custom column delimiter value (valid when ColumnDelimiter is set to 'Custom').
 
