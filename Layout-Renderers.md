@@ -20,7 +20,7 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * [${exception}](Exception-Layout-Renderer) - Exception information provided through a call to one of the Logger.*Exception() methods.
 * [${file-contents}](FileContents-Layout-Renderer) - Renders contents of the specified file.
 * [${gc}](Gc-Layout-Renderer) - The information about the garbage collector.
-* [${gdc}](Gdc-Layout-Renderer) - Thread identity information (name and authentication information).
+* [${gdc}](Gdc-Layout-Renderer) - Global Diagnostic Context item. Provided for compatibility with log4net.
 * [${guid}](Guid-Layout-Renderer) - Globally-unique identifier (GUID).
 * [${identity}](Identity-Layout-Renderer) - Thread identity information (name and authentication information).
 * [${install-context}](InstallContext-Layout-Renderer) - Installation parameter (passed to InstallNLogConfig).
