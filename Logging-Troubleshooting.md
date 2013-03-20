@@ -2,7 +2,7 @@
 When you get no log output from NLog, this can be because of the following reasons:
  1. NLog cannot find the configuration file
  2. Configuration file is invalid
- 3. Logging rules are incorrect
+ 3. Logging rules are incorrect or no rules are defined
  4. Application tracing code is incorrect.
  5. There is a runtime problem with the target (such as missing permissions)
  6. Logs are written to a different location.
