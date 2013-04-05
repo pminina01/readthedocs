@@ -5,7 +5,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ```
 <rules>
   <logger ... >
-    <when condition="Condition" action="Enum"/>
+    <filters>
+      <when condition="Condition" action="Enum"/>
+    </filters>
   </logger>
 </rules>
 ```
