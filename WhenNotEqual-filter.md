@@ -5,7 +5,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ```
 <rules>
   <logger ... >
-    <whenNotEqual ignoreCase="Boolean" layout="Layout" action="Enum" compareTo="String"/>
+    <filters>
+      <whenNotEqual ignoreCase="Boolean" layout="Layout" action="Enum" compareTo="String"/>
+    </filters>
   </logger>
 </rules>
 ```
