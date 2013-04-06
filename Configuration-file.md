@@ -253,7 +253,7 @@ Sometimes we require ALL targets to be wrapped in the same way, for example to a
   </targets>  
   <targets>  
     <default-wrapper xsi:type="AsyncWrapper">  
-      <wrapper xsi:type="RetryingWrapper"/>  
+      <wrapper-target xsi:type="RetryingWrapper"/>  
     </default-wrapper>  
     <target name="n1" xsi:type="Network" address="tcp://localhost:4001"/>  
     <target name="n2" xsi:type="Network" address="tcp://localhost:4002"/>  
