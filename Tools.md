@@ -18,4 +18,4 @@ In general, any viewer supporting Log4J or Log4Net should work fine with NLog - 
 * Log4View - http://www.log4view.com/
 * Log2Console - http://log2console.codeplex.com/
 * Legit Log Viewer - http://www.legitlog.com/ (Free and powerful log viewer.)
-* ReflectInsight Viewer (using the ReflectInsight Extension for Log4net) - https://insightextensions.codeplex.com/
+* ReflectInsight Viewer (using the ReflectInsight Extension for Log4net) - http://www.reflectsoftware.com/
