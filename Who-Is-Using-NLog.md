@@ -8,9 +8,11 @@ The following open source software projects are using or supporting NLog:
 * TeamCity Configuration Monitor - http://teamcityconfmonitor.codeplex.com/
 * MassTransit - http://masstransit-project.com/
 * Topshelf - http://topshelf-project.com/
+* ReflectInsight Extensions - https://insightextensions.codeplex.com/
 
 ##Commercial software
 * Gibraltar - http://nlog-project.org/blog/2009/11/01/gibraltar-adapter-for-nlog-released.html
 * TradeBullet - http://www.tradebullet.com
 * LiteStock - http://www.lightweightlabs.com
 * Silverlight Map Server - http://www.itacasoft.com/silverlightmapserver
+* ReflectInsight by ReflectSoftware - http://www.reflectsoftware.com/ 
