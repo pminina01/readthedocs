@@ -19,6 +19,7 @@
 * [Logging messages to a Syslog server using NLog](http://blog.graffen.dk/post/2010/06/13/Logging-messages-to-a-Syslog-server-using-NLog.aspx) by Graffen
 * [Introducing Caliburn.Micro.Logging.NLog](http://buksbaum.us/2011/07/06/introducing-caliburn-micro-logging-nlog/)
 * [Procmon Call Stack or Symbols and SysInternals tools](http://zine.net.pl/blogs/mgrzeg/archive/2011/09/16/procmon-call-stack-czyli-symbole-a-narz-dzia-sysinternals.aspx) by Michał Grzegorzewski (in Polish)
+* [Getting started with ReflectInsight Extension for NLog] (https://insightextensions.codeplex.com/wikipage?title=Getting%20Started%20with%20NLog%20Extension&referringTitle=Documentation) by ReflectSoftware
 
 ##Screencasts
 * [Mastering ASP.NET MVC2](http://tekpub.com/production/starter) by Steven Sanderson and Rob Conery from http://tekpub.com
