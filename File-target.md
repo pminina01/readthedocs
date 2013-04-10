@@ -133,7 +133,7 @@ Setting this to false may improve performance a bit, but you'll receive an error
 
 ###Performance Tuning Options
 _concurrentWrites_ - Indicates whether concurrent writes to the log file by multiple processes on the same host. [Boolean](Data-types) Default: True  
-This makes multi-process logging possible. NLog uses a special technique that lets it keep the files open for writing.
+This makes multi-process logging possible. NLog uses a special technique that lets it keep the files open for writing.<br />**NOTE:** are ignored unless _keepFileOpen_ are set to true.
 
 _openFileCacheTimeout_ - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. [Integer](Data-types) Default: -1  
 
