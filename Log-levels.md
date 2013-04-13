@@ -8,4 +8,4 @@ The following are the allowed log levels (in descending order):
 * Trace
 
 
-LogLevels in NLog are consistent with Log4j/Log4net, so a description of the usage of these different levels is available on [Wikipedia's entry on log4j](http://en.wikipedia.org/wiki/Log4j).
+Log Levels in NLog are consistent with Log4j/Log4net, so a description of the different levels' usage on [Wikipedia's entry about log4j](http://en.wikipedia.org/wiki/Log4j) is applicable for NLog Log Levels.
