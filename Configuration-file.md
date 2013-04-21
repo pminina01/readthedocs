@@ -54,7 +54,7 @@ In the first variant, we use a standard configSections mechanism, which makes ou
 </configuration>
 ```
 
-The simplified format is the pure XML having the <nlog /> element as its root. The use of namespaces is optional, but it enables the Intellisense in Visual Studio.
+The simplified format is the pure XML having the \<nlog /> element as its root. The use of namespaces is optional, but it enables the Intellisense in Visual Studio.
 ```
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </nlog>
@@ -62,7 +62,7 @@ The simplified format is the pure XML having the <nlog /> element as its root. T
 
 Note that NLog config file is case-insensitive when not using namespaces and is case-sensitive when you use them. Intellisense only works with case-sensitive configurations.
 
-Configuration elements You can use the following elements as children to <nlog />. The first two elements from the list are required to be present in all NLog configuration files, the remaining ones are optional and can be useful in advanced scenarios.
+Configuration elements You can use the following elements as children to \<nlog />. The first two elements from the list are required to be present in all NLog configuration files, the remaining ones are optional and can be useful in advanced scenarios.
  * \<targets /> – defines log targets/outputs
  * \<rules /> – defines log routing rules
  * \<extensions /> – loads NLog extensions from the *.dll file
