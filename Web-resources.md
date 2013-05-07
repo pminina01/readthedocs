@@ -8,7 +8,7 @@
 * [ASP.Net Logging Using NLog](http://rickyrosario.com/blog/asp-net-logging-using-nlog/) by Ricky Rosario
 * [Using NLog to Track Events](http://blogs.popart.com/2008/09/using-nlog-to-track-events/) by Andrew Hay
 * [Ninject (Part 2): Customizing your infrastructure for logging](http://flanders.co.nz/2008/04/18/ninject-part-2-customizing-your-infrastructure-for-logging/) by Ivan Porto Carrero
-* [Tracing and logging in .NET](http://www.hieu.co.uk/blog/index.php/2009/02/11/tracing-and-logging-in-net/) by Hieu Pham
+* [Tracing and logging in .NET](http://www.hieu.co.uk/blog/index.php/2009/02/11/tracing-and-logging-in-net/) by Hieu Pham (**Link Broken**)
 * [Logging with PostSharp and NLog](http://www.artemiswest.com/Articles/LoggingWithPostSharp.aspx) by Artemis West Ltd
 * [Using NLog in C#](http://kristjansson.us/?p=686) by Orn Kristjansson
 * [Logging NLog messages to a non-static method](http://thevalerios.net/matt/2008/05/logging-nlog-messages-to-a-non-static-method/) by Matt Valerio
