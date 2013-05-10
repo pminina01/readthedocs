@@ -275,18 +275,6 @@ Similar to default wrappers, NLog provides \<default-target-parameters /> which 
     <target name="f3" xsi:type="File" fileName="f3.txt" keepFileOpen="false"/>
    </targets>
 </nlog>
- 
-Alternatively you can specify a single <default-target-parameters /> that applies to all targets in the <targets /> section. Default parameters are defined on a per-type basis and are applied BEFORE the actual attributes defined in the XML file:
- 
-<source lang="xml">
-<nlog>
-  <targets>
-    <default-target-parameters xsi:type="File" keepFileOpen="false"/>
-    <target name="f1" xsi:type="File" fileName="f1.txt"/>
-    <target name="f2" xsi:type="File" fileName="f2.txt"/>
-    <target name="f3" xsi:type="File" fileName="f3.txt"/>
-  </targets>
-</nlog>
 ```
 
 Alternatively you can specify a single \<default-target-parameters /> that applies to all targets in the \<targets /> section. Default parameters are defined on a per-type basis and are applied BEFORE the actual attributes defined in the XML file:
