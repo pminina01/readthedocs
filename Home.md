@@ -10,9 +10,7 @@
 * [Web resources](wiki/Web-resources) - user-contributed tutorials and articles about NLog
 
 ##API Reference
-* [.NET logging API](http://nlog-project.org/wiki/.NET_logging_API) (link broken)
-* [C/C++ logging API](http://nlog-project.org/wiki/C_logging_API) (link broken)
-* [COM logging API](http://nlog-project.org/wiki/COM_logging_API) (link broken)
+* [API Reference](http://nlog.github.io/documentation)
 
 ##Configuration Reference
 * [Configuration file](wiki/Configuration-file)
