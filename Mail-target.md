@@ -23,7 +23,8 @@ Supported in .NET and Mono
           smtpPassword="Layout"
           smtpAuthentication="Enum"
           smtpServer="Layout"
-          smtpPort="Integer" />
+          smtpPort="Integer"
+          useSystemNetMailSettings="Boolean" />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration file).
@@ -76,6 +77,8 @@ _smtpServer_ - SMTP Server to be used for sending. [Layout](Data-types) Required
 
 _smtpPort_ - Port number that SMTP Server is listening on. [Integer](Data-types) Default: 25
 
+_useSystemNetMailSettings_ - Force using smtp configuration from system.net/mailSettings. [Boolean](Data-types) Default: False
+
 ##Remarks
 If the application config file contains mail settings, fx.:
 
@@ -90,4 +93,4 @@ If the application config file contains mail settings, fx.:
 </system.net>
 ```
 
-These values will be used, if target doesn't override them.
+These values will be used, if target doesn't override them (see _useSystemNetMailSettings_ attribute).
