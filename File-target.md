@@ -38,12 +38,12 @@ Read more about using the [Configuration File](Configuration-file).
 ###General Options
 _name_ - Name of the target.
 ###Layout Options
-_layout_ - Text to be rendered. [Layout](Layout) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}  
-_header_ - Header. [Layout](Layout)  
+_layout_ - Text to be rendered. [Layout](Layouts) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}  
+_header_ - Header. [Layout](Layouts)  
 
-_footer_ - Footer. [Layout](Layout)
+_footer_ - Footer. [Layout](Layouts)
 
-_encoding_ - File encoding. [Encoding](Layout)
+_encoding_ - File encoding. [Encoding](Layouts)
 
 _lineEnding_ - Line ending mode.  
 Possible values:
@@ -54,12 +54,12 @@ Possible values:
   * None - Don't insert any line ending.
 
 ###Archival Options
-_archiveAboveSize_ - Size in bytes above which log files will be automatically archived. [Long](Layout)  
+_archiveAboveSize_ - Size in bytes above which log files will be automatically archived. [Long](Layouts)  
 Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance.  
 
-_maxArchiveFiles_ - Maximum number of archive files that should be kept. [Integer](Layout) Default: 9  
+_maxArchiveFiles_ - Maximum number of archive files that should be kept. [Integer](Layouts) Default: 9  
 
-_archiveFileName_ - Name of the file to be used for an archive. [Layout](Layout)  
+_archiveFileName_ - Name of the file to be used for an archive. [Layout](Layouts)  
 It may contain a special placeholder {#####} that will be replaced with a sequence of numbers depending on the archiving strategy. The number of hash characters used determines the number of numerical digits to be used for numbering files.  
 
 _archiveNumbering_ - Way file archives are numbered.  
