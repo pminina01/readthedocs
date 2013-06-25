@@ -8,7 +8,7 @@ When you get no log output from NLog, this can be because of the following reaso
  6. Logs are written to a different location.
 
 ##Troubleshooting steps
- 1. The first step is to make sure that NLog finds your config file. It is recommeded to use NLog.config located in the same directory as your application, but there are other options. See [NLog Configuration](Configuration-file) for more information. Once you've made sure that the configuration file is there, proceed to the next step.
+ 1. The first step is to make sure that NLog finds your config file. It is recommended to use NLog.config located in the same directory as your application, but there are other options. See [NLog Configuration](Configuration-file) for more information. Once you've made sure that the configuration file is there, proceed to the next step.
  2. Configuration file is read when you create your first Logger, so the best way to validate that your configuration file is syntactically valid is to create one in the Main() method of your program.
 ```csharp
 class Program
