@@ -42,7 +42,7 @@ _html_ - Indicates whether to send message as HTML instead of plain text. [Boole
 
 _addNewLines_ - Indicates whether to add new lines between log entries. [Boolean](Data-types)
 
-_encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: UTF8
+_encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: UTF-8
 ###Message Options
 _subject_ - Mail subject. [Layout](Data-types) Required. Default: Message from NLog on ${machinename}
 
