@@ -5,7 +5,7 @@ In order to use [Mail target](Mail-target) with GMail, you need to use the follo
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <targets>
-    <target name="gmail" type="Mail"
+    <target name="gmail" xsi:type="Mail"
             smtpServer="smtp.gmail.com"
             smtpPort="587"
             smtpAuthentication="Basic"
