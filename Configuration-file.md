@@ -4,7 +4,6 @@
 [Targets](#targets)<br />
 [Rules](#rules)<br />
 [Example rules](#example-rules)<br />
-[Targets](#targets)<br />
 [Layouts and layout renderers](#layouts-and-layout-renderers)<br />
 [Include files](#include-files)<br />
 [Variable](#variables)<br />
