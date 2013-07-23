@@ -27,3 +27,12 @@ In order to use [Mail target](Mail-target) with GMail, you need to use the follo
 
 ##Using NLog with Growl for Windows
 [Ryan Farley](http://ryanfarley.com/blog/articles/about.aspx) has a great article on [how to use NLog with Growl for Windows](http://ryanfarley.com/blog/archive/2010/05/06/announcing-the-growl-for-windows-target-for-nlog.aspx)
+
+##Changing log file name at runtime
+
+    using NLog.Targets;
+    ...
+    FileTarget target = LogManager.Configuration.FindTargetByName(targetName) as FileTarget;
+    target.FileName = filename;
+
+Note that it is often easier to create the file name with a combination of [Layout-Renderers](layout renderers).
