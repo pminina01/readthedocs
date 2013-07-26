@@ -10,6 +10,7 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
 * [${asp-request}](AspRequest-Layout-Renderer) - ASP Request variable.
 * [${asp-session}](AspSession-Layout-Renderer) - ASP Session variable.
+* [${assembly-version}](AssemblyVersion-Layout-Renderer) - The version of the executable in the default application domain.
 * [${basedir}](Basedir-Layout-Renderer) - The current application domain's base directory.
 * [${callsite}](Callsite-Layout-Renderer) - The call site (class name, method name and source information).
 * [${counter}](Counter-Layout-Renderer) - A counter value (increases on each layout rendering).
