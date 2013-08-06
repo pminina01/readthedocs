@@ -1,4 +1,4 @@
-![NLog](http://nlog-project.org/NLog.png)
+![NLog](http://nlog-project.org/images/NLog.png)
 
 ##Using NLog
 * [Tutorial](wiki/Tutorial) - introduction to logging with NLog
