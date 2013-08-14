@@ -9,6 +9,7 @@ The following open source software projects are using or supporting NLog:
 * MassTransit - http://masstransit-project.com/
 * Topshelf - http://topshelf-project.com/
 * ReflectInsight Extensions - https://insightextensions.codeplex.com/
+* Fop2DD - https://fop2dd.codeplex.com/
 
 ##Commercial software
 * Gibraltar - http://nlog-project.org/blog/2009/11/01/gibraltar-adapter-for-nlog-released.html
