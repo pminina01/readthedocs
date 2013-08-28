@@ -12,4 +12,4 @@ Read more about using the [Configuration File](Configuration file).
 ###General Options
 _name_ - Name of the target.
 ###Layout Options
-_layout_ - Layout used to format log messages. [Layout](Data-types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+_layout_ - Layout used to format log messages. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
