@@ -23,4 +23,4 @@ Possible values:
   * Neutral - The filter doesn't want to decide whether to log or discard the message.
 
 ##Remarks
-Conditions are expressed using a simple language described [here](https://github.com/NLog/NLog/wiki/Conditions).
+Conditions are expressed using a simple language described [here](Conditions).
