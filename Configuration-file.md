@@ -170,6 +170,8 @@ The following configuration example demonstrates this, by loading a file whose n
 </nlog>
 ```
 
+The optional attribute, ignoreErrors="true", which defaults to false, can be added to prevent an exception from being thrown when the include file is not found or is not formatted correctly.  When setting ignoreErrors="true", use the [Troubleshooting logging](#troubleshooting-logging) section to log errors.
+
 <a name="variables" />
 ##Variables
 Variables can be used to write complex or repeated expressions (such as file names) in a concise manner. To define a variable use the following syntax:
