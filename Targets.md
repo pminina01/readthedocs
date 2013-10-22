@@ -44,6 +44,7 @@ Targets are used to display, store, or pass log messages to another destination.
 * [SplitGroup](SplitGroup-target) - Writes log events to all targets.
 
 ##Custom Targets
-[RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) ([NuGet](http://nuget.org/packages/NLog.RabbitMQ)) - sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
+ * [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) ([NuGet](http://nuget.org/packages/NLog.RabbitMQ)) - sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
+ * [GrowlNotify target](https://github.com/RyanFarley/NLogGrowlNotify) ([NLog.Growl NuGet package](http://www.nuget.org/packages/NLog.Growl/)) – sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
 
 NLog supports custom target. For more information, see: [How to write a Target](How-to-write-a-Target)
