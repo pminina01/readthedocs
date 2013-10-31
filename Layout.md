@@ -1,0 +1,1 @@
+See:[https://github.com/nlog/NLog/wiki/Layouts](https://github.com/nlog/NLog/wiki/Layouts)
