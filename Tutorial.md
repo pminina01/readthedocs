@@ -129,7 +129,7 @@ This will define a target which will send logs to a file named file.txt.
 ```
 This snippet will direct all logs (name="*") of level **Info** or higher (which includes **Info**, **Warn**, **Error** and **Fatal**) to a target named logfile.
 
-Note that as you are typing this in Visual Studio, you should see Intellisense suggesting attribute names and validating their values. The final configuration should look like this:
+Note that as you are typing this in Visual Studio, you should see IntelliSense suggesting attribute names and validating their values. The final configuration should look like this:
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
@@ -147,7 +147,7 @@ Note that as you are typing this in Visual Studio, you should see Intellisense s
 Now, when you run the application, you should see log messages written to file.txt in current directory.
 
 ##Multiple targets
-Lets try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slighly less detailed. Here's the configuration file which implements this:
+Lets try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slightly less detailed. Here's the configuration file which implements this:
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
@@ -167,7 +167,7 @@ Lets try something more complex now. Imagine you want to send very detailed logs
 As you can see, we now have multiple targets and multiple rules which route logs to them.
 
 ##Logger-specific routing
-Another scnenario which is very common requires producing more detailed logs from some components which are being currently developed, while reducing output from some other components. We can use the following configuration:
+Another scenario which is very common requires producing more detailed logs from some components which are being currently developed, while reducing output from some other components. We can use the following configuration:
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
@@ -183,12 +183,12 @@ Another scnenario which is very common requires producing more detailed logs fro
     </rules>
 </nlog>
 ```
-First rule will send logs from loggers whose names begin with `SomeNamespace.Component`. and where level is **Trace** or higher to the log file. The attribute _final="true"_ will cause further processing to be stopped after performing the write.
+The first rule will send logs from loggers whose names begin with `SomeNamespace.Component`. and where level is **Trace** or higher to the log file. The attribute _final="true"_ will cause further processing to be stopped after performing the write.
 
-Second rule will send all remaining logs to the same log file with the restriction that the level must be **Info** or higher.
+The second rule will send all remaining logs to the same log file with the restriction that the level must be **Info** or higher.
 
 ##Wrappers
-NLog supports a special kind of targets, which don't do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
+NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
 * [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
 * [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
