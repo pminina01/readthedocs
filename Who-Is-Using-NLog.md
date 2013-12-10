@@ -10,6 +10,7 @@ The following open source software projects are using or supporting NLog:
 * Topshelf - http://topshelf-project.com/
 * ReflectInsight Extensions - https://insightextensions.codeplex.com/
 * Fop2DD - https://fop2dd.codeplex.com/
+* Ember Media Manager - http://embermediamanager.org/
 
 ##Commercial software
 * Gibraltar - http://nlog-project.org/blog/2009/11/01/gibraltar-adapter-for-nlog-released.html
