@@ -26,3 +26,10 @@ _source_ - Value to be used as the event Source. By default this is the friendly
 _category_ - Layout that renders event Category.  The categories must be predefined for the specified _source_ and needs to be numeric. [Layout](Layouts)  
 _eventId_ - Layout that renders event ID. [Layout](Layouts)  
 _log_ - Name of the Event Log to write to. This can be System, Application or any user-defined name. Default: Application
+##Example
+```
+<target xsi:type="EventLog"
+            name="eventlog"
+            source="${appName}"
+            layout="${message}${newline}${exception:format=ToString}"/>
+```
