@@ -30,15 +30,19 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           concurrentWriteAttempts="Integer"
           bufferSize="Integer"
           autoFlush="Boolean"
-          keepFileOpen="Boolean" />
+          keepFileOpen="Boolean"
+          forceManaged="Boolean" />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
 ##Parameters
 ###General Options
 _name_ - Name of the target.
+
+_forceManaged_ - Indicates that the file target should only use managed methods. This disables some of the options.
 ###Layout Options
-_layout_ - Text to be rendered. [Layout](Layouts) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}  
+_layout_ - Text to be rendered. [Layout](Layouts) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+
 _header_ - Header. [Layout](Layouts)  
 
 _footer_ - Footer. [Layout](Layouts)
