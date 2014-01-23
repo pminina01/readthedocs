@@ -81,7 +81,7 @@ public class MyClass
  
     // alternatively you can call the Log() method 
     // and pass log level as the parameter.
-    logger.Log(LogLevel.Info, "Sample fatal error message");
+    logger.Log(LogLevel.Info, "Sample informational error message");
   }
 }
 ```
@@ -105,7 +105,7 @@ public class MyClass
     logger.Warn("Sample warning message, k={0}, l={1}", k, l);
     logger.Error("Sample error message, k={0}, l={1}", k, l);
     logger.Fatal("Sample fatal error message, k={0}, l={1}", k, l);
-    logger.Log(LogLevel.Info, "Sample fatal error message, k={0}, l={1}", k, l);
+    logger.Log(LogLevel.Info, "Sample informational error message, k={0}, l={1}", k, l);
   }
 }
 ```
