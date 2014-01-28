@@ -9,7 +9,7 @@ In order to use [Mail target](Mail-target) with GMail, you need to use the follo
             smtpServer="smtp.gmail.com"
             smtpPort="587"
             smtpAuthentication="Basic"
-            smtpUsername="user@gmail.com"
+            smtpUserName="user@gmail.com"
             smtpPassword="password"
             enableSsl="true"
             from="emailaddress@gmail.com"
