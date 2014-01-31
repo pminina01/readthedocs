@@ -123,7 +123,7 @@ Possible values:
     > * NLog v2.0 for .NET Compact Framework 3.5
     > * NLog v2.0 for Silverlight 4.0
 
-_fileName_ - Name of the file to write to. [Layouy](Data-types) Required.  
+_fileName_ - Name of the file to write to. [Layout](Data-types) Required.  
 This FileName string is a layout which may include instances of layout renderers. This lets you use a single target to write to multiple files.  
 The following value makes NLog write logging events to files based on the log level in the directory where the application runs. ${basedir}/${level}.log All Debug messages will go to Debug.log, all Info messages will go to Info.log and so on. You can combine as many of the layout renderers as you want to produce an arbitrary log file name.
 
