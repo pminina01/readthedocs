@@ -70,6 +70,7 @@ _archiveNumbering_ - Way file archives are numbered.
 Possible values:
   * Rolling - Rolling style numbering (the most recent is always #0 then #1, ..., #N.
   * Sequence - Sequence style numbering. The most recent archive has the highest number.
+  * Date - Date style numbering. The date is formatted according to the value of _archiveDateFormat_.
 
 _archiveEvery_ - Indicates whether to automatically archive log files every time the specified time passes.  
 Possible values:
@@ -81,6 +82,10 @@ Possible values:
   * Year - Archive every year.
 
 Files are moved to the archive as part of the write operation if the current period of time changes. For example if the current hour changes from 10 to 11, the first write that will occur on or after 11:00 will trigger the archiving. Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance.
+
+_archiveDateFormat_ - Specifies the date format used for archive numbering. Default format depends on the archive period.
+
+This option works only when the "ArchiveNumbering" parameter is set to Date
 
 ###Output Options
 _replaceFileContentsOnEachWrite_ - Indicates whether to replace file contents on each write instead of appending log message at the end. [Boolean](Data-types) Default: False  
