@@ -1,11 +1,12 @@
 ##Possible causes
 When you get no log output from NLog, this can be because of the following reasons:
- 1. NLog cannot find the configuration file
+ 1. NLog cannot find the configuration file (This can happen when the NLog.config file is configured with "Build Action = None" or "Copy to Output Directory = Do not copy" in Visual Studio. Set "Build Action = Content" and "Copy to Output Directory = Copy always" to fix this)
  2. Configuration file is invalid
  3. Logging rules are incorrect or no rules are defined
  4. Application tracing code is incorrect.
  5. There is a runtime problem with the target (such as missing permissions)
  6. Logs are written to a different location.
+ 7. 
 
 ##Troubleshooting steps
  1. The first step is to make sure that NLog finds your config file. It is recommended to use NLog.config located in the same directory as your application, but there are other options. See [NLog Configuration](Configuration-file) for more information. Once you've made sure that the configuration file is there, proceed to the next step.
