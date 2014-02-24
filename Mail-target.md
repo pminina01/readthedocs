@@ -80,6 +80,8 @@ _smtpPort_ - Port number that SMTP Server is listening on. [Integer](Data-types)
 _useSystemNetMailSettings_ - Force using smtp configuration from system.net/mailSettings. [Boolean](Data-types) Default: False
 
 ##Remarks
+
+### Application Configuration File
 If the application config file contains mail settings, fx.:
 
 ```
@@ -94,3 +96,7 @@ If the application config file contains mail settings, fx.:
 ```
 
 These values will be used, if target doesn't override them (see _useSystemNetMailSettings_ attribute).
+
+### Email Address Format
+
+It is possible to use an address in format "John Doe <john.doe@example.com>" but the special characters < and > must be escaped. The result would be `John Doe &lt;john.doe@example.com&gt;`
