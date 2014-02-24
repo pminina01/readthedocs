@@ -99,4 +99,4 @@ These values will be used, if target doesn't override them (see _useSystemNetMai
 
 ### Email Address Format
 
-It is possible to use an address in format "John Doe <john.doe@example.com>" but the special characters < and > must be escaped. The result would be `John Doe &lt;john.doe@example.com&gt;`
+It is possible to use an address in format "John Doe &lt;john.doe@example.com&gt;" but the special characters < and > must be escaped. The result would be `John Doe &lt;john.doe@example.com&gt;`
