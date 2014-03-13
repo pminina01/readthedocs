@@ -19,3 +19,4 @@ The following open source software projects are using or supporting NLog:
 * Silverlight Map Server - http://www.itacasoft.com/silverlightmapserver
 * ReflectInsight by ReflectSoftware - http://www.reflectsoftware.com/ 
 * Nemo Documents - http://www.nemo-docs.com
+* Misk.com - https://www.misk.com/
