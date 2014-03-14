@@ -22,7 +22,7 @@ namespace MyNamespace
             this.Host = "localhost";
         }
  
-        [Required] 
+        [RequiredParameter] 
         public string Host { get; set; }
  
         protected override void Write(LogEventInfo logEvent) 
