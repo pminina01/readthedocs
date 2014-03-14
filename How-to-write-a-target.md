@@ -9,8 +9,9 @@ This is a skeleton target that writes messages to the specified host. Compile us
 
 `csc.exe /t:library /out:MyAssembly.dll /r:NLog.dll MyFirstTarget.cs`
 ```csharp
-using NLog; 
-using NLog.Targets; 
+using NLog;
+using NLog.Config;
+using NLog.Targets;
  
 namespace MyNamespace 
 { 
