@@ -26,4 +26,4 @@ _error_ - Indicates whether to send the log messages to the standard error inste
 > * NLog v1.0 for .NET Compact Framework 1.0
 > * NLog v1.0 for .NET Compact Framework 2.0
 > * NLog v2.0 for .NET Compact Framework 2.0
-NLog v2.0 for .NET Compact Framework 3.5
+> * NLog v2.0 for .NET Compact Framework 3.5
