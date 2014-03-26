@@ -33,12 +33,12 @@ The default rules are:
 <th>Condition</th><th>Foreground Color</th><th>Background Color</th>
 </thead>
 <tbody>
-<tr>level == LogLevel.Fatal</tr><tr>Red</tr><tr>NoChange</tr>
-<tr>level == LogLevel.Error</tr><tr>Yellow</tr><tr>NoChange</tr>
-<tr>level == LogLevel.Warn</tr><tr>Magenta</tr><tr>NoChange</tr>
-<tr>level == LogLevel.Info</tr><tr>White</tr><tr>NoChange</tr>
-<tr>level == LogLevel.Debug</tr><tr>Gray</tr><tr>NoChange</tr>
-<tr>level == LogLevel.Trace</tr><tr>DarkGray</tr><tr>NoChange</tr>
+<tr><td>level == LogLevel.Fatal</td><td>Red</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Error</td><td>Yellow</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Warn</td><td>Magenta</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Info</td><td>White</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Debug</td><td>Gray</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Trace</td><td>DarkGray</td><td>NoChange</td></tr>
 </tbody>
 </table>
 _rowHighlightingRules_ - The row highlighting rules. [Collection](Data types)  
