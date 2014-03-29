@@ -1,6 +1,8 @@
 ##Installing NLog
 NLog can be downloaded from the the [Download](http://nlog-project.org/download/) section or from [NuGet](http://nuget.org). Both source and binary packages are available. For beginners, it is a good idea to use the recommended installer package in msi or exe format. More advanced scenarios may require the use of zip files, which are also available.
 
+> If you use NuGET to install NLog, do remember to add NLog's configuration file using the `NLog.Config` package via NuGET. Read more at [https://coderwall.com/p/ynossg](https://coderwall.com/p/ynossg)
+
 At this time NLog 2.0 is stable and can be tried for production applications.
 
 Once you have downloaded the installation package, run it and choose default installation options. This will deploy NLog assemblies, API documentation and Visual Studio integration, which includes:
