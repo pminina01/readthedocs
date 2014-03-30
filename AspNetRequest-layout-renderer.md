@@ -17,4 +17,4 @@ ${aspnet-request:cookie=String:serverVariable=String:queryString=String
 * **form** - Form variable to be rendered.
 
 ##Remarks
-Use this layout renderer to insert the value of the specified parameter of the ASP.NET Request object
+Use this layout renderer to insert the value of the specified parameter of the ASP.NET Request object. This rendered requires the NLog.Exended.dll package.
