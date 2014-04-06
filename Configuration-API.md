@@ -20,13 +20,13 @@ class Example
     static void Main(string[] args)
     {
         // Step 1. Create configuration object 
-        LoggingConfiguration config = new LoggingConfiguration();
+        var config = new LoggingConfiguration();
 
         // Step 2. Create targets and add them to the configuration 
-        ColoredConsoleTarget consoleTarget = new ColoredConsoleTarget();
+        var consoleTarget = new ColoredConsoleTarget();
         config.AddTarget("console", consoleTarget);
 
-        FileTarget fileTarget = new FileTarget();
+        var fileTarget = new FileTarget();
         config.AddTarget("file", fileTarget);
 
         // Step 3. Set target properties 
@@ -35,10 +35,10 @@ class Example
         fileTarget.Layout = "${message}";
 
         // Step 4. Define rules
-        LoggingRule rule1 = new LoggingRule("*", LogLevel.Debug, consoleTarget);
+        var rule1 = new LoggingRule("*", LogLevel.Debug, consoleTarget);
         config.LoggingRules.Add(rule1);
 
-        LoggingRule rule2 = new LoggingRule("*", LogLevel.Debug, fileTarget);
+        var rule2 = new LoggingRule("*", LogLevel.Debug, fileTarget);
         config.LoggingRules.Add(rule2);
 
         // Step 5. Activate the configuration
