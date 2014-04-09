@@ -28,4 +28,8 @@ This value determines how the inactivity period is determined. If sliding timeou
 
 _bufferSize_ - Number of log events to be buffered. Integer Default: 100
 
-_flushTimeout_ - Timeout (in milliseconds) after which the contents of buffer will be flushed if there's no write in the specified period of time. Use -1 to disable timed flushes. When set to -1, the buffer will be flushed when the program ends. Integer Default: -1
+_flushTimeout_ - Timeout (in milliseconds) after which the contents of buffer will be flushed if there's no write in the specified period of time. Use -1 to disable timed flushes. Integer Default: -1
+
+###Remarks
+
+The buffer is flushed when the program ends even if _flushTimeout and/or the _bufferSize has not been reached.
