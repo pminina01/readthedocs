@@ -32,4 +32,4 @@ _flushTimeout_ - Timeout (in milliseconds) after which the contents of buffer wi
 
 ###Remarks
 
-The buffer is flushed when the program ends even if _flushTimeout and/or the _bufferSize has not been reached.
+The buffer is flushed when the program ends even if _flushTimeout_ and/or the _bufferSize_ has not been reached.
