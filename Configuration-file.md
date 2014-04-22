@@ -201,7 +201,7 @@ The configuration file is read automatically at program startup. In a long runni
 
 Note that automatic reconfiguration supports include files, so each time one of the included files is changed, the entire configuration gets reloaded.
 
-Just to make it explicit, automatic reloading will NOT stop/recycle the IIS Application Pool.
+_Just to make it explicit, automatic reloading will NOT stop/recycle the IIS Application Pool._
 
 <a name="troubleshooting-logging" />
 ##Troubleshooting logging
