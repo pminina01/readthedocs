@@ -201,6 +201,8 @@ The configuration file is read automatically at program startup. In a long runni
 
 Note that automatic reconfiguration supports include files, so each time one of the included files is changed, the entire configuration gets reloaded.
 
+Just to make it explicit, automatic reloading will NOT stop/recycle the IIS Application Pool.
+
 <a name="troubleshooting-logging" />
 ##Troubleshooting logging
 Sometimes our application doesn’t write anything to the log files, even though we have supposedly configured logging properly. There can be many reasons for logs not being written. The most common problems are permissions issues, usually in an ASP.NET process, where the aspnet_wp.exe or w3wp.exe process may not have write access to the directory where we want to store logs.
