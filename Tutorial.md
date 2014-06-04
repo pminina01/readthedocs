@@ -129,7 +129,7 @@ This will define a target which will send logs to a file named file.txt.
 ```
 <logger name="*" minlevel="Info" writeTo="logfile" />
 ```
-This snippet will direct all logs (name="*") of level **Info** or higher (which includes **Info**, **Warn**, **Error** and **Fatal**) to a target named logfile.
+This snippet will direct all logs (name="\*") of level **Info** or higher (which includes **Info**, **Warn**, **Error** and **Fatal**) to a target named logfile.
 
 Note that as you are typing this in Visual Studio, you should see IntelliSense suggesting attribute names and validating their values. The final configuration should look like this:
 ```
