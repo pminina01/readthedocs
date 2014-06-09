@@ -37,7 +37,7 @@ ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSepa
   > * NLog v1.0 for .NET Framework 2.0
 
 * **separator** - Separator used to concatenate parts specified in the Format. Default:
-* **format** - Format of the output. Must be a comma-separated list of exception properties: Message, Type, ShortType, ToString, Method, StackTrace. This parameter value is case-insensitive.
+* **format** - Format of the output. Must be a comma-separated list of exception properties: Message, Type, ShortType, ToString, Method, StackTrace, Data. This parameter value is case-insensitive.
 
 ##More Info and Examples
 For more information, see [How to properly log exceptions](How-to-log-exceptions).
