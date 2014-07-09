@@ -1,0 +1,1 @@
+Does not work in ASP.NET apps. Returns "Could not find entry assembly" in this case.
