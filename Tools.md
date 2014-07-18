@@ -9,6 +9,7 @@ Logs produced by NLog can be analyzed using a number of GUI tools:
 * Legit Log Viewer - http://www.legitlog.com/ (Free and powerful log viewer.)
 * ReflectInsight Viewer (using the ReflectInsight Extension for NLog) - http://insightextensions.codeplex.com/
 * Logazmic - https://github.com/ihtfw/Logazmic/
+
 ##Log4x-compatible viewers
 In general, any viewer supporting Log4J or Log4Net should work fine with NLog - see http://nlog-project.org/target.Chainsaw.html for information on configuring NLog for use with those viewers.
 * Apache Chainsaw - http://logging.apache.org/chainsaw/index.html
