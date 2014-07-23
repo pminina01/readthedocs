@@ -16,6 +16,7 @@ ${other:cached=Boolean}
 ##Parameters
 ###Caching Options
 * _cached_ - Indicates whether this CachedLayoutRendererWrapper is enabled. Boolean Default: True
+
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
 
