@@ -36,4 +36,4 @@ Here are several [when filter](when-Filter) examples with conditions:
 ```
 
 ##Extensibility
-New condition functions are easy to add; just create an ordinary function and mark it with the [ConditionMethod] attribute.
+New condition functions are easy to add; just create a public static class with a static function and mark the class and method with the attributes [ConditionMethods] and [ConditionMethod] respectively. You can find an example implementation at https://github.com/NLog/NLog/blob/8201a362b8702be97facae2c6af83c2a6e9b54d1/tests/SampleExtensions/MyConditionMethods.cs
