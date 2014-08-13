@@ -44,7 +44,7 @@ _html_ - Indicates whether to send message as HTML instead of plain text. [Boole
 
 _addNewLines_ - Indicates whether to add new lines between log entries. [Boolean](Data-types)
 
-_replaceNewlineWithBrTagInHtml_ - Indicates whether NewLine characters in the body should be replaced with <br/> tags. [Boolean](Data-types) Default: False
+_replaceNewlineWithBrTagInHtml_ - Indicates whether NewLine characters in the body should be replaced with `<br/>` tags. [Boolean](Data-types) Default: False
 
 _encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: UTF-8
 ###Message Options
