@@ -11,6 +11,7 @@ Supported in .NET and Mono
           layout="Layout"
           html="Boolean"
           addNewLines="Boolean"
+          replaceNewlineWithBrTagInHtml="Boolean"
           encoding="Encoding"
           subject="Layout"
           to="Layout"
@@ -24,7 +25,8 @@ Supported in .NET and Mono
           smtpAuthentication="Enum"
           smtpServer="Layout"
           smtpPort="Integer"
-          useSystemNetMailSettings="Boolean" />
+          useSystemNetMailSettings="Boolean"
+          timeout="Integer" />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration file).
@@ -41,6 +43,8 @@ _layout_ - Text to be rendered. [Layout](Data-types) Required. Default: ${longda
 _html_ - Indicates whether to send message as HTML instead of plain text. [Boolean](Data-types) Default: False
 
 _addNewLines_ - Indicates whether to add new lines between log entries. [Boolean](Data-types)
+
+_replaceNewlineWithBrTagInHtml_ - Indicates whether NewLine characters in the body should be replaced with <br/> tags. [Boolean](Data-types) Default: False
 
 _encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: UTF-8
 ###Message Options
@@ -78,6 +82,8 @@ _smtpServer_ - SMTP Server to be used for sending. [Layout](Data-types) Required
 _smtpPort_ - Port number that SMTP Server is listening on. [Integer](Data-types) Default: 25
 
 _useSystemNetMailSettings_ - Force using smtp configuration from system.net/mailSettings. [Boolean](Data-types) Default: False
+
+_timeout_ - Indicates the SMTP client timeout. [Integer](Data-types) Default: 10000
 
 ##Remarks
 
