@@ -2,7 +2,7 @@
 If you want to write your log messages to a non-standard output (for example to some management console) or when you need a protocol which is not supported by NLog, you need to write a custom Target.
 
 ##How to write a target?
-It’s really easy. Create a class that inherits from NLog.TargetWithLayout and override the Write() method. In the body of the method invoke this.Layout.Render() to get the message text, then send the text to the destination media.
+It’s really easy. Create a class that inherits from NLog.Targets.TargetWithLayout and override the Write() method. In the body of the method invoke this.Layout.Render() to get the message text, then send the text to the destination media.
 
 ##Example
 This is a skeleton target that writes messages to the specified host. Compile using:
