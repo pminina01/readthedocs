@@ -71,7 +71,7 @@ Layout renderers are macros that are used in [Layouts](Layouts).
 * [${xml-encode}](Xml-Encode-Layout-Renderer) - Converts the result of another layout output to be XML-compliant.
 
 ##Custom Layout Renderers
-* [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/about/gelf) format.
+* [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format.
 
 ##Passing Custom Values to a Layout
 Even though the layout renderers provide many pre-defined values, you may need to pass application specific values to your [Layouts](Layouts). You can pass your own values in code by adding custom Properties to the event. You then retrieve the value using the [${event-context}](Event-Context-Layout-Renderer) renderer. See the documentation for the [${event-context}](Event-Context-Layout-Renderer) for an example.
