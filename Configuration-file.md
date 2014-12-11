@@ -102,6 +102,7 @@ Each routing table entry is a \<logger /> element, which accepts the following a
  * levels - comma separated list of log levels for this rule to match
  * writeTo – comma separated list of target that should be written to when this rule matches.
  * final – make this rule final. No further rules are processed when any final rule matches.
+ * enabled - setting enabled to false allows to disable this rule. Disabled rules are ignored.
 
 <a name="example-rules" />
 ##Example rules
