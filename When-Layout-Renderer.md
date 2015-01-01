@@ -17,3 +17,24 @@ ${other:when=Condition}
 ###Transformation Options
 * _when_ - Condition that must be met for the inner layout to be printed. Condition Required.
 * _inner_ - Wrapped layout. Layout
+
+##Remarks
+The colon (:) character should be wrapped within ```{literal:text=\:}``` instead of placed directly within the _inner_ layout. 
+
+
+**Working Example**
+ 
+Configuration | `layout="${when:when=1 == 1:inner=Test${literal:text=\:} Hello${literal:text=\:} World}"`
+------------- | -----------------------------------------------------------------------------------------
+Output | `Test: Hello: World`
+
+
+**Non-working Example**
+
+Configuration | `layout="${when:when=1 == 1:inner=Test: Hello: World}"`
+------------- | -------------------------------------------------------
+Output | `World`
+
+When the colon character is not wrapped only the last literal instance, in this case the word 'World', appears. 
+
+:star: Workaround identified by: _@reedyrm_
