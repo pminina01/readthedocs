@@ -104,6 +104,15 @@ Each routing table entry is a \<logger /> element, which accepts the following a
  * final – make this rule final. No further rules are processed when any final rule matches.
  * enabled - setting enabled to false allows to disable this rule. Disabled rules are ignored.
 
+In case a rule, defined in a XML configuration, contains more than one level related keyword (Level, Levels, MinLevel and MaxLevel) only the first level declaring keyword or set is used and the rest are ignored.
+
+The level related keywords are processed in the following order:
+
+1. level 
+2. levels 
+3. minlevel = maxlevel (minimum and maximum level keywords have the same priority)
+4. No keyword (All levels are logged)
+
 <a name="example-rules" />
 ##Example rules
 All messages from the Class1 in the Name.Space whose level is Debug or higher are written to the "f1" target:
