@@ -50,7 +50,47 @@ namespace MyNamespace
 }
 ```
 
-TIP: Instead of writing logger declaration by hand, you can use Visual Studio code snippet: Just type nlogger and press TAB key twice, which will insert the snippet.
+**TIP**: Instead of writing logger declaration by hand, you can use Visual Studio code snippet: Just type nlogger and press TAB key twice, which will insert the snippet.
+
+###Expose logger to sub-classes
+When we wish to expose the logger into subclasses a pattern similar to one below should be used.
+
+``` C# 
+class BaseClassb
+{      
+    protected BaseClass()
+    {
+        Log = LogManager.GetLogger(GetType().FullName);
+    }
+
+    protected Logger Log { get; private set; }
+}
+
+class ExactClass : BaseClass
+{
+    public ExactClass() : base() { }
+    ...
+}
+```
+
+The LogManager.GetLogger() method should NOT be invoked in the constructor of the BaseClass with Type parameter argument i.e. 
+
+``` C#
+protected BaseClass()
+{
+    Log = LogManager.GetLogger(GetType().FullName, GetType());
+}
+```
+
+as an exception will be throw. 
+
+In case of the ExactClass has a default constructor which invokes the BaseClass constructor a ```System.StackOverflowException``` is thrown. This is because the ExactClass calls the BaseClass the GetLogger(String, Type) attempts to construct a ExactClass until the exception is thrown.
+
+```
+ExactClass => BaseClass => ExactClass => BaseClass => ...
+```
+
+When there is no default constructor at the ExactClass the GetLogger(String, Type) method call does not know how to construct the ExactClass and it fails with a ```NLog.NLogConfigurationException```.
 
 ##Log levels
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
