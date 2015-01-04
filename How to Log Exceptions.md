@@ -2,7 +2,7 @@ Exceptions require special treatment in NLog. You need to call the method on the
 
 * `Error("Oops, an exception occured", ex);`
 
-**_Please note_** we have depracted the `<LogLevel>Exception()` methods, i.e., `ErrorException()` and replaced them with overloads to the standard logging methods. This also includes the `LogException()` method which has been replaced by a `Log()` overload accepting LogLevel, a string, and an exception instance.
+**_Please note_** we have deprecated the `<LogLevel>Exception()` methods, i.e., `ErrorException()` and replaced them with overloads to the standard logging methods. This also includes the `LogException()` method which has been replaced by a `Log()` overload accepting LogLevel, a string, and an exception instance.
 
 ### Example
 You typically log exceptions inside a catch handler. An example of logging an exception with the `Error` LogLevel is seen in the following: 
