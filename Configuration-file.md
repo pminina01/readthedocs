@@ -92,7 +92,7 @@ NLog provides many predefined [Targets](Targets). It’s actually very easy to c
 
 <a name="rules" />
 ##Rules
-Log routing rules are defined in the \<rules /> section. It is a simple routing table, where we define the list of targets that should be written to for each combination of source/logger name and log level. Rules are processed starting with the first rule in the list. When a rule matches, log messages are directed to target(s) in that rule. If a rule is marked as final, rules below it are not processed.
+Log routing rules are defined in the \<rules /> section. It is a simple routing table, where we define the list of targets that should be written to for each combination of source/logger name and [log level](/nlog/nlog/wiki/Log-levels). Rules are processed starting with the first rule in the list. When a rule matches, log messages are directed to target(s) in that rule. If a rule is marked as final, rules below it are not processed.
 
 Each routing table entry is a \<logger /> element, which accepts the following attributes:
  * name – source/logger name (may include wildcard characters *)
