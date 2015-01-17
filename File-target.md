@@ -47,7 +47,7 @@ _header_ - Header. [Layout](Layouts)
 
 _footer_ - Footer. [Layout](Layouts)
 
-_encoding_ - File encoding. [Encoding](Layouts)
+_encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx)
 
 _lineEnding_ - Line ending mode.  
 Possible values:
