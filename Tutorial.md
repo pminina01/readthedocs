@@ -3,7 +3,7 @@ NLog can be downloaded from the the [Download](http://nlog-project.org/download/
 
 > If you use NuGET to install NLog, do remember to add NLog's configuration file using the `NLog.Config` package via NuGET. Read more at [https://coderwall.com/p/ynossg](https://coderwall.com/p/ynossg)
 
-At this time NLog 3.1.0.0 is stable and can be tried for production applications.
+At this time NLog 3.2.0 is stable and can be tried for production applications.
 
 Once you have downloaded the installation package, run it and choose default installation options. This will deploy NLog assemblies, API documentation and Visual Studio integration, which includes:
 
