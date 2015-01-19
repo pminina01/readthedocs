@@ -22,10 +22,12 @@ layout="${machinename} ${message}"
 This layout is used in the NLog.config file like:
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <targets>
-        <target name="console" xsi:type="ColoredConsole" layout="${machinename} ${message}"/>
+        <target name="console" xsi:type="ColoredConsole" 
+                layout="${machinename} ${message}"/>
     </targets>
 
     <rules>
