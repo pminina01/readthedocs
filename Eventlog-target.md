@@ -2,7 +2,7 @@ Writes log message to the Event Log.
 
 Supported in .NET and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="EventLog"
           name="String"
@@ -31,7 +31,7 @@ Read more about using the [Configuration File](Configuration file).
  * _log_ - Name of the Event Log to write to. This can be System, Application or any user-defined name. Default: Application
 
 ##Example
-```
+```xml
 <target xsi:type="EventLog"
             name="eventlog"
             source="${appName}"
