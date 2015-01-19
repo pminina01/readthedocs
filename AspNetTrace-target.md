@@ -15,7 +15,7 @@ Read more about using the [Configuration File](Configuration file).
 ###General Options
 name - Name of the target
 ###Layout Options
-layout - Layout used to format log messages. [Layout](Layout) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+layout - Layout used to format log messages. [Layout](Layout) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 ###Remarks
 Log entries can then be viewed by navigating to http://server/path/Trace.axd.
 
