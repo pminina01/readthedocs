@@ -3,7 +3,7 @@ Writes log messages to the ASP.NET trace.
 Supported in .NET and Mono
 
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="AspNetTrace" name="String" layout="Layout" />
 </targets>
@@ -21,7 +21,7 @@ Log entries can then be viewed by navigating to http://server/path/Trace.axd.
 
 ##Examples
 In order to use this target, put the following code in the [configuration file](Configuration file) such as Web.nlog or NLog.config:
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
