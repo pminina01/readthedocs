@@ -1,4 +1,4 @@
-Layouts are one of the attributes of most [targets](Targets). The layout attribute is used to determine the format of the information to be logged. Many pre-defined 'macros' or [Layout renderers](Layout-renderers) exist. In the below example ${machinename} is an example of a layout renderer.
+Layouts are one of the attributes of most [targets](Targets). The layout attribute is used to determine the format of the information to be logged. Many pre-defined 'macros' or [Layout renderers](Layout-renderers) exist. In the below example `${machinename}` is an example of a layout renderer.
 
 ##Default Layout
 If a target has the layout attribute, you may define a custom layout. If you do not specify a layout, the default layout is used. The default layout is:
