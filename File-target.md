@@ -2,7 +2,7 @@ Writes log messages to one or more files.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="File"
           name="String"
@@ -167,7 +167,7 @@ Setting this property to True helps improve performance.
 ##Examples
 ###Simple logging
 The simplest use of File target is to produce single log file. In order to do this, put the following code in the configuration file such as NLog.config. Logs wil be written to logfile.txt in logs directory.
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -194,7 +194,7 @@ Single File target can be used to write to multiple files at once. The following
  * Error.log
  * Fatal.log
 
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -217,7 +217,7 @@ The following configuration will create one log file for each day. Log files wil
  * 2010-06-07.log
  * 2010-06-08.log
  * ...
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -236,7 +236,7 @@ The following configuration will create one log file for each day. Log files wil
 
 ###Asynchronous logging
 Depending on your usage scenario it may be useful to add an AsyncWrapper target the file target. This way all your log messages will be written on a separate thread so your main thread can be unblocked more quickly. Asynchronous logging is recommended for multi-threaded server applications which run for a long time and is not recommended for quickly-finishing command line applications.
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -258,7 +258,7 @@ Depending on your usage scenario it may be useful to add an AsyncWrapper target 
 ```
 ###Creating comma-separated log file (CSV)
 In order to create comma-separated files (CSV), use the following configuration, which utilizes CsvLayout. The resulting file will have 4 columns and will be formatted according to CSV rules:
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -280,7 +280,7 @@ In order to create comma-separated files (CSV), use the following configuration,
 ```
 ###Size-based file archival
 Log files can be automatically archived by moving them to another location after reaching certain size. The following configuration will create logs/logfile.txt which will be archived to archives/log.000000.txt', archives/log.000001.txt', archives/log.000002.txt' and so on once the main log file reaches 10KB.
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -304,7 +304,7 @@ Log files can be automatically archived by moving them to another location after
 ```
 ###Time-based file archival
 Log files can calso be automatically archived based on time. This configuration will archive a file at the beginning of each day and will use rolling file naming, so log file from the previous day can always be found in archives//log.0.txt, log from two days ago is in archives//log.1.txt and so on. This configuration will keep at most 7 archive files, so logs older than one week will be automatically deleted.
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
