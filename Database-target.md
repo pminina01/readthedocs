@@ -2,7 +2,7 @@ Writes log messages to the database using an ADO.NET provider.
 
 Supported in .NET, Compact Framework and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Database"
           name="String"
