@@ -2,7 +2,7 @@ Sends log messages by email using SMTP protocol.
 
 Supported in .NET and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Mail"
           name="String"
@@ -90,7 +90,7 @@ _timeout_ - Indicates the SMTP client timeout. [Integer](Data-types) Default: 10
 ### Application Configuration File
 If the application config file contains mail settings, fx.:
 
-```
+```xml
 <system.net>
   <mailSettings>
     <smtp from="mail@domain.com" deliveryMethod="SpecifiedPickupDirectory">
