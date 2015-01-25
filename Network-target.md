@@ -2,7 +2,7 @@ Sends log messages over the network.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Network"
           name="String"
