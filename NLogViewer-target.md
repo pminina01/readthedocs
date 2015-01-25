@@ -2,7 +2,7 @@ Sends log messages to the remote instance of NLog Viewer.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="NLogViewer"
           name="String"
