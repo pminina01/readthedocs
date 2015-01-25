@@ -48,7 +48,7 @@ _includeEventProperties_ - Indicates whether to include per-event properties in 
 ##Examples
 ###Passing Parameters
 Parameters are passed to the WCF LogReceiverService target using one or more configuration lines such as:
-```
+```xml
 <parameter name="MyParameter" layout="My Value!" />
 <parameter name="nlogdir" layout="${nlogdir}" />
 ```
@@ -90,7 +90,9 @@ emits each event to the appropriate targets defined in the server side NLog.conf
 ###Accessing Custom Values
 On the server side NLog.config file, you may use the ${event-context} layout renderer to access any parameters passed from the client side config. A line such as:
 
-`<target name="c" xsi:type="ColoredConsole" layout="testing ${event-context:item=MyParameter}" />`
+```xml
+<target name="c" xsi:type="ColoredConsole" layout="testing ${event-context:item=MyParameter}" />
+```
 
 would print to the console:
 
