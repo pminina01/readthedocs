@@ -218,11 +218,11 @@ _Just to make it explicit, automatic reloading will NOT stop/recycle the IIS App
 Sometimes our application doesn’t write anything to the log files, even though we have supposedly configured logging properly. There can be many reasons for logs not being written. The most common problems are permissions issues, usually in an ASP.NET process, where the aspnet_wp.exe or w3wp.exe process may not have write access to the directory where we want to store logs.
 
 NLog is designed to swallow run-time exceptions that may result from logging. The following settings can change this behavior and/or redirect these messages.
-* \<nlog throwExceptions="true" /> - adding the throwExceptions attribute in the config file causes NLog to stop masking exceptions and pass them to the calling application instead. This attribute is useful at deployment time to quickly locate any problems. It’s recommended to set throwExceptions to "false" as soon as the application is properly configured to run, so that any accidental logging problems won’t crash the application.
-* \<nlog internalLogFile="file.txt" /> - adding internalLogFile causes NLog to write its internal debugging messages to the specified file. This includes any exceptions that may be thrown during logging.
-* \<nlog internalLogLevel="Trace|Debug|Info|Warn|Error|Fatal" /> – determines the internal log level. The higher the level, the less verbose the internal log output.
-* \<nlog internalLogToConsole="false|true" /> – determines whether internal logging messages are sent to the console.
-* \<nlog internalLogToConsoleError="false|true" /> – determines whether internal logging messages are sent to the console error output (stderr).
+* `<nlog throwExceptions="true" />` - adding the throwExceptions attribute in the config file causes NLog to stop masking exceptions and pass them to the calling application instead. This attribute is useful at deployment time to quickly locate any problems. It’s recommended to set throwExceptions to "false" as soon as the application is properly configured to run, so that any accidental logging problems won’t crash the application.
+* `<nlog internalLogFile="file.txt" />` - adding internalLogFile causes NLog to write its internal debugging messages to the specified file. This includes any exceptions that may be thrown during logging.
+* `<nlog internalLogLevel="Trace|Debug|Info|Warn|Error|Fatal" />` – determines the internal log level. The higher the level, the less verbose the internal log output.
+* `<nlog internalLogToConsole="false|true" />` – determines whether internal logging messages are sent to the console.
+* `<nlog internalLogToConsoleError="false|true" />` – determines whether internal logging messages are sent to the console error output (stderr).
 
 <a name="asynchronous-processing-and-wrapper-targets" />
 ##Asynchronous processing and wrapper targets
