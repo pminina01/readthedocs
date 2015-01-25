@@ -2,7 +2,7 @@ Calls the specified static method on each log message and passes contextual para
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="MethodCall"
           name="String"
@@ -30,7 +30,7 @@ Each collection item is represented by \<parameter /> element with the following
 ##Examples
 ###Logging to a static method
 In order to send all logs to a static method, use the following configuration file:
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
