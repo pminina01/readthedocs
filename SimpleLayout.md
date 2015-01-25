@@ -2,7 +2,7 @@ Represents a string with embedded placeholders that can render contextual inform
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target>
     <layout xsi:type="SimpleLayout">
