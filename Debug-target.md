@@ -2,7 +2,7 @@ Mock target - useful for testing.
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Debug" name="String" layout="Layout" />
 </targets>
