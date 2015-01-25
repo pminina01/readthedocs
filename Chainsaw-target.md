@@ -3,7 +3,7 @@ Sends log messages to the remote instance of Chainsaw application from log4j.
 Supported in .NET, Silverlight, Compact Framework and Mono
 
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Chainsaw"
           name="String"
