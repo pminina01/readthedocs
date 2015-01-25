@@ -2,7 +2,7 @@ Pops up log messages as message boxes.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="MessageBox" name="String" layout="Layout" caption="Layout" />
 </targets>
