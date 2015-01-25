@@ -43,7 +43,7 @@ NLog supports two configuration file formats:
  2. Simplified configuration, stored in a separate file
 
 In the first variant, we use a standard configSections mechanism, which makes our file look like this:
-```
+```xml
 <configuration>
   <configSections>
     <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog"/>
@@ -54,7 +54,7 @@ In the first variant, we use a standard configSections mechanism, which makes ou
 ```
 
 The simplified format is the pure XML having the \<nlog /> element as its root. The use of namespaces is optional, but it enables the Intellisense in Visual Studio.
-```
+```xml
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </nlog>
 ```
@@ -79,7 +79,7 @@ In addition to these attributes, targets usually accept other parameters, which 
 For example – the [File target](File Target) accepts the fileName parameter which defines output file name and the [Console target](Console Target) has the error parameter which determines whether the diagnostic traces are written to standard error (stderr) instead of standard output (stdout) of the process.
 
 This example demonstrates a \<targets /> section which defines multiple targets: two files, one network target and OutputDebugString target:
-```
+```xml
 <targets>
   <target name="f1" xsi:type="File" fileName="file1.txt"/>
   <target name="f2" xsi:type="File" fileName="file2.txt"/>  
@@ -116,22 +116,22 @@ The level related keywords are processed in the following order:
 <a name="example-rules" />
 ##Example rules
 All messages from the Class1 in the Name.Space whose level is Debug or higher are written to the "f1" target:
-```
+```xml
 <logger name="Name.Space.Class1" minlevel="Debug" writeTo="f1" />
 ```
 
 All messages from the Class1 in the Name.Space whose level is either Debug or Error or higher are written to the "f1" target:
-```
+```xml
 <logger name="Name.Space.Class1" levels="Debug,Error" writeTo="f1" />
 ```
 
 Messages from any class in the Name.Space namespace are written to both "f3" and "f4" targets regardless of their levels:
-```
+```xml
 <logger name="Name.Space.*" writeTo="f3,f4" />
 ```
 
 Messages from any class in the Name.Space namespace whose level is between Debug and Error (which makes it Debug,Info,Warn,Error) are rejected (as there’s no writeTo clause) and no futher rules are processed for them (because of the final="true" setting)
-```
+```xml
 <logger name="Name.Space.*" minlevel="Debug" maxlevel="Error" final="true" />
 ```
 
@@ -150,12 +150,12 @@ Let’s assume, that we want to annotate each message written to the console wit
 * message text
 
 This is very easy:
-```
+```xml
 <target name="c" xsi:type="Console"  layout="${longdate} ${callsite} ${level} ${message}"/>
 ```
 
 We can make each messages for each logger go to a separate file, as in the following example:
-```
+```xml
 <target name="f" xsi:type="File" fileName="${logger}.txt"/>
 ```
 
@@ -172,7 +172,7 @@ As you can see, the ${logger} layout renderer was used in the fileName attribute
 It’s sometimes desired to split the configuration file into many smaller ones. NLog provides an include file mechanism for that. To include an external file, you simply use <include file=”…” /> element. It’s worth noting that the file attribute, just like most attributes in NLog config file(s), may include dynamic values using the familiar ${} notation for layout renderers, so it’s possible to include different files based on environmental properties.
 
 The following configuration example demonstrates this, by loading a file whose name is derived from the name of the machine we’re running on.
-```
+```xml
 <nlog>
   ...
   <include file="${basedir}/${machinename}.config"/>
@@ -185,12 +185,12 @@ The optional attribute, ignoreErrors="true", which defaults to false, can be add
 <a name="variables" />
 ##Variables
 Variables can be used to write complex or repeated expressions (such as file names) in a concise manner. To define a variable use the following syntax:
-```
+```xml
 <variable name="var" value="xxx" />
 ```
 
 Once defined, variables can be used as if they were layout renderers – by using ${var} syntax, as demonstrated in the following example:
-```
+```xml
 <nlog>
   <variable name="logDirectory" value="${basedir}/logs/${shortdate}"/>
   <targets>
@@ -203,7 +203,7 @@ Once defined, variables can be used as if they were layout renderers – by usin
 <a name="automatic-reconfiguration" />
 ##Automatic reconfiguration
 The configuration file is read automatically at program startup. In a long running process (such as a Windows service or an ASP.NET application) it’s sometimes desirable to temporarily increase the log level without stopping the application. NLog can monitor logging configuration files and re-read them each time they are modified. To enable this mechanism, you simply add autoReload="true" parameter to the configuration file.
-```
+```xml
 <nlog autoReload="true">
    ...
 </nlog>
@@ -235,7 +235,7 @@ NLog provides wrapper and compound targets which modify other targets’ behavio
 * failover (failover)
 
 To define a wrapper in the configuration file, simply nest a target node within another target node. You can even wrap a wrapper target - there are no limits on depth. For example, to add asynchronous logging with retry-on-error functionality add this to your configuration file:
-```
+```xml
 <targets>
   <target name="n" xsi:type="AsyncWrapper">
     <target xsi:type="RetryingWrapper">
@@ -246,7 +246,7 @@ To define a wrapper in the configuration file, simply nest a target node within 
 ```
 
 Because asynchronous processing is a common scenario, NLog supports a shorthand notation to enable it for all targets without the need to specify explicit wrappers. You can simply set async="true" on targets element and all your targets within that element will be wrapped with the AsyncWrapper target.
-```
+```xml
 <nlog>
   <targets async="true">
     <!-- all targets in this section will automatically be asynchronous -->
@@ -257,7 +257,7 @@ Because asynchronous processing is a common scenario, NLog supports a shorthand 
 <a name="default-wrappers" />
 ##Default wrappers
 Sometimes we require ALL targets to be wrapped in the same way, for example to add buffering and/or retrying. NLog provides \<default-wrapper /> syntax for that. You simply put this element in the \<targets /> section and all your targets will be automatically wrapped with the specified wrapper. Note that \<default-wrapper /> applies to the single \<targets /> section only and you can have multiple sections so you can define groups of targets that are wrapped in a similar manner.
-```
+```xml
 <nlog>  
   <targets>  
     <default-wrapper xsi:type="BufferingWrapper" bufferSize="100"/>  
@@ -280,7 +280,7 @@ In the above example we’ve defined two buffered File targets and three asynchr
 <a name="default-target-parameters" />
 ##Default target parameters
 Similar to default wrappers, NLog provides \<default-target-parameters /> which enables you to specify default values of target parameters. For example, if you don’t want files to be kept open, you can either add keepFileOpen="false" to each target, as in the following example:
-```
+```xml
 <nlog>
   <targets>
     <target name="f1" xsi:type="File" fileName="f1.txt" keepFileOpen="false"/>
@@ -291,7 +291,7 @@ Similar to default wrappers, NLog provides \<default-target-parameters /> which 
 ```
 
 Alternatively you can specify a single \<default-target-parameters /> that applies to all targets in the \<targets /> section. Default parameters are defined on a per-type basis and are applied BEFORE the actual attributes defined in the XML file:
-```
+```xml
 <source lang="xml">
 <nlog>
   <targets>
