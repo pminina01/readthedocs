@@ -1,6 +1,7 @@
 Layout renderers are macros that are used in [Layouts](Layouts).
 
 ##Layout Renderers
+* [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
 * [${asp-application}](AspApplication-Layout-Renderer) - ASP Application variable.
 * [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
 * [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
