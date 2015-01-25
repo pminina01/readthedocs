@@ -2,7 +2,7 @@ Writes log messages to the attached managed debugger.
 
 Supported in .NET, Silverlight and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Debugger"
           name="String"
