@@ -2,7 +2,7 @@ Sends log messages to a NLog Receiver Service (using WCF or Web Services).
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="LogReceiverService"
           name="String"
