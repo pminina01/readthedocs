@@ -2,7 +2,7 @@ Outputs log messages through the OutputDebugString() Win32 API.
 
 Supported in .NET, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="OutputDebugString" name="String" layout="Layout" />
 </targets>
