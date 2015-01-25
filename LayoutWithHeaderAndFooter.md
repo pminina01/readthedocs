@@ -2,7 +2,7 @@ A specialized layout that supports header and footer.
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target>
     <layout xsi:type="LayoutWithHeaderAndFooter">
