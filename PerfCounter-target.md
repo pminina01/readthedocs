@@ -63,5 +63,3 @@ _autoCreate_ - Indicates whether performance counter should be automatically cre
 _categoryName_ - Name of the performance counter category. Required.
 
 _counterName_ - Name of the performance counter. Required.
-##Remarks
-TODO: 1. Unable to create a category allowing multiple counter instances (.Net 2.0 API only, probably) 2. Is there any way of adding new counters without deleting the whole category? 3. There should be some mechanism of resetting the counter (e.g every day starts from 0), or auto-switching to another counter instance (with dynamic creation of new instance). This could be done with layouts.
