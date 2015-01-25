@@ -2,7 +2,7 @@ Writes log messages to the console with customizable coloring.
 
 Supported in .NET and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="ColoredConsole"
           name="String"
