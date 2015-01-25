@@ -2,7 +2,7 @@ A specialized layout that renders Log4j-compatible XML events.
 
 Supported in .NET, Silverligt, Compact Framework and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target>
     <layout xsi:type="Log4JXmlEventLayout">
