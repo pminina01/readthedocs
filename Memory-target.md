@@ -2,7 +2,7 @@ Writes log messages to an ArrayList in memory for programmatic retrieval.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Memory" name="String" layout="Layout" />
 </targets>
