@@ -2,7 +2,7 @@ Increments specified performance counter on each write.
 
 Supported in .NET and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="PerfCounter"
           name="String"
