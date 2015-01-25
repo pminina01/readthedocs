@@ -2,7 +2,7 @@ Log text a Rich Text Box control in an existing or new form.
 
 Supported in .NET
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="RichTextBox"
           name="String"
