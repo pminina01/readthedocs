@@ -1,6 +1,6 @@
 Value from the App Settings configuration 
 
-From NLog 3.0+
+From NLog 3.0+, in NLog.Extended
 
 ##Configuration Syntax
 ```
