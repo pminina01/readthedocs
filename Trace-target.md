@@ -2,7 +2,7 @@ Sends log messages through System.Diagnostics.Trace.
 
 Supported in .NET and Mono. 
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Trace" name="String" layout="Layout" />
 </targets>
