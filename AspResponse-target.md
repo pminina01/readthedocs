@@ -3,7 +3,7 @@ Outputs log messages through the ASP Response object.
 Supported in .NET and Mono
 
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="AspResponse" name="String" addComments="Boolean" layout="Layout" />
 </targets>
@@ -19,7 +19,7 @@ layout - Layout used to format log messages. [Layout](Layout) Required. Default:
 
 ##Examples
 This target is usable when using classic ASP (not ASP.NET). In order to use this target, put the following code in the [configuration file](Configuration file) which is loaded into the web server process:
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
