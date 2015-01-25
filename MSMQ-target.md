@@ -2,7 +2,7 @@ Writes log message to the specified message queue handled by MSMQ.
 
 Supported in .NET, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="MSMQ"
           name="String"
