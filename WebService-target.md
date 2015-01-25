@@ -2,7 +2,7 @@ Calls the specified web service on each log message.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="WebService"
           name="String"
