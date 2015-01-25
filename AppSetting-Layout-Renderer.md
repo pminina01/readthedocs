@@ -3,6 +3,9 @@ Value from the App Settings configuration
 From NLog 3.0+
 
 ##Configuration Syntax
+```
+${appsetting:name=String:default=String}
+```
 Example renderer: produces `mydefault` if `MyKey` is not configured.
 ```
 ${appsetting:name=MyKey:default=mydefault}
