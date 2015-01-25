@@ -2,7 +2,7 @@ Writes log messages to the console.
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Console"
           name="String"
