@@ -2,7 +2,7 @@ Logs text to Windows.Forms.Control.Text property control of specified Name.
 
 Supported in .NET
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="FormControl"
           name="String"
