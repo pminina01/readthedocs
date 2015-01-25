@@ -2,7 +2,7 @@ A specialized layout that renders CSV-formatted events.
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 Configuration Syntax
-```
+```xml
 <targets>
   <target>
     <layout xsi:type="CsvLayout">
