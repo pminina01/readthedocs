@@ -2,7 +2,7 @@ Discards log messages. Used mainly for debugging and benchmarking.
 
 Supported in .NET, Silverligt, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="Null" name="String" formatMessage="Boolean" layout="Layout" />
 </targets>
