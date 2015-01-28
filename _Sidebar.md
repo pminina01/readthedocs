@@ -1,4 +1,4 @@
-* [Home](/Wiki)
+* [Home](/NLog/NLog/wiki)
 * [Configuration file](Configuration-file)
 * [Configuration API](Configuration-API)
 * [Targets](Targets)
