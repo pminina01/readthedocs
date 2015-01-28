@@ -1,4 +1,4 @@
-* [Home](wiki/)
+* [Home](/)
 * [Configuration file](Configuration-file)
 * [Configuration API](Configuration-API)
 * [Targets](Targets)
