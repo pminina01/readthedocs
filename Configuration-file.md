@@ -279,7 +279,7 @@ In the above example we’ve defined two buffered File targets and three asynchr
 
 <a name="default-target-parameters" />
 ##Default target parameters
-Similar to default wrappers, NLog provides \<default-target-parameters /> which enables you to specify default values of target parameters. For example, if you don’t want files to be kept open, you can either add keepFileOpen="false" to each target, as in the following example:
+Similar to default wrappers, NLog provides `<default-target-parameters />` which enables you to specify default values of target parameters. For example, if you don’t want files to be kept open, you can either add `keepFileOpen="false"` to each target, as in the following example:
 ```xml
 <nlog>
   <targets>
@@ -290,7 +290,7 @@ Similar to default wrappers, NLog provides \<default-target-parameters /> which 
 </nlog>
 ```
 
-Alternatively you can specify a single \<default-target-parameters /> that applies to all targets in the \<targets /> section. Default parameters are defined on a per-type basis and are applied BEFORE the actual attributes defined in the XML file:
+Alternatively you can specify a single `<default-target-parameters />` that applies to all targets in the `<targets />` section. Default parameters are defined on a per-type basis and are applied BEFORE the actual attributes defined in the XML file:
 ```xml
 <source lang="xml">
 <nlog>
