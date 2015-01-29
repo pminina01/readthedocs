@@ -61,24 +61,24 @@ The simplified format is the pure XML having the \<nlog /> element as its root. 
 
 Note that NLog config file is case-insensitive when not using namespaces and is case-sensitive when you use them. Intellisense only works with case-sensitive configurations.
 
-Configuration elements You can use the following elements as children to \<nlog />. The first two elements from the list are required to be present in all NLog configuration files, the remaining ones are optional and can be useful in advanced scenarios.
- * \<targets /> – defines log targets/outputs
- * \<rules /> – defines log routing rules
- * \<extensions /> – loads NLog extensions from the *.dll file
- * \<include /> – includes external configuration file
- * \<variable /> – sets the value of a configuration variable
+Configuration elements You can use the following elements as children to `<nlog />`. The first two elements from the list are required to be present in all NLog configuration files, the remaining ones are optional and can be useful in advanced scenarios.
+ * `<targets />` – defines log targets/outputs
+ * `<rules />` – defines log routing rules
+ * `<extensions />` – loads NLog extensions from the *.dll file
+ * `<include />`– includes external configuration file
+ * `<variable />` – sets the value of a configuration variable
 
 <a name="targets" />
 ##Targets
 The \<targets /> section defines log [Targets](Targets). Each target is represented by a <target /> element. There are two attributes required for each target:
- * name – target name
- * type – target type – such as "File", "Database", "Mail". When using namespaces this attribute is named xsi:type.
+ * `name` – target name
+ * `type` – target type – such as "File", "Database", "Mail". When using namespaces this attribute is named `xsi:type`.
 
 In addition to these attributes, targets usually accept other parameters, which impact the way diagnostic traces are written. Each target has a different set of parameters, they are described in detail on project’s homepage and they are context-sensitive. Intellisense is also available in Visual Studio.
 
-For example – the [File target](File Target) accepts the fileName parameter which defines output file name and the [Console target](Console Target) has the error parameter which determines whether the diagnostic traces are written to standard error (stderr) instead of standard output (stdout) of the process.
+For example – the [File target](File Target) accepts the `fileName` parameter which defines output file name and the [Console target](Console Target) has the `error` parameter which determines whether the diagnostic traces are written to standard error (stderr) instead of standard output (stdout) of the process.
 
-This example demonstrates a \<targets /> section which defines multiple targets: two files, one network target and OutputDebugString target:
+This example demonstrates a `<targets />` section which defines multiple targets: two files, one network target and OutputDebugString target:
 ```xml
 <targets>
   <target name="f1" xsi:type="File" fileName="file1.txt"/>
@@ -92,54 +92,54 @@ NLog provides many predefined [Targets](Targets). It’s actually very easy to c
 
 <a name="rules" />
 ##Rules
-Log routing rules are defined in the \<rules /> section. It is a simple routing table, where we define the list of targets that should be written to for each combination of source/logger name and [log level](/nlog/nlog/wiki/Log-levels). Rules are processed starting with the first rule in the list. When a rule matches, log messages are directed to target(s) in that rule. If a rule is marked as final, rules below it are not processed.
+Log routing rules are defined in the `<rules />` section. It is a simple routing table, where we define the list of targets that should be written to for each combination of source/logger name and [log level](/nlog/nlog/wiki/Log-levels). Rules are processed starting with the first rule in the list. When a rule matches, log messages are directed to target(s) in that rule. If a rule is marked as `final`, rules below it are not processed.
 
 Each routing table entry is a \<logger /> element, which accepts the following attributes:
- * name – source/logger name (may include wildcard characters *)
- * minlevel – minimal log level for this rule to match
- * maxlevel – maximum log level for this rule to match
- * level – single log level for this rule to match
- * levels - comma separated list of log levels for this rule to match
- * writeTo – comma separated list of target that should be written to when this rule matches.
- * final – make this rule final. No further rules are processed when any final rule matches.
- * enabled - setting enabled to false allows to disable this rule. Disabled rules are ignored.
+ * `name` – source/logger name (may include wildcard characters *)
+ * `minlevel` – minimal log level for this rule to match
+ * `maxlevel` – maximum log level for this rule to match
+ * `level` – single log level for this rule to match
+ * `levels` - comma separated list of log levels for this rule to match
+ * `writeTo` – comma separated list of target that should be written to when this rule matches.
+ * `final` – make this rule final. No further rules are processed when any final rule matches.
+ * `enabled` - setting enabled to false allows to disable this rule. Disabled rules are ignored.
 
-In case a rule, defined in a XML configuration, contains more than one level related keyword (Level, Levels, MinLevel and MaxLevel) only the first level declaring keyword or set is used and the rest are ignored.
+In case a rule, defined in a XML configuration, contains more than one level related keyword (`level`, `levels`, `minLevel` and `naxLevel`) only the first level declaring keyword or set is used and the rest are ignored.
 
 The level related keywords are processed in the following order:
 
-1. level 
-2. levels 
-3. minlevel = maxlevel (minimum and maximum level keywords have the same priority)
+1. `level` 
+2. `levels` 
+3. `minlevel` and `maxlevel` (minimum and maximum level keywords have the same priority)
 4. No keyword (All levels are logged)
 
 <a name="example-rules" />
 ##Example rules
-All messages from the Class1 in the Name.Space whose level is Debug or higher are written to the "f1" target:
+All messages from the `Class1` in the `Name.Space` whose level is `Debug` or higher are written to the "f1" target:
 ```xml
 <logger name="Name.Space.Class1" minlevel="Debug" writeTo="f1" />
 ```
 
-All messages from the Class1 in the Name.Space whose level is either Debug or Error or higher are written to the "f1" target:
+All messages from the `Class1` in the `Name.Space` whose level is either `Debug` or `Error` or higher are written to the "f1" target:
 ```xml
 <logger name="Name.Space.Class1" levels="Debug,Error" writeTo="f1" />
 ```
 
-Messages from any class in the Name.Space namespace are written to both "f3" and "f4" targets regardless of their levels:
+Messages from any class in the `Name.Space` namespace are written to both "f3" and "f4" targets regardless of their levels:
 ```xml
 <logger name="Name.Space.*" writeTo="f3,f4" />
 ```
 
-Messages from any class in the Name.Space namespace whose level is between Debug and Error (which makes it Debug,Info,Warn,Error) are rejected (as there’s no writeTo clause) and no futher rules are processed for them (because of the final="true" setting)
+Messages from any class in the `Name.Space` namespace whose level is between `Debug` and `Error` (which makes it `Debug`, `Info`, `Warn`, `Error`) are rejected (as there’s no `writeTo` clause) and no further rules are processed for them (because of the `final="true"` setting)
 ```xml
 <logger name="Name.Space.*" minlevel="Debug" maxlevel="Error" final="true" />
 ```
 
-In the simplest cases the entire logging configuration consists of a single \<target /> and a single \<logger /> rule that routes messages to this target depending on their level, but adding more targets and rules is very simple as the application grows.
+In the simplest cases the entire logging configuration consists of a single `<target />` and a single `<logger />` rule that routes messages to this target depending on their level, but adding more targets and rules is very simple as the application grows.
 
 <a name="layouts-and-layout-renderers" />
 ##Layouts and layout renderers
-One of NLog’s strongest assets is the ability to use [layouts](Layouts). In the [simplest form](Simple Layout) layouts are texts with embedded tags delimited by ${ and }. The tags are called [Layout Renderers](Layout Renderers) and can be used to insert pieces of contextual information into the text.
+One of NLog’s strongest assets is the ability to use [layouts](Layouts). In the [simplest form](Simple Layout) layouts are texts with embedded tags delimited by `${` and `}`. The tags are called [Layout Renderers](Layout Renderers) and can be used to insert pieces of contextual information into the text.
 
 Layouts can be used in many places, for example they can control the format of information written on the screen or sent to a file, but also to control the file names themselves. This is very powerful, which we’ll see in a moment.
 
@@ -169,7 +169,7 @@ As you can see, the ${logger} layout renderer was used in the fileName attribute
 
 <a name="include-files" />
 ##Include files
-It’s sometimes desired to split the configuration file into many smaller ones. NLog provides an include file mechanism for that. To include an external file, you simply use <include file=”…” /> element. It’s worth noting that the file attribute, just like most attributes in NLog config file(s), may include dynamic values using the familiar ${} notation for layout renderers, so it’s possible to include different files based on environmental properties.
+It’s sometimes desired to split the configuration file into many smaller ones. NLog provides an include file mechanism for that. To include an external file, you simply use `<include file=”…” />` element. It’s worth noting that the file attribute, just like most attributes in NLog config file(s), may include dynamic values using the familiar `${}` notation for layout renderers, so it’s possible to include different files based on environmental properties.
 
 The following configuration example demonstrates this, by loading a file whose name is derived from the name of the machine we’re running on.
 ```xml
@@ -180,7 +180,7 @@ The following configuration example demonstrates this, by loading a file whose n
 </nlog>
 ```
 
-The optional attribute, ignoreErrors="true", which defaults to false, can be added to prevent an exception from being thrown when the include file is not found or is not formatted correctly.  When setting ignoreErrors="true", use the [Troubleshooting logging](#troubleshooting-logging) section to log errors.
+The optional attribute, `ignoreErrors="true"`, which defaults to `false`, can be added to prevent an exception from being thrown when the include file is not found or is not formatted correctly.  When setting `ignoreErrors="true"`, use the [Troubleshooting logging](#troubleshooting-logging) section to log errors.
 
 <a name="variables" />
 ##Variables
@@ -189,7 +189,7 @@ Variables can be used to write complex or repeated expressions (such as file nam
 <variable name="var" value="xxx" />
 ```
 
-Once defined, variables can be used as if they were layout renderers – by using ${var} syntax, as demonstrated in the following example:
+Once defined, variables can be used as if they were layout renderers – by using `${var}` syntax, as demonstrated in the following example:
 ```xml
 <nlog>
   <variable name="logDirectory" value="${basedir}/logs/${shortdate}"/>
@@ -202,7 +202,7 @@ Once defined, variables can be used as if they were layout renderers – by usin
 
 <a name="automatic-reconfiguration" />
 ##Automatic reconfiguration
-The configuration file is read automatically at program startup. In a long running process (such as a Windows service or an ASP.NET application) it’s sometimes desirable to temporarily increase the log level without stopping the application. NLog can monitor logging configuration files and re-read them each time they are modified. To enable this mechanism, you simply add autoReload="true" parameter to the configuration file.
+The configuration file is read automatically at program startup. In a long running process (such as a Windows service or an ASP.NET application) it’s sometimes desirable to temporarily increase the log level without stopping the application. NLog can monitor logging configuration files and re-read them each time they are modified. To enable this mechanism, you simply add `autoReload="true"` parameter to the configuration file.
 ```xml
 <nlog autoReload="true">
    ...
@@ -215,11 +215,11 @@ _Just to make it explicit, automatic reloading will NOT stop/recycle the IIS App
 
 <a name="troubleshooting-logging" />
 ##Troubleshooting logging
-Sometimes our application doesn’t write anything to the log files, even though we have supposedly configured logging properly. There can be many reasons for logs not being written. The most common problems are permissions issues, usually in an ASP.NET process, where the aspnet_wp.exe or w3wp.exe process may not have write access to the directory where we want to store logs.
+Sometimes our application doesn’t write anything to the log files, even though we have supposedly configured logging properly. There can be many reasons for logs not being written. The most common problems are permissions issues, usually in an ASP.NET process, where the `aspnet_wp.exe` or `w3wp.exe` process may not have write access to the directory where we want to store logs.
 
 NLog is designed to swallow run-time exceptions that may result from logging. The following settings can change this behavior and/or redirect these messages.
-* `<nlog throwExceptions="true" />` - adding the throwExceptions attribute in the config file causes NLog to stop masking exceptions and pass them to the calling application instead. This attribute is useful at deployment time to quickly locate any problems. It’s recommended to set throwExceptions to "false" as soon as the application is properly configured to run, so that any accidental logging problems won’t crash the application.
-* `<nlog internalLogFile="file.txt" />` - adding internalLogFile causes NLog to write its internal debugging messages to the specified file. This includes any exceptions that may be thrown during logging.
+* `<nlog throwExceptions="true" />` - adding the `throwExceptions` attribute in the config file causes NLog to stop masking exceptions and pass them to the calling application instead. This attribute is useful at deployment time to quickly locate any problems. It’s recommended to set `throwExceptions` to `"false"` as soon as the application is properly configured to run, so that any accidental logging problems won’t crash the application.
+* `<nlog internalLogFile="file.txt" />` - adding `internalLogFile` causes NLog to write its internal debugging messages to the specified file. This includes any exceptions that may be thrown during logging.
 * `<nlog internalLogLevel="Trace|Debug|Info|Warn|Error|Fatal" />` – determines the internal log level. The higher the level, the less verbose the internal log output.
 * `<nlog internalLogToConsole="false|true" />` – determines whether internal logging messages are sent to the console.
 * `<nlog internalLogToConsoleError="false|true" />` – determines whether internal logging messages are sent to the console error output (stderr).
@@ -245,7 +245,7 @@ To define a wrapper in the configuration file, simply nest a target node within 
 </targets>
 ```
 
-Because asynchronous processing is a common scenario, NLog supports a shorthand notation to enable it for all targets without the need to specify explicit wrappers. You can simply set async="true" on targets element and all your targets within that element will be wrapped with the AsyncWrapper target.
+Because asynchronous processing is a common scenario, NLog supports a shorthand notation to enable it for all targets without the need to specify explicit wrappers. You can simply set `async="true"` on targets element and all your targets within that element will be wrapped with the `AsyncWrapper` target.
 ```xml
 <nlog>
   <targets async="true">
@@ -256,7 +256,7 @@ Because asynchronous processing is a common scenario, NLog supports a shorthand 
 
 <a name="default-wrappers" />
 ##Default wrappers
-Sometimes we require ALL targets to be wrapped in the same way, for example to add buffering and/or retrying. NLog provides \<default-wrapper /> syntax for that. You simply put this element in the \<targets /> section and all your targets will be automatically wrapped with the specified wrapper. Note that \<default-wrapper /> applies to the single \<targets /> section only and you can have multiple sections so you can define groups of targets that are wrapped in a similar manner.
+Sometimes we require ALL targets to be wrapped in the same way, for example to add buffering and/or retrying. NLog provides `<default-wrapper />` syntax for that. You simply put this element in the `<targets />` section and all your targets will be automatically wrapped with the specified wrapper. Note that `<default-wrapper />` applies to the single `<targets />` section only and you can have multiple sections so you can define groups of targets that are wrapped in a similar manner.
 ```xml
 <nlog>  
   <targets>  
