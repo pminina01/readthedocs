@@ -2,7 +2,7 @@ Matches when the specified condition is met.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <rules>
   <logger ... >
     <filters>
