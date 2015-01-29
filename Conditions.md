@@ -2,27 +2,27 @@ Conditions are filter expressions used with the [when filter](when-Filter). They
 
 ##Language
 The filter expressions are written in a special mini-language. The language consists of:
-* relational operators: ==, !=, <, <=, >= and >
-* boolean operators: and, or, not
-* string literals which are always evaluated as layouts - '${somerenderer}'
-* boolean literals - true and false
-* numeric literals - 12345 (integer literal) and 12345.678 (floating point literal)
-* log level literals - LogLevel.Trace, LogLevel.Debug, ... LogLevel.Fatal
-* predefined keywords to access the most common log event properties - level, message and logger
+* relational operators: `==`, `!=`, `<`, `<=`, `>=` and `>`
+* boolean operators: `and`, `or`, `not`
+* string literals which are always evaluated as layouts - `${somerenderer}`
+* boolean literals - `true` and `false`
+* numeric literals - e.g. `12345` (integer literal) and `12345.678` (floating point literal)
+* log level literals - `LogLevel.Trace`, `LogLevel.Debug`, ... `LogLevel.Fatal`
+* predefined keywords to access the most common log event properties - `level`, `message` and `logger`
 * braces - to override default priorities and group expressions together
-* condition functions - to perform string and object tests
+* condition functions - to perform `string` and `object` tests
 
 ##Functions
 The following condition functions are available:
-* `contains(s1,s2)` Determines whether the second string is a substring of the first one. Returns: true when the second string is a substring of the first string, false otherwise.
-* `ends-with(s1,s2)` Determines whether the second string is a suffix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
-* `equals(o1,o2)` Compares two objects for equality. Returns: true when two objects are equal, false otherwise.
+* `contains(s1,s2)` Determines whether the second string is a substring of the first one. Returns: `true` when the second string is a substring of the first string, `false` otherwise.
+* `ends-with(s1,s2)` Determines whether the second string is a suffix of the first one. Returns: `true` when the second string is a prefix of the first string, `false` otherwise.
+* `equals(o1,o2)` Compares two objects for equality. Returns: `true` when two objects are equal, `false` otherwise.
 * `length(s)` Returns the length of a string.
-* `starts-with(s1,s2)` Determines whether the second string is a prefix of the first one. Returns: true when the second string is a prefix of the first string, false otherwise.
+* `starts-with(s1,s2)` Determines whether the second string is a prefix of the first one. Returns: `true` when the second string is a prefix of the first string, `false` otherwise.
 
 ##Examples
 Here are several [when filter](when-Filter) examples with conditions:
-```
+```xml
 <rules>
     <logger name="*" writeTo="file">
         <filters>
@@ -42,7 +42,7 @@ You can find a sample implementation of a custom filter [here](https://github.co
 
 Then you have to tell NLog where to find your assembly
 
-```
+```xml
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.netfx35.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
     <extensions>
 		<add assembly="NLog.Extensions" />
