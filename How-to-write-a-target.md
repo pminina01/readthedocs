@@ -45,7 +45,7 @@ namespace MyNamespace
 It’s easy. Just put the target in a DLL and reference it from the the config file using the <extensions /> clause as described here.
 
 Configuration file example:
-```
+```xml
 <nlog> 
   <extensions> 
     <add assembly="MyAssembly"/> 
