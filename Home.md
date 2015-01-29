@@ -15,9 +15,9 @@
 ##Configuration Reference
 * [Configuration file](wiki/Configuration-file)
 * [Configuration API](wiki/Configuration-API)
-* [Targets](wiki/Targets)
-* [Layouts](wiki/Layouts)
-* [Layout Renderers](wiki/Layout-Renderers)
-* [Filters](wiki/Filters)
-* [Conditions](wiki/Conditions)
-* [Log Levels](wiki/Log-levels)
+* [Targets](wiki/Targets) - write to destinations 
+* [Layouts](wiki/Layouts) - format: text, sql etc.
+* [Layout Renderers](wiki/Layout-Renderers) - templating the logs
+* [Filters](wiki/Filters) - filtering rules
+* [Conditions](wiki/Conditions) - conditions used in files
+* [Log Levels](wiki/Log-levels) - the six log levels
