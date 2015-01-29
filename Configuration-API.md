@@ -1,14 +1,14 @@
 ##Use
 In order to configure NLog in code you must complete the following steps:
- 1. Create a LoggingConfiguration object that will hold the configuration
- 2. Create one or more targets (objects of classes inheriting from Target)
+ 1. Create a `LoggingConfiguration` object that will hold the configuration
+ 2. Create one or more targets (objects of classes inheriting from `Target`)
  3. Set the properties of the targets
- 4. Define logging rules through LoggingRule objects and add them to the configuration's LoggingRules
- 5. Activate the configuration by assigning the configuration object to LogManager.Configuration
+ 4. Define logging rules through `LoggingRule` objects and add them to the configuration's `LoggingRules`
+ 5. Activate the configuration by assigning the configuration object to `LogManager.Configuration`
 
 ##Examples
 ###Multiple targets
-This sample demonstrates the programmatic creation of two targets: one is a colored console, and the other is a file and rules that send messages to them for messages whose level is Debug or higher.
+This sample demonstrates the programmatic creation of two targets: one is a colored console, and the other is a file and rules that send messages to them for messages whose level is `Debug` or higher.
 ```c#
 using NLog;
 using NLog.Targets;
