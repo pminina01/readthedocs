@@ -42,7 +42,7 @@ namespace MyNamespace
 ```
 
 ##How to use the newly created target?
-It’s easy. Just put the target in a DLL and reference it from the the config file using the <extensions /> clause as described here.
+It’s easy. Just put the target in a DLL and reference it from the the config file using the `<extensions />` clause as described here.
 
 Configuration file example:
 ```xml
@@ -59,14 +59,15 @@ Configuration file example:
 </nlog>
 ```
 ##How to pass configuration options to the target?
-Consider the above example. There’s a property called “Host” that does just that. Having a public property that sets the required configuration parameters is enough for NLog to use it. Each attribute that you put in the \<target /> definition gets passed to the appropriate public property. NLog takes care of the appropriate conversions necessary so that you can use integer, string, datetime, boolean parameters.
+Consider the above example. There’s a property called “Host” that does just that. Having a public property that sets the required configuration parameters is enough for NLog to use it. Each attribute that you put in the `<target />` definition gets passed to the appropriate public property. NLog takes care of the appropriate conversions necessary so that you can use integer, string, datetime, boolean parameters.
 
 ##Do I really need to create a separate DLL?
-Not really. You can use `TargetFactory.AddTarget()` to register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. It should be possible to reference your EXE using the \<extensions /> clause.
+Not really. You can use `TargetFactory.AddTarget()` to register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. It should be possible to reference your EXE using the `<extensions />` clause.
 ```csharp
 static void Main(string[] args) 
 { 
-    ConfigurationItemFactory.Default.Targets.RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
+    ConfigurationItemFactory.Default.Targets
+                            .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
  
     // start logging here 
 }
