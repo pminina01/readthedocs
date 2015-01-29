@@ -16,7 +16,7 @@
 * [Configuration file](wiki/Configuration-file)
 * [Configuration API](wiki/Configuration-API)
 * [Targets](wiki/Targets) - write to destinations 
-* [Layouts](wiki/Layouts) - format: text, sql etc.
+* [Layouts](wiki/Layouts) - format: text, csv etc.
 * [Layout Renderers](wiki/Layout-Renderers) - templating the logs
 * [Filters](wiki/Filters) - filtering rules
 * [Conditions](wiki/Conditions) - conditions used in files
