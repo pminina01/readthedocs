@@ -9,7 +9,7 @@ When you configure NLog using [Configuration File](Configuration-file), you can 
 * `internalLogToConsoleError="false|true"` – sends internal logging messages to the console error output (stderr).
 
 Here is an example of a configuration file which enables internal logging to a file:
-```
+```xml
 <nlog internalLogFile="c:\log.txt" internalLogLevel="Trace">
    <targets>
       <!-- target configuration here -->
