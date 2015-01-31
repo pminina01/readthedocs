@@ -6,7 +6,7 @@ When you get no log output from NLog, this can be because of the following reaso
  4. Application tracing code is incorrect.
  5. There is a runtime problem with the target (such as missing permissions)
  6. Logs are written to a different location.
- 7. 
+
 
 ##Troubleshooting steps
  1. The first step is to make sure that NLog finds your config file. It is recommended to use NLog.config located in the same directory as your application, but there are other options. See [NLog Configuration](Configuration-file) for more information. Once you've made sure that the configuration file is there, proceed to the next step.
