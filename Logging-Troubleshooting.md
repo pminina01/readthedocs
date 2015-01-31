@@ -22,7 +22,7 @@ class Program
 ```
 When troubleshooting, it is advised to turn on exceptions, so that NLog will report any problems to the calling application. This can be done in one of two ways:
   * In config file add `throwExceptions="true"` to the root element, so that it looks like this:
-```
+```xml
 <nlog throwExceptions="true">
    ...
 </nlog>
@@ -40,7 +40,7 @@ class Program
 ```
 Now, when loading the configuration file, you should see exception being raised.
  3. To eliminate the possibility that your logging rules are incorrect, add the rule which matches all loggers and all levels at the beginning of your \<rules> section.
-```
+```xml
 <nlog throwExceptions="true">
   <targets>
     <target name="file" type="File" fileName="${basedir}/log.txt" />
