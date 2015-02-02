@@ -3,7 +3,7 @@
 Writing info message via fluent API.
 
     using NLog.Fluent;
-    ...
+    
     _logger.Info()
         .Message("This is a test fluent message '{0}'.", DateTime.Now.Ticks)
         .Property("Test", "InfoWrite")
