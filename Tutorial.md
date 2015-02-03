@@ -56,7 +56,7 @@ namespace MyNamespace
 When we wish to expose the logger into subclasses a pattern similar to one below should be used.
 
 ``` C# 
-class BaseClassb
+class BaseClass
 {      
     protected BaseClass()
     {
