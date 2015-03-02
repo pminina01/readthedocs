@@ -1,4 +1,4 @@
-Layout renderers are macros that are used in [Layouts](Layouts).
+Layout renderers are templates that are used in [Layouts](Layouts).
 
 ##Layout Renderers
 * [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
