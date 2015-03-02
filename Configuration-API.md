@@ -1,3 +1,5 @@
+NLog can be also configured programmatically.
+
 ##Use
 In order to configure NLog in code you must complete the following steps:
  1. Create a `LoggingConfiguration` object that will hold the configuration
