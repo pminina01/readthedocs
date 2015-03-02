@@ -1,3 +1,5 @@
+Log messages can be filtered in the configuration. 
+
 ##Supported filters
 * [when filter](When-filter) - Matches when the specified condition is met.
 
