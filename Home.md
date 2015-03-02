@@ -9,9 +9,6 @@
 * [Who is using NLog](wiki/Who-Is-Using-NLog) - are you using NLog? Tell the world about it!
 * [Web resources](wiki/Web-resources) - user-contributed tutorials and articles about NLog
 
-##API Reference
-* [API Reference](http://nlog.github.io/documentation)
-
 ##Configuration Reference
 * [Configuration file](wiki/Configuration-file) - configure NLog with a XML file
 * [Configuration API](wiki/Configuration-API) - configure NLog with .Net code
@@ -21,3 +18,6 @@
 * [Filters](wiki/Filters) - filtering log messages with conditions
 * [Conditions](wiki/Conditions) - conditions used in filters
 * [Log Levels](wiki/Log-levels) - the six log levels
+
+##API Reference
+* [API Reference](http://nlog.github.io/documentation) - programming to NLog
