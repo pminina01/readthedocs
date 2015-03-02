@@ -4,5 +4,5 @@
 * [Targets](Targets)
 * [Layouts](Layouts)
 * [Layout Renderers](Layout-Renderers)
-* [Filters](Filters)
-* [Conditions](Conditions)
+* [Filtering log messages](Filters)
+
