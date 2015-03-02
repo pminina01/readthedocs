@@ -13,11 +13,11 @@
 * [API Reference](http://nlog.github.io/documentation)
 
 ##Configuration Reference
-* [Configuration file](wiki/Configuration-file)
-* [Configuration API](wiki/Configuration-API)
-* [Targets](wiki/Targets) - write to destinations 
-* [Layouts](wiki/Layouts) - format: text, csv etc.
+* [Configuration file](wiki/Configuration-file) - configure NLog with a XML file
+* [Configuration API](wiki/Configuration-API) - configure NLog with .Net code
+* [Targets](wiki/Targets) - write to destinations: database, file etc.
+* [Layouts](wiki/Layouts) - format: plain text, CSV etc.
 * [Layout Renderers](wiki/Layout-Renderers) - templating the logs
-* [Filters](wiki/Filters) - filtering rules
-* [Conditions](wiki/Conditions) - conditions used in files
+* [Filters](wiki/Filters) - filtering log messages with conditions
+* [Conditions](wiki/Conditions) - conditions used in filters
 * [Log Levels](wiki/Log-levels) - the six log levels
