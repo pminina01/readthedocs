@@ -106,7 +106,7 @@ Each routing table entry is a \<logger /> element, which accepts the following a
  * `final` – make this rule final. No further rules are processed when any final rule matches.
  * `enabled` - setting enabled to false allows to disable this rule. Disabled rules are ignored.
 
-In case a rule, defined in a XML configuration, contains more than one level related keyword (`level`, `levels`, `minLevel` and `naxLevel`) only the first level declaring keyword or set is used and the rest are ignored.
+In case a rule, defined in a XML configuration, contains more than one level related keyword (`level`, `levels`, `minLevel` and `maxLevel`) only the first level declaring keyword or set is used and the rest are ignored.
 
 The level related keywords are processed in the following order:
 
