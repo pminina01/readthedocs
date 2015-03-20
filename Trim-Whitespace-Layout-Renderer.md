@@ -15,5 +15,5 @@ ${other:trimWhiteSpace=Boolean}
 
 ##Parameters
 ###Transformation Options
-* _trimWhiteSpace_ - Indicates whether lower case conversion should be applied. Boolean Default: True
+* _trimWhiteSpace_ - Indicates whether trim should be applied. Boolean Default: True
 * _inner_ - Wrapped layout. Layout
