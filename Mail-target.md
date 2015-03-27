@@ -38,15 +38,15 @@ _header_ - Header. [Layout](Data-types)
 
 _footer_ - Footer. [Layout](Data-types)
 
-_layout_ - Text to be rendered. [Layout](Data-types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+_layout_ - Text to be rendered. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
-_html_ - Indicates whether to send message as HTML instead of plain text. [Boolean](Data-types) Default: False
+_html_ - Indicates whether to send message as HTML instead of plain text. [Boolean](Data-types) Default: `false`
 
 _addNewLines_ - Indicates whether to add new lines between log entries. [Boolean](Data-types)
 
-_replaceNewlineWithBrTagInHtml_ - Indicates whether NewLine characters in the body should be replaced with `<br/>` tags. [Boolean](Data-types) Default: False
+_replaceNewlineWithBrTagInHtml_ - Indicates whether NewLine characters in the body should be replaced with `<br/>` tags. [Boolean](Data-types) Default: `false`
 
-_encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: UTF-8
+_encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: `UTF-8`
 ###Message Options
 _subject_ - Mail subject. [Layout](Data-types) Required. Default: Message from NLog on ${machinename}
 
@@ -58,7 +58,7 @@ _cc_ - CC email addresses separated by semicolons (e.g. john@domain.com;jane@dom
 
 _from_ - Sender's email address (e.g. joe@domain.com). [Layout](Data-types) Required.
 
-_body_ - Mail message body (repeated for each log message send in one mail). [Layout](Data-types) Default: ${message}  
+_body_ - Mail message body (repeated for each log message send in one mail). [Layout](Data-types) Default: `${message}` 
 Alias for the Layout property.
 ###SMTP Options
 _smtpUserName_ - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
