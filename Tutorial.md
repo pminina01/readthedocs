@@ -55,7 +55,7 @@ namespace MyNamespace
 ###Expose logger to sub-classes
 When we wish to expose the logger into subclasses a pattern similar to one below should be used.
 
-``` C# 
+```csharp
 class BaseClass
 {      
     protected BaseClass()
@@ -160,19 +160,19 @@ Formatting log messages takes a lot of time, so NLog tries to defer formatting u
 So far we have learned how to emit log messages from code, but we have not configured any outputs for out logs. So, when you run your instrumented application at this point, you will see - well - nothing. Time to open the NLog.config file and add some logging rules:
 
 1. In the \<targets> section, add:
-```
+```xml
 <target name="logfile" xsi:type="File" fileName="file.txt" />
 ```
 This will define a target which will send logs to a file named file.txt.
 
 2. In the \<rules> section, add:
-```
+```xml
 <logger name="*" minlevel="Info" writeTo="logfile" />
 ```
 This snippet will direct all logs (name="\*") of level **Info** or higher (which includes **Info**, **Warn**, **Error** and **Fatal**) to a target named logfile.
 
 Note that as you are typing this in Visual Studio, you should see IntelliSense suggesting attribute names and validating their values. The final configuration should look like this:
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -190,7 +190,7 @@ Now, when you run the application, you should see log messages written to file.t
 
 ##Multiple targets
 Lets try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slightly less detailed. Here's the configuration file which implements this:
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -210,7 +210,7 @@ As you can see, we now have multiple targets and multiple rules which route logs
 
 ##Logger-specific routing
 Another scenario which is very common requires producing more detailed logs from some components which are being currently developed, while reducing output from some other components. We can use the following configuration:
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -240,7 +240,7 @@ Many more wrappers are available. You can find the full list [here](Targets).
 
 In order to use wrappers, simply enclose the \<target /> element with another one representing a wrapper and use the name of the wrapper in your \<rules/> section as in the following example:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -264,6 +264,6 @@ Layouts provide a way to format the contents of the logs as it is written to a f
 * structural layouts - which can output XML, CSV, and other complex formats
 
 Simple layout is just a string, with special tags embedded between **${** and **}**. For example the following declaration will cause each log message to be prefixed with date formatted as **yyyyMMddHHmmss**:
-```
+```xml
 <target name="logfile" xsi:type="File" fileName="file.txt" layout="${date:format=yyyyMMddHHmmss} ${message}" />
 ```
