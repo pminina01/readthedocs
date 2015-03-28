@@ -30,3 +30,6 @@ ${callsite:className=Boolean:fileName=Boolean:includeSourcePath=Boolean
   > * NLog v2.0 for Silverlight for Windows Phone 7.1
 
 * **methodName** - Indicates whether to render the method name.Boolean Default: True
+
+##Notes
+please note that the method name won't work well with async methods - it show's `MoveNext`. Too bad we cannot fix this shortcoming. See https://github.com/NLog/NLog/issues/255
