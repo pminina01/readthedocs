@@ -34,6 +34,6 @@ Read more about using the [Configuration File](Configuration file).
 ```xml
 <target xsi:type="EventLog"
             name="eventlog"
-            source="${appName}"
+            source="test"
             layout="${message}${newline}${exception:format=ToString}"/>
 ```
