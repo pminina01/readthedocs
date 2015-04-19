@@ -13,7 +13,8 @@ All configuration of NLog can be done with a single XML file.
 [Troubleshooting logging](#troubleshooting-logging)<br />
 [Asynchronous processing and wrapper targets](#asynchronous-processing-and-wrapper-targets)<br />
 [Default wrappers](#default-wrappers)<br />
-[Default target parameters](#default-target-parameters)
+[Default target parameters](#default-target-parameters)<br />
+[Content escaping](#content-escaping)
 
 <a name="configuration-file-locations" />
 ##Configuration file locations
@@ -304,3 +305,17 @@ Alternatively you can specify a single `<default-target-parameters />` that appl
   </targets>
 </nlog>
 ```
+
+
+<a name="content-escaping" />
+##Content escaping
+
+In the configuration file some characters needs to be escaped. 
+Because it XML file, the `<` and `>` brackets should be escaped with `&lt;` and `&gt;`. This also holds for the attribute values, like a condition.
+
+Inside a layout, the `}` bracket should be escaped if it isn't from a [Layout-Renderer](https://github.com/NLog/NLog/wiki/Layout-Renderers). So nested layout renderers doesn't need escaping. 
+
+Examples:
+
+- `${appdomain:format={1\}{0\}}` (escape of `}`)
+- `${rot13:inner=${ndc:topFrames=3:separator=x}}` (no escaping needed)
