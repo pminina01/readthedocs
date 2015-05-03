@@ -1,4 +1,4 @@
-Only outputs the inner layout when the specified condition has been met. 
+Only outputs the inner layout when the specified condition has been met.  See [Conditions page](https://github.com/NLog/NLog/wiki/Conditions).
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
