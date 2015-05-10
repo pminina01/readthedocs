@@ -38,7 +38,7 @@ _header_ - Header. [Layout](Data-types)
 
 _footer_ - Footer. [Layout](Data-types)
 
-_layout_ - Text to be rendered. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
+_layout_ - Text to be rendered. [Layout](Data-types) Required. Default: `${message}${newline}`. Same as _body_ property
 
 _html_ - Indicates whether to send message as HTML instead of plain text. [Boolean](Data-types) Default: `false`
 
@@ -58,8 +58,8 @@ _cc_ - CC email addresses separated by semicolons (e.g. john@domain.com;jane@dom
 
 _from_ - Sender's email address (e.g. joe@domain.com). [Layout](Data-types) Required.
 
-_body_ - Mail message body (repeated for each log message send in one mail). [Layout](Data-types) Default: `${message}` 
-Alias for the Layout property.
+_body_ - Same as _Layout_ property. Mail message body (repeated for each log message send in one mail). [Layout](Data-types) Default: `${message}${newline}` 
+
 ###SMTP Options
 _smtpUserName_ - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
 
