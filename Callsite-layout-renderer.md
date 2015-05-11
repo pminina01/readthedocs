@@ -5,7 +5,7 @@ Supported in .NET, Silverlight and Mono.
 ##Configuration Syntax
 ```
 ${callsite:className=Boolean:fileName=Boolean:includeSourcePath=Boolean
-          :methodName=Boolean}
+          :methodName=Boolean:cleanNamesOfAnonymousDelegates=Boolean:skipFrame=Integer}
 ```
 
 ##Parameters
@@ -30,6 +30,8 @@ ${callsite:className=Boolean:fileName=Boolean:includeSourcePath=Boolean
   > * NLog v2.0 for Silverlight for Windows Phone 7.1
 
 * **methodName** - Indicates whether to render the method name.Boolean Default: True
+* **cleanNamesOfAnonymousDelegates** - Indicates whether the method name will be cleaned up if it is detected as an anonymous delegate. Boolean Default: False
+* **skipFrames** - The number of frames to skip. Integer Default: 0
 
 ##Notes
 please note that the method name won't work well with async methods - it will always show `MoveNext`. Too bad we cannot fix this shortcoming. See [GitHub issue #255](https://github.com/NLog/NLog/issues/255).
