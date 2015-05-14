@@ -38,7 +38,7 @@ _encoding_ - Encoding. Encoding
 
 _protocol_ - Protocol to be used when calling web service. Default: Soap11  
 Possible values:  
-* HttpGet - Use HTTP GET Protocol.
+* HttpGet - Use HTTP GET Protocol. - NOTE: not working (see [issue 701](https://github.com/NLog/NLog/issues/701))
 * HttpPost - Use HTTP POST Protocol.
 * Soap11 - Use SOAP 1.1 Protocol.
 * Soap12 - Use SOAP 1.2 Protocol.
