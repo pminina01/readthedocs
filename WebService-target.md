@@ -65,7 +65,6 @@ Example config:
                 encoding='UTF-8'   >
             <parameter name='param1' type='System.String' layout='${message}'/> 
             <parameter name='param2' type='System.String' layout='${level}'/>
-
         </target>
     </targets>
     <rules>
@@ -81,15 +80,15 @@ Example API controller
 public class LogMeController : ApiController
 {
     /// <summary>
-    /// We need a complex type for modelbinding because of content-type: "application/x-www-form-urlencoded" in <see cref="WebServiceTarget"/>
+    /// We need a complex type for modelbinding because 
+    /// of content-type: "application/x-www-form-urlencoded" in <see cref="WebServiceTarget"/>
     /// </summary>
     public class ComplexType
     {
         public string Param1 { get; set; }
         public string Param2 { get; set; }
     }
-
-
+    
     /// <summary>
     /// Post
     /// </summary>
@@ -99,4 +98,3 @@ public class LogMeController : ApiController
     }
 }
 ```
-
