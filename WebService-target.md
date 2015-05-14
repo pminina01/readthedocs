@@ -49,3 +49,54 @@ _methodName_ - Web service method name.
 
 ##Remarks
 The web service must implement a method that accepts a number of string parameters.
+
+
+##Example
+
+Example config:
+
+```xml
+<nlog throwExceptions='true'>
+    <targets>
+        <target type='WebService'
+                name='ws'
+                url='http://localhost:1234/logme'
+                protocol='HttpPost'
+                encoding='UTF-8'   >
+            <parameter name='param1' type='System.String' layout='${message}'/> 
+            <parameter name='param2' type='System.String' layout='${level}'/>
+
+        </target>
+    </targets>
+    <rules>
+      <logger name='*' writeTo='ws'></logger>
+    </rules>
+</nlog>
+```
+
+Example API controller
+
+```c#
+
+public class LogMeController : ApiController
+{
+    /// <summary>
+    /// We need a complex type for modelbinding because of content-type: "application/x-www-form-urlencoded" in <see cref="WebServiceTarget"/>
+    /// </summary>
+    public class ComplexType
+    {
+        public string Param1 { get; set; }
+        public string Param2 { get; set; }
+    }
+
+
+    /// <summary>
+    /// Post
+    /// </summary>
+    public void Post([FromBody] ComplexType complexType)
+    {
+        //do something
+    }
+}
+```
+
