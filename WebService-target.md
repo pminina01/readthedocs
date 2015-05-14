@@ -81,7 +81,8 @@ public class LogMeController : ApiController
 {
     /// <summary>
     /// We need a complex type for modelbinding because 
-    /// of content-type: "application/x-www-form-urlencoded" in <see cref="WebServiceTarget"/>
+    /// of content-type: "application/x-www-form-urlencoded" 
+    /// in <see cref="WebServiceTarget"/>
     /// </summary>
     public class ComplexType
     {
