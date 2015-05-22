@@ -11,6 +11,7 @@ Supported in .NET, Compact Framework and Mono.
           layout="Layout"
           recoverable="Boolean"
           createQueueIfNotExists="Boolean"
+          checkIfQueueExists="Boolean"
           label="Layout"
           queue="Layout" />
 </targets>
@@ -28,7 +29,8 @@ _layout_ - Layout used to format log messages. [Layout](Data-types) Required. De
 ###Queue Options
 _recoverable_ - Indicates whether to use recoverable messages (with guaranteed delivery). [Boolean](Data-types) Default: False
 
-_createQueueIfNotExists_ - Indicates whether to create the queue if it doesn't exists. [Boolean](Data-types) Default: False
+_createQueueIfNotExists_ - Indicates whether to create the queue if it doesn't exists. Won't do anything when _checkIfQueueExists_ is false.  [Boolean](Data-types) Default: False
+_checkIfQueueExists_- If false, won't check for the existence of the queue. This is sometimes needed for private remote queues (where the `.exists` would throw an Exception). [Boolean](Data-types) Default: True
 
 _label_ - Label to associate with each message. [Layout](Data-types) Default: NLog  
 By default no label is associated.
