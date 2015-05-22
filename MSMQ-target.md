@@ -37,7 +37,6 @@ _createQueueIfNotExists_ - Indicates whether to create the queue if it doesn't e
 _checkIfQueueExists_- If false, won't check for the existence of the queue. This is sometimes needed for private remote queues (where the `.exists` would throw an Exception). [Boolean](Data-types) Default: True
 
 _label_ - Label to associate with each message. [Layout](Data-types) Default: "NLog"
-By default no label is associated.
 
 
 
