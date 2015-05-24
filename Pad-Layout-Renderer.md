@@ -5,7 +5,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
 ```
 ${pad:padCharacter=Char:padding=Integer:fixedLength=Boolean
-     :inner=Layout}
+     :inner=Layout:alignmentOnTruncation=PaddingHorizontalAlignment}
 ```
 
 or by using ambient property to modify output of other layout renderer:
