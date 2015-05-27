@@ -18,3 +18,10 @@ ${replace:searchFor=String:wholeWords=Boolean:replaceWith=String
 
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
+
+##example
+Replace newlines:
+
+```xml
+<variable name="replacedname" value="${replace:searchFor=[\\\\n]+:replaceWith=be:regex=true:inner=${message}} />
+```
