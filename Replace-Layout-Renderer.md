@@ -20,8 +20,9 @@ ${replace:searchFor=String:wholeWords=Boolean:replaceWith=String
 * _inner_ - Wrapped layout. Layout
 
 ##example
-Replace newlines:
+Replace newlines with `-`
 
 ```xml
-<variable name="replacedname" value="${replace:searchFor=[\\\\n]+:replaceWith=be:regex=true:inner=${message}} />
+<variable name="replacedname" 
+  value="${replace:searchFor=\\n+:replaceWith=-:regex=true:inner=${message}} />
 ```
