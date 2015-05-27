@@ -19,7 +19,7 @@ ${replace:searchFor=String:wholeWords=Boolean:replaceWith=String
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
 
-##example
+##Example
 Replace newlines with `-`
 
 ```xml
