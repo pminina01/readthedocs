@@ -14,7 +14,7 @@ try
 catch (MyException ex) 
 { 
     logger.Error("Got exception.", ex); //before NLog 4.0
-    logger.Error(ex,"Got exception.");  //NLog 4.0
+    logger.Error(ex, "Got exception.");  //NLog 4.0
 
 }
 ```
