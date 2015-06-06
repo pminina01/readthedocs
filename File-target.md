@@ -31,7 +31,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           bufferSize="Integer"
           autoFlush="Boolean"
           keepFileOpen="Boolean"
-          forceManaged="Boolean" />
+          forceManaged="Boolean"
+          enableArchiveFileCompression="Boolean" />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
@@ -139,6 +140,10 @@ _enableFileDelete_ - Indicates whether to enable log file(s) to be deleted. [Boo
 
 _createDirs_ - Indicates whether to create directories if they don't exist. [Boolean](Data-types) Default: True  
 Setting this to false may improve performance a bit, but you'll receive an error when attempting to write to a directory that's not present.
+
+_enableArchiveFileCompression_ - Indicates whether to compress the archive files into the zip files. [Boolean](Data-types) Default: False
+    > Supported in:
+    > * NLog v4.0 for .NET 4.5
 
 ###Performance Tuning Options
 _concurrentWrites_ - Indicates whether concurrent writes to the log file by multiple processes on the same host. [Boolean](Data-types) Default: True  
