@@ -50,7 +50,7 @@ _encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Defa
 ###Message Options
 _subject_ - Mail subject. [Layout](Data-types) Required. Default: Message from NLog on ${machinename}
 
-_to_ - Recipients' email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types) Required.
+_to_ - Recipients' email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types). Starting in NLog 4.0 this field is no longer required, but To, BCC or CC should be defined otherwise an exception is thrown. 
 
 _bcc_ - BCC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types)
 
