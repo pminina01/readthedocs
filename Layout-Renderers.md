@@ -14,6 +14,7 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 * [${assembly-version}](AssemblyVersion-Layout-Renderer) - The version of the executable in the default application domain.
 * [${basedir}](Basedir-Layout-Renderer) - The current application domain's base directory.
 * [${callsite}](Callsite-Layout-Renderer) - The call site (class name, method name and source information).
+* [${callsite-linenumber}](Callsite-line-number-layout-renderer) - The call site source line number.
 * [${counter}](Counter-Layout-Renderer) - A counter value (increases on each layout rendering).
 * [${date}](Date-Layout-Renderer) - Current date and time.
 * [${document-uri}](DocumentUri-Layout-Renderer) - URI of the HTML page which hosts the current Silverlight application.
