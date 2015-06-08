@@ -44,7 +44,7 @@ namespace MyNamespace
 ##How to use the newly created target?
 It’s easy. Just put the target in a DLL and reference it from the the config file using the `<extensions />` clause as described here.
 
-Since NLog 4.0 assemblies with the name "NLog*.dll", like “NLog.CustomTarget.dll” are now loaded automatically. This assembly should be in the same folder as `NLog.dll`. 
+Starting from NLog 4.0 assemblies with the name "NLog*.dll", like “NLog.CustomTarget.dll” are now loaded automatically. This assembly should be in the same folder as `NLog.dll`. 
 
 Configuration file example:
 ```xml
