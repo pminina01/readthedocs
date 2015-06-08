@@ -8,6 +8,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           name="String"
           url="System.Uri"
           encoding="Encoding"
+          includeBOM="Nullable boolean"
           protocol="Enum"
           namespace="String"
           methodName="String">
@@ -28,13 +29,15 @@ Each collection item is represented by \<parameter /> element with the following
 ###Web Service Options
 _url_ - Web service URL. System.Uri
 
-_encoding_ - Encoding. Encoding  
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v1.0 for .NET Framework 1.0
-> * NLog v1.0 for .NET Framework 1.1
-> * NLog v1.0 for .NET Framework 2.0
+_encoding_ - Encoding. Encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx)
+
+_includeBOM_ - Skip or add Byte-order-mark (BOM) for UTF-8. Only used if encoding is set to UTF-8, because a BOM is optional in UTF-8.  default: `false`. Possible options: 
+  - `null`: doesn’t change BOM. 
+  - `true`: always include UTF-8 BOM UTF-8 encodings. 
+  - `false`: default, always skip BOM on UTF-8 encodings.
+
+For more info on BOM, check [Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)
+
 
 _protocol_ - Protocol to be used when calling web service. Default: Soap11  
 Possible values:  
