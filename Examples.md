@@ -1,6 +1,6 @@
 ##Using NLog with GMail
 In order to use [Mail target](Mail-target) with GMail, you need to use the following server configuration:
-```
+```xml
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
@@ -30,9 +30,11 @@ In order to use [Mail target](Mail-target) with GMail, you need to use the follo
 
 ##Changing log file name at runtime
 
-    using NLog.Targets;
-    ...
-    FileTarget target = LogManager.Configuration.FindTargetByName(targetName) as FileTarget;
-    target.FileName = filename;
+```c#
+using NLog.Targets;
+...
+FileTarget target = LogManager.Configuration.FindTargetByName(targetName) as FileTarget;
+target.FileName = filename;
+```
 
 Note that it is often easier to create the file name with a combination of [Layout-Renderers](layout renderers).
