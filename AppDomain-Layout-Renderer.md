@@ -20,7 +20,7 @@ possible options:
 Examples in the .config
 
 ```xml
-${appdomain}
+${appdomain} //e.g. 0003:NLog.UnitTests
 ${appdomain:format=short} //e.g. 03
 ${appdomain:format=long} //e.g. 0003:NLog.UnitTests
 ${appdomain:format={1\} - {0\} //e.g. NLog.UnitTests - 3
