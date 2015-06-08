@@ -8,10 +8,12 @@ Supported in .NET and Mono
           name="String"
           layout="Layout"
           machineName="String"
-          source="Layout" <!-- before 4.0 a string -->
+          source="Layout" 
           category="Layout"
           eventId="Layout"
           log="String" />
+<!-- note: source is a string in NLog before 4.0 -->
+
 </targets>
 ```
 Read more about using the [Configuration File](Configuration file).
