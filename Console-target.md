@@ -9,6 +9,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono
           layout="Layout"
           footer="Layout"
           header="Layout"
+          encoding="Encoding"
           error="Boolean" />
 </targets>
 ```
@@ -21,9 +22,6 @@ _layout_ - Text to be rendered. [Layout](Layouts) Required. Default: ${longdate}
 _footer_ - Footer. [Layout](Layouts)  
 _header_ - Header. [Layout](Layouts)
 ###Console Options
+
+_encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx). Defaults to `Encoding.Default` (UTF-8 on silverlight). Starting for NLog 4.0.
 _error_ - Indicates whether to send the log messages to the standard error instead of the standard output. [Boolean](Data types) Default: False
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 3.5
