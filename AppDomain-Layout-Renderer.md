@@ -9,7 +9,7 @@ ${appdomain:format=Format}
 
 ##Parameters
 ###Rendering Options
-* **format** - The formating. Required. Default to `Long`.
+**format - The formating.  Default to `Long`.
 possible options:
 * Long: default. The id as four number digit, colon, friendlyname. E.g. 0003:NLog.UnitTests
 * Short. Only the id as two number digit, like "03".
