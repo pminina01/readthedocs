@@ -25,5 +25,6 @@ This would write:
 * _layout_: The (layout)[layout] for they key.
 
 ## Notes
-* Currently only (non-nested) key-values are supported.
+* Currently the layout will always create an non-nested object with properties.
+* Also there is no way to prevent escaping of the values (e.g. writing custom JSON as value)
 * The JSON will be written on one line, so no newlines. 
