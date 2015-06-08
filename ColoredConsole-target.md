@@ -6,6 +6,7 @@ Supported in .NET and Mono
 <targets>
   <target xsi:type="ColoredConsole"
           name="String"
+          encoding="Encoding"
           layout="Layout"
           header="Layout"
           footer="Layout"
@@ -21,6 +22,9 @@ Read more about using the [Configuration File](Configuration file).
 ##Parameters
 ###General Options
 _name_ - Name of the target.
+
+_encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx). Defaults to `Encoding.Default` (`UTF-8` on silverlight). Starting for NLog 4.0.
+
 ###Layout Options
 _layout_ - Text to be rendered. [Layout](Layout) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}  
 _header_ - Header. [Layout](Layout)  
