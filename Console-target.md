@@ -23,5 +23,6 @@ _footer_ - Footer. [Layout](Layouts)
 _header_ - Header. [Layout](Layouts)
 ###Console Options
 
-_encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx). Defaults to `Encoding.Default` (UTF-8 on silverlight). Starting for NLog 4.0.
-_error_ - Indicates whether to send the log messages to the standard error instead of the standard output. [Boolean](Data types) Default: False
+_encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx). Defaults to `Encoding.Default` (`UTF-8` on silverlight). Starting for NLog 4.0.
+
+_error_ - Indicates whether to send the log messages to the standard error instead of the standard output. [Boolean](Data types) Default: `false`
