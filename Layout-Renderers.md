@@ -2,7 +2,7 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 
 ##Layout Renderers
 * [${all-event-properties}](All-Event-Properties-Layout-Renderer) - Log all event context data.
-* [${appdomain}](AppDomain-Layout-Renderer) - Current app domain 
+* [${appdomain}](AppDomain-Layout-Renderer) - Current app domain. 
 * [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
 * [${asp-application}](AspApplication-Layout-Renderer) - ASP Application variable.
 * [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
