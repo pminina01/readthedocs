@@ -178,7 +178,7 @@ Another scenario which is very common requires producing more detailed logs from
     </rules>
 </nlog>
 ```
-The first rule will send logs from loggers whose names begin with `SomeNamespace.Component`. and where level is **Trace** or higher to the log file. The attribute _final="true"_ will cause further processing to be stopped after performing the write.
+The first rule will send logs from loggers whose names begin with `SomeNamespace.Component`. and where level is **Trace** or higher to the log file. The attribute `final="true"` will cause further processing to be stopped after performing the write.
 
 The second rule will send all remaining logs to the same log file with the restriction that the level must be **Info** or higher.
 
@@ -191,7 +191,7 @@ NLog supports special kinds of targets which do not do any logging by themselves
 
 Many more wrappers are available. You can find the full list [here](Targets).
 
-In order to use wrappers, simply enclose the \<target /> element with another one representing a wrapper and use the name of the wrapper in your \<rules/> section as in the following example:
+In order to use wrappers, simply enclose the `<target />` element with another one representing a wrapper and use the name of the wrapper in your `<rules/>` section as in the following example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
