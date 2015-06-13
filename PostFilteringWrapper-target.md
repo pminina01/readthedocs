@@ -2,7 +2,7 @@ Filters buffered log entries based on a set of conditions that are evaluated on 
 
 Supported in .NET, Silverligt, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="PostFilteringWrapper" name="String" defaultFilter="Condition">
     <target xsi:type="wrappedTargetType" ...target properties... />
