@@ -1,4 +1,4 @@
-Writes log messages to the database using an ADO.NET provider. The database operation is always executed outside of a transaction.
+Writes log messages to the database using an ADO.NET provider. 
 
 Supported in .NET, Compact Framework and Mono
 ##Configuration Syntax
@@ -8,6 +8,7 @@ Supported in .NET, Compact Framework and Mono
           name="String"
           dbUserName="Layout"
           dbProvider="String"
+          useTransactions="Boolean"
           connectionStringName="String"
           connectionString="Layout"
           keepConnection="Boolean"
@@ -46,7 +47,7 @@ The parameter name should be a provider invariant name as registered in machine.
 * oledb - OLEDB Data Provider
 * odbc - ODBC Data Provider
 
-[Boolean](Data types) Default: False  
+_useTransactions_ - Indicates whether to use database transactions. Some data providers require this. [Boolean](Data types) Default: False  
 _connectionStringName_ - Name of the connection string (as specified in .  
 > This parameter is not supported in:
 > * NLog v1.0 for .NET Compact Framework 1.0
