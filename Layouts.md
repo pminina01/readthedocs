@@ -8,6 +8,9 @@ ${longdate}|${level:uppercase=true}|${logger}|${message}
 ##Pre-Defined Layouts
 
 Several pre-defined layouts exist:
+
+
+###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
 * [CsvLayout](CsvLayout) - A specialized layout that renders CSV-formatted events.
 * [JsonLayout](JsonLayout) - A specialized layout that renders to JSON.
 * [LayoutWithHeaderAndFooter](LayoutWithHeaderAndFooter) - A specialized layout that supports header and footer.
