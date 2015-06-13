@@ -8,7 +8,7 @@ Supported in .NET, Compact Framework and Mono
           name="String"
           dbUserName="Layout"
           dbProvider="String"
-          useTransactions="Boolean"
+          *useTransactions="Boolean"
           connectionStringName="String"
           connectionString="Layout"
           keepConnection="Boolean"
