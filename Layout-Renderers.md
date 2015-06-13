@@ -1,16 +1,11 @@
 Layout renderers are template macros that are used in [Layouts](Layouts).
 
 ##Layout Renderers
+
+###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
 * [${all-event-properties}](All-Event-Properties-Layout-Renderer) - Log all event context data.
 * [${appdomain}](AppDomain-Layout-Renderer) - Current app domain. 
-* [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
 * [${asp-application}](AspApplication-Layout-Renderer) - ASP Application variable.
-* [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
-* [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
-* [${aspnet-session}](AspNetSession-Layout-Renderer) - ASP.NET Session variable.
-* [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
-* [${aspnet-user-authtype}](AspNetUserAuthType-Layout-Renderer) - ASP.NET User variable.
-* [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
 * [${asp-request}](AspRequest-Layout-Renderer) - ASP Request variable.
 * [${asp-session}](AspSession-Layout-Renderer) - ASP Session variable.
 * [${assembly-version}](AssemblyVersion-Layout-Renderer) - The version of the executable in the default application domain.
@@ -58,7 +53,20 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 * [${time}](Time-Layout-Renderer) - The time in a 24-hour, sortable format HH:mm:ss.mmm.
 * [${windows-identity}](Windows-Identity-Layout-Renderer) - Thread Windows identity information (username).
 
+###NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
+* [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
+
+###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
+* [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
+* [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
+* [${aspnet-session}](AspNetSession-Layout-Renderer) - ASP.NET Session variable.
+* [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
+* [${aspnet-user-authtype}](AspNetUserAuthType-Layout-Renderer) - ASP.NET User variable.
+* [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
+
 ##Wrapper Layout Renderers
+
+###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
 * [${cached}](Cached-Layout-Renderer) - Applies caching to another layout output.
 * [${filesystem-normalize}](Filesystem-Normalize-Layout-Renderer) - Filters characters not allowed in the file names by replacing them with safe character.
 * [${json-encode}](Json-Encode-Layout-Renderer) - Escapes output of another layout using JSON rules.
@@ -75,7 +83,8 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 * [${xml-encode}](Xml-Encode-Layout-Renderer) - Converts the result of another layout output to be XML-compliant.
 
 ##Custom Layout Renderers
-* [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format.
+
+* [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
 
 ##Passing Custom Values to a Layout
 Even though the layout renderers provide many pre-defined values, you may need to pass application specific values to your [Layouts](Layouts). You can pass your own values in code by adding custom Properties to the event. You then retrieve the value using the [${event-context}](Event-Context-Layout-Renderer) renderer. See the documentation for the [${event-context}](Event-Context-Layout-Renderer) for an example.
