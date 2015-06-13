@@ -48,6 +48,7 @@ The parameter name should be a provider invariant name as registered in machine.
 * odbc - ODBC Data Provider
 
 _useTransactions_ - This option was removed because the logging code always runs outside of transaction to ensure that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
+
 _connectionStringName_ - Name of the connection string (as specified in .  
 > This parameter is not supported in:
 > * NLog v1.0 for .NET Compact Framework 1.0
