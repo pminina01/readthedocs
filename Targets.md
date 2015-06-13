@@ -46,8 +46,7 @@ NLog supports custom target. For more information, see: [How to write a Target](
 External packages, not maintained the NLog team.
 
  * [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ)
- [![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ)
- - sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
+ [![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ) - sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
  * [GrowlNotify target](https://github.com/RyanFarley/NLogGrowlNotify) 
  [![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl)
  – sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
