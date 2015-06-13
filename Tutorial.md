@@ -18,14 +18,10 @@ In order to emit log messages from the application you need to use the logging A
 It is important to understand that `Logger` does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
 ##Creating loggers
-Most applications will use one logger per class, where the name of the logger is the same as the name of the class. As mentioned before, you must use LogManager to create Logger instances. To create a logger with a given name, call:
-```csharp
-using NLog;
- 
-Logger logger = LogManager.GetLogger("MyClassName");
-```
+It is advised to create one (`private static`) `Logger` per class.  As mentioned before, you must use `LogManager` to create `Logger` instances. 
 
-In most cases you will have one logger per class, so it makes sense to give logger the same name as the current class. `LogManager` exposes a method which creates a logger for current class, called `GetCurrentClassLogger()`. Because loggers are thread-safe, you can simply create the logger once and store it in a static variable:
+This will create a `Logger` instance with the same name of the `class`.
+
 ```csharp
 namespace MyNamespace
 {
@@ -36,47 +32,18 @@ namespace MyNamespace
 }
 ```
 
-**TIP**: Instead of writing logger declaration by hand, you can use Visual Studio code snippet: Just type nlogger and press TAB key twice, which will insert the snippet.
+It's also possible to control the `Logger`'s name:
 
-###Expose logger to sub-classes
-When we wish to expose the logger into subclasses a pattern similar to one below should be used.
 
 ```csharp
-class BaseClass
-{      
-    protected BaseClass()
-    {
-        Log = LogManager.GetLogger(GetType().FullName);
-    }
-
-    protected Logger Log { get; private set; }
-}
-
-class ExactClass : BaseClass
-{
-    public ExactClass() : base() { }
-    ...
-}
+using NLog;
+ 
+Logger logger = LogManager.GetLogger("MyClassName");
 ```
 
-The LogManager.GetLogger() method should NOT be invoked in the constructor of the BaseClass with Type parameter argument i.e. 
+Because loggers are thread-safe, you can simply create the logger once and store it in a `static` variable.
 
-``` C#
-protected BaseClass()
-{
-    Log = LogManager.GetLogger(GetType().FullName, GetType());
-}
-```
 
-as an exception will be throw. 
-
-In case of the ExactClass has a default constructor which invokes the BaseClass constructor a ```System.StackOverflowException``` is thrown. This is because the ExactClass calls the BaseClass the GetLogger(String, Type) attempts to construct a ExactClass until the exception is thrown.
-
-```
-ExactClass => BaseClass => ExactClass => BaseClass => ...
-```
-
-When there is no default constructor at the ExactClass the GetLogger(String, Type) method call does not know how to construct the ExactClass and it fails with a ```NLog.NLogConfigurationException```.
 
 ##Log levels
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
@@ -253,3 +220,49 @@ Simple layout is just a string, with special tags embedded between **${** and **
 ```xml
 <target name="logfile" xsi:type="File" fileName="file.txt" layout="${date:format=yyyyMMddHHmmss} ${message}" />
 ```
+
+
+#Advanced
+
+
+
+
+###Expose logger to sub-classes
+When we wish to expose the logger into sub classes a the following pattern could be used.
+
+```csharp
+class BaseClass
+{      
+    protected BaseClass()
+    {
+        Log = LogManager.GetLogger(GetType().FullName);
+    }
+
+    protected Logger Log { get; private set; }
+}
+
+class ExactClass : BaseClass
+{
+    public ExactClass() : base() { }
+    ...
+}
+```
+
+The `LogManager.GetLogger()` method should NOT be invoked in the constructor of the BaseClass with Type parameter argument i.e. 
+
+``` C#
+protected BaseClass()
+{
+    Log = LogManager.GetLogger(GetType().FullName, GetType());
+}
+```
+
+as an exception will be throw. 
+
+In case of the ExactClass has a default constructor which invokes the BaseClass constructor a ```System.StackOverflowException``` is thrown. This is because the ExactClass calls the BaseClass the GetLogger(String, Type) attempts to construct a ExactClass until the exception is thrown.
+
+```
+ExactClass => BaseClass => ExactClass => BaseClass => ...
+```
+
+When there is no default constructor at the ExactClass the GetLogger(String, Type) method call does not know how to construct the ExactClass and it fails with a ```NLog.NLogConfigurationException```.
