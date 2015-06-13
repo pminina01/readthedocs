@@ -141,7 +141,7 @@ Note that as you are typing this in Visual Studio, you should see IntelliSense s
 ```
 Now, when you run the application, you should see log messages written to file.txt in current directory.
 
-##Multiple targets
+###Multiple targets
 Lets try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slightly less detailed. Here's the configuration file which implements this:
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -182,7 +182,7 @@ The first rule will send logs from loggers whose names begin with `SomeNamespace
 
 The second rule will send all remaining logs to the same log file with the restriction that the level must be **Info** or higher.
 
-##Wrappers
+###Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
 * [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
@@ -211,7 +211,7 @@ In order to use wrappers, simply enclose the `<target />` element with another o
 ```
 This will make all writes to the file be asynchronous, which will improve responsiveness of the calling thread.
 
-##Layouts
+###Layouts
 Layouts provide a way to format the contents of the logs as it is written to a file. There are 2 main kinds of layouts:
 * simple layout - which is composed of [Layout Renderers](Layout-renderers)
 * structural layouts - which can output XML, CSV, and other complex formats
