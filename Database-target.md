@@ -47,7 +47,7 @@ The parameter name should be a provider invariant name as registered in machine.
 * oledb - OLEDB Data Provider
 * odbc - ODBC Data Provider
 
-_useTransactions_ - This option was removed in Nlog 4.0 because the logging code always runs outside of transaction to ensure that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
+_useTransactions_ - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
 
 _connectionStringName_ - Name of the connection string (as specified in .  
 > This parameter is not supported in:
