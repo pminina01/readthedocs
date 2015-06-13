@@ -1,35 +1,21 @@
 ##Installing NLog
-NLog can be downloaded from the the [Download](http://nlog-project.org/download/) section or from [NuGet](http://nuget.org). Both source and binary packages are available. For beginners, it is a good idea to use the recommended installer package in msi or exe format. More advanced scenarios may require the use of zip files, which are also available.
+NLog can be downloaded from the the from [NuGet](https://www.nuget.org/packages/NLog/). The source is also available on GitHub. 
 
-> If you use NuGET to install NLog, do remember to add NLog's configuration file using the `NLog.Config` package via NuGET. Read more at [https://coderwall.com/p/ynossg](https://coderwall.com/p/ynossg)
+Just install ["NLog.Config" package](https://www.nuget.org/packages/NLog.Config/) and this will install also "NLog" and "NLog.Schema" packages.
 
-At this time NLog 3.2.0 is stable and can be tried for production applications.
+Use the GUI or the following command in the Package Manager Console:
+```
+Install-Package NLog.Config 
+```
 
-Once you have downloaded the installation package, run it and choose default installation options. This will deploy NLog assemblies, API documentation and Visual Studio integration, which includes:
-
-* Item Templates - to quickly add NLog [Configuration File](Configuration-file) to your project
-* Code Snippets - for C# and Visual Basic, to simplify creation of Logger instances
-* NLog.xsd file Intellisense(tm) support for editing NLog configuration files registration of NLog binary directory into **Add Reference...** dialog
-
-##Adding NLog to an application
-Let's start by creating an empty console project in Visual Studio.
-
-In order to use NLog in the application, we must add a reference to NLog.dll and a [Configuration File](Configuration-file) which will specify Log Routing rules. Those two things can be done in a single step, just by adding NLog.config file to the project. To do so, right click on your project in Visual Studio and select **Add New Item**.
-
-From the list on the left, select **NLog** category, then select **Empty NLog Configuration File** then click **Add**.
-
-[[File-AddNewItem.png]]
-
-This will add a reference to NLog.dll from C:\Program Files\NLog and a [Configuration File](Configuration-file) without any rules. Since NLog requires the configuration file to be copied to the application directory, we must make just one change. In Solution Explorer select NLog.config and set **Copy to output** directory to **Copy always**.
-
-[[CopyToOutputDirectory.png]]
+At this time NLog 4.0 is stable and can be tried for production applications.
 
 That's it, you can now compile and run your application and it will be able to use NLog.
 
 ##Logging API
-In order to emit log messages from the application you need to use the logging API. There are two classes that you will be using the most: Logger and LogManager, both in the NLog namespace. Logger represents the named source of logs and has methods to emit log messages, and LogManager creates and manages instances of loggers.
+In order to emit log messages from the application you need to use the logging API. There are two classes that you will be using the most: `Logger` and `LogManager`, both in the NLog namespace. `Logger` represents the named source of logs and has methods to emit log messages, and `LogManager` creates and manages instances of loggers.
 
-It is important to understand that Logger does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
+It is important to understand that `Logger` does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
 ##Creating loggers
 Most applications will use one logger per class, where the name of the logger is the same as the name of the class. As mentioned before, you must use LogManager to create Logger instances. To create a logger with a given name, call:
