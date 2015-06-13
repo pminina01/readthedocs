@@ -63,6 +63,7 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 * [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
 * [${aspnet-user-authtype}](AspNetUserAuthType-Layout-Renderer) - ASP.NET User variable.
 * [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
+* [${iis-site-name}](IIS-site-name-Layout-Renderer) - IIS site name.
 
 ##Wrapper Layout Renderers
 
