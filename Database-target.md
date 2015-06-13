@@ -100,12 +100,6 @@ Each collection item is represented by \<parameter /> element with the following
         * _size_ - Database parameter size. [Integer](Data types) Default: 0
         * _text_ - Command text. [Layout](Data types) Required.
 
-        > This parameter is not supported in
-        > * NLog v1.0 for .NET Compact Framework 1.0
-        > * NLog v1.0 for .NET Compact Framework 2.0
-        > * NLog v1.0 for .NET Framework 1.0
-        > * NLog v1.0 for .NET Framework 1.1
-        > * NLog v1.0 for .NET Framework 2.0
 
 ###SQL Statement
 _commandText_ - Text of the SQL command to be run on each log level. [Layout](Data types) Required.  
