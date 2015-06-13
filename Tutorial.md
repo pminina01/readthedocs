@@ -12,12 +12,12 @@ At this time NLog 4.0 is stable and can be tried for production applications.
 
 That's it, you can now compile and run your application and it will be able to use NLog.
 
-##Logging API
-In order to emit log messages from the application you need to use the logging API. There are two classes that you will be using the most: `Logger` and `LogManager`, both in the NLog namespace. `Logger` represents the named source of logs and has methods to emit log messages, and `LogManager` creates and manages instances of loggers.
+##Creating Log messages
+In order to create log messages from the application you need to use the logging API. There are two classes that you will be using the most: `Logger` and `LogManager`, both in the NLog namespace. `Logger` represents the named source of logs and has methods to emit log messages, and `LogManager` creates and manages instances of loggers.
 
 It is important to understand that `Logger` does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
-##Creating loggers
+###Creating loggers
 It is advised to create one (`private static`) `Logger` per class.  As mentioned before, you must use `LogManager` to create `Logger` instances. 
 
 This will create a `Logger` instance with the same name of the `class`.
@@ -45,18 +45,18 @@ Because loggers are thread-safe, you can simply create the logger once and store
 
 
 
-##Log levels
+###Log levels
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
 
 NLog supports the following [log levels](Log-levels):
-* Trace - very detailed logs, which may include high-volume information such as protocol payloads. This log level is typically only enabled during development
-* Debug - debugging information, less detailed than trace, typically not enabled in production environment.
-* Info - information messages, which are normally enabled in production environment
-* Warn - warning messages, typically for non-critical issues, which can be recovered or which are temporary failures
-* Error - error messages
-* Fatal - very serious errors
+* `Trace` - very detailed logs, which may include high-volume information such as protocol payloads. This log level is typically only enabled during development
+* `Debug` - debugging information, less detailed than trace, typically not enabled in production environment.
+* `Info` - information messages, which are normally enabled in production environment
+* `Warn` - warning messages, typically for non-critical issues, which can be recovered or which are temporary failures
+* `Error` - error messages - most of the time these are `Exceptions`
+* Fatal - very serious errors!
 
-##Emitting log messages
+###Writing log messages
 In order to emit log message you can simply call one of the methods on the `Logger`. `Logger` class has six methods whose names correspond to log levels: `Trace()`, `Debug()`, `Info()`, `Warn()`, `Error()` and `Fatal()`. There is also `Log()` method which takes log level as a parameter.
 ```csharp
 using NLog;
@@ -110,7 +110,7 @@ TIP: You should avoiding doing string formatting (such as concatenation, or call
 Formatting log messages takes a lot of time, so NLog tries to defer formatting until it knows that log message will actually be written to some output. If the message ends up being skipped because of logging configuration, you will not pay the price of `String.Format()` at all. See also Optimizing Logging Performance.
 
 ##Configuration File
-So far we have learned how to emit log messages from code, but we have not configured any outputs for out logs. So, when you run your instrumented application at this point, you will see - well - nothing. Time to open the NLog.config file and add some logging rules:
+So far we have learned how to create log messages from code, but we have not configured any outputs for out logs. So, when you run your instrumented application at this point, you will see - well - nothing. Time to open the NLog.config file and add some logging rules:
 
 1. In the \<targets> section, add:
 ```xml
