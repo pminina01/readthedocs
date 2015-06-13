@@ -16,7 +16,7 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 * [${date}](Date-Layout-Renderer) - Current date and time.
 * [${document-uri}](DocumentUri-Layout-Renderer) - URI of the HTML page which hosts the current Silverlight application.
 * [${environment}](Environment-Layout-Renderer) - The environment variable.
-* [${event-context}](EventContext-Layout-Renderer) - Log event context data.
+* [${event-properties}](EventProperties-Layout-Renderer) - Log event properties data - rename of ${event-context}.
 * [${exception}](Exception-Layout-Renderer) - Exception information provided through a call to one of the Logger.*Exception() methods.
 * [${file-contents}](FileContents-Layout-Renderer) - Renders contents of the specified file.
 * [${gc}](Gc-Layout-Renderer) - The information about the garbage collector.
