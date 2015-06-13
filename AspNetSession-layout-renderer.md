@@ -10,7 +10,7 @@ ${aspnet-session:variable=String}
 ##Parameters
 ###Rendering Options
 * **variable** - Session variable name.
-* _EvaluateAsNestedProperties_ - boolean. Default: `false`. Evaluate the `variable` as nested properties. The dot's in the `variable` are special interpreted. See example below.
+* _EvaluateAsNestedProperties_ - boolean. Default: `false`. Evaluate the `variable` as nested properties. The dots in the `variable` are special interpreted. See example below.
 
 ##Remarks
 Use this layout renderer to insert the value of the specified variable stored in the ASP.NET Session dictionary.
