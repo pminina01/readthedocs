@@ -1,15 +1,15 @@
 ##Content
-* [[Installing NLog|Tutorial##Installing NLog]]
-* [[Creating Log messages|Tutorial##Creating Log messages]]
- * [[Creating loggers|Tutorial##Creating loggers]]
- * [[Log levels|Tutorial##Log levels]]
- * [[Writing log messages|Tutorial##Writing log messages]]
-* [[Configuration|Tutorial##Configuration]]
- * [[Multiple targets|Tutorial##Multiple targets]]
- * [[Logger-specific routing|Tutorial##Logger-specific routing]] 
- * [[Wrappers|Tutorial##Wrappers]] 
- * [[Layouts|Tutorial##Layouts]] 
-* [[Advanced|Tutorial##Advanced]]
+* [[Installing NLog|Tutorial#Installing NLog]]
+* [[Creating Log messages|Tutorial#Creating Log messages]]
+ * [[Creating loggers|Tutorial#Creating loggers]]
+ * [[Log levels|Tutorial#Log levels]]
+ * [[Writing log messages|Tutorial#Writing log messages]]
+* [[Configuration|Tutorial#Configuration]]
+ * [[Multiple targets|Tutorial#Multiple targets]]
+ * [[Logger-specific routing|Tutorial#Logger-specific routing]] 
+ * [[Wrappers|Tutorial#Wrappers]] 
+ * [[Layouts|Tutorial#Layouts]] 
+* [[Advanced|Tutorial#Advanced]]
 
 ##Installing NLog
 NLog can be downloaded from the the from [NuGet](https://www.nuget.org/packages/NLog/). The source is also available on GitHub. 
