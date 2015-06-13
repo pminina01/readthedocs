@@ -32,6 +32,7 @@ Read more about using the [Configuration File](Configuration file).
 _name_ - Name of the target.
 ###Connection Options
 _dbUserName_ - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
+
 _dbProvider_ - Name of the database provider. Required. Default: sqlserver  
 The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
 * System.Data.SqlClient -
@@ -53,14 +54,19 @@ _connectionStringName_ - Name of the connection string.
 
 
 _connectionString_ - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
+
 _keepConnection_ - Indicates whether to keep the database connection open between the log events. [Boolean](Data types) Default: `false`  
+
 _dbDatabase_ - Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string. [Layout](Data types)  
+
 _dbPassword_ - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
+
 _dbHost_ - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
+
 ###Installation Options
 _installDdlCommands_ - The installation DDL commands. [Collection](Data types)  
 Each collection item is represented by \<install-command /> element with the following attributes:
-  * _commandType_ - Type of the command. Required. Default: 1  
+  * _commandType_ - Type of the command. Required. Default: `text`  
 Possible values:
     * StoredProcedure -
     * TableDirect -
