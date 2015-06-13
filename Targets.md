@@ -6,7 +6,7 @@ NLog supports custom target. For more information, see: [How to write a Target](
 ##Targets
 
 ###NLog package
-
+* [AspResponse](AspResponse-target) - Outputs log messages through the ASP Response object.
 * [Chainsaw](Chainsaw-target) - Sends log messages to the remote instance of Chainsaw application from log4j.
 * [ColoredConsole](ColoredConsole-target) - Writes log messages to the console with customizable coloring.
 * [Console](Console-target) - Writes log messages to the console.
@@ -32,7 +32,7 @@ NLog supports custom target. For more information, see: [How to write a Target](
 
 ###NLog.Web package
 * [AspNetTrace](AspNetTrace-target) - Writes log messages to the ASP.NET trace.
-* [AspResponse](AspResponse-target) - Outputs log messages through the ASP Response object.
+
 
 ###NLog.Windows.Forms package
 * [FormControl](FormControl-target) - Logs text to Windows.Forms.Control.Text property control of specified Name.
@@ -49,7 +49,7 @@ External packages, not maintained the NLog team.
 
 
 ##Wrapper Targets
-* [AspNetBufferingWrapper](AspNetBufferingWrapper-target) - Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.
+###NLog. package
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
 * [AutoFlushWrapper](AutoFlushWrapper-target) - Causes a flush after each write on a wrapped target.
 * [BufferingWrapper](BufferingWrapper-target) - A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.
@@ -62,6 +62,10 @@ External packages, not maintained the NLog team.
 * [RetryingWrapper](RetryingWrapper-target) - Retries in case of write error.
 * [RoundRobinGroup](RoundRobinGroup-target) - Distributes log events to targets in a round-robin fashion.
 * [SplitGroup](SplitGroup-target) - Writes log events to all targets.
+
+###NLog.Web package
+* [AspNetBufferingWrapper](AspNetBufferingWrapper-target) - Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.
+
 
 
 #Writing your own target
