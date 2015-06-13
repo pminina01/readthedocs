@@ -10,14 +10,14 @@
 * [Web resources](wiki/Web-resources) - user-contributed tutorials and articles about NLog
 
 ##Configuration Reference
+* [Log Levels](wiki/Log-levels) - the six log levels
 * [Configuration file](wiki/Configuration-file) - configure NLog with a XML file
 * [Configuration API](wiki/Configuration-API) - configure NLog with .Net code
 * [Targets](wiki/Targets) - write to destinations: database, file etc.
 * [Layouts](wiki/Layouts) - format: plain text, CSV, JSON etc.
-* [Layout Renderers](wiki/Layout-Renderers) - templating the logs
-* [Filters](wiki/Filters) - filtering log messages with conditions
-* [Conditions](wiki/Conditions) - conditions used in filters
-* [Log Levels](wiki/Log-levels) - the six log levels
+* [Layout Renderers](wiki/Layout-Renderers) - templating the logs with `${}` syntax
+* [Filtering log messages](wiki/Filters) - filtering log messages with conditions
+
 
 ##API Reference
 * [API Reference](http://nlog.github.io/documentation) - programming to NLog
