@@ -49,7 +49,8 @@ External packages, not maintained the NLog team.
 
 
 ##Wrapper Targets
-###NLog. package
+
+###NLog package
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
 * [AutoFlushWrapper](AutoFlushWrapper-target) - Causes a flush after each write on a wrapped target.
 * [BufferingWrapper](BufferingWrapper-target) - A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.
