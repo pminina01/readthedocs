@@ -49,15 +49,8 @@ The parameter name should be a provider invariant name as registered in machine.
 
 _useTransactions_ - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
 
-_connectionStringName_ - Name of the connection string (as specified in .  
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v1.0 for .NET Framework 1.0
-> * NLog v1.0 for .NET Framework 1.1
-> * NLog v1.0 for .NET Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 3.5
+_connectionStringName_ - Name of the connection string.
+
 
 _connectionString_ - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
 _keepConnection_ - Indicates whether to keep the database connection open between the log events. [Boolean](Data types) Default: `false`  
@@ -82,28 +75,14 @@ Each collection item is represented by <parameter /> element with the following 
     * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
     * _size_ - Database parameter size. [Integer](Data types) Default: 0
     * _text_ - Command text. [Layout](Data types) Required.  
-
-      > This parameter is not supported in:
-      > * NLog v1.0 for .NET Compact Framework 1.0
-      > * NLog v1.0 for .NET Compact Framework 2.0
-      > * NLog v1.0 for .NET Framework 1.0
-      > * NLog v1.0 for .NET Framework 1.1
-      > * NLog v1.0 for .NET Framework 2.0
     * _installConnectionString_ - Connection string using for installation and uninstallation. If not provided, regular ConnectionString is being used. [Layout](Layout)  
-
-      > This parameter is not supported in:
-      > * NLog v1.0 for .NET Compact Framework 1.0
-      > * NLog v1.0 for .NET Compact Framework 2.0
-      > * NLog v1.0 for .NET Framework 1.0
-      > * NLog v1.0 for .NET Framework 1.1
-      > * NLog v1.0 for .NET Framework 2.0
     * _uninstallDdlCommands_ - The uninstallation DDL commands. [Collection](Data types)  
 Each collection item is represented by \<uninstall-command /> element with the following attributes:
-      * _commandType_ - Type of the command. Required. Default: 1  
+      * _commandType_ - Type of the command. Required. Default: `text` 
 Possible values:
-        * StoredProcedure -
-        * TableDirect -
-        * Text -
+        * `StoredProcedure` - `commandText` is the stored procedure name.
+        * `TableDirect` -
+        * `Text` - regurar query
       * _connectionString_ - Connection string to run the command against. If not provided, connection string from the target is used. [Layout](Layout)  
       * _ignoreFailures_ - Indicates whether to ignore failures. [Boolean](Layout)  
       * _parameters_ - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Layout)  
