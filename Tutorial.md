@@ -1,3 +1,16 @@
+##Content
+* [[Installing NLog|Tutorial##Installing NLog]]
+* [[Creating Log messages|Tutorial##Creating Log messages]]
+ * [[Creating loggers|Tutorial##Creating loggers]]
+ * [[Log levels|Tutorial##Log levels]]
+ * [[Writing log messages|Tutorial##Writing log messages]]
+* [[Configuration|Tutorial##Configuration]]
+ * [[Multiple targets|Tutorial##Multiple targets]]
+ * [[Logger-specific routing|Tutorial##Logger-specific routing]] 
+ * [[Wrappers|Tutorial##Wrappers]] 
+ * [[Layouts|Tutorial##Layouts]] 
+* [[Advanced|Tutorial##Advanced]]
+
 ##Installing NLog
 NLog can be downloaded from the the from [NuGet](https://www.nuget.org/packages/NLog/). The source is also available on GitHub. 
 
@@ -161,7 +174,7 @@ Lets try something more complex now. Imagine you want to send very detailed logs
 ```
 As you can see, we now have multiple targets and multiple rules which route logs to them.
 
-##Logger-specific routing
+###Logger-specific routing
 Another scenario which is very common requires producing more detailed logs from some components which are being currently developed, while reducing output from some other components. We can use the following configuration:
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -178,9 +191,9 @@ Another scenario which is very common requires producing more detailed logs from
     </rules>
 </nlog>
 ```
-The first rule will send logs from loggers whose names begin with `SomeNamespace.Component`. and where level is **Trace** or higher to the log file. The attribute `final="true"` will cause further processing to be stopped after performing the write.
+The first rule will send logs from loggers whose names begin with `SomeNamespace.Component`. and where level is `Trace` or higher to the log file. The attribute `final="true"` will cause further processing to be stopped after performing the write.
 
-The second rule will send all remaining logs to the same log file with the restriction that the level must be **Info** or higher.
+The second rule will send all remaining logs to the same log file with the restriction that the level must be `Info` or higher.
 
 ###Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
