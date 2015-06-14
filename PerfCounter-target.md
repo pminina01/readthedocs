@@ -5,7 +5,7 @@ Supported in .NET and Mono.
 ```xml
 <targets>
   <target xsi:type="PerfCounter"
-          name="String"
+          counterName="String"
           instanceName="String"
           counterHelp="String"
           counterType="Enum"
@@ -17,7 +17,7 @@ Supported in .NET and Mono.
 Read more about using the [Configuration File](Configuration-file).
 ##Parameters
 ###General Options
-_name_ - Name of the target.
+_counterName_ - Name of the counter.
 ###Performance Counter Options
 _instanceName_ - Performance counter instance name.
 
