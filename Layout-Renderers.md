@@ -20,7 +20,7 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 * [${exception}](Exception-Layout-Renderer) - Exception information provided through a call to one of the Logger.*Exception() methods.
 * [${file-contents}](FileContents-Layout-Renderer) - Renders contents of the specified file.
 * [${gc}](Gc-Layout-Renderer) - The information about the garbage collector.
-* [${gdc}](Gdc-Layout-Renderer) - Global Diagnostic Context item. Provided for compatibility with log4net.
+* [${gdc}](Gdc-Layout-Renderer) - Global Diagnostic Context item. Dictionary structure to hold per-application-instance values.
 * [${guid}](Guid-Layout-Renderer) - Globally-unique identifier (GUID).
 * [${identity}](Identity-Layout-Renderer) - Thread identity information (name and authentication information).
 * [${install-context}](InstallContext-Layout-Renderer) - Installation parameter (passed to InstallNLogConfig).
@@ -30,9 +30,9 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 * [${logger}](Logger-Layout-Renderer) - The logger name.
 * [${longdate}](LongDate-Layout-Renderer) - The date and time in a long, sortable format yyyy-MM-dd HH:mm:ss.mmm.
 * [${machinename}](MachineName-Layout-Renderer) - The machine name that the process is running on.
-* [${mdc}](Mdc-Layout-Renderer) - Mapped Diagnostic Context item. Provided for compatibility with log4net.
+* [${mdc}](Mdc-Layout-Renderer) - Mapped Diagnostics Context - a thread-local structure.
 * [${message}](Message-Layout-Renderer) - The formatted log message.
-* [${ndc}](Ndc-Layout-Renderer) - Nested Diagnostic Context item. Provided for compatibility with log4net.
+* [${ndc}](Ndc-Layout-Renderer) - Nested Diagnostics Context - a thread-local structure.
 * [${newline}](Newline-Layout-Renderer) - A newline literal.
 * [${nlogdir}](NLogDir-Layout-Renderer) - The directory where NLog.dll is located.
 * [${performancecounter}](PerformanceCounter-Layout-Renderer) - The performance counter.
