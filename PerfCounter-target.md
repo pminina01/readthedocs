@@ -27,36 +27,36 @@ _counterHelp_ - Counter help text.
 > * NLog v1.0 for .NET Framework 1.1
 > * NLog v1.0 for .NET Framework 2.0
 
-_counterType_ - Performance counter type. Default: 65536  
+_counterType_ - Performance counter type. Default: `NumberOfItems32`  
 Possible values:
-* AverageBase -
-* AverageCount64 -
-* AverageTimer32 -
-* CounterDelta32 -
-* CounterDelta64 -
-* CounterMultiBase -
-* CounterMultiTimer -
-* CounterMultiTimer100Ns -
-* CounterMultiTimer100NsInverse -
-* CounterMultiTimerInverse -
-* CounterTimer -
-* CounterTimerInverse -
-* CountPerTimeInterval32 -
-* CountPerTimeInterval64 -
-* ElapsedTime -
-* NumberOfItems32 -
-* NumberOfItems64 -
-* NumberOfItemsHEX32 -
-* NumberOfItemsHEX64 -
-* RateOfCountsPerSecond32 -
-* RateOfCountsPerSecond64 -
-* RawBase -
-* RawFraction -
-* SampleBase -
-* SampleCounter -
-* SampleFraction -
-* Timer100Ns -
-* Timer100NsInverse -
+* AverageBase
+* AverageCount64
+* AverageTimer32
+* CounterDelta32
+* CounterDelta64
+* CounterMultiBase
+* CounterMultiTimer
+* CounterMultiTimer100Ns
+* CounterMultiTimer100NsInverse
+* CounterMultiTimerInverse
+* CounterTimer
+* CounterTimerInverse
+* CountPerTimeInterval32
+* CountPerTimeInterval64
+* ElapsedTime
+* NumberOfItems32
+* NumberOfItems64
+* NumberOfItemsHEX32
+* NumberOfItemsHEX64
+* RateOfCountsPerSecond32
+* RateOfCountsPerSecond64
+* RawBase
+* RawFraction
+* SampleBase
+* SampleCounter
+* SampleFraction
+* Timer100Ns
+* Timer100NsInverse
 
 _autoCreate_ - Indicates whether performance counter should be automatically created.
 
