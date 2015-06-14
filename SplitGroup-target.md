@@ -2,7 +2,7 @@ Writes log events to all targets.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="SplitGroup" name="String">
     <target xsi:type="wrappedTargetType" ... />
