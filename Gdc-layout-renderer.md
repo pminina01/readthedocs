@@ -1,4 +1,4 @@
-Global Diagnostics Context item. Provided for compatibility with log4net. 
+Global Diagnostics Context - a dictionary structure to hold per-application-instance values.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
