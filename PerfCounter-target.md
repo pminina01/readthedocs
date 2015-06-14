@@ -22,10 +22,6 @@ _name_ - Name of the target.
 _instanceName_ - Performance counter instance name.
 
 _counterHelp_ - Counter help text.  
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Framework 1.0
-> * NLog v1.0 for .NET Framework 1.1
-> * NLog v1.0 for .NET Framework 2.0
 
 _counterType_ - Performance counter type. Default: `NumberOfItems32`  
 Possible values:
