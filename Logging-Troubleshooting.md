@@ -70,6 +70,7 @@ NLog has its own [internal logging](Internal-logging) system which can be used t
 * `internalLogFile="c:\path\to\internal_log_file.txt"` - specifies the location of the internal log file
 * `internalLogLevel="Trace"` specifies the level of detail of information written to the internal log file
 * `internalLogToConsole="true"` writes internal log to the console output
+
 More ways to enable internal logging are explained [here](Internal-logging).
 
 ##Other troubleshooting tools and techniques
