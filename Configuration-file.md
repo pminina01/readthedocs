@@ -15,6 +15,7 @@ All configuration of NLog can be done with a single XML file.
 [Default wrappers](#default-wrappers)<br />
 [Default target parameters](#default-target-parameters)<br />
 [Content escaping](#content-escaping)
+[Extensions](#extensions)
 
 <a name="configuration-file-locations" />
 ##Configuration file locations
@@ -319,3 +320,27 @@ Examples:
 
 - `${appdomain:format={1\}{0\}}` (escape of `}`)
 - `${rot13:inner=${ndc:topFrames=3:separator=x}}` (no escaping needed)
+
+
+#Extensions
+Extensions can be configured to include additional NLog packages or custom ones:
+
+Just reference the DLL in the config in the `<extensions />` as shown below.
+The name should not include the `.dll`
+
+Configuration file example:
+```xml
+<nlog> 
+  <extensions> 
+    <add assembly="MyAssembly"/> 
+  </extensions> 
+  <targets> 
+    <target name="a1" type="MyFirst" host="localhost"/> 
+  </targets> 
+  <rules> 
+    <logger name="*" minLevel="Info" appendTo="a1"/> 
+  </rules> 
+</nlog>
+```
+
+Starting from NLog 4.0 assemblies with the name "NLog*.dll", like “NLog.CustomTarget.dll” are now loaded automatically. This assembly should be in the same folder as `NLog.dll`. 
