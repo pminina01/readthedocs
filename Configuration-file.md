@@ -14,7 +14,7 @@ All configuration of NLog can be done with a single XML file.
 [Asynchronous processing and wrapper targets](#asynchronous-processing-and-wrapper-targets)<br />
 [Default wrappers](#default-wrappers)<br />
 [Default target parameters](#default-target-parameters)<br />
-[Content escaping](#content-escaping)
+[Content escaping](#content-escaping)<br />
 [Extensions](#extensions)
 
 <a name="configuration-file-locations" />
