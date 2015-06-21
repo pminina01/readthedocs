@@ -11,7 +11,6 @@ ${processinfo:property=Enum}
 ###Rendering Options
 * _property_ - Property to retrieve. Default: Id  
   Possible values:  
-  * **BasePriority** - Base Priority.
   * **ExitCode** - Exit Code.
   * **ExitTime** - Exit Time.
   * **Handle** - Process Handle.
@@ -19,7 +18,7 @@ ${processinfo:property=Enum}
   * **HasExited** - Whether process has exited.
   * **Id** - Process ID.
   * **MachineName** - Machine name.
-   * **MainWindowHandle** - Handle of the main window.
+  * **MainWindowHandle** - Handle of the main window.
   * **MainWindowTitle** - Title of the main window.
   * **MaxWorkingSet** - Maximum Working Set.
   * **MinWorkingSet** - Minimum Working Set.
@@ -31,7 +30,7 @@ ${processinfo:property=Enum}
   * **PagedSystemMemorySize64** - Paged System Memory Size (64-bit).
   * **PeakPagedMemorySize** - Peak Paged Memory Size.
   * **PeakPagedMemorySize64** - Peak Paged Memory Size (64-bit).
-  * **PeakVirtualMemorySize** - Peak Vitual Memory Size.
+  * **PeakVirtualMemorySize** - Peak Virtual Memory Size.
   * **PeakVirtualMemorySize64** - Peak Virtual Memory Size (64-bit)..
   * **PeakWorkingSet** - Peak Working Set Size.
   * **PeakWorkingSet64** - Peak Working Set Size (64-bit).
@@ -49,4 +48,4 @@ ${processinfo:property=Enum}
   * **VirtualMemorySize** - Virtual Memory Size.
   * **VirtualMemorySize64** - Virtual Memory Size (64-bit).
   * **WorkingSet** - Working Set Size.
-  * **WorkingSet64** - Working Set Size (64-bit).
+  * **WorkingSet64** - Working Set Size (64-bit)
