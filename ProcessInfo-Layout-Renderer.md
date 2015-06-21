@@ -9,7 +9,7 @@ ${processinfo:property=Enum}
 
 ##Parameters
 ###Rendering Options
-* _property_ - Property to retrieve. Default: Id  
+* _property_ - Property to retrieve. Default: **Id**  
   Possible values:  
   * **ExitCode** - Exit Code.
   * **ExitTime** - Exit Time.
