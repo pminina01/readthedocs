@@ -19,46 +19,12 @@ ${processinfo:property=Enum}
   * **HasExited** - Whether process has exited.
   * **Id** - Process ID.
   * **MachineName** - Machine name.
-  * **MainModule** -
-
-    > This parameter is not supported in:
-    > * NLog v2.0 for .NET Framework 2.0
-    > * NLog v2.0 for .NET Framework 3.5
-    > * NLog v2.0 for .NET Framework 4.0
-
-
-  * **MainWindowHandle** - Handle of the main window.
+   * **MainWindowHandle** - Handle of the main window.
   * **MainWindowTitle** - Title of the main window.
   * **MaxWorkingSet** - Maximum Working Set.
   * **MinWorkingSet** - Minimum Working Set.
-  * **NonpagedSystemMemorySize** -
-
-    > This parameter is not supported in:
-    > * NLog v2.0 for .NET Framework 2.0
-    > * NLog v2.0 for .NET Framework 3.5
-    > * NLog v2.0 for .NET Framework 4.0
-
   * **NonPagedSystemMemorySize** - Non-paged System Memory Size.
-
-    > This parameter is not supported in:
-    > * NLog v1.0 for .NET Framework 1.0
-    > * NLog v1.0 for .NET Framework 1.1
-    > * NLog v1.0 for .NET Framework 2.0
-
-  * **NonpagedSystemMemorySize64** -
-
-    > This parameter is not supported in:
-    > * NLog v2.0 for .NET Framework 2.0
-    > * NLog v2.0 for .NET Framework 3.5
-    > * NLog v2.0 for .NET Framework 4.0
-
   * **NonPagedSystemMemorySize64** - Non-paged System Memory Size (64-bit).
-
-    > This parameter is not supported in:
-    > * NLog v1.0 for .NET Framework 1.0
-    > * NLog v1.0 for .NET Framework 1.1
-    > * NLog v1.0 for .NET Framework 2.0
-
   * **PagedMemorySize** - Paged Memory Size.
   * **PagedMemorySize64** - Paged Memory Size (64-bit)..
   * **PagedSystemMemorySize** - Paged System Memory Size.
