@@ -12,7 +12,7 @@
 * [[Advanced|tutorial#advanced]]         
 
 ##Installing NLog
-NLog can be downloaded from the the from [NuGet](https://www.nuget.org/packages/NLog/). The source is also available on GitHub. 
+NLog can be downloaded from [NuGet](https://www.nuget.org/packages/NLog/). The source is also available on GitHub. 
 
 Just install [*NLog.Config* package](https://www.nuget.org/packages/NLog.Config/) and this will install also *NLog* and *NLog.Schema* packages - this will result in a starter config and intellisense. 
 
