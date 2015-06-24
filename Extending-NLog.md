@@ -1,4 +1,3 @@
-##Extending NLog
 There could be various reasons why you would like to extend NLog. For example: If you want to write your log messages to a non-standard output or when you need a protocol which is not supported by NLog, you need to write a custom Target. If you use your own `${}` macro's, then a custom layout renderer is a good idea.  
 
 This tutorial describes creating custom targets and custom layout renderers. But it's also possible to create custom Layouts and custom conditions (for filtering) - see [overhere](https://github.com/NLog/NLog/wiki/Conditions#extensibility). 
