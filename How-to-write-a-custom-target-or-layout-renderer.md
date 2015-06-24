@@ -1,7 +1,7 @@
 ##Extending NLog
 There could be various reasons why you would like to extend NLog. For example: If you want to write your log messages to a non-standard output or when you need a protocol which is not supported by NLog, you need to write a custom Target. If you use your own `${}` macro's, then a custom layout renderer is a good idea.  
 
-This tutorials describes creating custom targets and custom layout renderers. But it's also possible to create custom Layouts and custom conditions (for filtering) - see [overhere](https://github.com/NLog/NLog/wiki/Conditions#extensibility). 
+This tutorial describes creating custom targets and custom layout renderers. But it's also possible to create custom Layouts and custom conditions (for filtering) - see [overhere](https://github.com/NLog/NLog/wiki/Conditions#extensibility). 
 
 ##How to write a custom target?
 It’s really easy. Create a class that inherits from `NLog.Targets.TargetWithLayout` and override the `Write()` method. In the body of the method invoke `this.Layout.Render()` to get the message text, then send the text to the destination media.
