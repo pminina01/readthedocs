@@ -119,7 +119,7 @@ Configuration file example:
   <targets> 
     <target name="a1" type="MyFirst" host="localhost"/> 
     <target name="f1" type="file"  layout="${longdate} ${hello-world}" 
-            fileName="${basedir}/logs/logfile.log" 
+            fileName="${basedir}/logs/logfile.log" />
   </targets> 
   <rules> 
     <logger name="*" minLevel="Info" appendTo="a1"/> 
@@ -139,8 +139,8 @@ static void Main(string[] args)
                             .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
 
     //layout renderer
-    ConfigurationItemFactory.Default
-                            .LayoutRenderers.RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
+    ConfigurationItemFactory.Default.LayoutRenderers
+                            .RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
  
     // start logging here 
 }
