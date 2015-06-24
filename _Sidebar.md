@@ -5,4 +5,4 @@
 * [Layouts](Layouts)
 * [Layout Renderers](Layout-Renderers)
 * [Filtering log messages](Filters)
-
+* [Extending NLog](Extending NLog)
