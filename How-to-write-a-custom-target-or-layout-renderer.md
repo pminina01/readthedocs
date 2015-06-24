@@ -52,7 +52,7 @@ Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the
 Invoke in this method `builder.Append(..)` to render your custom layout renderer.
 
 ###Example
-We create a `${hello-world}` layout renderer, which renderers..."hello world!".
+We create a `${hello-world}` layout renderer, which renders..."hello world!".
 
 ```c#
 [LayoutRenderer("hello-world")]
