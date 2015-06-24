@@ -134,10 +134,12 @@ Not really. You can register your target programmatically. Just be sure to do it
 static void Main(string[] args) 
 { 
     //target
-    ConfigurationItemFactory.Default.Targets.RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
+    ConfigurationItemFactory.Default.Targets
+                            .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
 
     //layout renderer
-    ConfigurationItemFactory.Default.LayoutRenderers.RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
+    ConfigurationItemFactory.Default
+                            .LayoutRenderers.RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
  
     // start logging here 
 }
