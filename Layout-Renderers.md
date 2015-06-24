@@ -1,5 +1,8 @@
 Layout renderers are template macros that are used in [Layouts](Layouts).
 
+NLog supports creating custom layout renderers. For more information, see: [Extending NLog](Extending NLog)
+
+
 ##Layout Renderers
 
 ###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
