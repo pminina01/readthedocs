@@ -1,7 +1,7 @@
 ##Use
 Targets are used to display, store, or pass log messages to another destination. There are two kinds of target; those that receive and handle the messages, and those that buffer or route the messages to another target. The second group are called 'wrapper' targets. 
 
-NLog supports custom target. For more information, see: [How to write a Target](How-to-write-a-Target)
+NLog supports creating custom targets. For more information, see: [Extending NLog](Extending NLog)
 
 ##Targets
 
