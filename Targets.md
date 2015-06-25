@@ -74,4 +74,4 @@ External packages, not maintained the NLog team.
 
 
 #Writing your own target
-NLog supports custom target. For more information, see: [How to write a Target](How-to-write-a-Target)
+NLog supports custom target. For more information, see: [Extending NLog](Extending NLog)
