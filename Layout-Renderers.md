@@ -14,7 +14,6 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${assembly-version}](AssemblyVersion-Layout-Renderer) - The version of the executable in the default application domain.
 * [${basedir}](Basedir-Layout-Renderer) - The current application domain's base directory.
 * [${callsite}](Callsite-Layout-Renderer) - The call site (class name, method name and source information).
-<!-- 4.1 * [${callsite-linenumber}](Callsite-line-number-layout-renderer) - The call site source line number. -->
 * [${counter}](Counter-Layout-Renderer) - A counter value (increases on each layout rendering).
 * [${date}](Date-Layout-Renderer) - Current date and time.
 * [${document-uri}](DocumentUri-Layout-Renderer) - URI of the HTML page which hosts the current Silverlight application.
@@ -56,6 +55,9 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${time}](Time-Layout-Renderer) - The time in a 24-hour, sortable format HH:mm:ss.mmm.
 * [${windows-identity}](Windows-Identity-Layout-Renderer) - Thread Windows identity information (username).
 
+
+<!---  4.1 
+t* [${callsite-linenumber}](Callsite-line-number-layout-renderer) - The call site source line number. -->
 ###NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
 * [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
 
