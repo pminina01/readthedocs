@@ -1,0 +1,1 @@
+See [[extending NLog]]
