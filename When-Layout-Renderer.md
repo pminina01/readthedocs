@@ -18,6 +18,11 @@ ${other:when=Condition}
 * _when_ - Condition that must be met for the inner layout to be printed. Condition Required.
 * _inner_ - Wrapped layout. Layout
 
+
+##Examples
+* `{message:when=logger=='logger'}`: print the message when the logger name is equal to "logger"
+
+
 ##Remarks
 The colon (:) character should be wrapped within ```{literal:text=\:}``` instead of placed directly within the _inner_ layout. 
 
