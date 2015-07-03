@@ -50,7 +50,9 @@ External packages, not maintained the NLog team.
  * [GrowlNotify target](https://github.com/RyanFarley/NLogGrowlNotify) 
  [![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl)
  – sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
-
+ * [Pushover target](https://github.com/RobThree/NLog.Targets.Pushover) 
+ [![Version](http://img.shields.io/nuget/v/NLog.Targets.Pushover.svg)](https://www.nuget.org/packages/NLog.Targets.Pushover)
+ – sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
 
 ##Wrapper Targets
 
