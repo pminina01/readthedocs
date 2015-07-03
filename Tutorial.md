@@ -67,7 +67,7 @@ NLog supports the following [log levels](Log-levels):
 * `Info` - information messages, which are normally enabled in production environment
 * `Warn` - warning messages, typically for non-critical issues, which can be recovered or which are temporary failures
 * `Error` - error messages - most of the time these are `Exceptions`
-* Fatal - very serious errors!
+* `Fatal` - very serious errors!
 
 ###Writing log messages
 In order to emit log message you can simply call one of the methods on the `Logger`. `Logger` class has six methods whose names correspond to log levels: `Trace()`, `Debug()`, `Info()`, `Warn()`, `Error()` and `Fatal()`. There is also `Log()` method which takes log level as a parameter.
