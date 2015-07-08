@@ -88,7 +88,9 @@ t* [${callsite-linenumber}](Callsite-line-number-layout-renderer) - The call sit
 * [${whenEmpty}](WhenEmpty-Layout-Renderer) - Outputs alternative layout when the inner layout produces empty result.
 * [${xml-encode}](Xml-Encode-Layout-Renderer) - Converts the result of another layout output to be XML-compliant.
 
-##Custom Layout Renderers
+##External packages
+
+External packages, not maintained the NLog team.
 
 * [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
 
