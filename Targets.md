@@ -46,7 +46,7 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 External packages, not maintained the NLog team.
 
  * [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) - sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
- [![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ)
+[![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ)
  * [GrowlNotify target](https://github.com/RyanFarley/NLogGrowlNotify) – sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
 [![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl)
  * [Pushover target](https://github.com/RobThree/NLog.Targets.Pushover) – sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
