@@ -53,9 +53,9 @@ External packages, not maintained the NLog team.
  * [Pushover target](https://github.com/RobThree/NLog.Targets.Pushover) 
  [![Version](http://img.shields.io/nuget/v/NLog.Targets.Pushover.svg)](https://www.nuget.org/packages/NLog.Targets.Pushover)
  – sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
-* [SignalR](https://github.com/toddmeinershagen/NLog.SignalR)
-[![NuGet version (NLog.Signalr)](https://img.shields.io/nuget/v/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
-[![NuGet version (NLog.Signalr)](https://img.shields.io/nuget/dt/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
+* [SignalR target](https://github.com/toddmeinershagen/NLog.SignalR)
+[![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
+[![Download Total](https://img.shields.io/nuget/dt/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
 - Custom NLog target for sending log events to a SignalR hub.
 
 ##Wrapper Targets
