@@ -45,19 +45,19 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 ###External packages
 External packages, not maintained the NLog team.
 
- * [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) - sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
+ * [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) [![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ)
 <br>
-[![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ)
- * [GrowlNotify target](https://github.com/RyanFarley/NLogGrowlNotify) – sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
+Sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
+ * [GrowlNotify target](https://github.com/RyanFarley/NLogGrowlNotify) [![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl)
 <br>
-[![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl)
- * [Pushover target](https://github.com/RobThree/NLog.Targets.Pushover) – sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
+Sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
+ * [Pushover target](https://github.com/RobThree/NLog.Targets.Pushover) [![Version](http://img.shields.io/nuget/v/NLog.Targets.Pushover.svg)](https://www.nuget.org/packages/NLog.Targets.Pushover)
 <br>
-[![Version](http://img.shields.io/nuget/v/NLog.Targets.Pushover.svg)](https://www.nuget.org/packages/NLog.Targets.Pushover)
- * [SignalR target](https://github.com/toddmeinershagen/NLog.SignalR) - Custom NLog target for sending log events to a SignalR hub.
-<br>
-[![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
+Sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
+ * [SignalR target](https://github.com/toddmeinershagen/NLog.SignalR) [![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
 [![Download Total](https://img.shields.io/nuget/dt/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
+<br>
+Custom NLog target for sending log events to a SignalR hub.
 
 ##Wrapper Targets
 
