@@ -11,7 +11,7 @@ Supported in .NET and Mono.
           counterType="Enum"
           autoCreate="Boolean"
           categoryName="String"
-          counterName="String" />
+           />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
