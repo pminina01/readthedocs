@@ -20,3 +20,4 @@ The following open source software projects are using or supporting NLog:
 * ReflectInsight by ReflectSoftware - http://www.reflectsoftware.com/ 
 * Nemo Documents - http://www.nemo-docs.com
 * Misk.com - https://www.misk.com/
+* VisioForge - http://www.visioforge.com
