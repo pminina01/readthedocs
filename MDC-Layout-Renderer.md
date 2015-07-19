@@ -3,7 +3,7 @@ of strings and provides methods to output them in layouts.
 
 Use the Mapped Diagnostics Context when you have information that you want available to every logger executing on the current thread. As the Mapped Diagnostics Context is thread-local, you must configure all properties within the context of each thread where the property value is required.
  
-As of NLog 4.0.1, the Mapped Diagnostics Context supports any `Object` type, not just `String`.
+As of NLog 4.1, the Mapped Diagnostics Context supports any `Object` type, not just `String`.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
@@ -17,6 +17,23 @@ ${mdc:item=String}
 * **item** - Name of the item. Required.
 
 ##Example
+###Simple Properties
+The following example demonstrates the basic usage of the Mapped Diagnostics Context.
+
+```
+MappedDiagnosticsContext.Set("PropertyName", "PropertyValue");
+MappedDiagnosticsContext.Set("Property2", new { Part1 = 2.0m, Part2 = "Two parts" });
+MappedDiagnosticsContext.Set("Property3", AnyObjectOrString);
+```
+
+Add the following to your logger configuration to reference the above properties.
+```
+${mdc:item=PropertyName}
+${mdc:item=Property2}
+${mdc:item=Property3}
+```
+
+###Dynamic Properties
 The following example demonstrates a Mapped Diagnostics Context property that renders the value of `Environment.TickCount` at the time that the context item is rendered.
 
 ```
