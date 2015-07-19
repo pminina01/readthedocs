@@ -19,12 +19,21 @@ This would write:
 { "time": "2010-01-01 12:34:56.0000", "level": "ERROR", "message": "hello, world" }
 ```
 
-##Parameters
+Added in NLog 4.1
 
+Optional _encode_ parameter.
+
+You can disable JSON encoding by setting **encode="false"**. This will let you to write any string without JSON encoding. Including custom JSON.
+
+```xml
+<attribute name="Details" layout="${event-context:item=Details}" encode="false" />
+```
+
+##Parameters
 * _name_: required. The name of the key in JSON
 * _layout_: The (layout)[layout] for they key.
+* _encode_: Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
 
 ## Notes
 * Currently the layout will always create an non-nested object with properties.
-* Also there is no way to prevent escaping of the values (e.g. writing custom JSON as value)
 * The JSON will be written on one line, so no newlines. 
