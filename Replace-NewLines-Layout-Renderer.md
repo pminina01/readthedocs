@@ -6,4 +6,4 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 `${replace-newlines:replacement=String}`
 
 ## Parameters
-_replacement_ - Text to replace newlines with. Default is " ".
+_replacement_ - Text to replace newlines with. Default is `" "` (space)
