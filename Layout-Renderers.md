@@ -80,6 +80,7 @@ t* [${callsite-linenumber}](Callsite-line-number-layout-renderer) - The call sit
 * [${onexception}](OnException-Layout-Renderer) - Only outputs the inner layout when exception has been defined for log message.
 * [${pad}](Pad-Layout-Renderer) - Applies padding to another layout output.
 * [${replace}](Replace-Layout-Renderer) - Replaces a string in the output of another layout with another string.
+* [${replace-newlines}](Replace-NewLines-Layout-Renderer) - Replaces newline characters with another string.
 * [${rot13}](Rot13-Layout-Renderer) - Decodes text "encrypted" with ROT-13.
 * [${trim-whitespace}](Trim-Whitespace-Layout-Renderer) - Trims the whitespace from the result of another layout renderer.
 * [${uppercase}](Uppercase-Layout-Renderer) - Converts the result of another layout output to upper case.
