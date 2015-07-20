@@ -20,7 +20,7 @@ catch (MyException ex)
 ```
 
 ### Exception Formatting
-To write the details of the exception, use the `${exception}` layout renderer in your layout. Depending on the desired output you may want to specify different value for the `format` argument. The following example displays the result of calling `ToString()` on the exception object.
+To write the details of the exception, use the [`${exception}` layout renderer](https://github.com/NLog/NLog/wiki/Exception-Layout-Renderer) in your layout. Depending on the desired output you may want to specify different value for the `format` argument. The following example displays the result of calling `ToString()` on the exception object.
 
 ```xml
 <nlog> 
