@@ -1,0 +1,1 @@
+TODO see: https://github.com/NLog/NLog.Elmah/blob/master/NLog.Elmah/ElmahTarget.cs
