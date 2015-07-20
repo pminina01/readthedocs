@@ -40,7 +40,8 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 * [MessageBox](MessageBox-target) - Pops up log messages as message boxes.
 * [RichTextBox](RichTextBox-target) - Log text a Rich Text Box control in an existing or new form.
 
-
+###NLog.Elmah package [![Version](https://img.shields.io/nuget/v/NLog.Elmah.svg)](https://www.nuget.org/packages/NLog.Elmah)
+* [Elmah](Elmah-target) - Logs to Elmah
 
 ###External packages
 External packages, not maintained the NLog team.
