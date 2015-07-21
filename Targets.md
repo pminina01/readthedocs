@@ -46,6 +46,9 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 ###External packages
 External packages, not maintained the NLog team.
 
+ * [elmah.io target](https://github.com/elmahio/elmah.io.nlog) [![Version](https://img.shields.io/nuget/v/elmah.io.nlog.svg)](https://www.nuget.org/packages/elmah.io.nlog)
+<br>
+Sends logs to [elmah.io](https://elmah.io). elmah.io is an online service for logging messages in the cloud.
  * [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) [![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ)
 <br>
 Sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
