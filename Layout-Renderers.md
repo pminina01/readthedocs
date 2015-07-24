@@ -91,7 +91,7 @@ t* [${callsite-linenumber}](Callsite-line-number-layout-renderer) - The call sit
 
 ##External packages
 
-External packages, not maintained the NLog team.
+External packages, not maintained by the NLog team.
 
 * [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
 
