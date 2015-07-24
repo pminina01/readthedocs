@@ -44,7 +44,7 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 * [Elmah](Elmah-target) - Logs to Elmah
 
 ###External packages
-External packages, not maintained the NLog team.
+External packages, not maintained by the NLog team.
 
  * [elmah.io target](https://github.com/elmahio/elmah.io.nlog) [![Version](https://img.shields.io/nuget/v/elmah.io.nlog.svg)](https://www.nuget.org/packages/elmah.io.nlog)
 <br>
