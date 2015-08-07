@@ -318,3 +318,75 @@ Log files can calso be automatically archived based on time. This configuration 
     </rules>
 </nlog>
 ```
+
+
+###Archive Numbering Examples
+
+####Rolling
+```xml
+        <target name="file" xsi:type="File"
+            ...
+            archiveFileName="log.{####}.txt"
+            archiveNumbering="Rolling"  />
+
+```
+
+Example archive file names:
+
+* log.0000.txt
+* log.0001.txt
+* log.0002.txt
+
+####Sequence
+```xml
+        <target name="file" xsi:type="File"
+            ...
+            archiveFileName="log.{####}.txt"
+            archiveNumbering="Sequence"  />
+
+```
+
+Example archive file names:
+
+* log.0000.txt
+* log.0001.txt
+* log.0002.txt
+
+####Date
+```xml
+        <target name="file" xsi:type="File"
+            ...
+            archiveFileName="log.{#}.txt"
+            archiveNumbering="Sequence"
+            archiveEvery="Day",
+            archiveDateFormat="yyyyMMdd",
+  />
+
+```
+
+Example archive file names:
+
+* log.20150730.txt
+* log.20150731.txt
+
+
+####DateAndSequence
+```xml
+        <target name="file" xsi:type="File"
+            ...
+            archiveFileName="log.{#}.txt"
+            archiveNumbering="DateAndSequence"
+            archiveAboveSize="1000",
+            archiveDateFormat="yyyyMMdd",
+  />
+
+```
+
+Example archive file names:
+
+* log.20150730.1.txt
+* log.20150730.2.txt
+* log.20150730.3.txt
+
+
+
