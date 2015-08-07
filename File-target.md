@@ -60,7 +60,9 @@ Possible values:
 
 ###Archival Options
 _archiveAboveSize_ - Size in bytes above which log files will be automatically archived. [Long](Layouts)  
-Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance.  
+Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance. 
+**Warning: combining this mode with _Archive Numbering Date_ is not supported. Archive files are not merged.    _ DateAndSequence_ do will work. **
+ 
 
 _maxArchiveFiles_ - Maximum number of archive files that should be kept. [Integer](Layouts) Default: 9  
 
@@ -71,8 +73,8 @@ _archiveNumbering_ - Way file archives are numbered.
 Possible values:
   * Rolling - Rolling style numbering (the most recent is always #0 then #1, ..., #N.
   * Sequence - Sequence style numbering. The most recent archive has the highest number.
-  * Date - Date style numbering. The date is formatted according to the value of _archiveDateFormat_.
-  * DateAndSequence -Combination of _Date_ and _Sequence_ .Archives will be stamped with the prior period (Year, Month, Day) datetime.
+  * Date - Date style numbering. The date is formatted according to the value of _archiveDateFormat_. **Warning: combining this mode with _archiveAboveSize_ is not supported. Archive files are not merged.  **
+  * DateAndSequence - Combination of _Date_ and _Sequence_ .Archives will be stamped with the prior period (Year, Month, Day) datetime.
      The most recent archive has the highest number (in combination with the date). The date is formatted according to the value of _archiveDateFormat_.
 
 See [Archive Numbering Examples](#archive-numbering-examples)
@@ -389,6 +391,5 @@ Example archive file names:
 * log.20150730.1.txt
 * log.20150730.2.txt
 * log.20150730.3.txt
-
 
 
