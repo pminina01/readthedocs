@@ -17,6 +17,7 @@
 * [Layouts](wiki/Layouts) - format: plain text, CSV, JSON etc.
 * [Layout Renderers](wiki/Layout-Renderers) - templating the logs with `${}` syntax
 * [Filtering log messages](wiki/Filters) - filtering log messages with conditions
+* [Time Source] (wiki/Time Source) - configure NLog’s timestamp/time source
 
 
 ##API Reference
