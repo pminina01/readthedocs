@@ -72,6 +72,8 @@ Possible values:
   * Rolling - Rolling style numbering (the most recent is always #0 then #1, ..., #N.
   * Sequence - Sequence style numbering. The most recent archive has the highest number.
   * Date - Date style numbering. The date is formatted according to the value of _archiveDateFormat_.
+  * DateAndSequence -Combination of _Date_ and _Sequence_ .Archives will be stamped with the prior period (Year, Month, Day) datetime.
+     The most recent archive has the highest number (in combination with the date). The date is formatted according to the value of _archiveDateFormat_.
 
 _archiveEvery_ - Indicates whether to automatically archive log files every time the specified time passes.  
 Possible values:
