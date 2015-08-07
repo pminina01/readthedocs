@@ -3,7 +3,7 @@ Conditions are filter expressions used with the [when filter](when-Filter). They
 ##Language
 The filter expressions are written in a special mini-language. The language consists of:
 * relational operators: `==`, `!=`, `<`, `<=`, `>=` and `>`
-<br>_Note: Some of the characters may need to be escaped.  For example, if you try to use the '<' character, Intellisense will mistake it for an opening tag which results in an error in the configuration file.  Instead, use the escaped version of '<' (`&lt;`)._
+<br>_Note: Some [predefined XML characters](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML) may need to be escaped.  For example, if you try to use the '<' character, the XML parser will interpret it as an opening tag which results in an error in the configuration file.  Instead, use the escaped version of '<' (`&lt;`) in this context._
 * boolean operators: `and`, `or`, `not`
 * string literals which are always evaluated as layouts - `${somerenderer}`
 * boolean literals - `true` and `false`
