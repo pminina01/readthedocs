@@ -42,7 +42,7 @@ _name_ - Name of the target.
 
 _forceManaged_ - Indicates that the file target should only use managed methods. This disables some of the options.
 ###Layout Options
-_layout_ - Text to be rendered. [Layout](Layouts) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+_layout_ - Text to be rendered. [Layout](Layouts) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
 _header_ - Header. [Layout](Layouts)  
 
