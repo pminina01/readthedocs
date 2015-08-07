@@ -106,30 +106,14 @@ Possible values:
   * NotContentIndexed - File should not be indexed by the content indexing service.
   * PosixSemantics - A file is accessed according to POSIX rules.
   * Readonly - Read-only
-
-    > This parameter is not supported in:
-    > * NLog v2.0 for .NET Framework 2.0
-    > * NLog v2.0 for .NET Framework 3.5
-    > * NLog v2.0 for .NET Framework 4.0
-    > * NLog v2.0 for Mono 2.x
-
   * ReadOnly - Read-only file.
-    > This parameter is not supported in:
-    > * NLog v1.0 for .NET Framework 1.0
-    > * NLog v1.0 for .NET Framework 1.1
-    > * NLog v1.0 for .NET Framework 2.0
-
   * ReparsePoint - Reparse point.
   * SparseFile - Sparse file.
   * System - System file.
   * Temporary - File is temporary (should be kept in cache and not written to disk if possible).
   * WriteThrough - The system writes through any intermediate cache and goes directly to disk.
     > This parameter is not supported in:
-    > * NLog v1.0 for .NET Compact Framework 1.0
-    > * NLog v1.0 for .NET Compact Framework 2.0
-    > * NLog v2.0 for .NET Compact Framework 2.0
-    > * NLog v2.0 for .NET Compact Framework 3.5
-    > * NLog v2.0 for Silverlight 4.0
+    > * Silverlight 4.0
 
 _fileName_ - Name of the file to write to. [Layout](Data-types) Required.  
 This FileName string is a layout which may include instances of layout renderers. This lets you use a single target to write to multiple files.  
