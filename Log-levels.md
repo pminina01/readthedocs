@@ -10,6 +10,7 @@ The following are the allowed log levels (in descending order):
 Also to turn off logging, use `Off`
 
 Examples when you could use which level:
+
 |Level|Example|
 ------|-------
 |Fatal|Highest level: important stuff down|
