@@ -1,11 +1,20 @@
 The following are the allowed log levels (in descending order):
-* `Off`
-* `Fatal`
-* `Error`
-* `Warn`
+
+* `Fatal`   
+* `Error` 
+* `Warn`  
 * `Info`
 * `Debug`
 * `Trace`
 
+Also to turn off logging, use `Off`
 
-Log Levels in NLog are consistent with Log4j/Log4net, so a description of the different levels' usage on [Wikipedia's entry about log4j](http://en.wikipedia.org/wiki/Log4j) is applicable for NLog Log Levels.
+Examples when you could use which level:
+|Level|Example|
+------|-------
+|Fatal|Highest level: important stuff down|
+|Error|For example application crashes / exceptions.|
+|Warn|Incorrect behavior but the application can continue |
+|Info|Normal behavior like mail sent, user updated profile etc.|
+|Debug|Executed queries, user authenticated, session expired|
+|Trace|Begin method X, end method X etc|
