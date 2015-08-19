@@ -270,7 +270,7 @@ protected BaseClass()
 }
 ```
 
-as an exception will be throw. 
+as an exception will be thrown. 
 
 In case of the ExactClass has a default constructor which invokes the BaseClass constructor a ```System.StackOverflowException``` is thrown. This is because the ExactClass calls the BaseClass the GetLogger(String, Type) attempts to construct a ExactClass until the exception is thrown.
 
