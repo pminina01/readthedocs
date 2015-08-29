@@ -2,7 +2,7 @@ Provides fallback-on-error.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="FallbackGroup" name="String" returnToFirstOnSuccess="Boolean">
     <target xsi:type="wrappedTargetType" ... />
