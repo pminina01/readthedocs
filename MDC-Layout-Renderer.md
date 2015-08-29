@@ -22,14 +22,14 @@ ${mdc:item=String}
 ###Simple Properties
 The following example demonstrates the basic usage of the Mapped Diagnostics Context.
 
-```
+```c#
 MappedDiagnosticsContext.Set("PropertyName", "PropertyValue");
 MappedDiagnosticsContext.Set("Property2", new { Part1 = 2.0m, Part2 = "Two parts" });
 MappedDiagnosticsContext.Set("Property3", AnyObjectOrString);
 ```
 
 Add the following to your logger configuration to reference the above properties.
-```
+```xml
 ${mdc:item=PropertyName}
 ${mdc:item=Property2}
 ${mdc:item=Property3}
@@ -38,7 +38,7 @@ ${mdc:item=Property3}
 ###Dynamic Properties
 The following example demonstrates a Mapped Diagnostics Context property that renders the value of `Environment.TickCount` at the time that the context item is rendered.
 
-```
+```c#
 public class MdcTickProperty 
 {
    public static readonly MdcTickProperty Default = new MdcTickProperty();
@@ -56,13 +56,13 @@ public class MdcTickProperty
 
 Add the `MdcTickProperty` instance to the Mapped Diagnostics Context. This will only affect the current thread, as the Mapped Diagnostics Context is thread-local.
 
-```
+```c#
 MappedDiagnosticsContext.Set("TickCount", MdcTickProperty.Default);
 ```
 
 In the logging configuration, include:
 
-```
+```xml
 ${mdc:item=TickCount}
 ```
 
