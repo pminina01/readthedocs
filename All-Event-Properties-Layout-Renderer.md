@@ -15,7 +15,5 @@ ${all-event-properties:format=String:separator=String:includeCallerInformation=B
   * Default value: `[key]=[value]`
 * _separator_ - The string that will be used to separate key/value pairs.
   * Default value: `, `
-* _includeCallerInformation_ - The boolean that will be used to render the caller information attributes. **true** to render, **false** to not.
+* _includeCallerInformation_ - The boolean that will be used to render the caller information attributes. **true** to render, **false** to not. Introduced in NLog 4.1. 
   * Default value: `false`
-
-_Note: The new parameter that includeCallerInformation is introduced in NLog 4.1_
