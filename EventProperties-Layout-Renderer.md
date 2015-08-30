@@ -12,10 +12,9 @@ ${event-properties:item=String:culture=String:format=String}
 ##Parameters
 ###Rendering Options
 * **item** - Name of the item. Required.
-* **culture** - The culture used for rendering. Default value is `CultureInfo.InvariantCulture`
-* **format** - Format for conversion from object to string.
+* **culture** - The culture used for rendering. Introduced in NLog 4.1. Default value is `CultureInfo.InvariantCulture`
+* **format** - Format for conversion from object to string. Introduced in NLog 4.1. 
 
-_Note: The new parameters that culture and format are introduced in NLog 4.1_
 
 ##Example
 In C# class, create an event and add an element to the Properties dictionary (or the deprecated Context dictionary):
