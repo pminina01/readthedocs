@@ -12,7 +12,7 @@ ${event-properties:item=String:culture=String:format=String}
 ##Parameters
 ###Rendering Options
 * **item** - Name of the item. Required.
-* **culture** - The culture used for rendering.
+* **culture** - The culture used for rendering. Default value is `CultureInfo.InvariantCulture`
 * **format** - Format for conversion from object to string.
 
 _Note: The new parameters that culture and format are introduced in NLog 4.1_
