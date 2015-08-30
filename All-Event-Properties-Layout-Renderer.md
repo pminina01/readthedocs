@@ -12,10 +12,10 @@ ${all-event-properties:format=String:separator=String:includeCallerInformation=B
 ##Parameters
 ###Rendering Options
 * _format_ - How key/value pairs will be formatted. The placeholder used to define placement of the key is, "[key]", and the placeholder for value is, "[value]".
-  * Default value: "[key]=[value]"
+  * Default value: `[key]=[value]`
 * _separator_ - The string that will be used to separate key/value pairs.
-  * Default value: ", "
-* _includeCallerInformation_ - **true** to render the caller information attributes, **false** to not.
+  * Default value: `, `
+* _includeCallerInformation_ - The boolean that will be used to render the caller information attributes. **true** to render, **false** to not.
   * Default value: `false`
 
 _Note: The new parameter that includeCallerInformation is introduced in NLog 4.1_
