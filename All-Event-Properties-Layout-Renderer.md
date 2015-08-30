@@ -5,7 +5,7 @@ Introduced in NLog v4.0.
 Supported in .NET, Silverlight and Mono.
 
 ##Configuration Syntax
-```
+```xml
 ${all-event-properties:format=String:separator=String:includeCallerInformation=Boolean}
 ```
 
