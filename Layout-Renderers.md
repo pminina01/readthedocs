@@ -6,7 +6,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 ##Layout Renderers
 
 ###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
-* [${activityid}] - Puts into log a System.Diagnostics trace correlation id.
+* [${activityid}](activityid) - Puts into log a System.Diagnostics trace correlation id.
 * [${all-event-properties}](All-Event-Properties-Layout-Renderer) - Log all event context data.
 * [${appdomain}](AppDomain-Layout-Renderer) - Current app domain. 
 * [${asp-application}](AspApplication-Layout-Renderer) - ASP Application variable.
