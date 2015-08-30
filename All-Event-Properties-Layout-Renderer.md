@@ -6,7 +6,7 @@ Supported in .NET, Silverlight and Mono.
 
 ##Configuration Syntax
 ```
-${all-event-properties:format=String:separator=String}
+${all-event-properties:format=String:separator=String:includeCallerInformation=Boolean}
 ```
 
 ##Parameters
@@ -15,3 +15,7 @@ ${all-event-properties:format=String:separator=String}
   * Default value: "[key]=[value]"
 * _separator_ - The string that will be used to separate key/value pairs.
   * Default value: ", "
+* _includeCallerInformation_ - **true** to render the caller information attributes, **false** to not.
+  * Default value: `false`
+
+_Note: The new parameter that includeCallerInformation is introduced in NLog 4.1_
