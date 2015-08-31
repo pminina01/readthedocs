@@ -15,5 +15,5 @@ ${all-event-properties:format=String:separator=String:includeCallerInformation=B
   * Default value: `[key]=[value]`
 * _separator_ - The string that will be used to separate key/value pairs.
   * Default value: `, `
- * _includeCallerInformation_ - Also render the caller information attributes? .Net 4.5 required.
+* _includeCallerInformation_ - Also render the caller information attributes? .Net 4.5 required.
   * Default value: `false`
