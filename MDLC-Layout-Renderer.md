@@ -29,3 +29,6 @@ Add the following to your logger configuration to reference the above properties
 ${mdlc:item=PropertyName}
 ${mdlc:item=PropertyName2}
 ```
+
+##Notes
+In contrast to the MDC, only `strings` are supported in the MDLC yet.
