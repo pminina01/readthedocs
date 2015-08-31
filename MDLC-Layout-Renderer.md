@@ -27,34 +27,3 @@ Add the following to your logger configuration to reference the above properties
 ${mdlc:item=PropertyName}
 ${mdlc:item=PropertyName2}
 ```
-
-###Dynamic Properties
-The following example demonstrates a Mapped Diagnostic Logical Context property that renders the value of `Environment.TickCount` at the time that the context item is rendered.
-
-```c#
-public class MdcTickProperty 
-{
-   public static readonly MdcTickProperty Default = new MdcTickProperty();
-
-   private MdcTickProperty () 
-   {
-   }
-
-   public override string ToString () 
-   {
-      return Environment.TickCount.ToString();
-   }
-}
-```
-
-Add the `MdcTickProperty` instance to the Mapped Diagnostic Logical Context. This will affect the current logical context, as the Mapped Diagnostic Logical Context is logical context.
-
-```c#
-MappedDiagnosticsLogicalContext.Set("TickCount", MdcTickProperty.Default.ToString());
-```
-
-In the logging configuration, include:
-
-```xml
-${mdc:item=TickCount}
-```
