@@ -1,4 +1,4 @@
-Puts into log a System.Diagnostics trace correlation id. 
+Write the `System.Diagnostics` trace correlation id. 
 
 Introduced in NLog v4.1.
 
