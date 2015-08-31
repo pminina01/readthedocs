@@ -31,4 +31,4 @@ ${mdlc:item=PropertyName2}
 ```
 
 ##Notes
-In contrast to the MDC, only `strings` are supported in the MDLC yet.
+In contrast to the MDC, only `strings` are supported in the MDLC yet. This will be addressed in the future.
