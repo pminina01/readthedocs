@@ -15,5 +15,5 @@ ${all-event-properties:format=String:separator=String:includeCallerInformation=B
   * Default value: `[key]=[value]`
 * _separator_ - The string that will be used to separate key/value pairs.
   * Default value: `, `
-* _includeCallerInformation_ - The boolean that will be used to render the caller information attributes. `true` to render, `false` to not. Introduced in NLog 4.1. It is only supported in .Net 4.5. The caller information attributes are always rendered for older .Net versions.
+ * _includeCallerInformation_ - Also render the caller information attributes? .Net 4.5 required.
   * Default value: `false`
