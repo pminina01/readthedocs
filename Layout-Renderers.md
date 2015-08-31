@@ -35,6 +35,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${longdate}](LongDate-Layout-Renderer) - The date and time in a long, sortable format yyyy-MM-dd HH:mm:ss.mmm.
 * [${machinename}](MachineName-Layout-Renderer) - The machine name that the process is running on.
 * [${mdc}](Mdc-Layout-Renderer) - Mapped Diagnostics Context - a thread-local structure.
+* [${mdlc}](Mdlc-Layout-Renderer) - Async Mapped Diagnostics Context - a thread-local structure.
 * [${message}](Message-Layout-Renderer) - The formatted log message.
 * [${ndc}](Ndc-Layout-Renderer) - Nested Diagnostics Context - a thread-local structure.
 * [${newline}](Newline-Layout-Renderer) - A newline literal.
