@@ -3,7 +3,9 @@ of strings and provides methods to output them in layouts.
 
 Use the Mapped Diagnostics Context when you have information that you want available to every logger executing on the current thread. As the Mapped Diagnostics Context is thread-local, you must configure all properties within the context of each thread where the property value is required.
 
-When you need the context for all threads, use the [GDC](https://github.com/NLog/NLog/wiki/Gdc-Layout-Renderer). If the context is different for every message, use the [Log event properties](https://github.com/NLog/NLog/wiki/EventProperties-Layout-Renderer). 
+- When you work with async, use the [MDLC](MDLC-Layout-Renderer)
+- When you need the context for all threads, use the [GDC](Gdc-Layout-Renderer). 
+- If the context is different for every message, use the [Log event properties](https://github.com/NLog/NLog/wiki/EventProperties-Layout-Renderer). 
  
 As of NLog 4.1, the Mapped Diagnostics Context supports any `Object` type, not just `String`.
 
