@@ -1,8 +1,10 @@
-It uses [Mapped Diagnostic Logical Context] (Mapped-Diagnostic-Logical-Context).
+Use the Mapped Diagnostic Logical Context when you have information that you want available to every logger executing on the current logical context.
 
-As of NLog 4.1 in the NLog assembly.
+Mapped Diagnostic Logical Context is the async version of the [Mapped Diagnostics Context](Mdc-Layout-Renderer) - a logical call context structure that keeps a dictionary of strings and provides methods to output them in layouts. Allows for maintaining state across asynchronous tasks and call contexts. 
 
 Supported in .NET 4.0 and 4.5.
+
+As of NLog 4.1 in the NLog assembly.
 
 ##Configuration Syntax
 ```
