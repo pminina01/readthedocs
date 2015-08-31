@@ -1,6 +1,6 @@
 It uses [Mapped Diagnostic Logical Context] (Mapped-Diagnostic-Logical-Context).
- 
-As of NLog 4.1, the Mapped Diagnostic Logical Context supports just `String`.
+
+As of NLog 4.1 in the NLog assembly.
 
 Supported in .NET 4.0 and 4.5.
 
