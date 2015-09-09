@@ -65,7 +65,7 @@ Custom NLog target for sending log events to a SignalR hub.
 
 * [Logentries](https://github.com/logentries/le_dotnet) [![Version](https://img.shields.io/nuget/v/Logentries.nlog.svg?label=nuget NLog)](https://www.nuget.org/packages/Logentries.nlog) Writing to www.logentries.com
 
-* [XML](https://github.com/loresoft/NLog.Xml) [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) Write to XML files. 
+* [XML target](https://github.com/loresoft/NLog.Xml) [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) Write to XML files. 
 
 ##Wrapper Targets
 
