@@ -120,7 +120,7 @@ Each collection item is represented by \<parameter /> element with the following
 <target name="database" xsi:type="Database">
   <!--
   Remarks:
-    The appsetting layouts require the NLog.Extensions assembly.
+    The appsetting layouts require the NLog.Extended assembly.
     The aspnet-* layouts require the NLog.Web assembly.
     The Application value is determined by an AppName appSetting in Web.config.
     The "NLogDb" connection string determines the database that NLog write to.
