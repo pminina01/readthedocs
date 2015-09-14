@@ -100,7 +100,7 @@ _replaceFileContentsOnEachWrite_ - Indicates whether to replace file contents on
 _fileAttributes_ - File attributes (Windows only).  
 Possible values:
   * Archive - File should be archived.
-  * Compressed - Compress file contents.
+  * ~~Compressed~~ - Compress won't work due to .Net restrictions. You can use enableArchiveFileCompression.
   * DeleteOnClose - Delete file after it is closed.
   * Device - Device file.
   * Encrypted - Encrypted file.
@@ -391,5 +391,4 @@ Example archive file names:
 * log.20150730.1.txt
 * log.20150730.2.txt
 * log.20150730.3.txt
-
 
