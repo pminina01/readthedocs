@@ -64,10 +64,6 @@ _body_ - Same as _Layout_ property. Mail message body (repeated for each log mes
 _smtpUserName_ - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
 
 _enableSsl_ - Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server. [Boolean](Data-types) Default: False  
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Framework 1.0
-> * NLog v1.0 for .NET Framework 1.1
-> * NLog v1.0 for .NET Framework 2.0
 
 _smtpPassword_ - Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
 
