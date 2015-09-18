@@ -10,14 +10,14 @@ ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSepa
 
 ##Parameters
 ###Rendering Options
-* **innerFormat** - Format of the output of inner exceptions. Must be a comma-separated list of exception properties: Message, Type, ShortType, ToString, Method, StackTrace. This parameter value is case-insensitive.
+* **innerFormat** - Format of the output of inner exceptions. Must be a comma-separated list of exception properties: Message, Type, ShortType, ToString, Method, StackTrace. This parameter value is case-insensitive. 
 
-* **maxInnerExceptionLevel** - Maximum number of inner exceptions to include in the output. By default inner exceptions are not enabled for compatibility with NLog 1.0.Integer Default: 0
+* **maxInnerExceptionLevel** - Maximum number of inner exceptions to include in the output. By default inner exceptions are not enabled for compatibility with NLog 1.0.Integer. Default: 0
 
-* **innerExceptionSeparator** - Separator between inner exceptions.
+* **innerExceptionSeparator** - Separator between inner exceptions. Default: new line
 
-* **separator** - Separator used to concatenate parts specified in the Format. Default:
-* **format** - Format of the output. Must be a comma-separated list of exception properties: Message, Type, ShortType, ToString, Method, StackTrace, Data. This parameter value is case-insensitive.
+* **separator** - Separator used to concatenate parts specified in the Format. Default: single space
+* **format** - Format of the output. Must be a comma-separated list of exception properties: Message, Type, ShortType, ToString, Method, StackTrace, Data. This parameter value is case-insensitive. Default: message
 
 ##More Info and Examples
 For more information, see [How to properly log exceptions](How-to-log-exceptions).
