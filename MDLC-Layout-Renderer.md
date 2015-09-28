@@ -4,7 +4,8 @@ Mapped Diagnostic Logical Context is the async version of the [Mapped Diagnostic
 
 Supported in .NET 4.0 and 4.5.
 
-As of NLog 4.1 in the NLog assembly.
+- As of NLog 4.1 in the NLog package.
+- As of NLog 4.1.1, the Mapped Diagnostics Context supports any `Object` type, not just `String`.
 
 ##Configuration Syntax
 ```
@@ -29,6 +30,3 @@ Add the following to your logger configuration to reference the above properties
 ${mdlc:item=PropertyName}
 ${mdlc:item=PropertyName2}
 ```
-
-##Notes
-In contrast to the MDC, only `strings` are supported in the MDLC yet. This will be addressed in the future.
