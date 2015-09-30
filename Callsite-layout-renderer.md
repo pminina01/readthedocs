@@ -5,7 +5,7 @@ Supported in .NET, Silverlight and Mono.
 ##Configuration Syntax
 ```
 ${callsite:className=Boolean:fileName=Boolean:includeSourcePath=Boolean
-          :methodName=Boolean:cleanNamesOfAnonymousDelegates=Boolean:skipFrame=Integer}
+          :methodName=Boolean:cleanNamesOfAnonymousDelegates=Boolean:skipFrames=Integer}
 ```
 
 ##Parameters
