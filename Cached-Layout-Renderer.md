@@ -16,7 +16,7 @@ ${other:cached=Boolean}
 ##Parameters
 ###Caching Options
 * _cached_ - Indicates whether this CachedLayoutRendererWrapper is enabled. Boolean Default: True
-* _clearCache_ - Indicates when the cache is cleared. ClearCacheOption Default: OnInit,OnClose
+* _clearCache_ - Introduced in NLog 4.2. Indicates when the cache is cleared. Possible options: `None, OnInit, Onclose`.  ClearCacheOption Default: `OnInit, OnClose`. 
 
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
