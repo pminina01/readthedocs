@@ -21,5 +21,11 @@ ${other:cached=Boolean}
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
 
+
+##Examples
+* `${cached:cached=true:clearCache=OnInit,OnClose:inner=l}`: The value of `l` is cached and the cache will be cleared when the layout renderer is initialized or when it is closed. This is the same as `${cached:cached=true:inner=l}`.
+* `${cached:cached=true:clearCache=None:inner=l}`: The value of `l` is cached and the cache will not be cleared.
+
+
 ##Remarks
 The value of the inner layout will be rendered only once and reused subsequently.
