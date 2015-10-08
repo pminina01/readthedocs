@@ -32,7 +32,7 @@ class Example
         config.AddTarget("file", fileTarget);
 
         // Step 3. Set target properties 
-        consoleTarget.Layout = @"${date:format=HH\\:MM\\:ss} ${logger} ${message}";
+        consoleTarget.Layout = @"${date:format=HH\:mm\:ss} ${logger} ${message}";
         fileTarget.FileName = "${basedir}/file.txt";
         fileTarget.Layout = "${message}";
 
