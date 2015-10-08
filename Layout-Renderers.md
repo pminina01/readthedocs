@@ -32,7 +32,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${literal}](Literal-Layout-Renderer) - A string literal.
 * [${log4jxmlevent}](Log4JXMLEvent-Layout-Renderer) - XML event description compatible with log4j, Chainsaw and NLogViewer.
 * [${logger}](Logger-Layout-Renderer) - The logger name.
-* [${longdate}](LongDate-Layout-Renderer) - The date and time in a long, sortable format `yyyy-MM-dd HH:mm:ss.mmmm`.
+* [${longdate}](LongDate-Layout-Renderer) - The date and time in a long, sortable format `yyyy-MM-dd HH:mm:ss.ffff`.
 * [${machinename}](MachineName-Layout-Renderer) - The machine name that the process is running on.
 * [${mdc}](Mdc-Layout-Renderer) - Mapped Diagnostics Context - a thread-local structure.
 * [${mdlc}](Mdlc-Layout-Renderer) - Async Mapped Diagnostics Context - a thread-local structure.
