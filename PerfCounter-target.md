@@ -11,6 +11,7 @@ Supported in .NET and Mono.
           counterType="Enum"
           autoCreate="Boolean"
           categoryName="String"
+          incrementValue="Layout"
            />
 </targets>
 ```
@@ -59,3 +60,5 @@ _autoCreate_ - Indicates whether performance counter should be automatically cre
 _categoryName_ - Name of the performance counter category. Required.
 
 _counterName_ - Name of the performance counter. Required.
+
+_incrementValue_ - Introduced in NLog 4.2. The value by which to increment the counter. [Layout](Layout). Default: 1.
