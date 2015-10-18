@@ -26,6 +26,8 @@ Supported in .NET and Mono
           smtpServer="Layout"
           smtpPort="Integer"
           useSystemNetMailSettings="Boolean"
+          deliveryMethod="Enum"
+          pickupDirectoryLocation="String"
           timeout="Integer" />
 </targets>
 ```
@@ -81,6 +83,13 @@ _useSystemNetMailSettings_ - Force using smtp configuration from system.net/mail
 
 _timeout_ - Indicates the SMTP client timeout. [Integer](Data-types) Default: 10000
 
+_pickupDirectoryLocation_ - Gets or sets the folder where applications save mail messages to be processed by the local SMTP server (__introduced in NLog 4.2__).
+
+_smtpDeliveryMethod_ - Specifies how outgoing email messages will be handled (__introduced in NLog 4.2__). Default: Network 
+Possible values:
+* Network - Email is sent through the network to an SMTP server.
+* PickupDirectoryFromIis - Email is copied to the pickup directory used by a local Internet Information Services (IIS) for delivery.
+* SpecifiedPickupDirectory - Email is copied to the directory specified by the PickupDirectoryLocation property for delivery by an external application.
 ##Remarks
 
 ### Application Configuration File
