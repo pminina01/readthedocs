@@ -60,7 +60,6 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 
 ####Wrappers
 
-###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
 * [${cached}](Cached-Layout-Renderer) - Applies caching to another layout output.
 * [${filesystem-normalize}](Filesystem-Normalize-Layout-Renderer) - Filters characters not allowed in the file names by replacing them with safe character.
 * [${json-encode}](Json-Encode-Layout-Renderer) - Escapes output of another layout using JSON rules.
