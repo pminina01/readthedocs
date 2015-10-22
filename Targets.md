@@ -27,12 +27,31 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 * [Trace](Trace-target) - Sends log messages through System.Diagnostics.Trace.
 * [WebService](WebService-target) - Calls the specified web service on each log message.
 
+####Wrappers
+* [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
+* [AutoFlushWrapper](AutoFlushWrapper-target) - Causes a flush after each write on a wrapped target.
+* [BufferingWrapper](BufferingWrapper-target) - A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.
+* [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
+* [FilteringWrapper](FilteringWrapper-target) - Filters log entries based on a condition.
+* [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
+* [PostFilteringWrapper](PostFilteringWrapper-target) - Filters buffered log entries based on a set of conditions that are evaluated on a group of events.
+* [RandomizeGroup](RandomizeGroup-target) - Sends log messages to a randomly selected target.
+* [RepeatingWrapper](RepeatingWrapper-target) - Repeats each log event the specified number of times.
+* [RetryingWrapper](RetryingWrapper-target) - Retries in case of write error.
+* [RoundRobinGroup](RoundRobinGroup-target) - Distributes log events to targets in a round-robin fashion.
+* [SplitGroup](SplitGroup-target) - Writes log events to all targets.
+
+
+
 ###NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
 * [MSMQ](MSMQ-target) - Writes log message to the specified message queue handled by MSMQ.
 
 ###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
 
 * [AspNetTrace](AspNetTrace-target) - Writes log messages to the ASP.NET trace.
+
+####Wrappers
+* [AspNetBufferingWrapper](AspNetBufferingWrapper-target) - Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.
 
 
 ###NLog.Windows.Forms package [![Version](https://img.shields.io/nuget/v/NLog.Windows.Forms.svg)](https://www.nuget.org/packages/NLog.Windows.Forms)
@@ -71,24 +90,6 @@ Custom NLog target for sending log events to a SignalR hub.
 
 * [Syslog target](https://github.com/graffen/NLog.Targets.Syslog) [![Version](https://img.shields.io/nuget/v/NLog.Targets.Syslog.svg)](https://www.nuget.org/packages/NLog.Targets.Syslog) Write to Syslog.
 
-##Wrapper Targets
-
-###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
-* [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
-* [AutoFlushWrapper](AutoFlushWrapper-target) - Causes a flush after each write on a wrapped target.
-* [BufferingWrapper](BufferingWrapper-target) - A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.
-* [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
-* [FilteringWrapper](FilteringWrapper-target) - Filters log entries based on a condition.
-* [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
-* [PostFilteringWrapper](PostFilteringWrapper-target) - Filters buffered log entries based on a set of conditions that are evaluated on a group of events.
-* [RandomizeGroup](RandomizeGroup-target) - Sends log messages to a randomly selected target.
-* [RepeatingWrapper](RepeatingWrapper-target) - Repeats each log event the specified number of times.
-* [RetryingWrapper](RetryingWrapper-target) - Retries in case of write error.
-* [RoundRobinGroup](RoundRobinGroup-target) - Distributes log events to targets in a round-robin fashion.
-* [SplitGroup](SplitGroup-target) - Writes log events to all targets.
-
-###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
-* [AspNetBufferingWrapper](AspNetBufferingWrapper-target) - Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.
 
 
 
