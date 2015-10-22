@@ -65,31 +65,21 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 ###External packages
 External packages, not maintained by the NLog team.
 
- * [elmah.io target](https://github.com/elmahio/elmah.io.nlog) [![Version](https://img.shields.io/nuget/v/elmah.io.nlog.svg)](https://www.nuget.org/packages/elmah.io.nlog)
-<br>
-Sends logs to [elmah.io](https://elmah.io). elmah.io is an online service for logging messages in the cloud.
- * [RabbitMQ target](https://github.com/haf/NLog.RabbitMQ) [![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ)
-<br>
-Sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems.
- * [GrowlNotify target](https://github.com/RyanFarley/NLogGrowlNotify) [![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl)
-<br>
-Sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
- * [Pushover target](https://github.com/RobThree/NLog.Targets.Pushover) [![Version](http://img.shields.io/nuget/v/NLog.Targets.Pushover.svg)](https://www.nuget.org/packages/NLog.Targets.Pushover)
-<br>
-Sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
- * [SignalR target](https://github.com/toddmeinershagen/NLog.SignalR) [![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
-[![Download Total](https://img.shields.io/nuget/dt/NLog.SignalR.svg?style=flat)](https://www.nuget.org/packages/NLog.SignalR/)
-<br>
-Custom NLog target for sending log events to a SignalR hub.
 
-* [Logentries](https://github.com/logentries/le_dotnet) [![Version](https://img.shields.io/nuget/v/Logentries.nlog.svg?label=nuget NLog)](https://www.nuget.org/packages/Logentries.nlog) Writing to www.logentries.com
 
-* [XML target](https://github.com/loresoft/NLog.Xml) [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) Write to XML files. 
 
-* [Elastic Search target](https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch) [![Version](https://img.shields.io/nuget/v/NLog.Targets.ElasticSearch.svg)](https://www.nuget.org/packages/NLog.Targets.ElasticSearch) Write to Elastic Search servers.
 
-* [Syslog target](https://github.com/graffen/NLog.Targets.Syslog) [![Version](https://img.shields.io/nuget/v/NLog.Targets.Syslog.svg)](https://www.nuget.org/packages/NLog.Targets.Syslog) Write to Syslog.
-
+Package|Version     |Description
+-------|------------|------------------------------------------------
+[Elastic Search](https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.ElasticSearch.svg)](https://www.nuget.org/packages/NLog.Targets.ElasticSearch) | Write to Elastic Search servers.
+[elmah.io](https://github.com/elmahio/elmah.io.nlog)             | [![Version](https://img.shields.io/nuget/v/elmah.io.nlog.svg)](https://www.nuget.org/packages/elmah.io.nlog) | Sends logs to [elmah.io](https://elmah.io). elmah.io is an online service for logging messages in the cloud.
+[GrowlNotify](https://github.com/RyanFarley/NLogGrowlNotify)     | [![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl) | Sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
+[Logentries](https://github.com/logentries/le_dotnet)                   | [![Version](https://img.shields.io/nuget/v/Logentries.nlog.svg)](https://www.nuget.org/packages/Logentries.nlog) | Writing to www.logentries.com
+[Pushover](https://github.com/RobThree/NLog.Targets.Pushover)    | [![Version](http://img.shields.io/nuget/v/NLog.Targets.Pushover.svg)](https://www.nuget.org/packages/NLog.Targets.Pushover) | Sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
+[RabbitMQ](https://github.com/haf/NLog.RabbitMQ)                 | [![Version](https://img.shields.io/nuget/v/NLog.RabbitMQ.svg)](https://www.nuget.org/packages/NLog.RabbitMQ) | Sends logs over a RabbitMQ message broker. It allows you to combine your logs in real time across multiple platforms and systems. 
+[SignalR](https://github.com/toddmeinershagen/NLog.SignalR)      | [![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg)](https://www.nuget.org/packages/NLog.SignalR/) | Custom NLog target for sending log events to a SignalR hub.
+[Syslog](https://github.com/graffen/NLog.Targets.Syslog)         | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Syslog.svg)](https://www.nuget.org/packages/NLog.Targets.Syslog) | Write to Syslog.
+[XML](https://github.com/loresoft/NLog.Xml)                      | [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) | Write to XML files. 
 
 
 
