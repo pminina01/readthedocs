@@ -58,22 +58,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${time}](Time-Layout-Renderer) - The time in a 24-hour, sortable format HH:mm:ss.mmm.
 * [${windows-identity}](Windows-Identity-Layout-Renderer) - Thread Windows identity information (username).
 
-
- 
-
-###NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
-* [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
-
-###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
-* [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
-* [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
-* [${aspnet-session}](AspNetSession-Layout-Renderer) - ASP.NET Session variable.
-* [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
-* [${aspnet-user-authtype}](AspNetUserAuthType-Layout-Renderer) - ASP.NET User variable.
-* [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
-* [${iis-site-name}](IIS-site-name-Layout-Renderer) - IIS site name.
-
-##Wrapper Layout Renderers
+####Wrappers
 
 ###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
 * [${cached}](Cached-Layout-Renderer) - Applies caching to another layout output.
@@ -91,6 +76,21 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${when}](When-Layout-Renderer) - Only outputs the inner layout when the specified condition has been met.
 * [${whenEmpty}](WhenEmpty-Layout-Renderer) - Outputs alternative layout when the inner layout produces empty result.
 * [${xml-encode}](Xml-Encode-Layout-Renderer) - Converts the result of another layout output to be XML-compliant.
+ 
+
+###NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
+* [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
+
+###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
+* [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
+* [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
+* [${aspnet-session}](AspNetSession-Layout-Renderer) - ASP.NET Session variable.
+* [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
+* [${aspnet-user-authtype}](AspNetUserAuthType-Layout-Renderer) - ASP.NET User variable.
+* [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
+* [${iis-site-name}](IIS-site-name-Layout-Renderer) - IIS site name.
+
+
 
 ##External packages
 
