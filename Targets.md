@@ -67,6 +67,8 @@ Custom NLog target for sending log events to a SignalR hub.
 
 * [XML target](https://github.com/loresoft/NLog.Xml) [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) Write to XML files. 
 
+* [Elastic Search](https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch) [![Version](https://img.shields.io/nuget/v/NLog.Targets.ElasticSearch.svg)](https://www.nuget.org/packages/nlog.targets.elasticsearch) Write to Elastic Search servers.
+
 ##Wrapper Targets
 
 ###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
