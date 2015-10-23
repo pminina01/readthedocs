@@ -24,6 +24,7 @@ ${other:when=Condition}
 * `${when:inner=1:when='${aspnet-request:serverVariable=HTTPS}' == 'on'}${when:inner=0:when='${aspnet-request:serverVariable=HTTPS}' != 'on'}`: convert a layout string result to a bit (1 or 0) that can be inserted into a SQL bit field.
 
 ##Remarks
+
 The colon (:) character should be wrapped within ```{literal:text=\:}``` instead of placed directly within the _inner_ layout. 
 
 
@@ -43,3 +44,17 @@ Output | `World`
 When the colon character is not wrapped only the last literal instance, in this case the word 'World', appears. 
 
 :star: Workaround identified by: _@reedyrm_
+
+### Since 4.2 
+
+When using `:` and `}` in a internal layout those characters need to be scape (there is no need to scape `\`).
+
+-  `:` because it's a value separator. 
+-  `}` because it's the end of the layout
+
+Working examples:
+
+- `${when:when=1 == 1:Inner=Test\: Hello}`
+- `${when:when=1 == 1:Inner=Test\\Hello}`
+- `${when:when=1 == 1:Inner=Test\Hello}`
+- `${when:when=1 == 1:Inner=Test{Hello\}}`
