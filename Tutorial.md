@@ -21,8 +21,6 @@ Use the GUI or the following command in the Package Manager Console:
 Install-Package NLog.Config 
 ```
 
-At this time NLog 4.0 is stable and can be tried for production applications.
-
 That's it, you can now compile and run your application and it will be able to use NLog.
 
 ##Creating Log messages
