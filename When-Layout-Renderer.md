@@ -40,7 +40,7 @@ Working examples:
 - `${when:when=1 == 1:Inner=Test{Hello\}}`
 
 
-###Before 4.2.0
+###Before 4.2
 
 The colon (:) character should be wrapped within ```{literal:text=\:}``` instead of placed directly within the _inner_ layout. 
 
