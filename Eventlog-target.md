@@ -23,7 +23,7 @@ Read more about using the [Configuration File](Configuration file).
  * _name_ - Name of the target.
 
 ###Layout Options
- * _layout_ - Layout used to format log messages. [Layout](Layouts) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+ * _layout_ - Layout used to format log messages. [Layout](Layouts) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`. Note: max size of 16384 characters (limitation of the `EventLog` API)
 
 ###Event Log Options
  * _machineName_ - Name of the machine on which Event Log service is running. Default: `.`  
@@ -32,7 +32,7 @@ Read more about using the [Configuration File](Configuration file).
  * _eventId_ - [Layout](Layouts) that renders event ID. 
  * _log_ - Name of the Event Log to write to. This can be System, Application or any user-defined name. Default: Application
 
-##note
+##Note
 When install/uninstalling, the event source is only created / removed when the _source_ doesn't contain layout renderers. 
 
 ##Example
