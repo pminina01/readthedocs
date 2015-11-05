@@ -362,8 +362,8 @@ Example archive file names:
             ...
             archiveFileName="log.{#}.txt"
             archiveNumbering="Sequence"
-            archiveEvery="Day",
-            archiveDateFormat="yyyyMMdd",
+            archiveEvery="Day"
+            archiveDateFormat="yyyyMMdd"
   />
 
 ```
@@ -380,8 +380,8 @@ Example archive file names:
             ...
             archiveFileName="log.{#}.txt"
             archiveNumbering="DateAndSequence"
-            archiveAboveSize="1000",
-            archiveDateFormat="yyyyMMdd",
+            archiveAboveSize="1000"
+            archiveDateFormat="yyyyMMdd"
   />
 
 ```
