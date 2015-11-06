@@ -361,7 +361,7 @@ Example archive file names:
         <target name="file" xsi:type="File"
             ...
             archiveFileName="log.{#}.txt"
-            archiveNumbering="Sequence"
+            archiveNumbering="Date"
             archiveEvery="Day"
             archiveDateFormat="yyyyMMdd"
   />
