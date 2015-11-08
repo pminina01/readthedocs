@@ -2,7 +2,8 @@ Provides asynchronous, buffered execution of target writes.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+
+```xml
 <targets>
   <target xsi:type="AsyncWrapper"
           name="String"
