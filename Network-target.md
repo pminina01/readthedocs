@@ -29,19 +29,14 @@ Possible values:
 
 _newLine_ - Indicates whether to append newline at the end of log message. [Boolean](Data-types) Default: False
 
-_layout_ - Layout used to format log messages. [Layout](Data-types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+_layout_ - Layout used to format log messages. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
 _maxMessageSize_ - Maximum message size in bytes. [Integer](Data-types) Default: 65000
 
 _encoding_ - Encoding to be used. [Encoding](Data-types) Default: utf-8
 ###Connection Options
 _connectionCacheSize_ - Size of the connection cache (number of connections which are kept alive). [Integer](Data-types) Default: 5  
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v1.0 for .NET Framework 1.0
-> * NLog v1.0 for .NET Framework 1.1
-> * NLog v1.0 for .NET Framework 2.0
+
 
 _keepConnection_ - Indicates whether to keep connection open whenever possible. [Boolean](Data-types) Default: True
 
