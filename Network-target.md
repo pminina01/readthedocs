@@ -1,5 +1,8 @@
 Sends log messages over the network. 
 
+
+For SOAP-based webservice support over HTTP use [WebService target](https://github.com/NLog/NLog/wiki/WebService-target).
+
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
 ```xml
@@ -51,4 +54,3 @@ The network address can be:
 * http://host:port/pageName - HTTP using POST verb
 * https://host:port/pageName - HTTPS using POST verb
 
-For SOAP-based webservice support over HTTP use WebService target.
