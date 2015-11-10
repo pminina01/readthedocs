@@ -21,19 +21,10 @@ Read more about using the [Configuration File](Configuration-file).
 _name_ - Name of the target.
 ###Connection Options
 _endpointConfigurationName_ - Name of the endpoint configuration in WCF configuration file.  
-> This parameter is not supported in:
-> * NLog v2.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 3.5
-> * NLog v2.0 for .NET Framework 2.0
 
 _endpointAddress_ - Endpoint address. Required.
 ###Payload Options
 _useBinaryEncoding_ - Indicates whether to use binary message encoding. [Boolean](Data-types)  
-> This parameter is not supported in:
-> * NLog v2.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 3.5
-> * NLog v2.0 for .NET Framework 2.0
-> * NLog v2.0 for Silverlight 2.0
 
 _parameters_ - The list of parameters. [Collection](Data-types)  
 Each collection item is represented by \<parameter /> element with the following attributes:
