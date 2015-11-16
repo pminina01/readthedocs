@@ -2,7 +2,7 @@ Filters log entries based on a condition.
 
 Supported in .NET, Silverligt, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="FilteringWrapper" name="String" condition="Condition">
     <target xsi:type="wrappedTargetType" ...target properties... />
