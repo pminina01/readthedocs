@@ -34,7 +34,7 @@ Possible values:
 
 ##Remarks
 Asynchronous target wrapper allows the logger code to execute more quickly, by queueing messages and processing them in a separate thread. You should wrap targets that spend a non-trivial amount of time in their Write() method with asynchronous target to speed up logging. Because asynchronous logging is quite a common scenario, NLog supports a shorthand notation for wrapping all targets with AsyncWrapper. Just add async="true" to the <targets/> element in the configuration file.
-```
+```xml
 <targets async="true"> 
   ... your targets go here ...
 </targets>
