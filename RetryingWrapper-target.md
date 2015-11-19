@@ -2,7 +2,7 @@ Retries in case of write error.
 
 Supported in .NET, Silverligt, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="RetryingWrapper" name="String" retryDelayMilliseconds="Integer" retryCount="Integer">
     <target xsi:type="wrappedTargetType" ...target properties... />
