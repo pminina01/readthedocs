@@ -46,7 +46,7 @@ _encoding_ - Encoding to be used. [Encoding](Data-types) Default: utf-8
 _connectionCacheSize_ - Size of the connection cache (number of connections which are kept alive). [Integer](Data-types) Default: 5  
 
 
-_keepConnection_ - Indicates whether to keep connection open whenever possible. [Boolean](Data-types) Default: True
+_keepConnection_ - Indicates whether to keep connection open whenever possible. Not used for stateless protocols (= http, https) [Boolean](Data-types) Default: `True`
 
 _maxConnections_ - Maximum current connections. 0 = no maximum. `Integer` Default: `0`. Not used if _keepConnection_ is `true`
 
