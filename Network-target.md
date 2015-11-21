@@ -50,7 +50,7 @@ _keepConnection_ - Indicates whether to keep connection open whenever possible. 
 
 _maxConnections_ - Maximum current connections. 0 = no maximum. `Integer` Default: `0`. Not used if _keepConnection_ is `true`
 
-_onConnectionOverflow _- Action that should be taken if the will be more connections than _MaxConnections_.
+_onConnectionOverflow _- Action that should be taken if the will be more connections than _maxConnections_ .
 Possible values:
 * AllowNewConnnection - Just allow it. (default)
 * Block - Block until there's more room in the queue.
