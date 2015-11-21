@@ -48,7 +48,7 @@ _connectionCacheSize_ - Size of the connection cache (number of connections whic
 
 _keepConnection_ - Indicates whether to keep connection open whenever possible. [Boolean](Data-types) Default: True
 
-_maxConnections_ - Maximum current connections. 0 = no maximum. `Integer` Default: `0`
+_maxConnections_ - Maximum current connections. 0 = no maximum. `Integer` Default: `0`. Not used if _keepConnection_ is `true`
 
 _onConnectionOverflow _- Action that should be taken if the will be more connections than _MaxConnections_.
 Possible values:
@@ -56,7 +56,7 @@ Possible values:
 * Block - Block until there's more room in the queue.
 * DiscardMessage - Discard the connection item.
 
-_maxQueueSize_ - Maximum queue size.Integer Default: 0
+_maxQueueSize_ - Maximum queue size. Only used for TCP (not http/https/udp). Will removes messages when if too many. 0 is no max. `Integer`. Default: 0
 
 _address_ - Network address. [Layout](Data-types)  
 The network address can be:
