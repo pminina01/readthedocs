@@ -56,6 +56,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${threadname}](ThreadName-Layout-Renderer) - The name of the current thread.
 * [${ticks}](Ticks-Layout-Renderer) - The Ticks value of current date and time.
 * [${time}](Time-Layout-Renderer) - The time in a 24-hour, sortable format HH:mm:ss.mmm.
+* [${var}](Var-Layout-Renderer) - Render variable (new in 4.1)
 * [${windows-identity}](Windows-Identity-Layout-Renderer) - Thread Windows identity information (username).
 
 ####Wrappers
