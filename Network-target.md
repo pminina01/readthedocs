@@ -48,9 +48,9 @@ _connectionCacheSize_ - Size of the connection cache (number of connections whic
 
 _keepConnection_ - Indicates whether to keep connection open whenever possible. Not used for stateless protocols (= http, https) [Boolean](Data-types) Default: `True`
 
-_maxConnections_ - Maximum current connections. 0 = no maximum. `Integer` Default: `0`. Not used if _keepConnection_ is `true`
+_maxConnections_ - Maximum current connections. 0 = no maximum. `Integer` Default: `0`. Not used if _keepConnection_ is `true`. Introduced in NLog 4.2.1
 
-_onConnectionOverflow_ - Action that should be taken if the will be more connections than _maxConnections_ .
+_onConnectionOverflow_ - Action that should be taken if the will be more connections than _maxConnections_ . Introduced in NLog 4.2.1. 
 Possible values:
 * AllowNewConnnection - Just allow it. (default)
 * Block - Block until there's more room in the queue.
