@@ -14,9 +14,14 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           layout="Layout"
           maxMessageSize="Integer"
           encoding="Encoding"
+          
           connectionCacheSize="Integer"
+          maxConnections="Integer"
+          maxQueueSize="Integer"
           keepConnection="Boolean"
-          address="Layout" />
+          onConnectionOverflow="Enum"
+          address="Layout" 
+/>
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
@@ -42,6 +47,16 @@ _connectionCacheSize_ - Size of the connection cache (number of connections whic
 
 
 _keepConnection_ - Indicates whether to keep connection open whenever possible. [Boolean](Data-types) Default: True
+
+_maxConnections_ - Maximum current connections. 0 = no maximum. `Integer` Default: `0`
+
+_onConnectionOverflow _- Action that should be taken if the will be more connections than _MaxConnections_.
+Possible values:
+* AllowNewConnnection - Just allow it. (default)
+* Block - Block until there's more room in the queue.
+* DiscardMessage - Discard the connection item.
+
+_maxQueueSize_ - Maximum queue size.Integer Default: 0
 
 _address_ - Network address. [Layout](Data-types)  
 The network address can be:
