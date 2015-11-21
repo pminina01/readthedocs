@@ -204,6 +204,17 @@ Once defined, variables can be used as if they were layout renderers – by usin
 </nlog>
 ```
 
+###Vars since NLog 4.1
+In  NLog 4.1 is a new method introduced to render the variable values. Use `${var:var1}` instead of `${var1}`.
+
+See [Variable layout renderer](https://github.com/NLog/NLog/wiki/Var-Layout-Renderer). 
+
+Why use this new method? With the variable layout renderer:
+
+* Variables can be changed, deleted and created from the API
+* A default value can be configured for a variable, e.g. `${var:password:default=unknown}`
+
+
 <a name="automatic-reconfiguration" />
 ##Automatic reconfiguration
 The configuration file is read automatically at program startup. In a long running process (such as a Windows service or an ASP.NET application) it’s sometimes desirable to temporarily increase the log level without stopping the application. NLog can monitor logging configuration files and re-read them each time they are modified. To enable this mechanism, you simply add `autoReload="true"` parameter to the configuration file.
