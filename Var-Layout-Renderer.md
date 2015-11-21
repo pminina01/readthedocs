@@ -4,7 +4,7 @@ Introduced in 4.1, seen [news post](http://nlog-project.org/2015/08/31/nlog-4-1-
 
 ##Configuration Syntax
 ```
-${var:default=String:name=String}
+${var:name=String:default=String}
 ```
 
 ##Parameters
