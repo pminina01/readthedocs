@@ -66,13 +66,15 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 External packages, not maintained by the NLog team.
 
 
-
+<!-- PLEASE keep SORTED -->
 
 
 Package|Version     |Description
 -------|------------|------------------------------------------------
+[Amazon SNS](https://github.com/Takaloy/NLog.Targets.SNS) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.SNS.svg)](https://www.nuget.org/packages/NLog.Targets.SNS) | Write to Amazon SNS.
 [Elastic Search](https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.ElasticSearch.svg)](https://www.nuget.org/packages/NLog.Targets.ElasticSearch) | Write to Elastic Search servers.
 [elmah.io](https://github.com/elmahio/elmah.io.nlog)             | [![Version](https://img.shields.io/nuget/v/elmah.io.nlog.svg)](https://www.nuget.org/packages/elmah.io.nlog) | Sends logs to [elmah.io](https://elmah.io). elmah.io is an online service for logging messages in the cloud.
+[Glimpse](https://github.com/NLog/Glimpse.NLog) | [![Version](https://img.shields.io/nuget/v/Glimpse.NLog.svg)](https://www.nuget.org/packages/Glimpse.NLog) | Show NLog information in [Glimpse](http://getglimpse.com/).
 [GrowlNotify](https://github.com/RyanFarley/NLogGrowlNotify)     | [![Version](https://img.shields.io/nuget/v/NLog.Growl.svg)](https://www.nuget.org/packages/NLog.Growl) | Sends logs via [Growl for Windows](http://www.growlforwindows.com/gfw/), a desktop notification system.
 [Logentries](https://github.com/logentries/le_dotnet)                   | [![Version](https://img.shields.io/nuget/v/Logentries.nlog.svg)](https://www.nuget.org/packages/Logentries.nlog) | Writing to www.logentries.com
 [Pushover](https://github.com/RobThree/NLog.Targets.Pushover)    | [![Version](http://img.shields.io/nuget/v/NLog.Targets.Pushover.svg)](https://www.nuget.org/packages/NLog.Targets.Pushover) | Sends logs via [Pushover](https://pushover.net/), an [Android/iOS/Desktop](https://pushover.net/clients) push notification system.
@@ -80,8 +82,9 @@ Package|Version     |Description
 [SignalR](https://github.com/toddmeinershagen/NLog.SignalR)      | [![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg)](https://www.nuget.org/packages/NLog.SignalR/) | Custom NLog target for sending log events to a SignalR hub.
 [Syslog](https://github.com/graffen/NLog.Targets.Syslog)         | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Syslog.svg)](https://www.nuget.org/packages/NLog.Targets.Syslog) | Write to Syslog.
 [XML](https://github.com/loresoft/NLog.Xml)                      | [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) | Write to XML files. 
-[Amazon SNS](https://github.com/Takaloy/NLog.Targets.SNS) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.SNS.svg)](https://www.nuget.org/packages/NLog.Targets.SNS) | Write to Amazon SNS.
 
+
+<!-- PLEASE keep SORTED -->
 
 #Writing your own target
 NLog supports custom target. For more information, see: [Extending NLog](Extending NLog)
