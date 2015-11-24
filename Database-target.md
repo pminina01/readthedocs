@@ -88,7 +88,7 @@ Each collection item is represented by \<uninstall-command /> element with the f
 Possible values:
         * `StoredProcedure` - `commandText` is the stored procedure name.
         * `TableDirect` -
-        * `Text` - regurar query
+        * `Text` - regular query
       * _connectionString_ - Connection string to run the command against. If not provided, connection string from the target is used. [Layout](Layout)  
       * _ignoreFailures_ - Indicates whether to ignore failures. [Boolean](Layout)  
       * _parameters_ - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Layout)  
