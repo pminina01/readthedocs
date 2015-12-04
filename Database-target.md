@@ -191,3 +191,131 @@ Each collection item is represented by \<parameter /> element with the following
   <parameter name="@exception" layout="${exception:tostring}" />
 </target>
 ```
+
+### ASP.NET and SQL Server using a stored procedure
+
+This approach keeps the NLog.config file simpler, and helps confine 
+database logic to the database.
+
+#### NLog target configuration
+
+```xml
+<target name="db"
+        xsi:type="Database"
+        connectionStringName="NLogConn"
+        commandType="StoredProcedure"
+        commandText="[dbo].[NLog_AddEntry_p]"
+        >
+  <parameter name="@machineName"    layout="${machinename}" />
+  <parameter name="@siteName"       layout="${iis-site-name}" />
+  <parameter name="@logged"         layout="${date}" />
+  <parameter name="@level"          layout="${level}" />
+  <parameter name="@username"       layout="${aspnet-user-identity}" />
+  <parameter name="@message"        layout="${message}" />
+  <parameter name="@logger"         layout="${logger}" />
+  <parameter name="@properties"     layout="${all-event-properties:separator=|}" />
+  <parameter name="@serverName"     layout="${aspnet-request:serverVariable=SERVER_NAME}" />
+  <parameter name="@port"           layout="${aspnet-request:serverVariable=SERVER_PORT}" />
+  <parameter name="@url"            layout="${aspnet-request:serverVariable=HTTP_URL}" />
+  <parameter name="@https"          layout="${when:inner=1:when='${aspnet-request:serverVariable=HTTPS}' == 'on'}${when:inner=0:when='${aspnet-request:serverVariable=HTTPS}' != 'on'}" />
+  <parameter name="@serverAddress"  layout="${aspnet-request:serverVariable=LOCAL_ADDR}" />
+  <parameter name="@remoteAddress"  layout="${aspnet-request:serverVariable=REMOTE_ADDR}:${aspnet-request:serverVariable=REMOTE_PORT}" />
+  <parameter name="@callSite"       layout="${callsite}" />
+  <parameter name="@exception"      layout="${exception:tostring}" />
+</target>
+
+<!--
+  Notes:
+
+  - Some of these layout renderers require a reference to NLog.Web. 
+    (http://nuget.org/List/Packages/NLog.Web)
+
+  - If the connection string was created with Visual Studio's Settings dialog
+    then it may be prefixed with "<project>.Settings.Properties.*".
+    If so be sure to include the entire string.
+-->
+```
+
+#### SQL scripts to set up the database objects
+
+Remember to grant permissions on the database objects to the website can execute the stored procedure.
+
+```sql
+CREATE TABLE [dbo].[NLog] (
+   [ID] [int] IDENTITY(1,1) NOT NULL,
+   [MachineName] [nvarchar](200) NULL,
+   [SiteName] [nvarchar](200) NOT NULL,
+   [Logged] [datetime] NOT NULL,
+   [Level] [varchar](5) NOT NULL,
+   [UserName] [nvarchar](200) NULL,
+   [Message] [nvarchar](max) NOT NULL,
+   [Logger] [nvarchar](300) NULL,
+   [Properties] [nvarchar](max) NULL,
+   [ServerName] [nvarchar](200) NULL,
+   [Port] [nvarchar](100) NULL,
+   [Url] [nvarchar](2000) NULL,
+   [Https] [bit] NULL,
+   [ServerAddress] [nvarchar](100) NULL,
+   [RemoteAddress] [nvarchar](100) NULL,
+   [Callsite] [nvarchar](300) NULL,
+   [Exception] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Log] PRIMARY KEY CLUSTERED ([ID] ASC) 
+   WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
+
+CREATE PROCEDURE [dbo].[NLog_AddEntry_p] (
+  @machineName nvarchar(200),
+  @siteName nvarchar(200),
+  @logged datetime,
+  @level varchar(5),
+  @userName nvarchar(200),
+  @message nvarchar(max),
+  @logger nvarchar(300),
+  @properties nvarchar(max),
+  @serverName nvarchar(200),
+  @port nvarchar(100),
+  @url nvarchar(2000),
+  @https bit,
+  @serverAddress nvarchar(100),
+  @remoteAddress nvarchar(100),
+  @callSite nvarchar(300),
+  @exception nvarchar(max)
+) AS
+BEGIN
+  INSERT INTO [dbo].[NLog] (
+    [MachineName],
+    [SiteName],
+    [Logged],
+    [Level],
+    [UserName],
+    [Message],
+    [Logger],
+    [Properties],
+    [ServerName],
+    [Port],
+    [Url],
+    [Https],
+    [ServerAddress],
+    [RemoteAddress],
+    [CallSite],
+    [Exception]
+  ) VALUES (
+    @machineName,
+    @siteName,
+    @logged,
+    @level,
+    @userName,
+    @message,
+    @logger,
+    @properties,
+    @serverName,
+    @port,
+    @url,
+    @https,
+    @serverAddress,
+    @remoteAddress,
+    @callSite,
+    @exception
+  );
+END
+```
