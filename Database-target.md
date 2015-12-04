@@ -231,8 +231,8 @@ database logic to the database.
     (http://nuget.org/List/Packages/NLog.Web)
 
   - If the connection string was created with Visual Studio's Settings dialog
-    then it may be prefixed with "<project>.Settings.Properties.*".
-    If so be sure to include the entire string.
+    then its name may be prefixed with a namespace like "<project>.Settings.Properties.*".
+    If so be sure to include the entire name (with the namespace).
 -->
 ```
 
