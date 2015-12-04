@@ -17,14 +17,13 @@ Not used if _name_ is `null`
 
 ```xml
 <nlog>
-  <variable name='user' value='admin' />
-  <variable name='password' value='realgoodpassword' />
-            
+  <variable name="user" value="admin" />
+  <variable name="password" value="realgoodpassword" />      
   <targets>
-    <target name='debug' type='Debug' layout='${message} and ${var:user}=${var:password}' />
+    <target name="debug" type="Debug" layout="${message} and ${var:user}=${var:password}" />
   </targets>
   <rules>
-    <logger name='*' minlevel='Debug' writeTo='debug' />
+    <logger name="*" minlevel="Debug" writeTo="debug" />
   </rules>
 </nlog>
 ```
