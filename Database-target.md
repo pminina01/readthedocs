@@ -238,7 +238,7 @@ database logic to the database.
 
 #### SQL scripts to set up the database objects
 
-Remember to grant permissions on the database objects to the website can execute the stored procedure.
+Remember to grant permissions on the database objects so that the website can execute the stored procedure.
 
 ```sql
 CREATE TABLE [dbo].[NLog] (
