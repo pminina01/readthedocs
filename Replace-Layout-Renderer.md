@@ -24,5 +24,5 @@ Replace newlines with `-`
 
 ```xml
 <variable name="replacedname" 
-  value="${replace:searchFor=\\n+:replaceWith=-:regex=true:inner=${message}} />
+  value="${replace:searchFor=\\n+:replaceWith=-:regex=true:inner=${message}}" />
 ```
