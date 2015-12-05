@@ -19,6 +19,8 @@ layout - Layout used to format log messages. [Layout](Layout) Required. Default:
 ###Remarks
 Log entries can then be viewed by navigating to http://server/path/Trace.axd.
 
+AspNetTrace uses the `HttpContext.Current`. Therefore async mode does not works for AspNetTrace due to different thread.
+ 
 ##Examples
 In order to use this target, put the following code in the [configuration file](Configuration file) such as Web.nlog or NLog.config:
 ```xml
