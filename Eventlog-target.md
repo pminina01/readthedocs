@@ -31,9 +31,17 @@ Read more about using the [Configuration File](Configuration file).
  * _category_ - [Layout](Layouts) that renders event Category.  The categories must be predefined for the specified _source_ and needs to be numeric.   
  * _eventId_ - [Layout](Layouts) that renders event ID. 
  * _log_ - Name of the Event Log to write to. This can be System, Application or any user-defined name. Default: Application
+ * _onOverflow_ - Action to take when a log message is larger than the [max message size](https://msdn.microsoft.com/en-us/library/xzwc042w(v=vs.110).aspx#Anchor_1) of the Event Log. Available actions are:
+   * Truncate. Truncates the message before writing to the Event Log. This is the default.
+   * Split. Splits the message and writes multiple entries to the Event Log. Warning: the message layout will be spread across multiple Event Log entries; if there is an application reading and parsing the Event Log, split messages will not have the expected layout of a log entry.
+   * Discard. Discards of the message. It will not be written to the Event Log.
 
-##Note
+##Notes
 When install/uninstalling, the event source is only created / removed when the _source_ doesn't contain layout renderers. 
+
+The Event Log has a limit in the number of bytes in a message. From [MSDN](https://msdn.microsoft.com/en-us/library/xzwc042w(v=vs.110).aspx#Anchor_1):
+
+> The message string is longer than 31,839 bytes (32,766 bytes on Windows operating systems before Windows Vista).
 
 ##Example
 ```xml
