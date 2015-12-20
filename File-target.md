@@ -32,7 +32,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           autoFlush="Boolean"
           keepFileOpen="Boolean"
           forceManaged="Boolean"
-          enableArchiveFileCompression="Boolean" />
+          enableArchiveFileCompression="Boolean"
+          cleanupFileName="Boolean"  />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
@@ -152,6 +153,8 @@ The actual delay is a random value between 0 and the value specified in this par
 Assuming that ConcurrentWriteAttemptDelay is 10 the time to wait will be: a random value between 0 and 10 milliseconds - 1st attempt a random value between 0 and 20 milliseconds - 2nd attempt a random value between 0 and 40 milliseconds - 3rd attempt a random value between 0 and 80 milliseconds - 4th attempt ... and so on.
 
 _concurrentWriteAttempts_ - Number of times the write is appended on the file before NLog discards the log message. [Integer](Data-types) Default: 10  
+
+_cleanupFileName_ - before writing to a file, the name of the file get checked for illegal characters (OS dependent). This can be costly if a lot of messages are written. The cleanup is cached for fixed names (no layout renderers). Set this to `false` for optimal performance (but beware of the file name, if it's wrong, nothing gets written). Default: `true`
 
 _bufferSize_ - Log file buffer size in bytes. [Integer](Data-types) Default: 32768  
 
