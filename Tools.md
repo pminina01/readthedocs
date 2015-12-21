@@ -11,6 +11,7 @@ Logs produced by NLog can be analyzed using a number of GUI tools:
 
 ##Log4x-compatible viewers
 In general, any viewer supporting Log4J or Log4Net should work fine with NLog - see http://nlog-project.org/target.Chainsaw.html for information on configuring NLog for use with those viewers.
+* LogWizard - https://github.com/jtorjo/logwizard
 * Apache Chainsaw - http://logging.apache.org/chainsaw/index.html
 * DevIntelligence Log4Net Viewer - http://devintelligence.com/log4netviewer/
 * C# WPF Log4Net Viewer - http://www.codeproject.com/KB/cs/logviewer.aspx
