@@ -154,7 +154,7 @@ Assuming that ConcurrentWriteAttemptDelay is 10 the time to wait will be: a rand
 
 _concurrentWriteAttempts_ - Number of times the write is appended on the file before NLog discards the log message. [Integer](Data-types) Default: 10  
 
-_cleanupFileName_ - before writing to a file, the name of the file get checked for illegal characters (OS dependent). This can be costly if a lot of messages are written. The cleanup is cached for fixed names (no layout renderers). Set this to `false` for optimal performance (but beware of the file name, if it's wrong, nothing gets written). Default: `true`
+_cleanupFileName_ - before writing to a file, the name of the file get checked for illegal characters (OS dependent). This can be costly if a lot of messages are written. The cleanup is cached for fixed names (no layout renderers). Set this to `false` for optimal performance (but beware of the file name, if it's wrong, nothing gets written). Default: `true`. Introduced in NLog 4.2.3.
 
 _bufferSize_ - Log file buffer size in bytes. [Integer](Data-types) Default: 32768  
 
@@ -394,4 +394,3 @@ Example archive file names:
 * log.20150730.1.txt
 * log.20150730.2.txt
 * log.20150730.3.txt
-
