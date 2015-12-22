@@ -1,6 +1,6 @@
 Log event properties data. 
 
-This has the same implementation as `${event-context}`, but the later is deprecated. 
+This has the same implementation as `${event-context}`, but the latter is deprecated. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 
