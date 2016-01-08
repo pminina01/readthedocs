@@ -83,6 +83,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 
 ###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
 * [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
+* [${aspnet-item}](AspNetItem-layout-renderer) - ASP.NET `HttpContext` item variable.
 * [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
 * [${aspnet-session}](AspNetSession-Layout-Renderer) - ASP.NET Session variable.
 * [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
