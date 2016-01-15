@@ -37,6 +37,8 @@ Possible values:
 * Auto - Quote only whose values contain the quote symbol or the separator.
 * Nothing - Quote nothing.
 
+Hint: To write logs which has multiline data, such as Exception message, you will need to use quotation mark `(")`.
+
 _quoteChar_ - Quote Character. Default: "
 
 _withHeader_ - Indicates whether CSV should include header.Boolean
@@ -57,3 +59,5 @@ _columns_ - The array of parameters to be passed.Collection
 Each collection item is represented by \<column /> element with the following attributes:  
   * _layout_ - Layout of the column.Layout Required.
   * _name_ - Name of the column.
+
+
