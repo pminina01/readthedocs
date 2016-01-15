@@ -37,7 +37,7 @@ Possible values:
 * Auto - Quote only whose values contain the quote symbol or the separator.
 * Nothing - Quote nothing.
 
-Hint: To write logs which has multiline data, such as Exception message, you will need to use quotation mark `(")`.
+**Hint:** To write logs which has multiline data, such as Exception message, you will need to use quotation mark `(")`.
 
 _quoteChar_ - Quote Character. Default: "
 
