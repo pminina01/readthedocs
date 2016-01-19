@@ -33,8 +33,57 @@ Possible values:
  * Grow - Grow the queue.
 
 ##Remarks
-Asynchronous target wrapper allows the logger code to execute more quickly, by queueing messages and processing them in a separate thread. You should wrap targets that spend a non-trivial amount of time in their Write() method with asynchronous target to speed up logging. Because asynchronous logging is quite a common scenario, NLog supports a shorthand notation for wrapping all targets with AsyncWrapper. Just add async="true" to the <targets/> element in the configuration file.
+
+
+###Async attribute
+Asynchronous target wrapper allows the logger code to execute more quickly, by queuing messages and processing them in a separate thread. You should wrap targets that spend a non-trivial amount of time in their `Write()` method with asynchronous target to speed up logging. Because asynchronous logging is quite a common scenario, NLog supports a shorthand notation for wrapping all targets with AsyncWrapper. Just add `async="true"` to the `<targets/>` element in the configuration file.
+
+Example:
 ```xml
 <targets async="true"> 
   ... your targets go here ...
 </targets>
+
+###AsyncWrapper and `<rules>`
+
+When using the `AsyncWrapper`, do write to the wrapper in your ` <rules>` section! In the following example: do write to 
+"target2". If the `<logger>` is writing to "target1", the messages are not written asynchronously!
+
+```xml 
+   <targets >
+      <target name="target2" xsi:type="AsyncWrapper">
+        <target name ="target1" xsi:type="File"
+                    fileName="c:/temp/test.log" layout="${message}"
+                    keepFileOpen="true" />
+      </target>
+    <rules>
+      <logger name="*" minlevel="Info" writeTo="target2"/>
+    </rules>
+< 
+```
+
+###Async attribute and AsyncWrapper 
+Don't combine the Async attribute and AsyncWrapper. This will only slow down processing and will behave unreliable.
+
+###Async attribute will discard by default
+The async attribute is a shorthand for:
+
+```xml
+xsi:type="AsyncWrapper overflowAction="Discard" queueLimit="10000" batchSize="100" timeToSleepBetweenBatches="50"
+```
+
+So it you will write a lot of messages (more then 10000) in a short time, it's possible messages will be lost. This is intended behavior as keeping all the messages or waiting for all the messages to be written, could have impact on the performance of your program.
+
+If you need all the log messages, do use the AsyncWrapper instead of the async attribute. 
+
+
+
+###Buffer and asynchronously writing
+
+If `slidingTimeout` is set to `true`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target). Using the `slidingTimeout` is preferred over the `async` attribute and AsyncWrapper.
+
+When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.
+
+
+###timeToSleepBetweenBatches = 0 
+Setting `timeToSleepBetweenBatches` to `0` will lead to a high CPU usage.
