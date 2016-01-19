@@ -81,3 +81,5 @@ If you need all the log messages, do use the AsyncWrapper instead of the async a
 When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.
 
 
+###BufferingWrapper  and Async
+The [BufferingWrapper](https://github.com/NLog/NLog/wiki/BufferingWrapper-target) can write asynchronously by itself. No need to use the async attribute or AsyncWrapper. See [remarks at the BufferingWrapper](https://github.com/NLog/NLog/wiki/BufferingWrapper-target#buffer-and-asynchronously-writing).
