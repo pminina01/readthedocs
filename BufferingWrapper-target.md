@@ -28,6 +28,6 @@ _flushTimeout_ - Timeout (in milliseconds) after which the contents of buffer wi
 
 ###Buffer and asynchronously writing
 
-If `slidingTimeout` is set to `true`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target). Using the `slidingTimeout` is preferred over the `async` attribute and AsyncWrapper.
+If `slidingTimeout` is set to `true`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target). Using the `slidingTimeout` is preferred over the `async` attribute and AsyncWrapper. Combining both can lead to lost messages.
 
 When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.
