@@ -19,9 +19,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ###General Options
 _name_ - Name of the target.
 ###Buffering Options
-_queueLimit_ - Limit on the number of requests in the lazy writer thread request queue. Integer Default: 10000
+_queueLimit_ - Limit on the number of requests in the lazy writer thread request queue. Integer Default: `10000`
 
-_timeToSleepBetweenBatches_ - Time in milliseconds to sleep between batches. Integer Default: 50
+_timeToSleepBetweenBatches_ - Time in milliseconds to sleep between batches. Integer Default: `50`. When set to `0`, this  will lead to a high CPU usage.
 
 _batchSize_ - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100
 
@@ -76,14 +76,8 @@ So it you will write a lot of messages (more then 10000) in a short time, it's p
 
 If you need all the log messages, do use the AsyncWrapper instead of the async attribute. 
 
-
-
-###Buffer and asynchronously writing
-
-If `slidingTimeout` is set to `true`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target). Using the `slidingTimeout` is preferred over the `async` attribute and AsyncWrapper.
+###Asynchronously writing and threads
 
 When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.
 
 
-###timeToSleepBetweenBatches = 0 
-Setting `timeToSleepBetweenBatches` to `0` will lead to a high CPU usage.
