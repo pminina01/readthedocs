@@ -23,3 +23,11 @@ This value determines how the inactivity period is determined. If sliding timeou
 _bufferSize_ - Number of log events to be buffered. `Integer` Default: `100`
 
 _flushTimeout_ - Timeout (in milliseconds) after which the contents of buffer will be flushed if there's no write in the specified period of time. Use `-1` to disable timed flushes. `Integer` Default: `-1`
+
+##Remarks
+
+###Buffer and asynchronously writing
+
+If `slidingTimeout` is set to `true`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target). Using the `slidingTimeout` is preferred over the `async` attribute and AsyncWrapper.
+
+When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.
