@@ -138,3 +138,12 @@ _wholeWords_ - Indicates whether to match whole words only. [Boolean](Data types
 
 ###Output Options
 _errorStream_ - Indicates whether the error stream (stderr) should be used instead of the output stream (stdout). [Boolean](Data types) Default: False
+
+###Programmatic example
+
+	var consoleTarget = new ColoredConsoleTarget();
+	
+	var highlightRule = new ConsoleRowHighlightingRule();
+	highlightRule.Condition = ConditionParser.ParseExpression("level == LogLevel.Info");
+	highlightRule.ForegroundColor = ConsoleOutputColor.Green;
+	consoleTarget.RowHighlightingRules.Add(highlightRule);
