@@ -18,5 +18,5 @@ ${date:universalTime=Boolean:format=String:culture=Culture}
   > * NLog v1.0 for .NET Framework 1.1
   > * NLog v1.0 for .NET Framework 2.0
 
-* **format** - Date format. Can be any argument accepted by DateTime.ToString(format). Note that semicolons needs to escaped with a backslash.
+* **format** - Date format. Can be any argument accepted by DateTime.ToString(format). Note that semicolons needs to escaped with a backslash. Example: `${date:format=yyyy-MM-dd HH\:mm\:ss.fff}`
 * **culture** - Culture used for rendering.Culture
