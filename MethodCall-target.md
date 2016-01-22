@@ -22,8 +22,8 @@ _methodName_ - Method name. The method must be `public` and `static`.
 _className_ - Class name. Do include the assembly name, e.g. `"NLog.UnitTests.Targets.MethodCallTests, NLog.UnitTests"`
 ### Parameter Options
 _parameters_ - The array of parameters to be passed. [Collection](Data-types)  
-Each collection item is represented by \<parameter /> element with the following attributes:
-  * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data-types) Required.
+Each collection item is represented by `<parameter />` element with the following attributes:
+  * _layout_ - Layout that should be use to calculate the value for the parameter. [Layout](Data-types) Required.
   * _name_ - Name of the parameter.
   * _type_ - Type of the parameter. [System.Type](Data-types)
 
@@ -64,7 +64,7 @@ namespace SomeNamespace
 }
 ```
 
-Names of parameters are not important, only their order is. The default type of each parameter is string, but it can be overridden by adding type attribute to <parameter /> element.
+Names of parameters are not important, only their order is. The default type of each parameter is string, but it can be overridden by adding type attribute to `<parameter />` element.
 
 It is also possible to configure logging using [Configuration API](Configuration-API):
 
