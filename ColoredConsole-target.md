@@ -14,7 +14,7 @@ Supported in .NET and Mono
           errorStream="Boolean">
     <highlight-row backgroundColor="Enum" condition="Condition" foregroundColor="Enum"/><!-- repeated -->
     <highlight-word backgroundColor="Enum" foregroundColor="Enum" ignoreCase="Boolean"
-                    regex="String" text="String" wholeWords="Boolean"/><!-- repeated -->
+                    regex="String" text="String" wholeWords="Boolean" compileRegex="Boolean"/><!-- repeated -->
   </target>
 </targets>
 ```
@@ -131,10 +131,11 @@ Possible values:
 * White - White Color (#FFFFFF).
 * Yellow - Yellow Color (#FFFF00).
 
-_ignoreCase_ - Indicates whether to ignore case when comparing texts. [Boolean](Data types) Default: False  
+_ignoreCase_ - Indicates whether to ignore case when comparing texts. [Boolean](Data types)  Default: `false` 
 _regex_ - Regular expression to be matched. You must specify either text or regex.  
 _text_ - Text to be matched. You must specify either text or regex.  
-_wholeWords_ - Indicates whether to match whole words only. [Boolean](Data types) Default: False  
+_wholeWords_ - Indicates whether to match whole words only. [Boolean](Data types) Default: `false`  
+_compileRegex_ - Introduced in NLog 4.3. Compiles the Regex. If `false`, the regex cache is used. Setting this to `true` can improve performance, but costs memory. Default: `false` 
 
 ###Output Options
 _errorStream_ - Indicates whether the error stream (stderr) should be used instead of the output stream (stdout). [Boolean](Data types) Default: False
