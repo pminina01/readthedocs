@@ -17,10 +17,10 @@ Read more about using the [Configuration File](Configuration-file).
 ###General Options
 _name_ - Name of the target.
 ###Invocation Options
-_methodName_ - Method name. The method must be public and static.
+_methodName_ - Method name. The method must be `public` and `static`.
 
-_className_ - Class name.
-###Parameter Options
+_className_ - Class name. Do include the assembly name, e.g. `"NLog.UnitTests.Targets.MethodCallTests, NLog.UnitTests"`
+### Parameter Options
 _parameters_ - The array of parameters to be passed. [Collection](Data-types)  
 Each collection item is represented by \<parameter /> element with the following attributes:
   * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data-types) Required.
