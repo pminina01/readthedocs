@@ -43,6 +43,7 @@ Example:
 <targets async="true"> 
   ... your targets go here ...
 </targets>
+```
 
 ###AsyncWrapper and `<rules>`
 
@@ -50,7 +51,7 @@ When using the `AsyncWrapper`, do write to the wrapper in your ` <rules>` sectio
 "target2". If the `<logger>` is writing to "target1", the messages are not written asynchronously!
 
 ```xml 
-   <targets >
+   <targets>
       <target name="target2" xsi:type="AsyncWrapper">
         <target name ="target1" xsi:type="File"
                     fileName="c:/temp/test.log" layout="${message}"
@@ -59,7 +60,7 @@ When using the `AsyncWrapper`, do write to the wrapper in your ` <rules>` sectio
     <rules>
       <logger name="*" minlevel="Info" writeTo="target2"/>
     </rules>
-< 
+  </targets> 
 ```
 
 ###Async attribute and AsyncWrapper 
