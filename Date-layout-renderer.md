@@ -11,12 +11,6 @@ ${date:universalTime=Boolean:format=String:culture=Culture}
 ###Rendering Options
 * **universalTime** - Indicates whether to output UTC time instead of local time.Boolean Default: False
 
-  > This parameter is not supported in:
-  > * NLog v1.0 for .NET Compact Framework 1.0
-  > * NLog v1.0 for .NET Compact Framework 2.0
-  > * NLog v1.0 for .NET Framework 1.0
-  > * NLog v1.0 for .NET Framework 1.1
-  > * NLog v1.0 for .NET Framework 2.0
 
 * **format** - Date format. Can be any argument accepted by DateTime.ToString(format). Note that semicolons needs to escaped with a backslash. Example: `${date:format=yyyy-MM-dd HH\:mm\:ss.fff}`
 * **culture** - Culture used for rendering.Culture
