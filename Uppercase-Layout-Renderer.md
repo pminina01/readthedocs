@@ -15,6 +15,15 @@ ${other:uppercase=Boolean}
 
 ##Parameters
 ###Transformation Options
+* _inner_ - Wrapped layout. Layout.  Default attribute.
 * _uppercase_ - Indicates whether upper case conversion should be applied. Boolean Default: True
-* _inner_ - Wrapped layout. Layout
 * _culture_ - Culture used for rendering. Culture
+
+##Examples
+
+```
+${uppercase:${level}}
+${uppercase:Inner=${level}}
+${level:uppercase}
+
+```
