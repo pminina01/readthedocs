@@ -5,6 +5,7 @@ When you configure NLog using [Configuration File](Configuration-file), you can 
 
 * `internalLogFile="file.txt"` - adding internalLogFile cause NLog to write its internal debugging messages to the specified file. This includes any exceptions that may be thrown during logging.
 * `internalLogLevel="Trace|Debug|Info|Warn|Error|Fatal"` – determines internal log level. The higher the level, the less verbose the internal log output.
+* `includeTimestamp="false|true"` - indicates whether timestamps should be included in the internal log output
 * `internalLogToConsole="false|true"` – sends internal logging messages to the console.
 * `internalLogToConsoleError="false|true"` – sends internal logging messages to the console error output (stderr).
 
@@ -31,6 +32,7 @@ Internal logging can be configured through code by setting the following propert
 * **InternalLogger.LogToConsole** - enables or disables logging to the console
 * **InternalLogger.LogToConsoleError** - enables or disables logging to the console error stream
 * **InternalLogger.LogFile** - specifies name of the log file (null will disable logging to a file)
+* **InternalLogger.LogWriter** - specifies a `TextWriter` object to use for logging
 * **InternalLogger.LogLevel** - specifies internal logging level
 
 ```csharp
@@ -46,6 +48,9 @@ class Program
  
     // enable internal logging to a file
     InternalLogger.LogFile = "c:\\log.txt";
+
+    // enable internal logging to a custom TextWriter
+    InternalLogger.LogWriter = new StringWriter();
  
     // set internal log level
     InternalLogger.LogLevel = LogLevel.Trace;
