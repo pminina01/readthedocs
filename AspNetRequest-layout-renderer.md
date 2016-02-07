@@ -5,13 +5,13 @@ Supported in .NET and Mono
 ##Configuration Syntax
 ```
 ${aspnet-request:cookie=String:serverVariable=String:queryString=String
-                :item=String:form=String}
+                :item=String:form=String:header=String}
 ```
 
 ##Parameters
 ###Rendering Options
 * **cookie** - Cookie to be rendered.
-* **header** - Request header
+* **header** - Request header. Introduced in NLog.Web 4.2
 * **serverVariable** - ServerVariables item to be rendered. See for possible options: [msnd](https://msdn.microsoft.com/en-us/library/ms524602(v=vs.90).aspx)
 * **queryString** - QueryString variable to be rendered.
 * **item** - Item name. The QueryString, Form, Cookies, or ServerVariables collection variables having the specified name are rendered.
