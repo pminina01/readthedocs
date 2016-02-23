@@ -239,7 +239,7 @@ Simple layout is just a string, with special tags embedded between **${** and **
 
 
 ###Expose logger to sub-classes
-When we wish to expose the logger into sub classes a the following pattern could be used.
+When we wish to expose the logger into sub classes the following pattern could be used.
 
 ```csharp
 class BaseClass
