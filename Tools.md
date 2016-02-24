@@ -6,7 +6,7 @@ Logs produced by NLog can be analyzed using a number of GUI tools:
 * Sentinel - http://sentinel.codeplex.com/
 * NLogViewer - http://github.com/jkowalski/NLogViewer (functional, but no longer in development, not recommended)
 * LogEntries - http://www.logentries.com (service for cloud logging, has .net NLog target)
-* Legit Log Viewer - http://www.legitlog.com/ (Free and powerful log viewer.)
+* Legit Log Viewer - http://www.legitlog.com/ (Although their website is down, it is Free and powerful log viewer.)
 * ReflectInsight Viewer (using the ReflectInsight Extension for NLog) - http://insightextensions.codeplex.com/
 
 ##Log4x-compatible viewers
