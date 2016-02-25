@@ -38,3 +38,34 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 ## Notes
 * Currently the layout will always create an non-nested object with properties.
 * The JSON will be written on one line, so no newlines. 
+
+
+## Advanced examples
+
+Nested JSON layouts:
+
+From the API:
+
+```c#
+var jsonLayout = new JsonLayout
+{
+    Attributes =
+    {
+        new JsonAttribute("type", "${exception:format=Type}"),
+        new JsonAttribute("message", "${exception:format=Message}"),
+        new JsonAttribute("innerException", new JsonLayout
+        {
+
+            Attributes =
+            {
+                new JsonAttribute("type", "${exception:format=:innerFormat=Type:MaxInnerExceptionLevel=1:InnerExceptionSeparator=}"),
+                new JsonAttribute("message", "${exception:format=:innerFormat=Message:MaxInnerExceptionLevel=1:InnerExceptionSeparator=}"),
+            }
+        },
+        //don't escape layout
+        false)
+    }
+};
+```
+
+This is also possible with the XML config.
