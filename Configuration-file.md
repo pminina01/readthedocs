@@ -40,6 +40,14 @@ The .NET Compact Framework doesn’t recognize application configuration files (
 * NLog.config in application’s directory
 * NLog.dll.nlog in a directory where NLog.dll is located  (only if NLog isn't installed in the GAC)
 
+
+### Xamarin Assets
+For Xamarin Android, the assets folder is supported. It won't be loaded automatically, so use:
+
+```
+LogManager.Configuration = new XmlLoggingConfiguration("assets/nlog.config");
+````
+
 <a name="configuration-file-format" />
 ##Configuration file format
 NLog supports two configuration file formats:
