@@ -68,4 +68,5 @@ var jsonLayout = new JsonLayout
 };
 ```
 returns: `{ "type": "NLog.NLogRuntimeException", "message": "test", "innerException": { "type": "System.NullReferenceException", "message": "null is bad!" } }`
+
 This is also possible with the XML config.
