@@ -4,6 +4,8 @@ This has the same implementation as `${event-context}`, but the latter is deprec
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 
+To log all properties, use [`${all-event-properties}`](https://github.com/NLog/NLog/wiki/All-Event-Properties-Layout-Renderer).
+
 ##Configuration Syntax
 ```
 ${event-properties:item=String:culture=String:format=String}
