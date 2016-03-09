@@ -67,7 +67,7 @@ Possible values:
     * White - White Color (#FFFFFF).
     * Yellow - Yellow Color (#FFFF00).
 
-_condition_ - Condition that must be met in order to set the specified foreground and background color. [Condition](Data types) Required.  
+_condition_ - Condition that must be met in order to set the specified foreground and background color. [Condition](Conditions) Required.  
 
 _foregroundColor_ - Foreground color. Default: NoChange  
 Possible values:
