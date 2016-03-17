@@ -44,7 +44,7 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 
 Nested JSON layouts:
 
-From the API:
+### From the API:
 
 ```c#
 var jsonLayout = new JsonLayout
@@ -69,4 +69,29 @@ var jsonLayout = new JsonLayout
 ```
 returns: `{ "type": "NLog.NLogRuntimeException", "message": "test", "innerException": { "type": "System.NullReferenceException", "message": "null is bad!" } }`
 
-This is also possible with the XML config.
+
+### From XML
+
+```xml
+<nlog>
+  <targets>
+    <target name='jsonFile' type='File' fileName='log.json'>
+      <layout type='JsonLayout'>
+        <attribute name='time' layout='${longdate}' />
+        <attribute name='level' layout='${level:upperCase=true}'/>
+        <attribute name='nested' encode='false'  >
+          <layout type='JsonLayout'>
+            <attribute name='message' layout='${message}' />
+            <attribute name='exception' layout='${exception}' />
+          </layout>
+        </attribute>
+      </layout>
+    </target>
+  </targets>
+  <rules>
+  </rules>
+</nlog>
+```
+
+
+will render: `{ "time": "2016-10-30 13:30:55.0000", "level": "INFO", "nested": { "message": "this is message", "exception": "test" } }`
