@@ -1,4 +1,4 @@
-Stack trace renderer. 
+Render Stack trace of a log event. 
 
 Supported in .NET, Silverlight and Mono
 
