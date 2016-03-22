@@ -48,6 +48,10 @@ The parameter name should be a provider invariant name as registered in machine.
 * oledb - OLEDB Data Provider
 * odbc - ODBC Data Provider
 
+Example of using a fully qualified name with Mono.Data.Sqlite
+ 
+    dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"
+
 _useTransactions_ - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
 
 _connectionStringName_ - Name of the connection string.
