@@ -7,3 +7,4 @@
 * [Filtering log messages](Filters)
 * [Time Source](Time Source)
 * [Extending NLog](Extending NLog)
+* [Platform support](platform-support)
