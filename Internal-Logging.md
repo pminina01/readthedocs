@@ -5,7 +5,7 @@ When you configure NLog using [Configuration File](Configuration-file), you can 
 
 * `internalLogFile="file.txt"` - adding internalLogFile cause NLog to write its internal debugging messages to the specified file. This includes any exceptions that may be thrown during logging.
 * `internalLogLevel="Trace|Debug|Info|Warn|Error|Fatal"` – determines internal log level. The higher the level, the less verbose the internal log output.
-* `includeTimestamp="false|true"` - indicates whether timestamps should be included in the internal log output
+* `internalLogIncludeTimestamp="false|true"` - indicates whether timestamps should be included in the internal log output (NLog 4.3+)
 * `internalLogToConsole="false|true"` – sends internal logging messages to the console.
 * `internalLogToConsoleError="false|true"` – sends internal logging messages to the console error output (stderr).
 
