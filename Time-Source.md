@@ -52,12 +52,12 @@ accuracy, but can be changed via the API calls of
 [timeBeginPeriod](<https://msdn.microsoft.com/en-us/library/dd757624(v=vs.85).aspx>)
 and
 [timeEndPeriod](<https://msdn.microsoft.com/en-us/library/dd757626(v=vs.85).aspx>).
-The AccurateLocal and AccurateUTC both utilize this API to provide a more
+The `AccurateLocal` and `AccurateUTC` both utilize this API to provide a more
 accurate time reading.
 
-The speed relates directly to whether the time is UTC or local. When FastLocal
-or AccurateLocal are used, they will be “slower” than their counterparts FastUTC
-AccurateUTC because time zone conversions need to be applied to the local time
+The speed relates directly to whether the time is UTC or local. When `FastLocal`
+or `AccurateLocal` are used, they will be “slower” than their counterparts `FastUTC`
+`AccurateUTC` because time zone conversions need to be applied to the local time
 sources.
 
 Below are the provided time sources with NLog:
