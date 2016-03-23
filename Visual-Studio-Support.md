@@ -13,12 +13,10 @@ The other change necessary is turning \<target type=“TypeName” /> into \<tar
 
 Once you do this, you really good support for Intellisense and config file validation in Visual Studio.
 
-[[File-Intellisense.png]]
 
 ##Integration with Add/Reference dialog
 NLog Setup registers the appropriate AssemblyFolders entry in registry so that Visual Studio is able to locate the *.dll files and present them in Add Reference dialog. This is supported in all Visual Studio versions.
 
-[[File-AddReference.png]]
 
 ##New Item Templates
 NLog comes with 3 sample configuration files that can be quickly added to you project through Add New Item dialog. They are:
@@ -28,7 +26,6 @@ NLog comes with 3 sample configuration files that can be quickly added to you pr
 
 Please note that you need to change “Copy To Output Directory” option on the NLog.config to “Copy Always”
 
-[[CopyToOutputDirectory.png]]
 
 Note that “New Item” templates are supported on Visual Studio 2005 and higher (including Express Editions).
 
