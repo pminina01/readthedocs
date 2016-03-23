@@ -10,7 +10,7 @@ NLog supports Intellisense when editing XML configuration files (both App.config
 ```
 
 The other change necessary is turning  
-`\<target type=“TypeName” />`
+`\<target type=“TypeName” />`  
 to  
 `\<target xsi:type=“TypeName” />`.
 
