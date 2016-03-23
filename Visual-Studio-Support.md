@@ -1,7 +1,7 @@
 NLog integrates with Visual Studio® 2005/2008 and 2010 (including Visual C# and Visual Basic.NET Express Editions). Integration with Visual Studio.NET 2002 and 2003 is also supported, but not all features are available.
 
 ##Intellisense(TM)
-NLog supports Intellisense when editing XML configuration files (both App.config-style, and stand-alone). All you need to do is add two namespace declarations to the `\<nlog>` tag:
+NLog supports Intellisense when editing XML configuration files (both App.config-style, and stand-alone). All you need to do is add two namespace declarations to the `<nlog>` tag:
 ```
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" 
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
