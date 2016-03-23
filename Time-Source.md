@@ -49,9 +49,9 @@ or UTC time.
 The accuracy relates directly to Windows and how it balances accuracy, speed,
 and efficiency (i.e. battery life). By default, Windows is set to 16ms of
 accuracy, but can be changed via the API calls of
-[timeBeginPeriod](<https://msdn.microsoft.com/en-us/library/dd757624(v=vs.85).aspx>)
+[timeBeginPeriod](https://msdn.microsoft.com/en-us/library/dd757624)
 and
-[timeEndPeriod](<https://msdn.microsoft.com/en-us/library/dd757626(v=vs.85).aspx>).
+[timeEndPeriod](https://msdn.microsoft.com/en-us/library/dd757626).
 The `AccurateLocal` and `AccurateUTC` both utilize this API to provide a more
 accurate time reading.
 
