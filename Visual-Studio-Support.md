@@ -10,9 +10,9 @@ NLog supports Intellisense when editing XML configuration files (both App.config
 ```
 
 The other change necessary is turning  
-`\<target type=“TypeName” />`  
+`<target type=“TypeName”/>`  
 to  
-`\<target xsi:type=“TypeName” />`.
+`<target xsi:type=“TypeName”/>`.
 
 Once you do this, you really good support for Intellisense and config file validation in Visual Studio.
 
