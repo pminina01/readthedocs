@@ -2,7 +2,7 @@ NLog allows for a custom time source to be provided when timestamping log
 entries. In addition, NLog provides a few default time sources that can easily
 be configured via XML or code.
 
-By default, NLog uses the FastLocalTimeSource as the default time source.
+By default, NLog uses the `FastLocal` as the default time source.
 
 Note that the time source is used mostly for accuracy, so there might be some
 quirks if using different time zones.
