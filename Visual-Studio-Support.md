@@ -27,7 +27,7 @@ NLog comes with 3 sample configuration files that can be quickly added to you pr
 * configuration file that defines one Console Target
 * empty configuration file
 
-Please note that you need to change “Copy To Output Directory” option on the NLog.config to “Copy Always”
+Please note that you need to change “Copy To Output Directory” option of properties of NLog.config to “Copy Always”
 
 
 Note that “New Item” templates are supported on Visual Studio 2005 and higher (including Express Editions).
