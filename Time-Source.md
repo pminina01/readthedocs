@@ -64,7 +64,7 @@ Below are the provided time sources with NLog:
 
 | **XML Configuration** | **Is Default?** | **Runtime Configuration** | **Time** | **Accuracy** | **Speed** |
 |-----------------------|-----------------|---------------------------|----------|--------------|-----------|
-| FastLocal             | Yes             | FastLocalTimeSource       | local    | 16ms         | fastest   |
+| FastLocal             | Yes             | FastLocalTimeSource       | local    | 16ms         | very fast |
 | FastUTC               | No              | FastUtcTimeSource         | UTC      | 16ms         | fastest   |
 | AccurateLocal         | No              | AccurateLocalTimeSource   | local    | 1ms          | slow      |
 | AccurateUTC           | No              | AccurateUtcTimeSource     | UTC      | 1ms          | fast      |
