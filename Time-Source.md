@@ -72,7 +72,7 @@ Before implementing your own time source, see the provided time sources first.
 If none of those fit your needs, this section will guide you through the
 process.
 
-Create a class that inherits from TimeSource and implement the inheritted
+Create a class that inherits from TimeSource and implement the inherited
 property getter `Time` and method `FromSystemTime`.
 
 -   The property getter `Time` provides the current time instance.
