@@ -55,10 +55,7 @@ and
 The `AccurateLocal` and `AccurateUTC` both utilize this API to provide a more
 accurate time reading.
 
-The speed relates directly to whether the time is UTC or local. When `FastLocal`
-and/or `AccurateLocal` are used, they will be “slower” than their counterparts `FastUTC`
- and/or `AccurateUTC` because time zone conversions need to be applied to the local time
-sources.
+The speed of UTC is faster than the local variant, as the time zone conversion can take some time.
 
 Below are the provided time sources with NLog:
 
