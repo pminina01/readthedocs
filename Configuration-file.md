@@ -151,7 +151,7 @@ In the simplest cases the entire logging configuration consists of a single `<ta
 
 <a name="layouts-and-layout-renderers" />
 ##Layouts and layout renderers
-One of NLog’s strongest assets is the ability to use [layouts](Layouts). In the [simplest form](Simple Layout) layouts are texts with embedded tags delimited by `${` and `}`. The tags are called [Layout Renderers](Layout Renderers) and can be used to insert pieces of contextual information into the text.
+One of NLog’s strongest assets is the ability to use [layouts](Layouts). In the simplest form, layouts are texts with embedded tags delimited by `${` and `}`. The tags are called [Layout Renderers](Layout Renderers) and can be used to insert pieces of contextual information into the text.
 
 Layouts can be used in many places, for example they can control the format of information written on the screen or sent to a file, but also to control the file names themselves. This is very powerful, which we’ll see in a moment.
 
