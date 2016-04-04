@@ -214,6 +214,8 @@ Once defined, variables can be used as if they were layout renderers – by usin
 
 Variables should be declared before the targets to be able to use them. Otherwise configuration initialization will fail.
 
+NB: Since NLog 4.3 the `${basedir}` isn't needed anymore for relative paths.
+
 ###Vars since NLog 4.1
 In  NLog 4.1 is a new method introduced to render the variable values. Use `${var:var1}` instead of `${var1}`.
 
