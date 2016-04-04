@@ -1,5 +1,7 @@
 Writes log messages to one or more files. 
 
+Since NLog 4.3 the `${basedir}` isn't needed anymore for relative paths.
+
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
 ```xml
@@ -122,7 +124,7 @@ Possible values:
 
 _fileName_ - Name of the file to write to. [Layout](Data-types) Required.  
 This FileName string is a layout which may include instances of layout renderers. This lets you use a single target to write to multiple files.  
-The following value makes NLog write logging events to files based on the log level in the directory where the application runs. ${basedir}/${level}.log All Debug messages will go to Debug.log, all Info messages will go to Info.log and so on. You can combine as many of the layout renderers as you want to produce an arbitrary log file name.
+The following value makes NLog write logging events to files based on the log level in the directory where the application runs. `${basedir}/${level}.log` All Debug messages will go to `Debug.log`, all Info messages will go to `Info.log` and so on. You can combine as many of the layout renderers as you want to produce an arbitrary log file name. Since NLog 4.3 the `${basedir}` isn't needed anymore for relative paths.
 
 _deleteOldFileOnStartup_ - Indicates whether to delete old log file on startup. [Boolean](Data-types) Default: False  
 This option works only when the "FileName" parameter denotes a single file.
