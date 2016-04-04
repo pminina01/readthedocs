@@ -27,6 +27,8 @@ Each collection item is represented by `<parameter />` element with the followin
   * _name_ - Name of the parameter.
   * _type_ - Type of the parameter. [System.Type](Data-types)
 
+Note: Since NLog 4.3 these parameters can be optional.
+
 ##Examples
 ###Logging to a static method
 In order to send all logs to a static method, use the following configuration file:
