@@ -41,7 +41,7 @@ For more info on BOM, check [Wikipedia](https://en.wikipedia.org/wiki/Byte_order
 
 _protocol_ - Protocol to be used when calling web service. Default: Soap11  
 Possible values:  
-* HttpGet - Use HTTP GET Protocol. - NOTE: not working (see [issue 701](https://github.com/NLog/NLog/issues/701))
+* HttpGet - Use HTTP GET Protocol.
 * HttpPost - Use HTTP POST Protocol.
 * Soap11 - Use SOAP 1.1 Protocol.
 * Soap12 - Use SOAP 1.2 Protocol.
