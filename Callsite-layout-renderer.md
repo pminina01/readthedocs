@@ -18,4 +18,4 @@ ${callsite:className=Boolean:fileName=Boolean:includeSourcePath=Boolean
 * **skipFrames** - The number of frames to skip. Integer Default: 0
 
 ##Notes
-please note that the method name won't work well with async methods - it will always show `MoveNext`. Too bad we cannot fix this shortcoming. See [GitHub issue #255](https://github.com/NLog/NLog/issues/255).
+please note that the method name won't work well with async methods before NLog 4.3 - it will always show `MoveNext`. 
