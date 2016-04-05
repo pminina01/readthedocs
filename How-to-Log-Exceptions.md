@@ -1,8 +1,8 @@
-Exceptions require special treatment in NLog. You need to call the method on the `Logger` class which takes an `Exception` as its second argument. The method name matches the log level. For instance, to log an exception using the `Error` loglevel, do:
+Exceptions require special treatment in NLog. You need to call the method on the `Logger` class which takes an `Exception` as its first argument. The method name matches the log level. For instance, to log an exception using the `Error` loglevel, do:
 
-* `Error(ex, "Oops, an exception occured"); \\NLog 4.0`
+    logger.Error(ex, "Oops, an exception occured");
 
-**_Please note_** the methods has been changed in NLog 4.0. The exception should be the first argument.
+**_Please note_:** the methods have been changed in NLog 4.0. Previous versions expected the exception after the message.
 
 ### Example
 You typically log exceptions inside a catch handler. An example of logging an exception with the `Error` LogLevel is seen in the following: 
