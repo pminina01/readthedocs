@@ -1,6 +1,6 @@
 Filters buffered log entries based on a set of conditions that are evaluated on a group of events. 
 
-Supported in .NET, Silverligt, Compact Framework and Mono.
+Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
 ```xml
 <targets>
