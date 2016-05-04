@@ -19,11 +19,14 @@ ${other:uppercase=Boolean}
 * _uppercase_ - Indicates whether upper case conversion should be applied. Boolean Default: True
 * _culture_ - Culture used for rendering. Culture
 
-##Examples
+## Examples
 
 ```
 ${uppercase:${level}}
 ${uppercase:Inner=${level}}
-${level:uppercase}
+
 
 ```
+
+## Note
+`${level:uppercase}` isn't correct, as the parser will read `uppercase` as a default parameter of `Level` 
