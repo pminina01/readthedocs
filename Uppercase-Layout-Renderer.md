@@ -16,7 +16,7 @@ ${other:uppercase=Boolean}
 ##Parameters
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout.  Default attribute.
-* _uppercase_ - Indicates whether upper case conversion should be applied. Required
+* _uppercase_ - Indicates whether upper case conversion should be applied. Default `true` with Inner, required when using as ambient.
 * _culture_ - Culture used for rendering. Culture
 
 ## Examples
