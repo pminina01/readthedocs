@@ -15,6 +15,9 @@ ${other:lowercase=Boolean}
 
 ##Parameters
 ###Transformation Options
-* _lowercase_ - Indicates whether lower case conversion should be applied. Boolean Default: True
+* _lowercase_ - Indicates whether lower case conversion should be applied. Boolean Default: True. Required when using as ambient. 
 * _inner_ - Wrapped layout. Layout
 * _culture_ - Culture used for rendering. Culture
+
+## Note
+`${level:lowercase}` isn't correct, as the parser will read `lowercase` as a default parameter of `Level` 
