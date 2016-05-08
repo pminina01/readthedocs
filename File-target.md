@@ -17,7 +17,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           maxArchiveFiles="Integer"
           archiveFileName="Layout"
           archiveNumbering="Enum"
-          archiveEvery="Enum"
+          archiveDateFormat="String"
+          archiveEvery="Enum"          
+          archiveOldFileOnStartup="Boolean"
           replaceFileContentsOnEachWrite="Boolean"
           fileAttributes="Enum"
           fileName="Layout"
@@ -97,6 +99,9 @@ _archiveDateFormat_ - Specifies the date format used for archive numbering. Defa
 
 This option works only when the "ArchiveNumbering" parameter is set to Date
 
+_ArchiveOldFileOnStartup_
+
+aAchive old log file on startup.
 ###Output Options
 _replaceFileContentsOnEachWrite_ - Indicates whether to replace file contents on each write instead of appending log message at the end. [Boolean](Data-types) Default: False  
 
