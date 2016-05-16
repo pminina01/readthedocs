@@ -1,5 +1,7 @@
 Wraps the result of another layout output at specified line length.
 
+Introduced in NLog 4.3.4
+
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ##Configuration Syntax
