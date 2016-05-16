@@ -75,6 +75,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${url-encode}](Url-Encode-Layout-Renderer) - Encodes the result of another layout output for use with URLs.
 * [${when}](When-Layout-Renderer) - Only outputs the inner layout when the specified condition has been met.
 * [${whenEmpty}](WhenEmpty-Layout-Renderer) - Outputs alternative layout when the inner layout produces empty result.
+* [${WrapLine}](WrapLine-layout-renderer) - Wraps the result of another layout output at specified line length.
 * [${xml-encode}](Xml-Encode-Layout-Renderer) - Converts the result of another layout output to be XML-compliant.
  
 
