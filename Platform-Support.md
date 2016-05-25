@@ -1,8 +1,6 @@
-##General
-Feature|.NET 3.5|.NET 4.0|.NET 4.5|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----
 read app.config/web.config|✓ |✓ |✓ |||✓ |||
-autoloading .dll|✓ |✓ |✓ |✓ |✓ |✓ |||
+autoloading .dll|✓ |✓ |✓ |✓ |✓ |✓ |||±: expected 
 auto reload|✓ |✓ |✓ |||✓ |||
 stacktrace with source|✓ |✓ |✓ |✓ |✓ |✓ |||
 fluent interface|||✓ |||?|||
@@ -41,6 +39,7 @@ MachineName|✓ |✓ |✓ |✓ |✓ |✓ |✓ ||
 Mdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Mdlc||✓ |✓ ||||||
 Message|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
+
 NLogDir|✓ |✓ |✓ |✓ |✓ |✓ |✓ ||
 Ndc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 NewLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
@@ -79,6 +78,7 @@ Rot13|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 TrimWhiteSpace|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Uppercase|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 UrlEncode|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
+
 WhenEmpty|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 XmlEncode|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 
@@ -87,7 +87,7 @@ Target|.NET 3.5|.NET 4.0|.NET 4.5|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlig
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----
 AspResponse|✓ |✓ |✓ ||||||
 Chainsaw|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
-ColoredConsole|✓ |✓ |✓ |||✓ |||
+ColoredConsole|✓ |✓ |✓ |||✓ |||±: no encoding
 Console|✓ |✓ |✓ |±|±|✓ |✓ |±|±: no encoding
 Database|✓ |✓ |✓ |||✓ |✓ ||
 Debug|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
