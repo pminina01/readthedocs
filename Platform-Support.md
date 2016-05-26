@@ -91,7 +91,7 @@ AspResponse|✓ |✓ |✓ |||||||
 Chainsaw|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 ColoredConsole|✓ |✓ |✓ |±|||✓ |||±: no encoding	
 Console|✓ |✓ |✓ |±|±|±|✓ |✓ |±|±: no encoding	
-Database|✓ |✓ |✓ ||||✓ |✓ ||	
+Database|✓ |✓ |✓ |±|||✓ |✓ ||	±: no transactions or reading from .config
 Debug|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Debugger|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 EventLog|✓ |✓ |✓ ||||✓ |||	
