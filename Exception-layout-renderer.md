@@ -17,7 +17,7 @@ ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSepa
 * **innerExceptionSeparator** - Separator between inner exceptions. Default: new line
 
 * **separator** - Separator used to concatenate parts specified in the Format. Default: single space
-* **format** - Format of the output. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method`, `StackTrace` & `Data`. This parameter value is case-insensitive. Default: message
+* **format** - Format of the output. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method`, `StackTrace` & `Data`. This parameter value is case-insensitive. Default: `message`
 
 ##More Info and Examples
 For more information, see [How to properly log exceptions](How-to-log-exceptions).
