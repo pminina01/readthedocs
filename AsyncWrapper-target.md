@@ -73,7 +73,7 @@ The async attribute is a shorthand for:
 xsi:type="AsyncWrapper overflowAction="Discard" queueLimit="10000" batchSize="100" timeToSleepBetweenBatches="50"
 ```
 
-So it you will write a lot of messages (more then 10000) in a short time, it's possible messages will be lost. This is intended behavior as keeping all the messages or waiting for all the messages to be written, could have impact on the performance of your program.
+So if you write a lot of messages (more then 10000) in a short time, it's possible that messages will be lost. This is intended behavior as keeping all the messages or waiting for all the messages to be written, could have impact on the performance of your program.
 
 If you need all the log messages, do use the AsyncWrapper instead of the async attribute. 
 
