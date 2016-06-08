@@ -69,7 +69,7 @@ Caution: Enabling this option can considerably slow down your file logging in mu
 **Warning: combining this mode with _Archive Numbering Date_ is not supported. Archive files are not merged.    _ DateAndSequence_ do will work. **
  
 
-_maxArchiveFiles_ - Maximum number of archive files that should be kept. [Integer](Layouts) Default: 9  
+_maxArchiveFiles_ - Maximum number of archive files that should be kept. If maxArchiveFiles is less or equal to 0, old files aren't deleted [Integer](Layouts) Default: 0  
 
 _archiveFileName_ - Name of the file to be used for an archive. [Layout](Layouts)  
 It may contain a special placeholder {#####} that will be replaced with a sequence of numbers depending on the archiving strategy. The number of hash characters used determines the number of numerical digits to be used for numbering files.  
