@@ -32,7 +32,7 @@ In order to use [Mail target](Mail-target) with GMail, you need to use the follo
 ```c#
 using NLog.Targets;
 ...
-FileTarget target = LogManager.Configuration.FindTargetByName(targetName) as FileTarget;
+FileTarget target = LogManager.Configuration.FindTargetByName<FileTarget>(targetName);
 target.FileName = filename;
 ```
 
