@@ -21,7 +21,7 @@ ${other:when=Condition}
 
 ##Examples
 * `{message:when=logger=='logger'}`: print the message when the logger name is equal to "logger".
-* `${when:inner=1:when='${aspnet-request:serverVariable=HTTPS}' == 'on'}${when:inner=0:when='${aspnet-request:serverVariable=HTTPS}' != 'on'}`: convert a layout string result to a bit (1 or 0) that can be inserted into a SQL bit field.
+* `${when:when='${aspnet-request:serverVariable=HTTPS}' == 'on'}:inner=1:else:0}` convert a layout string result to a bit (1 or 0) that can be inserted into a SQL bit field.
 
 ##Escaping
 
