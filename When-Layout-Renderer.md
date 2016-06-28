@@ -4,7 +4,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ##Configuration Syntax
 ```
-${when:when=Condition:inner=Layout}
+${when:when=Condition:inner=Layout:else=Layout}
 ```
 
 or by using ambient property to modify output of other layout renderer:
@@ -17,7 +17,7 @@ ${other:when=Condition}
 ###Transformation Options
 * _when_ - Condition that must be met for the inner layout to be printed. Condition Required.
 * _inner_ - Wrapped layout. Layout
-
+* _else_ - Layout if the condition is not true (introduced in NLog 4.3.5)
 
 ##Examples
 * `{message:when=logger=='logger'}`: print the message when the logger name is equal to "logger".
