@@ -37,7 +37,7 @@ Literal|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Log4JXmlEvent|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |±|±: no file name or source path	
 LoggerName|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 LongDate|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-MachineName|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
+MachineName|✓ |✓ |✓ |1.5|✓ |✓ |✓ |✓ ||	
 Mdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Mdlc||✓ |✓ |||||||	
 Message|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
