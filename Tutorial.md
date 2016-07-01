@@ -116,7 +116,7 @@ public class MyClass
 }
 ```
 
-TIP: You should avoiding doing string formatting (such as concatenation, or calling `String.Format()`) yourself and instead use built-in formatting functionality of NLog. The main reason for this is performance:
+TIP: You should avoid doing string formatting (such as concatenation, or calling `String.Format()`) yourself and instead use built-in formatting functionality of NLog. The main reason for this is performance:
 
 Formatting log messages takes a lot of time, so NLog tries to defer formatting until it knows that log message will actually be written to some output. If the message ends up being skipped because of logging configuration, you will not pay the price of `String.Format()` at all. See also Optimizing Logging Performance.
 
