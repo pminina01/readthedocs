@@ -66,6 +66,15 @@ Below are the provided time sources with NLog:
 | AccurateLocal         | No              | AccurateLocalTimeSource   | local    | 1ms          | slow      |
 | AccurateUTC           | No              | AccurateUtcTimeSource     | UTC      | 1ms          | fast      |
 
+Performance benchmarks for time source implementations (used [BenchmarkDotNet](https://github.com/PerfDotNet/BenchmarkDotNet)):
+
+|        Method |      Median |     StdDev |
+|-------------- |-----------: |----------: |
+|     FastLocal |   5.7752 ns |  0.3450 ns |
+|       FastUtc |   5.8330 ns |  0.4939 ns |
+| AccurateLocal | 784.4354 ns | 61.6136 ns |
+|   AccurateUtc |   7.0547 ns |  0.3934 ns |
+
 ### Custom Time Source
 
 Before implementing your own time source, see the provided time sources first.
