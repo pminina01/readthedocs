@@ -16,6 +16,7 @@ Several pre-defined layouts exist:
 * [LayoutWithHeaderAndFooter](LayoutWithHeaderAndFooter) - A specialized layout that supports header and footer.
 * [Log4JXmlEventLayout](Log4JXmlEventLayout) - A specialized layout that renders Log4j-compatible XML events.
 * [SimpleLayout](SimpleLayout) - Represents a string with embedded placeholders that can render contextual information.
+* [CompoundLayout](CompoundLayout) - A layout containing one or more nested layouts.
 
 ##Example
 An example of a simple layout looks like:
