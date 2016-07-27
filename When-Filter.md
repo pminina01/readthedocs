@@ -22,5 +22,9 @@ Possible values:
   * `LogFinal` - The message should be logged and processing should be finished.
   * `Neutral` - The filter doesn't want to decide whether to log or discard the message.
 
+##Examples
+See https://github.com/NLog/NLog/wiki/Conditions#examples
+
 ##Remarks
 Conditions are expressed using a simple language described [here](Conditions).
+
