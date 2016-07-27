@@ -22,3 +22,4 @@
 
 ##API Reference
 * [API Reference](http://nlog.github.io/documentation) - programming to NLog
+* [Writing custom Targets, layouts and layout renderers](Extending%20NLog)
