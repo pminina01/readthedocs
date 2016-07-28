@@ -31,12 +31,12 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 
 ##Parameters
 * _name_: required. The name of the key in JSON
-* _layout_: The (layout)[layout] for they key.
+* _layout_: The [layout](Layouts) for they key.
 * _encode_: Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
-* _suppressSpaces_: Enable to suppress extra spaces in the output JSON.  Disabled by default. (Added in NLog 4.1)
-
+* _suppressSpaces_: Enable to suppress extra spaces in the output JSON. Disabled by default. (Added in NLog 4.1)
+ 
 ## Notes
-* Currently the layout will always create an non-nested object with properties.
+* Currently the layout will always create a non-nested object with properties.
 * The JSON will be written on one line, so no newlines. 
 
 
@@ -89,6 +89,7 @@ returns: `{ "type": "NLog.NLogRuntimeException", "message": "test", "innerExcept
     </target>
   </targets>
   <rules>
+      <logger name="*" minlevel="Debug" writeTo="jsonFile" />
   </rules>
 </nlog>
 ```
