@@ -34,6 +34,7 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 * _layout_: The [layout](Layouts) for they key.
 * _encode_: Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
 * _suppressSpaces_: Enable to suppress extra spaces in the output JSON. Disabled by default. (Added in NLog 4.1)
+* _renderEmptyObject_: Gets or sets the option to render the empty object value `{}`, default `true`. (Added in NLog 4.3.7)
  
 ## Notes
 * Currently the layout will always create a non-nested object with properties.
@@ -96,3 +97,35 @@ returns: `{ "type": "NLog.NLogRuntimeException", "message": "test", "innerExcept
 
 
 will render: `{ "time": "2016-10-30 13:30:55.0000", "level": "INFO", "nested": { "message": "this is message", "exception": "test" } }`
+
+## RenderEmptyObject 
+
+```c#
+var jsonLayout = new JsonLayout
+{
+    Attributes =
+    {
+        new JsonAttribute("type", "${exception:format=Type}"),
+        new JsonAttribute("message", "${exception:format=Message}"),
+        new JsonAttribute("innerException", new JsonLayout
+        {
+
+            Attributes =
+            {
+                new JsonAttribute("type", "${exception:format=:innerFormat=Type:MaxInnerExceptionLevel=1:InnerExceptionSeparator=}"),
+                new JsonAttribute("message", "${exception:format=:innerFormat=Message:MaxInnerExceptionLevel=1:InnerExceptionSeparator=}"),
+            },
+            RenderEmptyObject = false
+        },
+        //don't escape layout
+        false)
+    }
+};
+```
+
+Writing without an exception will render
+`{ "type": "NLog.NLogRuntimeException", "message": "test" }`
+
+with `RenderEmptyObject=true` (default) it will render:
+
+` "type": "NLog.NLogRuntimeException", "message": "test", "innerException": {  } }`
