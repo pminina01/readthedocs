@@ -1,10 +1,20 @@
-Renders the assembly version of the entry assembly.
+Renders the assembly version of the entry or a named assembly.
 
 
 ##Configuration Syntax
 ```
-${assembly-version}
+${assembly-version:name=string}
 ```
+## Parameters
+
+- _name_: the name of the assembly. Note will load it. If `null`, will find the entry assembly
+
+## Examples
+
+```
+${assembly-version:NLogAutloadExtension}
+```
+
 
 
 ## Notes
