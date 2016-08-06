@@ -7,7 +7,7 @@ ${assembly-version:name=string}
 ```
 ## Parameters
 
-- _name_: the name of the assembly. Note will load it. If `null`, will find the entry assembly
+- _name_: the name of the assembly. Note will load it. If `null`, will find the entry assembly. Introduced in NLog 4.3.7
 
 ## Examples
 
