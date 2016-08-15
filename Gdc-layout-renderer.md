@@ -2,6 +2,15 @@ Global Diagnostics Context - a dictionary structure to hold per-application-inst
 
 Use the Global Diagnostics Context when you want to make certain information available to every logger in the current process.
 
+The global context is one of the context. 
+
+- When you need the context for all threads, use the [GDC](Gdc-Layout-Renderer). 
+- When you need the context for one threads, use the [MDC](MDC-Layout-Renderer). 
+- When you work with async, use the [MDLC](MDLC-Layout-Renderer)
+- If the context is different for every message, use the [Log event properties](https://github.com/NLog/NLog/wiki/EventProperties-Layout-Renderer). 
+
+
+
 As of NLog 4.1, the Global Diagnostics Context supports any `Object` type, not just `String`.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
