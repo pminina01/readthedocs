@@ -1,18 +1,24 @@
-Log event context data. 
+Log event property data. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
+
 ```
-${event-context:item=String}
+${event-properties:item=MyValue}
 ```
 
-##Parameters
-###Rendering Options
-* _item_ - Name of the item. Required.
+Note that this syntax replaces the deprecated `${event-context}` syntax.
 
-##Example
-In C# class, create an event and add an element to the Properties dictionary (or the deprecated Context dictionary):
+## Parameters
+
+### Rendering Options
+
+* `item` - Name of the item (required)
+
+## Example
+
+In your C# code, create an event and add an element to the `Properties` dictionary (or the deprecated `Context` dictionary):
 
 ```csharp
 ...
@@ -25,9 +31,9 @@ log.Log(theEvent);
 ...
 ```
 
-and in your NLog.config file:
+And in your `NLog.config` file:
 
-```
-${event-context:item=MyValue} -- renders "My custom string"
-${event-context:item=TheAnswer} -- renders "42"
+```plain
+${event-properties:item=MyValue}   -- renders "My custom string"
+${event-properties:item=TheAnswer} -- renders "42"
 ```
