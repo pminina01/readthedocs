@@ -1,6 +1,6 @@
 Filters log entries based on a condition. 
 
-Supported in .NET, Silverligt, Compact Framework and Mono.
+Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
 ```xml
 <targets>
