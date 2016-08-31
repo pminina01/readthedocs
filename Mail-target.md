@@ -115,7 +115,7 @@ These values will be used, if target doesn't override them (see _useSystemNetMai
 It is possible to use an address in format "John Doe &lt;john.doe@example.com&gt;" but the special characters < and > must be escaped. The result would be `John Doe &lt;john.doe@example.com&gt;`
 
 
-### Mail Target wrapped by FallbackGroup Target
+### Mail Target wrapped by [FallbackGroup Target](https://github.com/NLog/NLog/wiki/FallbackGroup-target)
 
 Example configuration for a Mailserver Fallback with multiple hosts.
 
