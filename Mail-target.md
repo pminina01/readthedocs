@@ -1,5 +1,7 @@
 Sends log messages by email using SMTP protocol. 
 
+Combines well with [FallbackGroup Target](https://github.com/NLog/NLog/wiki/FallbackGroup-target) in order to create a fallback with multiple SMTP Hosts, example see [here](Mail Target wrapped by FallbackGroup Target).
+
 Supported in .NET and Mono
 ##Configuration Syntax
 ```xml
@@ -111,3 +113,31 @@ These values will be used, if target doesn't override them (see _useSystemNetMai
 ### Email Address Format
 
 It is possible to use an address in format "John Doe &lt;john.doe@example.com&gt;" but the special characters < and > must be escaped. The result would be `John Doe &lt;john.doe@example.com&gt;`
+
+
+### Mail Target wrapped by FallbackGroup Target
+
+Example configuration for a Mailserver Fallback with multiple hosts.
+
+```xml
+<target xsi:type="FallbackGroup" 
+        name="mail"
+        returnToFirstOnSuccess="true">
+    <target xsi:type="Mail"
+            name="mailserver1"
+            subject="Layout"
+            to="Layout"
+            from="Layout"
+            smtpServer="mx1.example.com" 
+            smtpPort="Integer"
+            layout="Layout" />
+    <target xsi:type="Mail"
+            name="mailserver2" 
+            subject="Layout"
+            to="Layout"
+            from="Layout"
+            smtpServer="mx2.example.com" 
+            smtpPort="Integer"
+            layout="Layout" />
+</target>
+```
