@@ -337,13 +337,21 @@ Alternatively you can specify a single `<default-target-parameters />` that appl
 In the configuration file some characters needs to be escaped. 
 Because it XML file, the `<` and `>` brackets should be escaped with `&lt;` and `&gt;`. This also holds for the attribute values, like a condition.
 
-Inside a layout, the `}` bracket should be escaped if it isn't from a [Layout-Renderer](https://github.com/NLog/NLog/wiki/Layout-Renderers). So nested layout renderers doesn't need escaping. 
+
+
+Inside a layout we need to escape the  `}` bracket and the colon `:` should be escaped because:
+
+- `:` is thevalue separator.
+- `}` is the end of the layout
+
+
+Nested layout renderers doesn't need escaping. Also the backslash doesn't need an escape. 
 
 Examples:
 
 - `${appdomain:format={1\}{0\}}` (escape of `}`)
 - `${rot13:inner=${ndc:topFrames=3:separator=x}}` (no escaping needed)
-
+- `${when:when=1 == 1:Inner=Test\: Hello}` (escape of `:`)
 
 #Extensions
 Extensions can be configured to include additional NLog packages or custom ones:
