@@ -39,7 +39,13 @@ Read more about using the [Configuration File](Configuration file).
    * Discard. Discards of the message. It will not be written to the Event Log.
 
 ##Notes
-When install/uninstalling, the event source is only created / removed when the _source_ doesn't contain layout renderers. 
+To log to the event log, an event source is required to exist. This involves creating the event source.
+
+When install/uninstalling, the event source is only created / removed when the _source_ doesn't contain layout renderers.
+
+When installing, the event source can only be created when run as an Administrator. Alternatively a simple PowerShell command to create this source is shown below (run PowerShell as Administrator).
+
+    New-EventLog -LogName Application -Source "MySourceName"
 
 The Event Log has a limit in the number of bytes in a message. From [MSDN](https://msdn.microsoft.com/en-us/library/xzwc042w(v=vs.110).aspx#Anchor_1):
 
