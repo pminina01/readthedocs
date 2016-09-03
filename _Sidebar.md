@@ -1,3 +1,4 @@
+* [Search this wiki](https://github.com/NLog/NLog/search?q=&type=Wikis&utf8=%E2%9C%93)
 * [Home](/NLog/NLog/wiki)
 * [Configuration file](Configuration-file)
 * [Configuration API](Configuration-API)
