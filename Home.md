@@ -2,7 +2,7 @@
 
 Welcome to the NLog documentation! Just start with the [tutorial](wiki/Tutorial) to log messages within minutes!
 
-For .NET Core users, check the  [Platform support](platform-support) table, as there is a limited set implemented. Check the column netstandard1.3 or netstandard1.5. 
+For .NET Core users, check the  [Platform support](platform-support) table, as there is a limited set implemented. Check the column `NetStandard  1.3`. To read more about  NetStandard, see [the docs from Microsoft](https://docs.microsoft.com/en-us/dotnet/articles/standard/library)
 
 ASP.NET Core users should use [NLog.Extensions.Logging](https://github.com/NLog/NLog.Extensions.Logging/blob/master/README.md)
 
