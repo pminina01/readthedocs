@@ -20,8 +20,8 @@
 * [Advanced Configuration file options](Configuration-file)
 * [Filtering log messages](Filters)
 * [Using Time Sources](Time Source)
-* [Visual Studio support](wiki/Visual-Studio-support)
-* [Who is using NLog](wiki/Who-Is-Using-NLog) 
+* [Visual Studio support](Visual-Studio-support)
+* [Who is using NLog](Who-Is-Using-NLog) 
 
 ## Extending NLog
 * [Write custom extensions](Extending NLog)
