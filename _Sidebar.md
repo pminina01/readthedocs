@@ -13,6 +13,7 @@
 
 ## Programmatic Configuration
 * [Tutorial Configuration API](Configuration-API)
+* [Sandcastle documentation](http://nlog-project.org/documentation/)
 
 ## Advanced
 * [Advanced Configuration file options](Configuration-file)
