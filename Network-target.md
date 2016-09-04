@@ -11,10 +11,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           name="String"
           onOverflow="Enum"
           newLine="Boolean"
+          LineEnding="CRLF|LF|CR|None"
           layout="Layout"
           maxMessageSize="Integer"
           encoding="Encoding"
-          
           connectionCacheSize="Integer"
           maxConnections="Integer"
           maxQueueSize="Integer"
@@ -42,6 +42,14 @@ _layout_ - Layout used to format log messages. [Layout](Data-types) Required. De
 _maxMessageSize_ - Maximum message size in bytes. [Integer](Data-types) Default: 65000
 
 _encoding_ - Encoding to be used. [Encoding](Data-types) Default: utf-8
+
+_lineEnding_ - Line Ending to be used if _newLine_ is set to true. `LineEndingMode` Default: `CRLF`. Not used if _newLine_ is `false`. Introduced in 4.3.8.
+Possible values:
+* CRLF - Carriage Return and Line Feed. (default)
+* CR - Carriage Return.
+* LF - Line Feed.
+* None - No end of line characters.
+
 ###Connection Options
 _connectionCacheSize_ - Size of the connection cache (number of connections which are kept alive). [Integer](Data-types) Default: 5  
 
