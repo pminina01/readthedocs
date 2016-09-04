@@ -3,6 +3,7 @@
 * [Search this wiki](https://github.com/NLog/NLog/search?q=&type=Wikis&utf8=%E2%9C%93)
 * [Getting started](Tutorial)
 * [Examples](Examples)
+* [User contributed tutorials and articles](wiki/Web-resources)
 * [FAQ](faq)
 * [Platform support](platform-support)
 
@@ -21,5 +22,4 @@
 * [Extending NLog](Extending NLog)
 * [Using Time Sources](Time Source)
 * [Visual Studio support](wiki/Visual-Studio-support)
-* [Who is using NLog](wiki/Who-Is-Using-NLog) - are you using NLog? Tell the world about it!
-* [Web resources](wiki/Web-resources) - user-contributed tutorials and articles about NLog
+* [Who is using NLog](wiki/Who-Is-Using-NLog) 
