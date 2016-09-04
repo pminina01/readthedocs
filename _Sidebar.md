@@ -3,7 +3,7 @@
 * [Search this wiki](https://github.com/NLog/NLog/search?q=&type=Wikis&utf8=%E2%9C%93)
 * [Getting started](Tutorial)
 * [Examples](Examples)
-* [User contributed tutorials and articles](wiki/Web-resources)
+* [External articles and tutorials](wiki/Web-resources)
 * [FAQ](faq)
 * [Platform support](platform-support)
 
