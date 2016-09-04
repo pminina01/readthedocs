@@ -11,7 +11,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           name="String"
           onOverflow="Enum"
           newLine="Boolean"
-          LineEnding="CRLF|LF|CR|None"
+          lineEnding="CRLF|LF|CR|None"
           layout="Layout"
           maxMessageSize="Integer"
           encoding="Encoding"
