@@ -3,6 +3,7 @@ All configuration of NLog can be done with a single XML file.
 ##Contents
 [Configuration file locations](#configuration-file-locations)<br />
 [Configuration file format](#configuration-file-format)<br />
+[Log levels](#log-levels)<br />
 [Targets](#targets)<br />
 [Rules](#rules)<br />
 [Example rules](#example-rules)<br />
@@ -77,6 +78,32 @@ Configuration elements You can use the following elements as children to `<nlog 
  * `<extensions />` – loads NLog extensions from the *.dll file
  * `<include />`– includes external configuration file
  * `<variable />` – sets the value of a configuration variable
+
+<a name="log-levels" />
+##Log levels
+
+The following are the allowed log levels (in descending order):
+
+* `Fatal`   
+* `Error` 
+* `Warn`  
+* `Info`
+* `Debug`
+* `Trace`
+
+Also to turn off logging, use `Off`
+
+Examples when you could use which level:
+
+|Level|Example|
+------|-------
+|Fatal|Highest level: important stuff down|
+|Error|For example application crashes / exceptions.|
+|Warn|Incorrect behavior but the application can continue |
+|Info|Normal behavior like mail sent, user updated profile etc.|
+|Debug|Executed queries, user authenticated, session expired|
+|Trace|Begin method X, end method X etc|
+
 
 <a name="targets" />
 ##Targets
