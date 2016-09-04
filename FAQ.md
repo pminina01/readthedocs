@@ -54,9 +54,6 @@
 * **I'm writing a library who's using NLog. Should I update when NLog has an update?**
    - If you don't use the latest additions, then you should only update every NLog major version. As mentioned at the Common Logging version, we will keep the assembly version fixed. The end-user don't need `<assemblybinding>`-magic! So in short: your library should target NLog 4.0 and in the future NLog 5.0.
 
-
-
-
 * [Logging is not working - how to troubleshoot?](Logging-troubleshooting)
 * [How to properly log exceptions?](How-to-log-exceptions)
 * [How to configure logging in a component?](Configure-component-logging)
