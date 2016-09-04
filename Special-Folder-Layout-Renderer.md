@@ -71,3 +71,9 @@ ${specialfolder:dir=String:file=String:folder=Enum}
   * LocalApplicationData - non roaming application data
   * Personal - user profile directory
   * System - System directory
+
+## Example
+
+```
+fileName="${specialfolder:folder=ApplicationData}/Program/file.txt"
+```
