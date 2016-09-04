@@ -19,7 +19,9 @@
 ## Advanced
 * [Advanced Configuration file options](Configuration-file)
 * [Filtering log messages](Filters)
-* [Extending NLog](Extending NLog)
 * [Using Time Sources](Time Source)
 * [Visual Studio support](wiki/Visual-Studio-support)
 * [Who is using NLog](wiki/Who-Is-Using-NLog) 
+
+## Extending NLog
+* [Write custom extentions](Extending NLog)
