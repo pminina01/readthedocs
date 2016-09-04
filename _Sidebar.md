@@ -24,4 +24,4 @@
 * [Who is using NLog](wiki/Who-Is-Using-NLog) 
 
 ## Extending NLog
-* [Write custom extentions](Extending NLog)
+* [Write custom extensions](Extending NLog)
