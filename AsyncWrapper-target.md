@@ -64,7 +64,7 @@ When using the `AsyncWrapper`, do write to the wrapper in your ` <rules>` sectio
 ```
 
 ###Async attribute and AsyncWrapper 
-Don't combine the Async attribute and AsyncWrapper. This will only slow down processing and will behave unreliable.
+Don't combine the Async attribute and AsyncWrapper. This will only slow down processing and will behave unreliably.
 
 ###Async attribute will discard by default
 The async attribute is a shorthand for:
