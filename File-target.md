@@ -37,7 +37,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           keepFileOpen="Boolean"
           forceManaged="Boolean"
           enableArchiveFileCompression="Boolean"
-          cleanupFileName="Boolean"  />
+          cleanupFileName="Boolean"
+          writeFooterOnArchivingOnly="Boolean"  />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
@@ -142,6 +143,8 @@ Setting this to false may improve performance a bit, but you'll receive an error
 _enableArchiveFileCompression_ - Indicates whether to compress the archive files into the zip files. [Boolean](Data-types) Default: False
     > Supported in:
     > * NLog v4.0 for .NET 4.5
+
+_writeFooterOnArchivingOnly_ - Indicates whether the footer should be written only when the file is archived. If `False`, the footer will also be written when starting to write to a different file and when the target is closed [Boolean](Data-types) Default: False
 
 ###Performance Tuning Options
 _concurrentWrites_ - Indicates whether concurrent writes to the log file by multiple processes on the same host. [Boolean](Data-types) Default: True  
