@@ -4,7 +4,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ##Configuration Syntax
 ```
-${cached:cached=Boolean:clearCache=ClearCacheOption:inner=Layout}
+${cached:cached=Boolean:clearCache=ClearCacheOption:inner=Layout:cacheKey=Layout}
 ```
 
 or by using ambient property to modify output of other layout renderer:
@@ -17,6 +17,7 @@ ${other:cached=Boolean}
 ###Caching Options
 * _cached_ - Indicates whether this CachedLayoutRendererWrapper is enabled. Boolean Default: True
 * _clearCache_ - Introduced in NLog 4.2. Indicates when the cache is cleared. Possible options: `None, OnInit, Onclose`.  ClearCacheOption Default: `OnInit, OnClose`. 
+* _cacheKey_ - the layout to be checked if the cache is still valid. For example, the current day. Default `null`. Introduced in NLog 4.3.9
 
 ###Transformation Options
 * _inner_ - Wrapped layout. Layout
