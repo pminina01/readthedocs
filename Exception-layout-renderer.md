@@ -5,7 +5,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
 ```
 ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSeparator=String
-           :separator=String:format=String}
+           :separator=String:format=String:exceptionDataSeparator=string}
 ```
 
 ##Parameters
@@ -14,9 +14,10 @@ ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSepa
 
 * **maxInnerExceptionLevel** - Maximum number of inner exceptions to include in the output. By default inner exceptions are not enabled for compatibility with NLog 1.0.Integer. Default: 0
 
-* **innerExceptionSeparator** - Separator between inner exceptions. Default: new line
-
 * **separator** - Separator used to concatenate parts specified in the Format. Default: single space
+* **innerExceptionSeparator** - Separator between inner exceptions. Default: new line
+* **exceptionDataSeparator** -  Separator used to concatenate the exception data parts. Default: `;`. Introduced in NLog 4.3.9
+
 * **format** - Format of the output. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method`, `StackTrace` & `Data`. This parameter value is case-insensitive. Default: `message`
 
 ##Examples
