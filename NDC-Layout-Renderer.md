@@ -13,3 +13,15 @@ ${ndc:bottomFrames=Integer:topFrames=Integer:separator=String}
 * **bottomFrames** - Number of bottom stack frames to be rendered.Integer
 * **topFrames** - Number of top stack frames to be rendered.Integer
 * **separator** - Separator to be used for concatenating nested diagnostics context output
+
+## Examples
+
+```c#
+NestDiagnosticsContext.Push("entering method X");
+...
+NestDiagnosticsContext.Pop(); //leaving methods
+```
+
+Then in the log config:
+
+    ${ndc}
