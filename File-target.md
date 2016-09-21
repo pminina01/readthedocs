@@ -98,7 +98,7 @@ Files are moved to the archive as part of the write operation if the current per
 
 _archiveDateFormat_ - Specifies the date format used for archive numbering. Default format depends on the archive period.
 
-This option works only when the "ArchiveNumbering" parameter is set to Date
+This option works only when the "ArchiveNumbering" parameter is set to Date or DateAndSequence
 
 _ArchiveOldFileOnStartup_
 
