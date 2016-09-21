@@ -39,7 +39,7 @@ target.FileName = filename;
 Note that it is often easier to create the file name with a combination of [Layout-Renderers](layout renderers).
 
 
-## Using NLog with [Autofac](https://autofac.org/) - [APS.NET Web API 2](http://www.asp.net/web-api)
+## Using NLog with [Autofac](https://autofac.org/) - [ASP.NET Web API 2](http://www.asp.net/web-api)
 
 This example is using a nuget package [Autofac.Extras.Nlog](https://www.nuget.org/packages/Autofac.Extras.NLog) that takes care of creating the [Autofac module](http://autofac.readthedocs.io/en/latest/configuration/modules.html) needed to wire up the dependency in the Web API.
 
