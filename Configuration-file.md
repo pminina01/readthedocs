@@ -150,6 +150,8 @@ The level related keywords are processed in the following order:
 3. `minlevel` and `maxlevel` (minimum and maximum level keywords have the same priority)
 4. No keyword (All levels are logged)
 
+In case a rule is marked as `final` and contains any level related keywords, the `final` attribute applies only to the specified levels.
+
 <a name="example-rules" />
 ##Example rules
 All messages from the `Class1` in the `Name.Space` whose level is `Debug` or higher are written to the "f1" target:
