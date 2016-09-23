@@ -8,6 +8,7 @@ Supported in .NET
           name="String"
           layout="Layout"
           append="Boolean"
+          reverseOrder="Boolean"
           controlName="String"
           formName="String" />
 </targets>
@@ -20,6 +21,8 @@ _name_ - Name of the target.
 _layout_ - Layout used to format log messages. [Layout](Data-types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
 ###Form Options
 _append_ - Indicates whether log text should be appended to the text of the control instead of overwriting it. [Boolean](Data-types) Default: True
+
+_reverseOrder_ - Indicates whether log text should be appended or prepended. [Boolean](Data-types) Default: False
 
 _controlName_ - Name of control to which NLog will log write log text. Required.
 
