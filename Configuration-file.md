@@ -348,7 +348,6 @@ Similar to default wrappers, NLog provides `<default-target-parameters />` which
 
 Alternatively you can specify a single `<default-target-parameters />` that applies to all targets in the `<targets />` section. Default parameters are defined on a per-type basis and are applied BEFORE the actual attributes defined in the XML file:
 ```xml
-<source lang="xml">
 <nlog>
   <targets>
     <default-target-parameters xsi:type="File" keepFileOpen="false"/>
@@ -370,7 +369,7 @@ Because it XML file, the `<` and `>` brackets should be escaped with `&lt;` and 
 
 Inside a layout we need to escape the  `}` bracket and the colon `:` should be escaped because:
 
-- `:` is thevalue separator.
+- `:` is the value separator.
 - `}` is the end of the layout
 
 
