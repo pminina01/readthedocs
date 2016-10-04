@@ -17,3 +17,33 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 _name_ - Name of the target.
 ###Fallback Options
 _returnToFirstOnSuccess_ - Indicates whether to return to the first target after any successful write. `Boolean`. Default `false`
+
+##Example
+
+Fallback to another mail if the mailserver is down
+
+```xml
+<target xsi:type="FallbackGroup" 
+        name="mail"
+        returnToFirstOnSuccess="true">
+    <target xsi:type="Mail"
+            name="mailserver1"
+            subject="Layout"
+            to="Layout"
+            from="Layout"
+            smtpServer="mx1.example.com" 
+            smtpPort="Integer"
+            layout="Layout" />
+    <target xsi:type="Mail"
+            name="mailserver2" 
+            subject="Layout"
+            to="Layout"
+            from="Layout"
+            smtpServer="mx2.example.com" 
+            smtpPort="Integer"
+            layout="Layout" />
+</target>
+<rules>
+  <logger name="*" minlevel="Trace" writeTo="mail" />
+</rules>
+```
