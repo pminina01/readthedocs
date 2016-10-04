@@ -16,4 +16,4 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ###General Options
 _name_ - Name of the target.
 ###Fallback Options
-_returnToFirstOnSuccess_ - Indicates whether to return to the first target after any successful write. Boolean
+_returnToFirstOnSuccess_ - Indicates whether to return to the first target after any successful write. `Boolean`. Default `false`
