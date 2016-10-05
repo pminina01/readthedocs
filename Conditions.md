@@ -12,6 +12,7 @@ The filter expressions are written in a special mini-language. The language cons
 * predefined keywords to access the most common log event properties - `level`, `message` and `logger`
 * braces - to override default priorities and group expressions together
 * condition functions - to perform `string` and `object` tests
+* Single quotes should be escaped with another single quote. 
 
 ##Functions
 The following condition functions are available:
