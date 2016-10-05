@@ -10,7 +10,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono
           footer="Layout"
           header="Layout"
           encoding="Encoding"
-          error="Boolean" />
+          error="Boolean"
+          detectConsoleTarget="Boolean" />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration file).
@@ -26,3 +27,5 @@ _header_ - Header. [Layout](Layouts)
 _encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx). Defaults to `Encoding.Default` (`UTF-8` on silverlight). Starting for NLog 4.0.
 
 _error_ - Indicates whether to send the log messages to the standard error instead of the standard output. [Boolean](Data types) Default: `false`
+
+_detectConsoleTarget_ - Indicates whether the console target should disable itself when no console detected. [Boolean](Data types) Default: `true`
