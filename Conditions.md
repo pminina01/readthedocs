@@ -36,6 +36,15 @@ Here are several [when filter](when-Filter) examples with conditions:
 </rules>
 ```
 
+### Quotes
+
+Single quotes should be escaped with another single quote. 
+Example:
+
+```
+contains('${message}', 'Cannot insert the value NULL into column ''Col1')
+```
+
 ##Extensibility
 New condition functions are easy to add; just create a public static class with a static function and mark the class and method with the attributes `[ConditionMethods]` and `[ConditionMethod]` respectively. 
 
