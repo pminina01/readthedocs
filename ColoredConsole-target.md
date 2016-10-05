@@ -11,7 +11,8 @@ Supported in .NET and Mono
           header="Layout"
           footer="Layout"
           useDefaultRowHighlightingRules="Boolean"
-          errorStream="Boolean">
+          errorStream="Boolean"
+          detectConsoleAvailable="Boolean">
     <highlight-row backgroundColor="Enum" condition="Condition" foregroundColor="Enum"/><!-- repeated -->
     <highlight-word backgroundColor="Enum" foregroundColor="Enum" ignoreCase="Boolean"
                     regex="String" text="String" wholeWords="Boolean" compileRegex="Boolean"/><!-- repeated -->
@@ -139,6 +140,8 @@ _compileRegex_ - Introduced in NLog 4.3. Compiles the Regex. If `false`, the reg
 
 ###Output Options
 _errorStream_ - Indicates whether the error stream (stderr) should be used instead of the output stream (stdout). [Boolean](Data types) Default: False
+
+_detectConsoleAvailable_ - Indicates whether the console target should disable itself when no console detected. Boolean Default: true (introduced in 4.3.10)
 
 ###Programmatic example
 
