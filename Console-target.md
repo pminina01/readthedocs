@@ -28,4 +28,4 @@ _encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding
 
 _error_ - Indicates whether to send the log messages to the standard error instead of the standard output. [Boolean](Data types) Default: `false`
 
-_detectConsoleTarget_ - Indicates whether the console target should disable itself when no console detected. [Boolean](Data types) Default: `true`
+_detectConsoleTarget_ - Indicates whether the console target should disable itself when no console detected. [Boolean](Data types) Default: `true` (introduced in 4.3.10)
