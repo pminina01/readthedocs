@@ -20,8 +20,23 @@ ${other:when=Condition}
 * _else_ - Layout if the condition is not true (introduced in NLog 4.3.5)
 
 ##Examples
-* `{message:when=logger=='logger'}`: print the message when the logger name is equal to "logger".
-* `${when:when='${aspnet-request:serverVariable=HTTPS}' == 'on':inner=1:else:0}` convert a layout string result to a bit (1 or 0) that can be inserted into a SQL bit field.
+
+print the message when the logger name is equal to "logger": 
+ ```
+${message:when=logger=='logger'}
+```
+ 
+convert a layout string result to a bit (1 or 0) that can be inserted into a SQL bit field.:
+
+```
+${when:when='${aspnet-request:serverVariable=HTTPS}' == 'on':inner=1:else:0}
+```
+
+Write "Good" if the loglevel is trace/debug/info and otherwise "Bad":
+
+```
+${when:when=level<=LogLevel.Info:inner=Good:else=Bad}
+```
 
 ##Escaping
 
