@@ -120,7 +120,7 @@ TIP: You should avoid doing string formatting (such as concatenation, or calling
 
 Formatting log messages takes a lot of time, so NLog tries to defer formatting until it knows that log message will actually be written to some output. If the message ends up being skipped because of logging configuration, you will not pay the price of `String.Format()` at all. See also Optimizing Logging Performance.
 
-##Configuration 
+##Configuration
 So far we have learned how to create log messages from code, but we have not configured any outputs for our logs. So, when you run your instrumented application at this point, you will see - well - nothing. Time to open the NLog.config file and add some logging rules:
 
 1. In the `<targets>` section, add:
