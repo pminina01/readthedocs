@@ -50,7 +50,6 @@ The following condition functions are available:
 * `starts-with(s1,s2)` Determines whether the second string is a prefix of the first one. Returns: `true` when the second string is a prefix of the first string, `false` otherwise.
 
 
-```
 
 ### Quotes
 
@@ -80,6 +79,7 @@ Then you have to tell NLog where to find your assembly
 
 ##Examples
 Here are several examples with conditions:
+
 ```xml
 <rules>
     <logger name="*" writeTo="file">
@@ -91,6 +91,7 @@ Here are several examples with conditions:
         </filters>
     </logger>
 </rules>
+```
 
 
 
