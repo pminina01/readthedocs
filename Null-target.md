@@ -15,3 +15,16 @@ _name_ - Name of the target.
 _formatMessage_ - Indicates whether to perform layout calculation. [Boolean](Data-types) Default: False
 
 _layout_ - Layout used to format log messages. [Boolean](Data-types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+
+
+##Example
+
+```xml
+<targets>
+  <target xsi:type="Null" name="BlackHole" formatMessage="false"  />
+</targets>
+<rules>
+   <!-- ignore events written that are written to a logger which starts with "Namespace." -->
+   <logger name="Namespace.*" minlevel="Debug" writeTo="BlackHole" final="true" />     
+</rules>
+```
