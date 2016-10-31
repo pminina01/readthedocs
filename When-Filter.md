@@ -14,7 +14,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ```
 ##Parameters
 ###Filtering Options
-* _condition_ - Condition expression. Condition Required. See [Conditions](#Conditions).
+* _condition_ - Condition expression. Condition Required. See section Conditions below.
 * _action_ - Action to be taken when filter matches. Required.  
 Possible values:
   * `Ignore` - The message should not be logged.
