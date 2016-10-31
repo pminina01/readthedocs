@@ -18,7 +18,7 @@
 
 ## Advanced
 * [Advanced Configuration file options](Configuration-file)
-* [Filtering log messages](Filters)
+* [Filtering log messages](Filtering-log-messages)
 * [Using Time Sources](Time Source)
 * [Visual Studio support](Visual-Studio-support)
 * [Who is using NLog](Who-Is-Using-NLog) 
