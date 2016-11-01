@@ -34,6 +34,7 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 * [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
 * [FilteringWrapper](FilteringWrapper-target) - Filters log entries based on a condition.
 * [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
+* [LimitingWrapper`](LimitingWrapper-target) - Limits number of log events sent to target.
 * [PostFilteringWrapper](PostFilteringWrapper-target) - Filters buffered log entries based on a set of conditions that are evaluated on a group of events.
 * [RandomizeGroup](RandomizeGroup-target) - Sends log messages to a randomly selected target.
 * [RepeatingWrapper](RepeatingWrapper-target) - Repeats each log event the specified number of times.
