@@ -1,10 +1,10 @@
 Limiting Wrapper
 ===================
-Limits the number of logs written to the wrapped target in a given time frame.
+Limits the number of logs written to the wrapped target in a given time interval.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-Introduced in NLog4.4.
+Introduced in NLog 4.4.
 
 ##Configuration Syntax
 ```xml
