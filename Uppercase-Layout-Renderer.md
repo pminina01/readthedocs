@@ -24,7 +24,8 @@ ${other:uppercase=Boolean}
 ```
 ${uppercase:${level}}
 ${uppercase:Inner=${level}}
-${level:uppercase=true}  //NB `${level:uppercase}` isn't correct, as the parser will read `uppercase` as a default parameter of `Level` 
+${level:uppercase=true}  //NB: `${level:uppercase}` isn't correct, 
+                         // as the parser will read `uppercase` as a default parameter of `Level` 
 
 
 ```
