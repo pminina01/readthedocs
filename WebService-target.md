@@ -38,6 +38,9 @@ _includeBOM_ - Skip or add Byte-order-mark (BOM) for UTF-8. Only used if encodin
 
 For more info on BOM, check [Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)
 
+_escapeDataRfc3986_ - NLog will by default encode parameters as UTF8 and escape special characters according to Rfc2396. To escape data according to standard Rc3986, set this option to 'true' (Available from NLog 4.4)
+
+_escapeDataNLogLegacy_ - NLog will by default encode parameters as UTF8 and escape special characters according to Rfc2396. To escape data according to the old non-standard NLog style, set this option to 'true' (Available from NLog 4.4)
 
 _protocol_ - Protocol to be used when calling web service. Default: Soap11  
 Possible values:  
