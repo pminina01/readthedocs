@@ -149,7 +149,7 @@ _writeFooterOnArchivingOnly_ - Indicates whether the footer should be written on
 
 ###Performance Tuning Options
 _concurrentWrites_ - Enables support for concurrent writes to same log file from multiple processes on the same machine-host. [Boolean](Data-types) Default: True
-This performs faster than _keepFileOpen_ = False, by using a special technique that lets it keep the files open for writing. For single process (and single AppDomain) application logging, then it is faster to set to False.  **NOTE:** Requires that _keepFileOpen_ has been set to True. **NOTE:** 
+This performs faster than _keepFileOpen_ = False, by using a special technique that lets it keep the files open for writing. For single process (and single AppDomain) application logging, then it is faster to set to False.  **NOTE:** Requires that _keepFileOpen_ has been set to True.
 
 _openFileCacheTimeout_ - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. [Integer](Data-types) Default: -1  
 
