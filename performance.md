@@ -31,7 +31,8 @@ This call will be removed by the .Net compiler if the DEBUG conditional compilat
 Single process applications (in single AppDomain). Can optimize performance by configuring the FileTarget attributes:
 - _keepFileOpen_ = True
 - _concurrentwrites_ = False
- See also [FileTarget - Performance](../wiki/File-target#performance-tuning-options)
+
+See also [FileTarget - Performance](../wiki/File-target#performance-tuning-options)
 
 To avoid the blocking file write operation, then one can consider to wrap the FileTarget within a [AsyncWrapper](../wiki/AsyncWrapper-target). This will also optimize the writing against the disk, as it will be done in batches. Be careful as the default behavior is to discard log operations if they come fast. It is recommended to set
 
