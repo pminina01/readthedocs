@@ -37,7 +37,7 @@ See also [FileTarget - Performance](../wiki/File-target#performance-tuning-optio
 To avoid the blocking file write operation, then one can consider to wrap the FileTarget within a [AsyncWrapper](../wiki/AsyncWrapper-target). This will also optimize the writing against the disk, as it will be done in batches. Be careful as the default behavior is to discard log operations if they come fast. It is recommended to set:
 
 -  _overflowAction_ = Block 
-- _queueLimit_ = 10000, 
+- _queueLimit_ = 10000
 - _batchSize_ = 500
 - _timeToSleepBetweenBatches_ = 50
 
