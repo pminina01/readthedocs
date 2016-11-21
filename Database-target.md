@@ -68,7 +68,9 @@ _dbPassword_ - Database password. If the ConnectionString is not provided this v
 _dbHost_ - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
 
 ###Installation Options
-_installDdlCommands_ - The installation DDL commands. [Collection](Data types)  
+See  [Installing targets](Installing-targets).
+
+_installDdlCommands_ - The installation DDL commands. [Collection](Data types)  . 
 Each collection item is represented by \<install-command /> element with the following attributes:
   * _commandType_ - Type of the command. Required. Default: `text`  
 Possible values:
