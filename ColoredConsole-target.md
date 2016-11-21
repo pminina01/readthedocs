@@ -141,7 +141,7 @@ _compileRegex_ - Introduced in NLog 4.3. Compiles the Regex. If `false`, the reg
 ###Output Options
 _errorStream_ - Indicates whether the error stream (stderr) should be used instead of the output stream (stdout). [Boolean](Data types) Default: False
 
-_detectConsoleAvailable_ - Indicates whether the console target should disable itself when no console detected. Boolean Default: true (introduced in 4.3.10)
+_detectConsoleAvailable_ - Indicates whether the console target should disable itself when no console detected. Boolean Default: false (introduced in 4.3.10 with default: true)
 
 ###Programmatic example
 
