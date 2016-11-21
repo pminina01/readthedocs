@@ -20,6 +20,7 @@
 * [Advanced Configuration file options](Configuration-file)
 * [Filtering log messages](Filtering-log-messages)
 * [Using Time Sources](Time Source)
+* [Installing targets](Installing-targets)
 * [Visual Studio support](Visual-Studio-support)
 * [Who is using NLog](Who-Is-Using-NLog) 
 
