@@ -38,7 +38,7 @@ To avoid the blocking file write operation, then one can consider to wrap the Fi
 
 -  _overflowAction_ = Block 
 - _queueLimit_ = 10000, 
-- _batchSize_ = 500 and 
-- _timeToSleepBetweenBatches_ = 50. 
+- _batchSize_ = 500
+- _timeToSleepBetweenBatches_ = 50
 
 For optimal performance set _timeToSleepBetweenBatches_ = 0, though it will make it write in smaller batches and give higher priority to logging when high activity.
