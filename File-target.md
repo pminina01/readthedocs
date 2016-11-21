@@ -148,8 +148,8 @@ _enableArchiveFileCompression_ - Indicates whether to compress the archive files
 _writeFooterOnArchivingOnly_ - Indicates whether the footer should be written only when the file is archived. If `False`, the footer will also be written when starting to write to a different file and when the target is closed [Boolean](Data-types) Default: False
 
 ###Performance Tuning Options
-_concurrentWrites_ - Indicates whether concurrent writes to the log file by multiple processes on the same host. [Boolean](Data-types) Default: True  
-This makes multi-process logging possible. NLog uses a special technique that lets it keep the files open for writing.<br />**NOTE:** are ignored unless _keepFileOpen_ are set to true.
+_concurrentWrites_ - Enables support for concurrent writes to same log file from multiple processes on the same machine-host. [Boolean](Data-types) Default: True
+This performs faster than _keepFileOpen_ = False, by using a special technique that lets it keep the files open for writing. For single process (and single AppDomain) application logging, then it is faster to set to False.  **NOTE:** Requires that _keepFileOpen_ has been set to True. **NOTE:** 
 
 _openFileCacheTimeout_ - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. [Integer](Data-types) Default: -1  
 
