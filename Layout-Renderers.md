@@ -9,9 +9,6 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${activityid}](Trace-Activity-Id-Layout-Renderer) - Puts into log a System.Diagnostics trace correlation id.
 * [${all-event-properties}](All-Event-Properties-Layout-Renderer) - Log all event context data.
 * [${appdomain}](AppDomain-Layout-Renderer) - Current app domain. 
-* [${asp-application}](AspApplication-Layout-Renderer) - ASP Application variable.
-* [${asp-request}](AspRequest-Layout-Renderer) - ASP Request variable.
-* [${asp-session}](AspSession-Layout-Renderer) - ASP Session variable.
 * [${assembly-version}](AssemblyVersion-Layout-Renderer) - The version of the executable in the default application domain.
 * [${basedir}](Basedir-Layout-Renderer) - The current application domain's base directory.
 * [${callsite}](Callsite-Layout-Renderer) - The call site (class name, method name and source information).
