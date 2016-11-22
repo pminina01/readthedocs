@@ -73,6 +73,7 @@ External packages, not maintained by the NLog team.
 Package|Version     |Description
 -------|------------|------------------------------------------------
 [Amazon SNS](https://github.com/Takaloy/NLog.Targets.SNS) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.SNS.svg)](https://www.nuget.org/packages/NLog.Targets.SNS) | Write to Amazon SNS.
+[Amazon SQS](https://github.com/aireq/NLog.Targets.SQS) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.SQS.svg)](https://www.nuget.org/packages/NLog.Targets.SQS) | Write to Amazon SQS.
 [Elastic Search](https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.ElasticSearch.svg)](https://www.nuget.org/packages/NLog.Targets.ElasticSearch) | Write to Elastic Search servers.
 [elmah.io](https://github.com/elmahio/elmah.io.nlog)             | [![Version](https://img.shields.io/nuget/v/elmah.io.nlog.svg)](https://www.nuget.org/packages/elmah.io.nlog) | Sends logs to [elmah.io](https://elmah.io). elmah.io is an online service for logging messages in the cloud.
 [Glimpse](https://github.com/NLog/Glimpse.NLog) | [![Version](https://img.shields.io/nuget/v/Glimpse.NLog.svg)](https://www.nuget.org/packages/Glimpse.NLog) | Show NLog information in [Glimpse](http://getglimpse.com/).
