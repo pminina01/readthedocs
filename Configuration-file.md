@@ -253,8 +253,8 @@ Why use this new method? With the variable layout renderer:
 * Variables can be changed, deleted and created from the API
 * A default value can be configured for a variable, e.g. `${var:password:default=unknown}`
 
-By default, variables are reset on configuration reload. In order to take variables from current
-configuration, you should simply add `keepVariablesOnReload="true"` parameter to the configuration file (introduced in NLog 4.4).
+By default, variables are reset when the configuration reloads. In order to take the variables from current
+configuration, add `keepVariablesOnReload="true"` parameter to the configuration file (introduced in NLog 4.4).
 ```xml
 <nlog keepVariablesOnReload="true">
    ...
