@@ -4,7 +4,7 @@ Supported in .NET
 
 ##Configuration Syntax
 ```
-${processinfo:property=Enum}
+${processinfo:property=Enum:format=string}
 ```
 
 ##Parameters
@@ -49,3 +49,5 @@ ${processinfo:property=Enum}
   * **VirtualMemorySize64** - Virtual Memory Size (64-bit).
   * **WorkingSet** - Working Set Size.
   * **WorkingSet64** - Working Set Size (64-bit)
+
+* _format_ formatstring in the value is formatable. Introduced in NLog 4.4
