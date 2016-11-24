@@ -4,7 +4,7 @@ Added in NLog 4.0
 
 
 ```xml
-<target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json">
+<target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json" includeAllProperties="Boolean" excludeProperties="Comma-separated list (string)"   >
       <layout xsi:type="JsonLayout">
               <attribute name="time" layout="${longdate}" />
               <attribute name="level" layout="${level:upperCase=true}"/>
@@ -35,6 +35,12 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 * _encode_: Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
 * _suppressSpaces_: Enable to suppress extra spaces in the output JSON. Disabled by default. (Added in NLog 4.1)
 * _renderEmptyObject_: Gets or sets the option to render the empty object value `{}`, default `true`. (Added in NLog 4.3.7)
+
+* _includeAllProperties_: Include all events properties of a logevent? default: `false`.  Introduced in NLog 4.4
+* _excludeProperties_: comma separated string with names which properties to exclude. Only used when _includeAllProperties_ is `true`. Case sensitive. Default empty
+When a name contains a comma, single quote the value. E.g. `'value,withquote',value2`. Introduced in NLog 4.4
+
+  . 
  
 ## Notes
 * Currently the layout will always create a non-nested object with properties.
