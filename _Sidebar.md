@@ -5,6 +5,7 @@
 * [Examples](Examples)
 * [External articles and tutorials](Web-resources)
 * [Troubleshooting](Logging-troubleshooting)
+  * [Internal log](Internal-logging)
 * [FAQ](faq)
 * [Platform support](platform-support)
 
