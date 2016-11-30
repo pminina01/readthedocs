@@ -4,7 +4,9 @@
 * [Getting started](Tutorial)
 * [Examples](Examples)
 * [External articles and tutorials](Web-resources)
+* [Troubleshooting](Logging-troubleshooting)
 * [FAQ](faq)
+
 * [Platform support](platform-support)
 
 ## Configuration
