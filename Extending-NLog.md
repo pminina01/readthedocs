@@ -4,5 +4,5 @@ There could be various reasons why you would like to extend NLog. For example: I
 
 -  [How to write a custom target](How to write a custom target)
 -  [How to write a custom layout renderer](How to write a custom layout renderer)
-- [Writing custom conditions](Conditions#extensibility)
+- [Writing custom conditions](When-Filter#extensibility)
 
