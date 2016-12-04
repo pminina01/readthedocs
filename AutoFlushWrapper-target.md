@@ -3,7 +3,7 @@ If condition isn't set, a flush will occur after each write.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ##Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="AutoFlushWrapper" name="String" condition="Condition">
     <target xsi:type="wrappedTargetType" ...target properties... />
