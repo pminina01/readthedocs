@@ -54,9 +54,9 @@ Introduced in NLog 4.4, the following collection types could be used.
 Usage in XML: comma separated string. If the value contains a comma, single quote the whole value.
 
 Examples:
-- `one arg`
-- `1,2`
-- `value1,'value2,  with comma'`
+- `value="one arg"`
+- value="1,2"`
+- value="ovalue1,'value2,  with comma'"`
 
 Collections of type: 
   -  `IList<T>` / `IList`
