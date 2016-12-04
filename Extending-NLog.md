@@ -7,6 +7,9 @@ This tutorial describes creating custom targets and custom layout renderers. But
 ##How to write a custom target?
 See [How to write a custom target](How to write a custom target)
 
+##How to write a custom layout renderer?
+See [How to write a custom layout renderer](How to write a custom layout renderer)
+
 ##How to use the custom target / layout renderer
 It’s easy. Just put the target or layout renderer in a DLL and reference it from the the config file using the `<extensions />` clause as described here.
 
