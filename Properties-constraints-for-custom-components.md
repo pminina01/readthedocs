@@ -16,6 +16,11 @@ The following types are supported
 - Types which are using `TypeDescriptor` from `string` (not Silverlight)
 - Collections, introduced in NLog 4.4. See section [Collection types](#user-content-collection-types])
 
+
+## Layout renderers
+- C# types: e.g. bool, char, decimal, double, float, int, uint, etc.
+- Enums (use short name)
+
 ### Collection types
 Introduced in NLog 4.4, the following collection types could be used.
 
