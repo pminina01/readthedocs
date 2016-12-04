@@ -18,7 +18,7 @@ Examples
 LayoutRenderer.Register("test-fixed", (logEvent) => "2");
 
 //register ${trace-identifier}
-LayoutRenderer.Register("trace-identifier", (logEvent) =>  HttpContext.Current.TraceIdentifier);
+LayoutRenderer.Register("trace-identifier", (logEvent) => HttpContext.Current.TraceIdentifier);
 
 //Using logEventInfo, ${message-length}
 LayoutRenderer.Register("message-length", (logEvent) => logEvent.Message.Length);
