@@ -34,7 +34,7 @@ Flush into target on each write
 
 
 Flush into target, if LogEvent level >= Warn (*introduced in NLog 4.4*)
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
