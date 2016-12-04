@@ -6,8 +6,9 @@ There could be various reasons why you would like to extend NLog. For example: I
 -  [How to write a custom target](How to write a custom target)
 -  [How to write a custom layout renderer](How to write a custom layout renderer)
 - [Writing custom conditions](When-Filter#extensibility)
-
+- [Properties constraints for custom components](Properties constraints for custom components)
 
 ## Register
 
 - [Register your custom component](Register your custom component)
+
