@@ -2,7 +2,7 @@ Since NLog 4.4 there are two ways to create a custom layout renderer.
 
 You could write a custom layout with one lambda function - it will be registed intermediately, or you could write a class with is easier to share acros projects. 
 
-## Function
+## Lamba Function
 Introducted in NLog 4.4
 
 For some cases it's easier to write a lambda function.
