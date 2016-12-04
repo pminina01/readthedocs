@@ -1,3 +1,36 @@
+Since NLog 4.4 there are two ways to create a custom layout renderer.
+
+You could write a custom layout with one lambda function - it will be registed intermediately, or you could write a class with is easier to share acros projects. 
+
+## Function
+Introducted in NLog 4.4
+
+For some cases it's easier to write a lambda function.
+
+The lambda function will accept 1 or 2 parameters and should return a `string`.
+
+- 1 parameter: the `logEventInfo`.
+- 2 parameters: `logEventInfo` and the current NLog config.
+
+Examples
+```
+//register ${text-fixed}
+LayoutRenderer.Register("test-fixed", (info) => "2");
+
+//register ${trace-identifier}
+LayoutRenderer.Register("trace-identifier", (info) =>  HttpContext.Current.TraceIdentifier);
+
+//Using logEventInfo, ${message-length}
+LayoutRenderer.Register("message-length", (info) => info.Message.Length);
+
+//Using logEventInfo & config ${fancy}
+LayoutRenderer.Register("fancy", (info, config) => someFancyStuff(..));
+```
+
+
+
+
+## Class
 Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
 Invoke in this method `builder.Append(..)` to render your custom layout renderer.
 
