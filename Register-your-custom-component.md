@@ -20,7 +20,7 @@ Include your assembly with the `<extensions>` syntax. Use the assembly name (not
 
 ## Manual register
 
-Register manually your extension.
+Register manually your extension. Do this a soon as possible, e.g. `main()`, or `app_start`.
 
 ### Short syntax
 Short syntax introduced in NLog 4.4
