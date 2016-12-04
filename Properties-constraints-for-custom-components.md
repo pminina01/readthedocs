@@ -55,8 +55,8 @@ Usage in XML: comma separated string. If the value contains a comma, single quot
 
 Examples:
 - `value="one arg"`
-- value="1,2"`
-- value="ovalue1,'value2,  with comma'"`
+- `value="1,2"`
+- `value="value1,'value2,  with comma'"`
 
 Collections of type: 
   -  `IList<T>` / `IList`
