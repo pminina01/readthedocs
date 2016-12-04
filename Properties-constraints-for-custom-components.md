@@ -2,7 +2,8 @@ Custom Targets, layout etc. could have properties. There are only limitations if
 
 The following types are supported
 
-## Targets
+## Allowed types
+Allowed types for Targets, Layouts and Layout renderers.
 
 - C# types: e.g. bool, char, decimal, double, float, int, uint, etc.
 - Enums (use short name)
@@ -17,10 +18,32 @@ The following types are supported
 - Collections, introduced in NLog 4.4. See section [Collection types](#user-content-collection-types])
 
 
-## Layout renderers
-- C# types: e.g. bool, char, decimal, double, float, int, uint, etc.
-- Enums (use short name)
-- Collections, introduced in NLog 4.4. See section [Collection types](#user-content-collection-types])
+### XML Elements
+For targets and layout renderers there is also support for XML elements.
+
+E.g. the [JSON layout](JsonLayout):
+
+```xml
+<target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json" includeAllProperties="Boolean" excludeProperties="Comma-separated list (string)"   >
+      <layout xsi:type="JsonLayout">
+              <attribute name="time" layout="${longdate}" />
+              <attribute name="level" layout="${level:upperCase=true}"/>
+              <attribute name="message" layout="${message}" />
+       </layout>
+</target>
+```
+
+Usage in C#
+
+```c#
+
+[ArrayParameter(typeof(JsonAttribute), "attribute")]
+public IList<JsonAttribute> Attributes { get; private set; }
+
+[NLogConfigurationItem]
+public class JsonAttribute {} //needs default ctor
+
+```
 
 ### Collection types
 Introduced in NLog 4.4, the following collection types could be used.
