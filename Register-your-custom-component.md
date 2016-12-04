@@ -22,7 +22,8 @@ Include your assembly with the `<extensions>` syntax. Use the assembly name (not
 
 Register manually your extension.
 
-Short syntax introducted in NLog 4.4
+### Short syntax
+Short syntax introduced in NLog 4.4
 ```c#
 //target
 Target.Register<MyNamespace.MyFirstTarget>("MyFirst"); //generic
@@ -36,6 +37,7 @@ LayoutRenderer.Register("MyFirst", typeof(MyNamespace.MyFirstLayoutRenderer)); /
 Layout.Register<MyNamespace.MyFirstLayout>("MyFirst"); //generic
 Layout.Register("MyFirst", typeof(MyNamespace.MyFirstLayout)); //dynamic
 
+### Older syntax
 Older syntax, still supported
 
 ```c#
