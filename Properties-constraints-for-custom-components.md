@@ -43,6 +43,8 @@ public IList<JsonAttribute> Attributes { get; private set; }
 [NLogConfigurationItem]
 public class JsonAttribute {} //needs default ctor
 
+Another example is the [Database target](Database target)
+
 ```
 
 ### Collection types
