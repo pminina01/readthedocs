@@ -14,9 +14,9 @@ The following types are supported
 - NLog types: `Layout`, `SimpleLayout` & `ConditionExpression`
 - Types which has an implicit conversion from `string`
 - Types which are using `TypeDescriptor` from `string` (not Silverlight)
-- Collections, introduced in NLog 4.4
+- Collections, introduced in NLog 4.4. See section [Collection types](#Collection types])
 
-### Collections
+### Collection types
 Introduced in NLog 4.4, the following collection types could be used.
 
 Usage in XML: comma separated string. If the value contains a comma, single quote the whole value.
