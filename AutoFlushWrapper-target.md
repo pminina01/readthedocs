@@ -17,7 +17,7 @@ _condition_ - [Condition](https://github.com/NLog/NLog/wiki/When-Filter#conditio
 
 ##Examples
 Flush into target on each write
-```
+```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
