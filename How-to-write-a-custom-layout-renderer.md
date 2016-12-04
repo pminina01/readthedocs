@@ -12,8 +12,8 @@ The lambda function will accept 1 or 2 parameters and should return a `string`.
 - 1 parameter: the `logEventInfo`.
 - 2 parameters: `logEventInfo` and the current NLog config.
 
-Examples
-```
+Examples 
+```c#
 //register ${text-fixed}
 LayoutRenderer.Register("test-fixed", (info) => "2");
 
