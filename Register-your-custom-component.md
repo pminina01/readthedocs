@@ -34,8 +34,8 @@ LayoutRenderer.Register<MyNamespace.MyFirstLayoutRenderer>("MyFirst"); //generic
 LayoutRenderer.Register("MyFirst", typeof(MyNamespace.MyFirstLayoutRenderer)); //dynamic
 
 //layout
-Layout.Register<MyNamespace.MyFirstLayout>("MyFirst"); //generic
-Layout.Register("MyFirst", typeof(MyNamespace.MyFirstLayout)); //dynamic
+Layout.Register<MyNamespace.CsvLayout>("csv"); //generic
+Layout.Register("csv", typeof(MyNamespace.CsvLayout)); //dynamic
 ```
 
 ### Older syntax
