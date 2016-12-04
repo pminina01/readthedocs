@@ -36,6 +36,7 @@ LayoutRenderer.Register("MyFirst", typeof(MyNamespace.MyFirstLayoutRenderer)); /
 //layout
 Layout.Register<MyNamespace.MyFirstLayout>("MyFirst"); //generic
 Layout.Register("MyFirst", typeof(MyNamespace.MyFirstLayout)); //dynamic
+```
 
 ### Older syntax
 Older syntax, still supported
