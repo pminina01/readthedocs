@@ -15,16 +15,16 @@ The lambda function will accept 1 or 2 parameters and should return a `string`.
 Examples 
 ```c#
 //register ${text-fixed}
-LayoutRenderer.Register("test-fixed", (info) => "2");
+LayoutRenderer.Register("test-fixed", (logEvent) => "2");
 
 //register ${trace-identifier}
-LayoutRenderer.Register("trace-identifier", (info) =>  HttpContext.Current.TraceIdentifier);
+LayoutRenderer.Register("trace-identifier", (logEvent) =>  HttpContext.Current.TraceIdentifier);
 
 //Using logEventInfo, ${message-length}
-LayoutRenderer.Register("message-length", (info) => info.Message.Length);
+LayoutRenderer.Register("message-length", (logEvent) => logEvent.Message.Length);
 
 //Using logEventInfo & config ${fancy}
-LayoutRenderer.Register("fancy", (info, config) => someFancyStuff(..));
+LayoutRenderer.Register("fancy", (logEvent, config) => someFancyStuff(..));
 ```
 
 
