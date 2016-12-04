@@ -23,8 +23,8 @@ LayoutRenderer.Register("trace-identifier", (logEvent) =>  HttpContext.Current.T
 //Using logEventInfo, ${message-length}
 LayoutRenderer.Register("message-length", (logEvent) => logEvent.Message.Length);
 
-//Using logEventInfo & config ${fancy}
-LayoutRenderer.Register("fancy", (logEvent, config) => someFancyStuff(..));
+//Using config, ${targetCount}
+LayoutRenderer.Register("targetCount",(logEvent, config) => config.AllTargets.Count);
 ```
 
 
