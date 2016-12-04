@@ -43,9 +43,10 @@ public IList<JsonAttribute> Attributes { get; private set; }
 [NLogConfigurationItem]
 public class JsonAttribute {} //needs default ctor
 
-Another example is the [Database target](Database target)
-
 ```
+
+
+Another example is the [Database target](Database target)
 
 ### Collection types
 Introduced in NLog 4.4, the following collection types could be used.
