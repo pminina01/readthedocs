@@ -5,7 +5,7 @@ You could write a custom layout with one lambda function - it will be registed i
 ## Lamba Function
 Introducted in NLog 4.4
 
-For some cases it's easier to write a lambda function.
+For some cases it's easier to write a lambda function. 
 
 The lambda function will accept 1 or 2 parameters and should return a `string`.
 
@@ -33,6 +33,8 @@ LayoutRenderer.Register("targetCount",(logEvent, config) => config.AllTargets.Co
 ## Class
 Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
 Invoke in this method `builder.Append(..)` to render your custom layout renderer.
+
+Don't forget to [register your custom layout renderer](Register your custom component)!
 
 ###Example
 We create a `${hello-world}` layout renderer, which renders..."hello world!".
