@@ -44,10 +44,13 @@ _escapeDataNLogLegacy_ - NLog will by default encode parameters as UTF8 and esca
 
 _protocol_ - Protocol to be used when calling web service. Default: Soap11  
 Possible values:  
+* JsonPost - JSON POST  - introduced in NLog 4.4
+* XmlPost - XML POST - introduced in NLog 4.4
 * HttpGet - Use HTTP GET Protocol.
 * HttpPost - Use HTTP POST Protocol.
 * Soap11 - Use SOAP 1.1 Protocol.
 * Soap12 - Use SOAP 1.2 Protocol.
+
 
 _namespace_ - Web service namespace.
 
