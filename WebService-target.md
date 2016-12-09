@@ -21,8 +21,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 _name_ - Name of the target.
 ###Parameter Options
 _parameters_ - The array of parameters to be passed. Collection  
-Each collection item is represented by \<parameter /> element with the following attributes:  
-* _layout_ - Layout that should be use to calcuate the value for the parameter. Layout Required.
+Each collection item is represented by `<parameter />` element with the following attributes:  
+* _layout_ - Layout that should be use to calculate the value for the parameter. Layout Required.
 * _name_ - Name of the parameter.
 * _type_ - Type of the parameter. System.Type
 
@@ -44,10 +44,10 @@ _escapeDataNLogLegacy_ - NLog will by default encode parameters as UTF8 and esca
 
 _protocol_ - Protocol to be used when calling web service. Default: Soap11  
 Possible values:  
-* JsonPost - JSON POST  - introduced in NLog 4.4
-* XmlPost - XML POST - introduced in NLog 4.4
+* JsonPost - JSON POST  - introduced in NLog 4.4 - ContentType "application/json"
+* XmlPost - XML POST - introduced in NLog 4.4 -  ContentType "application/xml"
 * HttpGet - Use HTTP GET Protocol.
-* HttpPost - Use HTTP POST Protocol.
+* HttpPost - Use HTTP POST Protocol.  ContentType "application/x-www-form-urlencoded"
 * Soap11 - Use SOAP 1.1 Protocol.
 * Soap12 - Use SOAP 1.2 Protocol.
 
