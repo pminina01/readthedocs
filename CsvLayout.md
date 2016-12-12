@@ -60,4 +60,19 @@ Each collection item is represented by \<column /> element with the following at
   * _layout_ - Layout of the column.Layout Required.
   * _name_ - Name of the column.
 
+## Example
 
+```xml
+<target xsi:type="File" fileName="${csvPath}">
+    <layout xsi:type="CsvLayout" delimiter="Tab" withHeader="false">
+        <column name="time" layout="${longdate}" />
+        <column name="level" layout="${level:upperCase=true}"/>
+        <column name="message" layout="${message}" />
+        <column name="callsite" layout="${callsite:includeSourcePath=true}" />
+        <column name="stacktrace" layout="${stacktrace:topFrames=10}" />
+        <column name="exception" layout="${exception:format=ToString}"/>
+        <column name="property1" layout="${event-properties:property1}"/>
+
+    </layout>
+</target>
+```
