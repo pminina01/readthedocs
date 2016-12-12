@@ -49,14 +49,14 @@ _delimiter_ - Column delimiter. Default: Auto
 Possible values:  
 * Auto - Automatically detect from regional settings.
 * Comma - Comma (ASCII 44).
-* Custom - Custom string, specified by the CustomDelimiter.
+* Custom - Custom string, specified by the `CustomDelimiter`.
 * Pipe - Pipe character (ASCII 124).
 * Semicolon - Semicolon (ASCII 59).
 * Space - Space character (ASCII 32).
 * Tab - Tab character (ASCII 9).
 
 _columns_ - The array of parameters to be passed.Collection  
-Each collection item is represented by \<column /> element with the following attributes:  
+Each collection item is represented by `<column />` element with the following attributes:  
   * _layout_ - Layout of the column.Layout Required.
   * _name_ - Name of the column.
 
