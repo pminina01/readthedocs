@@ -43,7 +43,7 @@ _quoteChar_ - Quote Character. Default: `"`
 
 _withHeader_ - Indicates whether CSV should include header. `Boolean`. Default `true`
 
-_customColumnDelimiter_ - Custom column delimiter value (valid when ColumnDelimiter is set to 'Custom').
+_customColumnDelimiter_ - Custom column delimiter value (valid when `ColumnDelimiter` is set to `Custom`).
 
 _delimiter_ - Column delimiter. Default: Auto  
 Possible values:  
