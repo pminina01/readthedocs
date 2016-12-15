@@ -15,7 +15,7 @@ If the `Trace.CorrelationManager.ActivityId` is equal to `Guid.Empty`, then appe
 
 ##Example
 
-For an ASP.Net WebAPI application, initialize the 'Trace.CorrelationManager.ActivityId' in the 'Global.asax', 'Application_BeginRequest' event:
+For an ASP.Net WebAPI application, initialize the `Trace.CorrelationManager.ActivityId` in the `Global.asax`, `Application_BeginRequest` event:
 
     protected void Application_BeginRequest(object sender, EventArgs e)
     {
