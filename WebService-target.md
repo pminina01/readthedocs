@@ -65,7 +65,7 @@ The web service must implement a method that accepts a number of string paramete
 Example config:
 
 ```xml
-<nlog throwExceptions='true'>
+<nlog>
     <targets>
         <target type='WebService'
                 name='ws'
