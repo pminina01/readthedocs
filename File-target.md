@@ -148,8 +148,9 @@ _enableArchiveFileCompression_ - Indicates whether to compress the archive files
 _writeFooterOnArchivingOnly_ - Indicates whether the footer should be written only when the file is archived. If `False`, the footer will also be written when starting to write to a different file and when the target is closed [Boolean](Data-types) Default: False
 
 ###Performance Tuning Options
-_concurrentWrites_ - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host. [Boolean](Data-types) Default: True
-This performs faster than _keepFileOpen_ = False, by using a special technique that lets it keep the files open for writing. For single process (and single AppDomain) application logging, then it is faster to set to _concurrentWrites_ = False and _keepFileOpen_ = True.  **NOTE:** Concurrent writes requires that _keepFileOpen_ has been set to True.
+_keepFileOpen_ - Indicates whether to keep log file open instead of opening and closing it on each logging event. Changing this property to true will improve performance a lot, but will also keep the file handle locked. Consider setting _openFileCacheTimeout_ = 10 when enabling this. [Boolean](Data-types) Default: False 
+
+_concurrentWrites_ - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host, when using _keepFileOpen_ = true. By using a special technique that lets it keep the files open from multiple processes. If only single process (and single AppDomain) application is logging, then it is faster to set to _concurrentWrites_ = False.  [Boolean](Data-types) Default: True
 
 _openFileCacheTimeout_ - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. [Integer](Data-types) Default: -1  
 
@@ -171,8 +172,6 @@ _bufferSize_ - Log file buffer size in bytes. [Integer](Data-types) Default: 327
 
 _autoFlush_ - Indicates whether to automatically flush the file buffers after each log message. [Boolean](Data-types) Default: True  
 
-_keepFileOpen_ - Indicates whether to keep log file open instead of opening and closing it on each logging event. [Boolean](Data-types) Default: False  
-Setting this property to True helps improve performance.
 ##Examples
 ###Simple logging
 The simplest use of File target is to produce single log file. In order to do this, put the following code in the configuration file such as NLog.config. Logs wil be written to logfile.txt in logs directory.
