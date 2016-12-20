@@ -127,7 +127,7 @@ So far we have learned how to create log messages from code, but we have not con
 ```xml
 <target name="logfile" xsi:type="File" fileName="file.txt" />
 ```
-This will define a target which will send logs to a [file target](File-target) named file.txt.
+This will define a [file target](File-target) which will send logs to a file named file.txt.
 
 2. In the `<rules>` section, add:
 ```xml
