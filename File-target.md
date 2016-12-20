@@ -148,7 +148,7 @@ _enableArchiveFileCompression_ - Indicates whether to compress the archive files
 _writeFooterOnArchivingOnly_ - Indicates whether the footer should be written only when the file is archived. If `False`, the footer will also be written when starting to write to a different file and when the target is closed [Boolean](Data-types) Default: False
 
 ###Performance Tuning Options
-_keepFileOpen_ - Indicates whether to keep log file open instead of opening and closing it on each logging event. Changing this property to true will improve performance a lot, but will also keep the file handle locked. Consider setting _openFileCacheTimeout_ = 10 when enabling this. [Boolean](Data-types) Default: False 
+_keepFileOpen_ - Indicates whether to keep log file open instead of opening and closing it on each logging event. Changing this property to true will improve performance a lot, but will also keep the file handle locked. Consider setting _openFileCacheTimeout_ = 30 when enabling this, as it will allow archive operations and react to log file being deleted. [Boolean](Data-types) Default: False 
 
 _concurrentWrites_ - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host, when using _keepFileOpen_ = true. By using a special technique that lets it keep the files open from multiple processes. If only single process (and single AppDomain) application is logging, then it is faster to set to _concurrentWrites_ = False.  [Boolean](Data-types) Default: True
 
