@@ -11,7 +11,7 @@
 * [Sending the output from Linq to SQL to a Log file](http://weblogs.asp.net/grantbarrington/archive/2010/02/08/sending-the-output-from-linq-to-sql-to-a-log-file.aspx) by Grant Barrington
 * [Logging to SQLite with NLog](http://www.beckshome.com/index.php/2010/03/logging-to-sqlite-with-nlog/) by Thomas Beck
 * [Aspect-Oriented Instrumentation With PostSharp, NLog, and SQLite](http://www.beckshome.com/index.php/2010/04/lightweight-aspect-oriented-instrumentation-with-postsharp-nlog-and-sqlite/) by Thomas Beck
-* [Logging messages to a Syslog server using NLog](http://blog.graffen.dk/post/2010/06/13/Logging-messages-to-a-Syslog-server-using-NLog.aspx) by Graffen (**Link Broken**)
+* [Logging messages to a Syslog server using NLog](http://blog.graffen.dk/post/logging-messages-to-a-syslog-server-using-nlog) by Graffen
 * [Introducing Caliburn.Micro.Logging.NLog](http://buksbaum.us/2011/07/06/introducing-caliburn-micro-logging-nlog/)
 * [Procmon Call Stack or Symbols and SysInternals tools](http://zine.net.pl/blogs/mgrzeg/archive/2011/09/16/procmon-call-stack-czyli-symbole-a-narz-dzia-sysinternals.aspx) by Michał Grzegorzewski (in Polish)
 * [Getting started with ReflectInsight Extension for NLog] (https://insightextensions.codeplex.com/wikipage?title=Getting%20Started%20with%20NLog%20Extension&referringTitle=Documentation) by ReflectSoftware
