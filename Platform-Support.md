@@ -50,7 +50,7 @@ ProcessId|✓ |✓ |✓ |||✓ |✓ |✓ ||
 ProcessInfo|✓ |✓ |✓ ||✓ |✓ ||✓ ||	
 ProcessName|✓ |✓ |✓ |||✓ |✓ |✓ ||	
 ProcessTime|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-QueryPerformanceCounter|✓ |✓ |✓ |||✓ |✓ |||	
+QueryPerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 Registry|✓ |✓ |✓ ||||✓ |✓ ||	
 ShortDate|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 SilverlightApplicationInfo|||||||||✓ |	
@@ -103,7 +103,7 @@ MethodCall|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 NLogViewer|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |±|±: no UDP	
 Network|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ |✓ |	
 Null|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-OutputDebugString|✓ |✓ |✓ |||✓ |✓ |✓ ||	
+OutputDebugString|✓ |✓ |✓ ||||✓ |✓ ||	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |✓ ||	
 Trace|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
@@ -117,7 +117,7 @@ Buffering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 FallbackGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 FilteringRule.cs|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Filtering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Impersonating|✓ |✓ |✓ |||✓ |✓ |✓ ||	
+Impersonating|✓ |✓ |✓ ||||✓ |✓ ||	
 PostFiltering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 RandomizeGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Repeating|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
