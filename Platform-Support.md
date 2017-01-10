@@ -11,14 +11,14 @@ fluent interface|||✓ |✓ |||?|||
 Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AllEventProperties|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ | Include Caller Information: .NET 4.5 only	
-AppDomain|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
+AppDomain|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 AspApplicationValue|✓ |✓ |✓ |||||||	
 AspRequestValue|✓ |✓ |✓ |||||||	
 AspSessionValue|✓ |✓ |✓ |||||||	
 AssemblyVersion|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
-BaseDir|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ ||	
+BaseDir|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
 CallSite|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no file name or source path	
-CallSiteLineNumber|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ ||	
+CallSiteLineNumber|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
 Counter|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Date|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 DocumentUri|||||||||✓ |	
@@ -42,7 +42,7 @@ Mdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Mdlc||✓ |✓ |||||||	
 Message|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-NLogDir|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
+NLogDir|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Ndc|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |✓ ||	
@@ -51,7 +51,7 @@ ProcessInfo|✓ |✓ |✓ ||✓ |✓ ||✓ ||
 ProcessName|✓ |✓ |✓ |||✓ |✓ |✓ ||	
 ProcessTime|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 QueryPerformanceCounter|✓ |✓ |✓ ||||✓ |||	
-Registry|✓ |✓ |✓ ||||✓ |✓ ||	
+Registry|✓ |✓ |✓ ||||✓ |||	
 ShortDate|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 SilverlightApplicationInfo|||||||||✓ |	
 SpecialFolder|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
@@ -61,9 +61,9 @@ ThreadId|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 ThreadName|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 Ticks|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Time|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-TraceActivityId|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
+TraceActivityId|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-WindowsIdentity|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
+WindowsIdentity|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 n
 ##Layout renderer (wrapped)
 Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
@@ -90,21 +90,21 @@ Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mo
 AspResponse|✓ |✓ |✓ |||||||	
 Chainsaw|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 ColoredConsole|✓ |✓ |✓ |±|||✓ |||±: no encoding	
-Console|✓ |✓ |✓ |±|±|±|✓ |✓ |±|±: no encoding	
-Database|✓ |✓ |✓ |±|||✓ |✓ ||	±: no transactions or reading from .config
+Console|✓ |✓ |✓ |±|±|±|✓ |±|±|±: no encoding	
+Database|✓ |✓ |✓ |±|||✓ |||	±: no transactions or reading from .config
 Debug|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Debugger|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 EventLog|✓ |✓ |✓ ||||✓ |||	
 File|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 LogReceiverWebService|✓ |✓ |✓ ||||✓ ||✓ |	
-Mail|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
+Mail|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Memory|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 MethodCall|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NLogViewer|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |±|±: no UDP	
 Network|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ |✓ |	
 Null|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-OutputDebugString|✓ |✓ |✓ ||||✓ |✓ ||	
-PerformanceCounter|✓ |✓ |✓ ||||✓ |✓ ||	
+OutputDebugString|✓ |✓ |✓ ||||✓ |||	
+PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 Trace|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
