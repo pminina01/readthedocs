@@ -105,7 +105,7 @@ Network|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ |✓ |
 Null|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 OutputDebugString|✓ |✓ |✓ ||||✓ |||	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
-Trace|✓ |✓ |✓ ||✓ |✓ |✓ |✓ ||	
+Trace|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
 ##Target-wrappers
