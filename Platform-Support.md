@@ -117,7 +117,7 @@ Buffering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 FallbackGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 FilteringRule.cs|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Filtering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Impersonating|✓ |✓ |✓ ||||✓ |✓ ||	
+Impersonating|✓ |✓ |✓ ||||✓ |||	
 PostFiltering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 RandomizeGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Repeating|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
