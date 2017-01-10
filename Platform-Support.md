@@ -28,7 +28,7 @@ EventProperties|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Exception|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no method name	
 FileContents|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 GarbageCollectorInfo|✓ |✓ |✓ |✓ |✓ |✓ ||✓ |±|±: no collection count option	
-Gdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ ||	
+Gdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Guid|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Identity|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 InstallContext|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
