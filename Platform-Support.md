@@ -45,10 +45,10 @@ NewLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 NLogDir|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Ndc|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
-PerformanceCounter|✓ |✓ |✓ ||||✓ |✓ ||	
-ProcessId|✓ |✓ |✓ |||✓ |✓ |✓ ||	
-ProcessInfo|✓ |✓ |✓ ||✓ |✓ ||✓ ||	
-ProcessName|✓ |✓ |✓ |||✓ |✓ |✓ ||	
+PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
+ProcessId|✓ |✓ |✓ |||✓ |✓ |||	
+ProcessInfo|✓ |✓ |✓ ||✓ |✓ ||||	
+ProcessName|✓ |✓ |✓ |||✓ |✓ |||	
 ProcessTime|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 QueryPerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 Registry|✓ |✓ |✓ ||||✓ |||	
