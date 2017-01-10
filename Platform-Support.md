@@ -111,16 +111,17 @@ WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 ##Target-wrappers
 Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
-Async|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-AutoFlush|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Buffering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-FallbackGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-FilteringRule.cs|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Filtering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Impersonating|✓ |✓ |✓ ||||✓ |||	
-PostFiltering|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-RandomizeGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Repeating|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Retrying|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+AsyncWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+AutoFlushWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+BufferingWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+FilteringWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+FallbackGroup |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+FilteringWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+ImpersonatingWrapper |✓ |✓ |✓ ||||✓ |||	
+LimitingWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+PostFilteringWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+RandomizeGroup |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+RepeatingWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+RetryingWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 RoundRobinGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 SplitGroup|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
