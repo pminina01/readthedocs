@@ -10,9 +10,9 @@ ${ndc:bottomFrames=Integer:topFrames=Integer:separator=String}
 
 ##Parameters
 ###Rendering Options
-* **bottomFrames** - Number of bottom stack frames to be rendered.Integer
-* **topFrames** - Number of top stack frames to be rendered.Integer
-* **separator** - Separator to be used for concatenating nested diagnostics context output
+* **bottomFrames** - Number of bottom stack frames to be rendered. -1` is no limit. `Integer`.` Default `-1`.
+* **topFrames** - Number of top stack frames to be rendered. -1` is no limit. `Integer`.  Default `-1`
+* **separator** - Separator to be used for concatenating nested diagnostics context output. `string`. Default ` ` (space)
 
 ## Examples
 
