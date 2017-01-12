@@ -1,4 +1,4 @@
-The environment variable. 
+The environment variable like Path, TMP, PROCESSOR_ARCHITECTURE etc.
 
 Supported in .NET and Mono
 
