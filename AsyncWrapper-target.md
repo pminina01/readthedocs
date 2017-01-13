@@ -25,13 +25,15 @@ _timeToSleepBetweenBatches_ - Time in milliseconds to sleep between batches. Int
 
 _batchSize_ - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100 (NLog 4.4.2 and newer has Default: 200)
 
-_fullBatchSizeWriteLimit_ - Max number of consecutive full _batchSize_ writes to perform within the same timer event. Integer Default: 5 (Introduced with NLog 4.4.2)
+_fullBatchSizeWriteLimit_ - Max number of consecutive full _batchSize_ writes to perform within the same timer event. Integer Default: 5. Introduced in NLog 4.4.2
 
 _overflowAction_ - Action to be taken when the lazy writer thread request queue count exceeds the set limit. Default: Discard  
 Possible values:  
  * Block - Block until there's more room in the queue.  
  * Discard - Discard the overflowing item.
  * Grow - Grow the queue.
+
+_optimizeBufferReuse_ - Instead of allocating new buffers for every _batchSize_ write, then it reuse the same buffer. This means that the wrapped target no longer can take ownership of the buffers. All targets in the NLog package supports this mode. It is enabled by automatically if the wrapped target has enabled _optimizeBufferReuse_. Introduced in NLog 4.4.2
 
 ##Remarks
 
