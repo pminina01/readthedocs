@@ -157,6 +157,8 @@ _openFileCacheTimeout_ - Maximum number of seconds that files are kept open. If 
 _openFileCacheSize_ - Number of files to be kept open. Setting this to a higher value may improve performance in a situation where a single File target is writing to many files (such as splitting by level or by logger). [Integer](Data-types) Default: 5  
 The files are managed on a LRU (least recently used) basis, which flushes the files that have not been used for the longest period of time should the cache become full. As a rule of thumb, you shouldn't set this parameter to a very high value. A number like 10-15 shouldn't be exceeded, because you'd be keeping a large number of files open which consumes system resources.
 
+_optimizeBufferReuse_ - Instead of allocating new buffers for every file write and for each layout rendering of log message, then it reuse the same buffers. [Boolean](Data-types) Default: True. Introduced in NLog 4.4.2
+
 _networkWrites_ - Indicates whether concurrent writes to the log file by multiple processes on different network hosts. [Boolean](Data-types) Default: False  
 This effectively prevents files from being kept open.
 
