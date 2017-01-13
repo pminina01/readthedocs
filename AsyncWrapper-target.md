@@ -23,12 +23,13 @@ _queueLimit_ - Limit on the number of requests in the lazy writer thread request
 
 _timeToSleepBetweenBatches_ - Time in milliseconds to sleep between batches. Integer Default: `50`. When set to `0`, this  will lead to a high CPU usage.
 
-_batchSize_ - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100
+_batchSize_ - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100 (NLog 4.4.2 and newer has Default: 200)
+
+_FullBatchSizeWriteLimit_ - Max number of consecutive full BatchSize writes to perform within the same timer event. Integer Default:5 (Available from NLog 4.4.2)
 
 _overflowAction_ - Action to be taken when the lazy writer thread request queue count exceeds the set limit. Default: Discard  
 Possible values:  
  * Block - Block until there's more room in the queue.  
-
  * Discard - Discard the overflowing item.
  * Grow - Grow the queue.
 
