@@ -91,6 +91,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${aspnet-Request-QueryString}](AspNetRequest-QueryString-Layout-Renderer) - ASP.NET Request querystring.
 * [${aspnet-Request-Referrer}](AspNetRequest-Referrer-Renderer) - ASP.NET Request referrer.
 * [${aspnet-Request-UserAgent}](AspNetRequest-UserAgent-Layout-Renderer) - ASP.NET Request useragent.
+* [${aspnet-Request-Url}](AspNetRequest-Url-Layout-Renderer) - ASP.NET Request URL.
 * [${aspnet-Session}](AspNetSession-layout-renderer) - ASP.NET Session variable. 
 * [${aspnet-SessionId}](AspNetSessionId-layout-renderer) - ASP.NET Session ID variable.
 * [${aspnet-UserAuthType}](AspNetUserAuthType-layout-renderer) - ASP.NET User auth.
