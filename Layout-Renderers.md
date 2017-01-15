@@ -80,16 +80,22 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
 
 ###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
-* [${aspnet-application}](AspNetApplication-Layout-Renderer) - ASP.NET Application variable.
-* [${aspnet-item}](AspNetItem-layout-renderer) - ASP.NET `HttpContext` item variable.
-* [${aspnet-request}](AspNetRequest-Layout-Renderer) - ASP.NET Request variable.
-* [${aspnet-session}](AspNetSession-Layout-Renderer) - ASP.NET Session variable.
-* [${aspnet-sessionid}](AspNetSessionId-Layout-Renderer) - ASP.NET Session ID.
-* [${aspnet-user-authtype}](AspNetUserAuthType-Layout-Renderer) - ASP.NET User variable.
-* [${aspnet-user-identity}](AspNetUserIdentity-Layout-Renderer) - ASP.NET User variable.
+* [${aspnet-MVC-Action}](AspNet-MVC-Action-Layout-Renderer) - ASP.NET MVC action name
+* [${aspnet-MVC-Controller}](AspNet-MVC-Controller-Layout-Renderer) - ASP.NET MVC controller name
+* [${aspnet-Application}](AspNetApplication-layout-renderer) - ASP.NET Application variable.
+* [${aspnet-Item}](AspNetItem-layout-renderer) - ASP.NET `HttpContext` item variable.
+* [${aspnet-Request}](AspNetRequest-layout-renderer  - ASP.NET Request variable.
+* [${aspnet-Request-Cookie}](AspNetRequest-Cookie-Layout-Renderer) - ASP.NET Request cookie content. 
+* [${aspnet-Request-Host}](AspNetRequest-Host-Layout-Renderer) - ASP.NET Request host.
+* [${aspnet-Request-Method}](AspNetRequest-Method-Layout-Renderer) - ASP.NET Request method (GET, POST etc).
+* [${aspnet-Request-Query-String}](AspNetRequest-QueryString-Layout-Renderer) - ASP.NET Request querystring.
+* [${aspnet-Request-Referrer}](AspNetRequest-Referrer-Renderer) - ASP.NET Request referrer.
+* [${aspnet-Request-UserAgent}](AspNetRequest-UserAgent-Layout-Renderer) - ASP.NET Request useragent.
+* [${aspnet-Session}](AspNetSession-layout-renderer) - ASP.NET Session variable. 
+* [${aspnet-SessionId}](AspNetSessionId-layout-renderer) - ASP.NET Session ID variable.
+* [${aspnet-UserAuthType}](AspNetUserAuthType-layout-renderer) - ASP.NET User auth.
+* [${aspnet-UserIdentity}](AspNetUserIdentity-layout-renderer) - ASP.NET User variable.
 * [${iis-site-name}](IIS-site-name-Layout-Renderer) - IIS site name.
-
-
 
 ##External packages
 
