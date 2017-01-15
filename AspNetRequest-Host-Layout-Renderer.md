@@ -2,7 +2,7 @@ Introduced in NLog.Web 4.3
 
 ASP.NET Host Renderer. 
 
-Supported in .NET Core
+Supported in ASP.NET Core and ASP.NET
 
 ## Configuration Syntax
 ```
