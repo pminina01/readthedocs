@@ -6,7 +6,7 @@ Supported in .NET, .NET Core and Mono
 
 ## Configuration Syntax
 ```
-${aspnet-useragent}
+${aspnet-request-useragent}
 ```
 
 ## Remarks
