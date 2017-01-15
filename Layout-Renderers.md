@@ -3,9 +3,9 @@ Layout renderers are template macros that are used in [Layouts](Layouts).
 NLog supports creating custom layout renderers. For more information, see: [Extending NLog](Extending NLog)
 
 
-##Layout Renderers
+## Layout Renderers
 
-###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
+### NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
 * [${activityid}](Trace-Activity-Id-Layout-Renderer) - Puts into log a System.Diagnostics trace correlation id.
 * [${all-event-properties}](All-Event-Properties-Layout-Renderer) - Log all event context data.
 * [${appdomain}](AppDomain-Layout-Renderer) - Current app domain. 
@@ -56,7 +56,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${var}](Var-Layout-Renderer) - Render variable (new in 4.1)
 * [${windows-identity}](Windows-Identity-Layout-Renderer) - Thread Windows identity information (username).
 
-####Wrappers
+### #Wrappers
 
 * [${cached}](Cached-Layout-Renderer) - Applies caching to another layout output.
 * [${filesystem-normalize}](Filesystem-Normalize-Layout-Renderer) - Filters characters not allowed in the file names by replacing them with safe character.
@@ -76,10 +76,10 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${xml-encode}](Xml-Encode-Layout-Renderer) - Converts the result of another layout output to be XML-compliant.
  
 
-###NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
+### NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
 * [${appsetting}](AppSetting-Layout-Renderer) - App config setting.
 
-###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
+### NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
 * [${aspnet-MVC-Action}](AspNet-MVC-Action-Layout-Renderer) - ASP.NET MVC action name
 * [${aspnet-MVC-Controller}](AspNet-MVC-Controller-Layout-Renderer) - ASP.NET MVC controller name
 * [${aspnet-Application}](AspNetApplication-layout-renderer) - ASP.NET Application variable.
@@ -97,11 +97,11 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${aspnet-UserIdentity}](AspNetUserIdentity-layout-renderer) - ASP.NET User variable.
 * [${iis-site-name}](IIS-site-name-Layout-Renderer) - IIS site name.
 
-##External packages
+## External packages
 
 External packages, not maintained by the NLog team.
 
 * [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
 
-##Passing Custom Values to a Layout
+## Passing Custom Values to a Layout
 Even though the layout renderers provide many pre-defined values, you may need to pass application specific values to your [Layouts](Layouts). You can pass your own values in code by adding custom properties to the event. You then retrieve the value using the [${event-properties}](Event-Context-Layout-Renderer) renderer. See the documentation for the [${event-properties}](Event-Context-Layout-Renderer) for an example.
