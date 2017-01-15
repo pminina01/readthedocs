@@ -84,7 +84,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${aspnet-MVC-Controller}](AspNet-MVC-Controller-Layout-Renderer) - ASP.NET MVC controller name
 * [${aspnet-Application}](AspNetApplication-layout-renderer) - ASP.NET Application variable.
 * [${aspnet-Item}](AspNetItem-layout-renderer) - ASP.NET `HttpContext` item variable.
-* [${aspnet-Request}](AspNetRequest-layout-renderer  - ASP.NET Request variable.
+* [${aspnet-Request}](AspNetRequest-layout-renderer) - ASP.NET Request variable.
 * [${aspnet-Request-Cookie}](AspNetRequest-Cookie-Layout-Renderer) - ASP.NET Request cookie content. 
 * [${aspnet-Request-Host}](AspNetRequest-Host-Layout-Renderer) - ASP.NET Request host.
 * [${aspnet-Request-Method}](AspNetRequest-Method-Layout-Renderer) - ASP.NET Request method (GET, POST etc).
