@@ -1,6 +1,8 @@
 ASP.NET Application variable. 
 
-Supported in .NET and Mono. Not supported in ASP.NET Core
+Supported in .NET and Mono. 
+
+Not supported in ASP.NET Core - [ServerVariables are non-existing in ASP.NET Core. ](http://stackoverflow.com/questions/25849217/vnext-server-variables-missing)
 
 ##Configuration Syntax
 ```
