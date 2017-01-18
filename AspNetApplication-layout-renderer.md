@@ -1,6 +1,6 @@
 ASP.NET Application variable. 
 
-Supported in .NET and Mono
+Supported in .NET and Mono. Not supported in ASP.NET Core
 
 ##Configuration Syntax
 ```
