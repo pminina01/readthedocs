@@ -2,7 +2,7 @@ Introduced in NLog.Web 4.3
 
 ASP.NET Cookie Variable. 
 
-Supported in .NET, .NET Core and Mono
+Supported in ASP.NET, ASP.NET Core and Mono
 
 ## Configuration Syntax
 ```
