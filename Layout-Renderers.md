@@ -56,7 +56,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${var}](Var-Layout-Renderer) - Render variable (new in 4.1)
 * [${windows-identity}](Windows-Identity-Layout-Renderer) - Thread Windows identity information (username).
 
-### #Wrappers
+#### Wrappers
 
 * [${cached}](Cached-Layout-Renderer) - Applies caching to another layout output.
 * [${filesystem-normalize}](Filesystem-Normalize-Layout-Renderer) - Filters characters not allowed in the file names by replacing them with safe character.
