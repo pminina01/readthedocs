@@ -12,7 +12,7 @@ ${aspnet-request:cookie=String:serverVariable=String:queryString=String
 ###Rendering Options
 * **cookie** - Cookie to be rendered.
 * **header** - Request header. Introduced in NLog.Web 4.2
-* **serverVariable** - ServerVariables item to be rendered. See for possible options: [msdn](https://msdn.microsoft.com/en-us/library/ms524602(v=vs.90).aspx)
+* **serverVariable** - ServerVariables item to be rendered. See for possible options: [msdn](https://msdn.microsoft.com/en-us/library/ms524602(v=vs.90).aspx). Not supported in ASP.NET Core. 
 * **queryString** - QueryString variable to be rendered.
 * **item** - Item name. The QueryString, Form, Cookies, or ServerVariables collection variables having the specified name are rendered.
 * **form** - Form variable to be rendered.
