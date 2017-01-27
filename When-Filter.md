@@ -93,5 +93,17 @@ Here are several examples with conditions:
 </rules>
 ```
 
+Ignore all `Microsoft.*` logs but log `Microsoft.AspNetCore.Hosting.Internal.WebHost`. `Log` -> `Ignore` order is important.
+```xml
+<rules>
+    <logger name="*" writeTo="file">
+        <filters>
+            <when condition="equals(logger, 'Microsoft.AspNetCore.Hosting.Internal.WebHost')" action="Log" />
+            <when condition="starts-with(logger, 'Microsoft')" action="Ignore" />
+        </filters>
+    </logger>
+</rules>
+```
+
 
 
