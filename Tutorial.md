@@ -153,7 +153,7 @@ Note that as you are typing this in Visual Studio, you should see IntelliSense s
 Now, when you run the application, you should see log messages written to file.txt in current directory.
 
 ###Multiple targets
-Lets try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slightly less detailed. Here's the configuration file which implements this:
+Let's try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slightly less detailed. Here's the configuration file which implements this:
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
