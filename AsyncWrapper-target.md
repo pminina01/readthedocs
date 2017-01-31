@@ -33,7 +33,7 @@ Possible values:
  * Discard - Discard the overflowing item.
  * Grow - Grow the queue.
 
-_optimizeBufferReuse_ - Instead of allocating new buffers for every _batchSize_ write, then it reuse the same buffer. This means that the wrapped target no longer can take ownership of the buffers. All targets in the NLog package supports this mode. It is enabled by automatically if the wrapped target has enabled _optimizeBufferReuse_. Introduced in NLog 4.4.2
+_optimizeBufferReuse_ - Instead of allocating new buffers for every _batchSize_ write, then it reuse the same buffer. This means that the wrapped target no longer can take ownership of the buffers. All targets in the NLog package supports this mode. It is enabled automatically if the wrapped target has enabled _optimizeBufferReuse_. Introduced in NLog 4.4.2
 
 ##Remarks
 
