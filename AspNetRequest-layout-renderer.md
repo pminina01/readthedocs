@@ -44,7 +44,7 @@ Full URL without domain, eg `default.aspx?id=512`
 ### Referer
 URL doing the request
 
-`Referer:      ${aspnet-request:header=Referer}`
+`${aspnet-request:header=Referer}`
 
 
 ### Content-Type
@@ -52,12 +52,16 @@ URL doing the request
 Content-Type like `application/json; charset=UTF-8 `
 
 
-`Content-Type: ${aspnet-request:header=Content-Type}`
+`${aspnet-request:header=Content-Type}`
 
 
 ### Method
 
 Method like PUT, POST, GET etc
 
-`Method:       ${aspnet-request:serverVariable=REQUEST_METHOD}`
+`${aspnet-request:serverVariable=REQUEST_METHOD}`
 
+
+### User agent
+
+` ${aspnet-request:serverVariable=HTTP_USER_AGENT} `
