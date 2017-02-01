@@ -42,7 +42,7 @@ Full URL without domain, eg `default.aspx?id=512`
 
 
 ### Referer
-URL doing the request
+URL doing the request. Including schema (e.g `https://`) and querystring
 
 `${aspnet-request:header=Referer}`
 
@@ -63,5 +63,7 @@ Method like PUT, POST, GET etc
 
 
 ### User agent
+
+user agent, like ` Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36`
 
 ` ${aspnet-request:serverVariable=HTTP_USER_AGENT} `
