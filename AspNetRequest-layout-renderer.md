@@ -34,6 +34,30 @@ ${aspnet-request:cookie=String:serverVariable=String:queryString=String
 Use this layout renderer to insert the value of the specified parameter of the ASP.NET Request object. This renderer requires the NLog.Web package.
 
 ##Examples
-Full URL without domain, eg "default.aspx?id=512"
+
+### Full URL
+Full URL without domain, eg `default.aspx?id=512`
 
 ` ${aspnet-request:serverVariable=HTTP_URL}${aspnet-request:queryString}` 
+
+
+### Referer
+URL doing the request
+
+`Referer:      ${aspnet-request:header=Referer}`
+
+
+### Content-Type
+
+Content-Type like `application/json; charset=UTF-8 `
+
+
+`Content-Type: ${aspnet-request:header=Content-Type}`
+
+
+### Method
+
+Method like PUT, POST, GET etc
+
+`Method:       ${aspnet-request:serverVariable=REQUEST_METHOD}`
+
