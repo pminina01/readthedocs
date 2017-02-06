@@ -221,7 +221,7 @@ The following configuration example demonstrates this, by loading a file whose n
 
 The optional attribute, `ignoreErrors="true"`, which defaults to `false`, can be added to prevent an exception from being thrown when the include file is not found or is not formatted correctly.  When setting `ignoreErrors="true"`, use the [Troubleshooting logging](#troubleshooting-logging) section to log errors.
 
-Since NLog 4.4.2, wildcards (*) are allowed. E.g. `<include file="${basedir}/nlog-*.config"/>`
+Since NLog 4.4.2, wildcards (`*`) are allowed. E.g. `<include file="${basedir}/nlog-*.config"/>`
 
 <a name="variables" />
 ##Variables
