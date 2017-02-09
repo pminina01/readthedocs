@@ -28,7 +28,8 @@ LogManager.Configuration.Uninstall(new InstallationContext());
     <install-command>
         <text>
             <!--
-            NOTE: call LogManager.Configuration.Install(new InstallationContext()); To execute this query.
+            NOTE: call LogManager.Configuration.Install(new InstallationContext()); 
+                  to execute this query.
             -->
             CREATE TABLE ${var:logTableName} (
             Id bigint primary key not null identity(1,1),
