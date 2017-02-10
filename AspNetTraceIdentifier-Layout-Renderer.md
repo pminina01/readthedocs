@@ -4,5 +4,5 @@ ASP.NET Trace Identifier
 
 ## Configuration Syntax
 ```
-${aspnet-Traceidentifier}
+${aspnet-TraceIdentifier}
 ```
