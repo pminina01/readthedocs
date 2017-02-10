@@ -1,24 +1,24 @@
 ##Content
-* [[Installing NLog|tutorial#installing-nlog]]                       
-* [[Creating Log messages|tutorial#creating-log-messages]]           
- * [[Creating loggers|tutorial#creating-loggers]]                    
- * [[Log levels|tutorial#log-levels]]                                
- * [[Writing log messages|tutorial#writing-log-messages]]            
-* [[Configuration|tutorial#configuration]]                           
- * [[Multiple targets|tutorial#multiple-targets]]                    
- * [[Logger-specific routing|tutorial#logger-specific-routing]]      
- * [[Wrappers|tutorial#wrappers]]                                    
- * [[Layouts|tutorial#layouts]]                                      
-* [[Advanced|tutorial#advanced]]         
+* [[Installing NLog|tutorial#installing-nlog]]
+* [[Creating Log messages|tutorial#creating-log-messages]]
+ * [[Creating loggers|tutorial#creating-loggers]]
+ * [[Log levels|tutorial#log-levels]]
+ * [[Writing log messages|tutorial#writing-log-messages]]
+* [[Configuration|tutorial#configuration]]
+ * [[Multiple targets|tutorial#multiple-targets]]
+ * [[Logger-specific routing|tutorial#logger-specific-routing]]
+ * [[Wrappers|tutorial#wrappers]]
+ * [[Layouts|tutorial#layouts]]
+* [[Advanced|tutorial#advanced]]
 
 ##Installing NLog
 [NLog](https://www.nuget.org/packages/NLog/) can be downloaded from NuGet.
 
-Just install [NLog.Config package](https://www.nuget.org/packages/NLog.Config/) and this will install also [NLog](https://www.nuget.org/packages/NLog) and [NLog.Schema](https://www.nuget.org/packages/NLog.Schema) packages - this will result in a starter config and intellisense. 
+Just install [NLog.Config package](https://www.nuget.org/packages/NLog.Config/) and this will install also [NLog](https://www.nuget.org/packages/NLog) and [NLog.Schema](https://www.nuget.org/packages/NLog.Schema) packages - this will result in a starter config and intellisense.
 
 Use the GUI or the following command in the Package Manager Console:
 ```
-Install-Package NLog.Config 
+Install-Package NLog.Config
 ```
 
 That's it, you can now compile and run your application and it will be able to use NLog.
@@ -29,7 +29,7 @@ In order to create log messages from the application you need to use the logging
 It is important to understand that `Logger` does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
 ###Creating loggers
-It is advised to create one (`private static`) `Logger` per class.  As mentioned before, you must use `LogManager` to create `Logger` instances. 
+It is advised to create one (`private static`) `Logger` per class.  As mentioned before, you must use `LogManager` to create `Logger` instances.
 
 This will create a `Logger` instance with the same name of the `class`.
 
@@ -48,7 +48,7 @@ It's also possible to control the `Logger`'s name:
 
 ```csharp
 using NLog;
- 
+
 Logger logger = LogManager.GetLogger("MyClassName");
 ```
 
@@ -71,11 +71,11 @@ NLog supports the following [log levels](Log-levels):
 In order to emit log message you can simply call one of the methods on the `Logger`. `Logger` class has six methods whose names correspond to log levels: `Trace()`, `Debug()`, `Info()`, `Warn()`, `Error()` and `Fatal()`. There is also `Log()` method which takes log level as a parameter.
 ```csharp
 using NLog;
- 
+
 public class MyClass
 {
   private static Logger logger = LogManager.GetCurrentClassLogger();
- 
+
   public void MyMethod1()
   {
     logger.Trace("Sample trace message");
@@ -84,8 +84,8 @@ public class MyClass
     logger.Warn("Sample warning message");
     logger.Error("Sample error message");
     logger.Fatal("Sample fatal error message");
- 
-    // alternatively you can call the Log() method 
+
+    // alternatively you can call the Log() method
     // and pass log level as the parameter.
     logger.Log(LogLevel.Info, "Sample informational message");
   }
@@ -95,16 +95,16 @@ public class MyClass
 Log messages can also be parameterized - you can use the same format strings as when using `Console.WriteLine()` and `String.Format()`:
 ```csharp
 using NLog;
- 
+
 public class MyClass
 {
   private static Logger logger = LogManager.GetCurrentClassLogger();
- 
+
   public void MyMethod1()
   {
     int k = 42;
     int l = 100;
- 
+
     logger.Trace("Sample trace message, k={0}, l={1}", k, l);
     logger.Debug("Sample debug message, k={0}, l={1}", k, l);
     logger.Info("Sample informational message, k={0}, l={1}", k, l);
@@ -140,11 +140,11 @@ Note that as you are typing this in Visual Studio, you should see IntelliSense s
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- 
+
     <targets>
         <target name="logfile" xsi:type="File" fileName="file.txt" />
     </targets>
- 
+
     <rules>
         <logger name="*" minlevel="Info" writeTo="logfile" />
     </rules>
@@ -158,12 +158,12 @@ Let's try something more complex now. Imagine you want to send very detailed log
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- 
+
     <targets>
         <target name="logfile" xsi:type="File" fileName="file.txt" />
         <target name="console" xsi:type="Console" />
     </targets>
- 
+
     <rules>
         <logger name="*" minlevel="Trace" writeTo="logfile" />
         <logger name="*" minlevel="Info" writeTo="console" />
@@ -178,11 +178,11 @@ Another scenario which is very common requires producing more detailed logs from
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- 
+
     <targets>
         <target name="logfile" xsi:type="File" fileName="file.txt" />
     </targets>
- 
+
     <rules>
         <logger name="SomeNamespace.Component.*" minlevel="Trace" writeTo="logfile" final="true" />
         <logger name="*" minlevel="Info" writeTo="logfile" />
@@ -208,13 +208,13 @@ In order to use wrappers, simply enclose the `<target />` element with another o
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- 
+
     <targets>
         <target name="asyncFile" xsi:type="AsyncWrapper">
             <target name="logfile" xsi:type="File" fileName="file.txt" />
         </target>
     </targets>
- 
+
     <rules>
         <logger name="*" minlevel="Info" writeTo="asyncFile" />
     </rules>
@@ -233,17 +233,14 @@ Simple layout is just a string, with special tags embedded between **${** and **
 ```
 
 
-#Advanced
-
-
-
+##Advanced
 
 ###Expose logger to sub-classes
 When we wish to expose the logger into sub classes the following pattern could be used.
 
 ```csharp
 class BaseClass
-{      
+{
     protected BaseClass()
     {
         Log = LogManager.GetLogger(GetType().FullName);
@@ -268,7 +265,7 @@ protected BaseClass()
 }
 ```
 
-as an exception will be thrown. 
+as an exception will be thrown.
 
 In case of the ExactClass has a default constructor which invokes the BaseClass constructor a ```System.StackOverflowException``` is thrown. This is because the ExactClass calls the BaseClass the GetLogger(String, Type) attempts to construct a ExactClass until the exception is thrown.
 
