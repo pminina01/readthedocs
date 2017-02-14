@@ -17,3 +17,11 @@ ${other:jsonEncode=Boolean}
 ###Transformation Options
 * _jsonEncode_ - Indicates whether to apply JSON encoding. Boolean Default: True
 * _inner_ - Wrapped layout. Layout
+
+
+## Example
+
+```
+
+${event-properties:item=MyValue:jsonEncode=true}
+```
