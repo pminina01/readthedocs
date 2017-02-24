@@ -83,7 +83,7 @@ _smtpPort_ - Port number that SMTP Server is listening on. [Integer](Data-types)
 
 _useSystemNetMailSettings_ - Force using smtp configuration from system.net/mailSettings. [Boolean](Data-types) Default: False
 
-_timeout_ - Indicates the SMTP client timeout. [Integer](Data-types) Default: 10000
+_timeout_ - Indicates the SMTP client timeout in milliseconds. [Integer](Data-types) Default: 10000 (10 seconds)
 
 _pickupDirectoryLocation_ - Gets or sets the folder where applications save mail messages to be processed by the local SMTP server (__introduced in NLog 4.2__).
 
