@@ -327,3 +327,15 @@ BEGIN
   );
 END
 ```
+
+### MySql and .NET Core
+
+Installed this package [MySql.Data](https://www.nuget.org/packages/MySql.Data/7.0.6-IR31)
+
+with following settings
+```xml
+<target name="database" xsi:type="Database"
+             dbProvider="MySql.Data.MySqlClient.MySqlConnection, MySql.Data"
+             connectionString="server=localhost;Database=*****;user id=****;password=*****"
+             >
+```
