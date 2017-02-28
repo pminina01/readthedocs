@@ -345,13 +345,15 @@ Log files can calso be automatically archived based on time. This configuration 
 ```xml
         <target name="file" xsi:type="File"
             ...
+            fileName="file.txt"
             archiveFileName="log.{####}.txt"
             archiveNumbering="Rolling"  />
 
 ```
 
-Example archive file names:
+Example of file names (newest files first):
 
+* file.txt
 * log.0000.txt
 * log.0001.txt
 * log.0002.txt
@@ -360,21 +362,24 @@ Example archive file names:
 ```xml
         <target name="file" xsi:type="File"
             ...
+            fileName="file.txt"
             archiveFileName="log.{####}.txt"
             archiveNumbering="Sequence"  />
 
 ```
 
-Example archive file names:
+Example of file names (newest files first):
 
-* log.0000.txt
-* log.0001.txt
+* file.txt
 * log.0002.txt
+* log.0001.txt
+* log.0000.txt
 
 ####Date
 ```xml
         <target name="file" xsi:type="File"
             ...
+            fileName="file.txt"
             archiveFileName="log.{#}.txt"
             archiveNumbering="Date"
             archiveEvery="Day"
@@ -383,16 +388,17 @@ Example archive file names:
 
 ```
 
-Example archive file names:
+Example of file names (newest files first):
 
-* log.20150730.txt
+* file.txt
 * log.20150731.txt
-
+* log.20150730.txt
 
 ####DateAndSequence
 ```xml
         <target name="file" xsi:type="File"
             ...
+            fileName="file.txt"
             archiveFileName="log.{#}.txt"
             archiveNumbering="DateAndSequence"
             archiveAboveSize="1000"
@@ -401,8 +407,9 @@ Example archive file names:
 
 ```
 
-Example archive file names:
+Example of file names (newest files first):
 
-* log.20150730.1.txt
-* log.20150730.2.txt
+* file.txt
 * log.20150730.3.txt
+* log.20150730.2.txt
+* log.20150730.1.txt
