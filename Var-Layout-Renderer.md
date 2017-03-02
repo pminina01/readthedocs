@@ -42,3 +42,4 @@ LogManager.Configuration.Variables.Remove("password");
 * Variables can be changed, deleted and created from the API
 * A default value can be configured for a variable, e.g. `${var:password:default=unknown}`
 * The old variables can still be used and so this is completely backwards-compatible.
+* the `<variable>` is optional if no default is needed
