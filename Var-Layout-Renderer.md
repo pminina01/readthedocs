@@ -1,4 +1,4 @@
-Render a NLog variable. The variable value can be set from the XML config or the API. 
+Render a NLog variable. The variable value can be set from the XML config and/or the API. 
 
 Introduced in 4.1, seen [news post](http://nlog-project.org/2015/08/31/nlog-4-1-0-is-now-available.html) 
 
