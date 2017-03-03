@@ -28,7 +28,7 @@ ${aspnet-request:cookie=String:serverVariable=String:queryString=String
 * **serverVariable** - ServerVariables item to be rendered. See for possible options: [msdn](https://msdn.microsoft.com/en-us/library/ms524602(v=vs.90).aspx). Not supported in ASP.NET Core. 
 * **queryString** - QueryString variable to be rendered.
 * **item** - Item name. The QueryString, Form, Cookies, or ServerVariables collection variables having the specified name are rendered.
-* **form** - Form variable to be rendered. Note: The Form property is populated when the HTTP request Content-Type value is either "application/x-www-form-urlencoded" or "multipart/form-data". (see [msnd](https://msdn.microsoft.com/en-us/library/system.web.httprequest.form(v=vs.110).aspx))
+* **form** - Form variable to be rendered. Note: The Form property is populated when the HTTP request Content-Type value is either "application/x-www-form-urlencoded" or "multipart/form-data". (see [msdn](https://msdn.microsoft.com/en-us/library/system.web.httprequest.form(v=vs.110).aspx))
 
 ##Remarks
 Use this layout renderer to insert the value of the specified parameter of the ASP.NET Request object. This renderer requires the NLog.Web package.
