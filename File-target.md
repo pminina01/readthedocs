@@ -94,6 +94,13 @@ Possible values:
   * Month - Archive every month.
   * None - Don't archive based on time.
   * Year - Archive every year.
+  * Sunday - Archive every Sunday. Introduced in NLog 4.4.4.
+  * Monday - Archive every Monday. Introduced in NLog 4.4.4.
+  * Tuesday - Archive every Tuesday. Introduced in NLog 4.4.4.
+  * Wednesday - Archive every Wednesday. Introduced in NLog 4.4.4.
+  * Thursday - Archive every Thursday. Introduced in NLog 4.4.4.
+  * Friday - Archive every Friday. Introduced in NLog 4.4.4.
+  * Saturday - Archive every Saturday. Introduced in NLog 4.4.4.
 
 Files are moved to the archive as part of the write operation if the current period of time changes. For example if the current hour changes from 10 to 11, the first write that will occur on or after 11:00 will trigger the archiving. Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance.
 
