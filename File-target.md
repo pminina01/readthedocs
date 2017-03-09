@@ -320,7 +320,7 @@ Log files can be automatically archived by moving them to another location after
 </nlog>
 ```
 ###Time-based file archival
-Log files can calso be automatically archived based on time. This configuration will archive a file at the beginning of each day and will use rolling file naming, so log file from the previous day can always be found in archives//log.0.txt, log from two days ago is in archives//log.1.txt and so on. This configuration will keep at most 7 archive files, so logs older than one week will be automatically deleted.
+Log files can also be automatically archived based on time. This configuration will archive a file at the beginning of each day and will use rolling file naming, so log file from the previous day can always be found in archives//log.0.txt, log from two days ago is in archives//log.1.txt and so on. This configuration will keep at most 7 archive files, so logs older than one week will be automatically deleted.
 ```xml
 <?xml version="1.0" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
@@ -337,6 +337,37 @@ Log files can calso be automatically archived based on time. This configuration 
             concurrentWrites="true"
             keepFileOpen="false"
             encoding="iso-8859-2" />
+    </targets>
+ 
+    <rules>
+        <logger name="*" minlevel="Debug" writeTo="file" />
+    </rules>
+</nlog>
+```
+
+
+####Archive every Week
+You can specify different archival time periods. For example, if you wanted to archive once a week on Tuesdays,
+you would set `archiveEvery="Tuesday"`. Possible values for `archiveEvery` can be found above. This will result in
+the following files being created:
++ logfile.txt           // the current log being written to
++ logfile.20170307.txt
++ logfile.20170314.txt
++ logfile.20170321.txt
++ etc.
+
+```xml
+<?xml version="1.0" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ 
+    <targets>
+        <target name="file" xsi:type="File"
+            layout="${longdate} ${logger} ${message}" 
+            fileName="${basedir}/logs/logfile.txt" 
+            archiveFileName="${basedir}/archives/logfile.{#}.txt"
+            archiveEvery="Tuesday"
+            maxArchiveFiles="7" />
     </targets>
  
     <rules>
