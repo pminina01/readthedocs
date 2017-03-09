@@ -17,7 +17,7 @@ Needed in your config:
 ```
 
 and
-```
+```xml
   <system.serviceModel>
     <diagnostics>
         <messageLogging logEntireMessage="true"
