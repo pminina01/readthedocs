@@ -1,4 +1,4 @@
-##Content
+## Content
 * [[Installing NLog|tutorial#installing-nlog]]
 * [[Creating Log messages|tutorial#creating-log-messages]]
  * [[Creating loggers|tutorial#creating-loggers]]
@@ -11,7 +11,7 @@
  * [[Layouts|tutorial#layouts]]
 * [[Advanced|tutorial#advanced]]
 
-##Installing NLog
+## Installing NLog
 [NLog](https://www.nuget.org/packages/NLog/) can be downloaded from NuGet.
 
 Just install [NLog.Config package](https://www.nuget.org/packages/NLog.Config/) and this will install also [NLog](https://www.nuget.org/packages/NLog) and [NLog.Schema](https://www.nuget.org/packages/NLog.Schema) packages - this will result in a starter config and intellisense.
@@ -23,12 +23,12 @@ Install-Package NLog.Config
 
 That's it, you can now compile and run your application and it will be able to use NLog.
 
-##Creating Log messages
+## Creating Log messages
 In order to create log messages from the application you need to use the logging API. There are two classes that you will be using the most: `Logger` and `LogManager`, both in the NLog namespace. `Logger` represents the named source of logs and has methods to emit log messages, and `LogManager` creates and manages instances of loggers.
 
 It is important to understand that `Logger` does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
-###Creating loggers
+### Creating loggers
 It is advised to create one (`private static`) `Logger` per class.  As mentioned before, you must use `LogManager` to create `Logger` instances.
 
 This will create a `Logger` instance with the same name of the `class`.
@@ -56,7 +56,7 @@ Because loggers are thread-safe, you can simply create the logger once and store
 
 
 
-###Log levels
+### Log levels
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
 
 NLog supports the following [log levels](Log-levels):
@@ -67,7 +67,7 @@ NLog supports the following [log levels](Log-levels):
 * `Error` - error messages - most of the time these are `Exceptions`
 * `Fatal` - very serious errors!
 
-###Writing log messages
+### Writing log messages
 In order to emit log message you can simply call one of the methods on the `Logger`. `Logger` class has six methods whose names correspond to log levels: `Trace()`, `Debug()`, `Info()`, `Warn()`, `Error()` and `Fatal()`. There is also `Log()` method which takes log level as a parameter.
 ```csharp
 using NLog;
@@ -120,7 +120,7 @@ TIP: You should avoid doing string formatting (such as concatenation, or calling
 
 Formatting log messages takes a lot of time, so NLog tries to defer formatting until it knows that log message will actually be written to some output. If the message ends up being skipped because of logging configuration, you will not pay the price of `String.Format()` at all. See also Optimizing Logging Performance.
 
-##Configuration
+## Configuration
 So far we have learned how to create log messages from code, but we have not configured any outputs for our logs. So, when you run your instrumented application at this point, you will see - well - nothing. Time to open the NLog.config file and add some logging rules:
 
 1. In the `<targets>` section, add:
@@ -152,7 +152,7 @@ Note that as you are typing this in Visual Studio, you should see IntelliSense s
 ```
 Now, when you run the application, you should see log messages written to file.txt in current directory.
 
-###Multiple targets
+### Multiple targets
 Let's try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slightly less detailed. Here's the configuration file which implements this:
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -172,7 +172,7 @@ Let's try something more complex now. Imagine you want to send very detailed log
 ```
 As you can see, we now have multiple targets and multiple rules which route logs to them.
 
-###Logger-specific routing
+### Logger-specific routing
 Another scenario which is very common requires producing more detailed logs from some components which are being currently developed, while reducing output from some other components. We can use the following configuration:
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -193,7 +193,7 @@ The first rule will send logs from loggers whose names begin with `SomeNamespace
 
 The second rule will send all remaining logs to the same log file with the restriction that the level must be `Info` or higher.
 
-###Wrappers
+### Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
 * [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
@@ -222,7 +222,7 @@ In order to use wrappers, simply enclose the `<target />` element with another o
 ```
 This will make all writes to the file be asynchronous, which will improve responsiveness of the calling thread.
 
-###Layouts
+### Layouts
 Layouts provide a way to format the contents of the logs as it is written to a file. There are 2 main kinds of layouts:
 * simple layout - which is composed of [Layout Renderers](Layout-renderers)
 * structural layouts - which can output XML, CSV, and other complex formats
@@ -233,9 +233,9 @@ Simple layout is just a string, with special tags embedded between **${** and **
 ```
 
 
-##Advanced
+## Advanced
 
-###Expose logger to sub-classes
+### Expose logger to sub-classes
 When we wish to expose the logger into sub classes the following pattern could be used.
 
 ```csharp
