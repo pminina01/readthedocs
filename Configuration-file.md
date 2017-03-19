@@ -81,8 +81,8 @@ Configuration elements You can use the following elements as children to `<nlog 
  * `<variable />` – sets the value of a configuration variable
 
 <a name="log-levels" />
-## Log levels
 
+## Log levels
 The following are the allowed log levels (in descending order):
 
 * `Fatal`   
