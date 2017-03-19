@@ -9,7 +9,7 @@ All configuration of NLog can be done with a single XML file.
 [Example rules](#example-rules)<br />
 [Layouts and layout renderers](#layouts-and-layout-renderers)<br />
 [Include files](#include-files)<br />
-[Variable](#variables)<br />
+[Variables](#variables)<br />
 [Automatic reconfiguration](#automatic-reconfiguration)<br />
 [Troubleshooting logging](#troubleshooting-logging)<br />
 [Asynchronous processing and wrapper targets](#asynchronous-processing-and-wrapper-targets)<br />
