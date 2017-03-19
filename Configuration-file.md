@@ -401,6 +401,8 @@ Examples:
 - `${rot13:inner=${ndc:topFrames=3:separator=x}}` (no escaping needed)
 - `${when:when=1 == 1:Inner=Test\: Hello}` (escape of `:`)
 
+<a name="extensions" />
+
 ## Extensions
 Extensions can be configured to include additional NLog packages or custom ones:
 
