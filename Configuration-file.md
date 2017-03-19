@@ -1,6 +1,6 @@
 All configuration of NLog can be done with a single XML file. 
 
-## Contents
+# Contents
 [Configuration file locations](#configuration-file-locations)<br />
 [Configuration file format](#configuration-file-format)<br />
 [Log levels](#log-levels)<br />
@@ -401,7 +401,7 @@ Examples:
 - `${rot13:inner=${ndc:topFrames=3:separator=x}}` (no escaping needed)
 - `${when:when=1 == 1:Inner=Test\: Hello}` (escape of `:`)
 
-# Extensions
+## Extensions
 Extensions can be configured to include additional NLog packages or custom ones:
 
 Just reference the DLL in the config in the `<extensions />` as shown below.
