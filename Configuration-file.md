@@ -49,6 +49,7 @@ LogManager.Configuration = new XmlLoggingConfiguration("assets/someothername.con
 ````
 
 <a name="configuration-file-format" />
+
 ## Configuration file format
 NLog supports two configuration file formats:
  1. Configuration embedded within the standard *.exe.config or web.config file
