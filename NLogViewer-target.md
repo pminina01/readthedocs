@@ -1,7 +1,7 @@
 Sends log messages to the remote instance of NLog Viewer. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="NLogViewer"
@@ -26,10 +26,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
-##Parameters
-###General Options
+## Parameters
+### General Options
 _name_ - Name of the target.
-###Layout Options
+### Layout Options
 _newLine_ - Indicates whether to append newline at the end of log message. [Boolean](Data-types) Default: False
 
 _layout_ - Instance of Log4JXmlEventLayout that is used to format log messages. [Layout](Data-types) Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
@@ -43,7 +43,7 @@ Possible values:
 _maxMessageSize_ - Maximum message size in bytes. [Integer](Data-types) Default: 65000
 
 _encoding_ - Encoding to be used. [Encoding](Data-types) Default: utf-8
-###Connection Options
+### Connection Options
 _connectionCacheSize_ - Size of the connection cache (number of connections which are kept alive). [Integer](Data-types) Default: 5
 > This parameter is not supported in:
 > * NLog v1.0 for .NET Compact Framework 1.0
@@ -65,7 +65,7 @@ The network address can be:
 For SOAP-based webservice support over HTTP use WebService target.
 
 _keepConnection_ - Indicates whether to keep connection open whenever possible. [Boolean](Data-types) Default: True
-###Payload Options
+### Payload Options
 _includeSourceInfo_ - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data-types)  
 > This parameter is not supported in:
 > * NLog v1.0 for .NET Compact Framework 1.0
