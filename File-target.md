@@ -3,7 +3,7 @@ Writes log messages to one or more files.
 Since NLog 4.3 the `${basedir}` isn't needed anymore for relative paths.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="File"
@@ -42,12 +42,12 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
-##Parameters
-###General Options
+## Parameters
+### General Options
 _name_ - Name of the target.
 
 _forceManaged_ - Indicates that the file target should only use managed methods. This disables some of the options.
-###Layout Options
+### Layout Options
 _layout_ - Text to be rendered. [Layout](Layouts) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
 _header_ - Header. [Layout](Layouts)  
@@ -64,7 +64,7 @@ Possible values:
   * LF - Insert LF character (ASCII 10) after each line.
   * None - Don't insert any line ending.
 
-###Archival Options
+### Archival Options
 _archiveAboveSize_ - Size in bytes above which log files will be automatically archived. [Long](Layouts)  
 Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance. 
 **Warning: combining this mode with _Archive Numbering Date_ is not supported. Archive files are not merged.    _ DateAndSequence_ do will work. **
@@ -111,7 +111,7 @@ This option works only when the "ArchiveNumbering" parameter is set to Date or D
 _ArchiveOldFileOnStartup_
 
 aAchive old log file on startup.
-###Output Options
+### Output Options
 _replaceFileContentsOnEachWrite_ - Indicates whether to replace file contents on each write instead of appending log message at the end. [Boolean](Data-types) Default: False  
 
 _fileAttributes_ - File attributes (Windows only).  
@@ -154,7 +154,7 @@ _enableArchiveFileCompression_ - Indicates whether to compress the archive files
 
 _writeFooterOnArchivingOnly_ - Indicates whether the footer should be written only when the file is archived. If `False`, the footer will also be written when starting to write to a different file and when the target is closed [Boolean](Data-types) Default: False
 
-###Performance Tuning Options
+### Performance Tuning Options
 _keepFileOpen_ - Indicates whether to keep log file open instead of opening and closing it on each logging event. Changing this property to true will improve performance a lot, but will also keep the file handle locked. Consider setting _openFileCacheTimeout_ = 30 when enabling this, as it will allow archive operations and react to log file being deleted. [Boolean](Data-types) Default: False 
 
 _concurrentWrites_ - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host, when using _keepFileOpen_ = true. By using a special technique that lets it keep the files open from multiple processes. If only single process (and single AppDomain) application is logging, then it is faster to set to _concurrentWrites_ = False.  [Boolean](Data-types) Default: True
@@ -181,8 +181,8 @@ _bufferSize_ - Log file buffer size in bytes. [Integer](Data-types) Default: 327
 
 _autoFlush_ - Indicates whether to automatically flush the file buffers after each log message. [Boolean](Data-types) Default: True  
 
-##Examples
-###Simple logging
+## Examples
+### Simple logging
 The simplest use of File target is to produce single log file. In order to do this, put the following code in the configuration file such as NLog.config. Logs wil be written to logfile.txt in logs directory.
 ```xml
 <?xml version="1.0" ?>
@@ -202,7 +202,7 @@ The simplest use of File target is to produce single log file. In order to do th
     </rules>
 </nlog>
 ```
-###Per-level log files
+### Per-level log files
 Single File target can be used to write to multiple files at once. The following configuration will cause log entries for each log level to be written to a separate file, so you will get:
  * Trace.log
  * Debug.log
@@ -227,7 +227,7 @@ Single File target can be used to write to multiple files at once. The following
     </rules>
 </nlog>
 ```
-###One log file per day
+### One log file per day
 The following configuration will create one log file for each day. Log files will be named:
  * 2010-06-05.log
  * 2010-06-06.log
@@ -251,7 +251,7 @@ The following configuration will create one log file for each day. Log files wil
 </nlog>
 ```
 
-###Asynchronous logging
+### Asynchronous logging
 Depending on your usage scenario it may be useful to add an AsyncWrapper target the file target. This way all your log messages will be written on a separate thread so your main thread can be unblocked more quickly. Asynchronous logging is recommended for multi-threaded server applications which run for a long time and is not recommended for quickly-finishing command line applications.
 ```xml
 <?xml version="1.0" ?>
@@ -273,7 +273,7 @@ Depending on your usage scenario it may be useful to add an AsyncWrapper target 
     </rules>
 </nlog>
 ```
-###Creating comma-separated log file (CSV)
+### Creating comma-separated log file (CSV)
 In order to create comma-separated files (CSV), use the following configuration, which utilizes CsvLayout. The resulting file will have 4 columns and will be formatted according to CSV rules:
 ```xml
 <?xml version="1.0" ?>
@@ -295,7 +295,7 @@ In order to create comma-separated files (CSV), use the following configuration,
     </rules>
 </nlog>
 ```
-###Size-based file archival
+### Size-based file archival
 Log files can be automatically archived by moving them to another location after reaching certain size. The following configuration will create logs/logfile.txt which will be archived to archives/log.000000.txt', archives/log.000001.txt', archives/log.000002.txt' and so on once the main log file reaches 10KB.
 ```xml
 <?xml version="1.0" ?>
@@ -319,7 +319,7 @@ Log files can be automatically archived by moving them to another location after
     </rules>
 </nlog>
 ```
-###Time-based file archival
+### Time-based file archival
 Log files can also be automatically archived based on time. This configuration will archive a file at the beginning of each day and will use rolling file naming, so log file from the previous day can always be found in archives//log.0.txt, log from two days ago is in archives//log.1.txt and so on. This configuration will keep at most 7 archive files, so logs older than one week will be automatically deleted.
 ```xml
 <?xml version="1.0" ?>
@@ -346,7 +346,7 @@ Log files can also be automatically archived based on time. This configuration w
 ```
 
 
-####Archive every Week
+#### Archive every Week
 You can specify different archival time periods. For example, if you wanted to archive once a week on Tuesdays,
 you would set `archiveEvery="Tuesday"`. Possible values for `archiveEvery` can be found above. This will result in
 the following files being created:
@@ -377,9 +377,9 @@ the following files being created:
 ```
 
 
-###Archive Numbering Examples
+### Archive Numbering Examples
 
-####Rolling
+#### Rolling
 ```xml
         <target name="file" xsi:type="File"
             ...
@@ -396,7 +396,7 @@ Example of file names (newest files first):
 * log.0001.txt
 * log.0002.txt
 
-####Sequence
+#### Sequence
 ```xml
         <target name="file" xsi:type="File"
             ...
@@ -413,7 +413,7 @@ Example of file names (newest files first):
 * log.0001.txt
 * log.0000.txt
 
-####Date
+#### Date
 ```xml
         <target name="file" xsi:type="File"
             ...
@@ -432,7 +432,7 @@ Example of file names (newest files first):
 * log.20150731.txt
 * log.20150730.txt
 
-####DateAndSequence
+#### DateAndSequence
 ```xml
         <target name="file" xsi:type="File"
             ...
