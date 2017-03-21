@@ -12,7 +12,7 @@ ${aspnet-item:variable=String;evaluateAsNestedProperties:boolean}
 ## Parameters
 ### Rendering Options
 * **variable** - Variable name.
-* _EvaluateAsNestedProperties_ - boolean. Default: `false`. Evaluate the  as nested properties. The dots in the `variable` are special interpreted. See example below.
+* **EvaluateAsNestedProperties** - boolean. Default: `false`. Evaluate the  as nested properties. The dots in the `variable` are special interpreted. See example below.
 
 
 ## Examples
