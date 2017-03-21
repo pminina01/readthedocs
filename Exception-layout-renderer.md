@@ -2,14 +2,14 @@ Exception information provided through a call to one of the Logger.*Exception() 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSeparator=String
            :separator=String:format=String:exceptionDataSeparator=string}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **innerFormat** - Format of the output of inner exceptions. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method` & `StackTrace`. This parameter value is case-insensitive. 
 
 * **maxInnerExceptionLevel** - Maximum number of inner exceptions to include in the output. By default inner exceptions are not enabled for compatibility with NLog 1.0.Integer. Default: 0
@@ -20,7 +20,7 @@ ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSepa
 
 * **format** - Format of the output. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method`, `StackTrace` & `Data`. This parameter value is case-insensitive. Default: `message`
 
-##Examples
+## Examples
 
 ### Log only message
 Only message of the first exception
