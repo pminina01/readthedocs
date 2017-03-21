@@ -1,7 +1,8 @@
 Retries in case of write error. 
 
 Supported in .NET, Silverligt, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="RetryingWrapper" name="String" retryDelayMilliseconds="Integer" retryCount="Integer">
@@ -9,10 +10,11 @@ Supported in .NET, Silverligt, Compact Framework and Mono.
   </target>
 </targets>
 ```
-##Parameters
-###General Options
-_name_ - Name of the target.
-###Retrying Options
-_retryDelayMilliseconds_ - Time to wait between retries in milliseconds. Integer Default: 100
 
-_retryCount_ - Number of retries that should be attempted on the wrapped target in case of a failure. Integer Default: 3
+## Parameters
+### General Options
+* **name** - Name of the target.
+### Retrying Options
+* **retryDelayMilliseconds** - Time to wait between retries in milliseconds. Integer Default: 100
+
+* **retryCount** - Number of retries that should be attempted on the wrapped target in case of a failure. Integer Default: 3
