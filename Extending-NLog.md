@@ -10,5 +10,5 @@ There could be various reasons why you would like to extend NLog. For example: I
 
 ## Register
 
-- [Register your custom component](Register your custom component)
+- [Register your custom component](Register-your-custom-component)
 
