@@ -1,7 +1,8 @@
 Impersonates another user for the duration of the write. 
 
 Supported in .NET and Mono
-##Configuration Syntax
+
+## Configuration Syntax
 ```
 <targets>
   <target xsi:type="ImpersonatingWrapper"
@@ -17,34 +18,35 @@ Supported in .NET and Mono
   </target>
 </targets>
 ```
-##Parameters
-###General Options
-_name_ - Name of the target.
-###Impersonation Options
-_userName_ - Username to change context to.
+## Parameters
+### General Options
+* **name** - Name of the target.
 
-_password_ - User account password.
+### Impersonation Options
+* **userName** - Username to change context to.
 
-_revertToSelf_ - Indicates whether to revert to the credentials of the process instead of impersonating another user. Boolean Default: False
+* **password** - User account password.
+
+* **revertToSelf** - Indicates whether to revert to the credentials of the process instead of impersonating another user. Boolean Default: False
  
- _impersonationLevel_ - Required impersonation level.  
+* **impersonationLevel** - Required impersonation level.  
 Possible values:  
-* Anonymous - Anonymous Level.
-* Delegation - Delegation Level.
-* Identification - Identification Level.
-* Impersonation - Impersonation Level.
+  * Anonymous - Anonymous Level.
+  * Delegation - Delegation Level.
+  * Identification - Identification Level.
+  * Impersonation - Impersonation Level.
 
-_domain_ - Windows domain name to change context to. Default: .
+* **domain** - Windows domain name to change context to. Default: .
 
-_logOnType_ - Logon Type.  
+* **logOnType** - Logon Type.  
 Possible values:  
-* Batch - Batch Logon.
-* Interactive - Interactive Logon.
-* Network - Network Logon.
-* NetworkClearText - Network Clear Text Logon.
-* NewCredentials - New Network Credentials.
-* Service - Logon as a Service.
+  * Batch - Batch Logon.
+  * Interactive - Interactive Logon.
+  * Network - Network Logon.
+  * NetworkClearText - Network Clear Text Logon.
+  * NewCredentials - New Network Credentials.
+  * Service - Logon as a Service.
 
-_logOnProvider_ - Type of the logon provider.  
+* **logOnProvider** - Type of the logon provider.  
 Possible values:  
-* Default - Use the standard logon provider for the system.
+ * Default - Use the standard logon provider for the system.
