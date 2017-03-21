@@ -29,7 +29,7 @@ Log messages could be filtered on the logger name. Write the messages to a Null 
 
 Compared to the `<filters>` this is more efficient and could be easier to write. 
 
-###Deprecated filters
+### Deprecated filters
 These filters is deprecated in favour of `<when />` which is based on conditions.
 
 * [whenContains filter](WhenContains-filter) - Matches when the calculated layout contains the specified substring. 
