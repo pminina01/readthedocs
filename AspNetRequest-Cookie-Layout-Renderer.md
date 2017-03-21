@@ -12,7 +12,7 @@ ${aspnet-request-cookie:CookieNames=Keys;OutputFormat:AspNetLayoutOutputFormat}
 ## Parameters
 ### Rendering Options
 * **Keys** - Cookie name. A list of keys can be passed as a Comma separated value. Eg: Key1, Key2
-* _OutputFormat_ - AspNetLayoutOutputFormat. Possible Values: `FLAT`, `JSON`. Default: `flat`. Evaluate the `cookiename` and `values` flat string. See example below.
+* **OutputFormat** - AspNetLayoutOutputFormat. Possible Values: `FLAT`, `JSON`. Default: `flat`. Evaluate the `cookiename` and `values` flat string. See example below.
 
 ## Remarks
 Use this layout renderer to insert the value of the specified cookie stored in the ASP.NET Request Cookies Collection.
