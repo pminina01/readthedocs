@@ -1,7 +1,8 @@
 Writes log events to all targets. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="SplitGroup" name="String">
@@ -12,6 +13,6 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   </target>
 </targets>
 ```
-##Parameters
-###General Options
-_name_ - Name of the target.
+## Parameters
+### General Options
+* **name** - Name of the target.
