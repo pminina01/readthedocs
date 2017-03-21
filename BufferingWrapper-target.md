@@ -16,13 +16,13 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ```
 ## Parameters
 ### General Options
-_name_ - Name of the target.
+* **name** - Name of the target.
 ###Buffering Options
-_bufferSize_ - Number of log events to be buffered. When the limit is reached, then a synchronously flush is performed. `Integer` Default: `100`
+* **bufferSize** - Number of log events to be buffered. When the limit is reached, then a synchronously flush is performed. `Integer` Default: `100`
 
-_flushTimeout_ - Timeout (in milliseconds) after a write, until the entire buffer is asynchronously flushed. Use `-1` to disable timed flushes. `Integer` Default: `-1`
+* **flushTimeout** - Timeout (in milliseconds) after a write, until the entire buffer is asynchronously flushed. Use `-1` to disable timed flushes. `Integer` Default: `-1`
 
-_slidingTimeout_ - Indicates whether to use sliding _flushTimeout_. `Boolean` Default: `True`  
+* **slidingTimeout** - Indicates whether to use sliding _flushTimeout_. `Boolean` Default: `True`  
 This value determines how the inactivity period is determined. If sliding timeout is enabled, the inactivity timer is reset after each write, if it is disabled - inactivity timer will count from the first event written to the buffer.
 
 ## Remarks
