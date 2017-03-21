@@ -18,15 +18,15 @@ Supported in .NET and Mono
 ## Parameters
 
 ### General Options
-_name_ - Name of the target.
+* **name** - Name of the target.
 
 ### Buffering Options
-_bufferGrowLimit_ - Maximum number of log events that the buffer can keep. Integer
+* **bufferGrowLimit** - Maximum number of log events that the buffer can keep. Integer
 
-_growBufferAsNeeded_ - Indicates whether buffer should grow as needed. Boolean Default: False  
+* **growBufferAsNeeded** - Indicates whether buffer should grow as needed. Boolean Default: False  
 Value of true causes the buffer to expand until BufferGrowLimit is hit, false causes the buffer to never expand and lose the earliest entries in case of overflow.
 
-_bufferSize_ - Number of log events to be buffered. Integer Default: 100
+* **bufferSize** - Number of log events to be buffered. Integer Default: 100
 
 ## Remarks
 Typically this target is used in cooperation with PostFilteringTargetWrapper to provide verbose logging for failing requests and normal or no logging for successful requests. We need to make the decision of the final filtering rule to apply after all logs for a page have been generated. To use this target, you need to add an entry in the httpModules section of web.config: 
