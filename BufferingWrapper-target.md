@@ -31,4 +31,6 @@ This value determines how the inactivity period is determined. If sliding timeou
 
 If `flushTimeout` is larger than `0`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target).
 
-When messages are written asynchronously, this is done in another thread. This means context information like thread-user-identity is different. If the buffer is filled before the 'flushTimeout' fires and triggers the asynchronously flush, then the logging thread will be performing the flush, and be blocked by the operation.
+When messages are written asynchronously, this is done in another thread. This means context information like thread-user-identity is different.
+
+If the buffer is filled before the 'flushTimeout' fires and triggers the asynchronously flush, then the logging thread will be performing the flush, and be blocked by the operation.
