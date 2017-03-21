@@ -2,10 +2,7 @@ It’s really easy. Create a class that inherits from `NLog.Targets.TargetWithLa
 
 Don't forget to [register your custom target](Register your custom component)!
 
-
-
-
-###Example
+### Example
 This is a skeleton target that writes messages to the specified host. Compile using:
 
 `csc.exe /t:library /out:MyAssembly.dll /r:NLog.dll MyFirstTarget.cs`
@@ -42,8 +39,5 @@ namespace MyNamespace
 }
 ```
 
-###How to pass configuration options to the target?
+### How to pass configuration options to the target?
 Consider the above example. There’s a property called “Host” that does just that. Having a public property that sets the required configuration parameters is enough for NLog to use it. Each attribute that you put in the `<target />` definition gets passed to the appropriate public property. NLog takes care of the appropriate conversions necessary so that you can use integer, string, datetime, boolean parameters. Check also [[Properties-constraints-for-custom-extensions]]
-
-
-
