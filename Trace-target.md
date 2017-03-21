@@ -1,14 +1,16 @@
 Sends log messages through System.Diagnostics.Trace. 
 
-Supported in .NET and Mono. 
-##Configuration Syntax
+Supported in .NET and Mono.
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="Trace" name="String" layout="Layout" />
 </targets>
 ```
-##Parameters
-###General Options
-_name_ - Name of the target.
+
+## Parameters
+### General Options
+* **name** - Name of the target.
 ###Layout Options
-_layout_ - Layout used to format log messages. Layout Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+* **layout** - Layout used to format log messages. Layout Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
