@@ -7,17 +7,17 @@ Supported in .NET 4.0 and 4.5.
 - As of NLog 4.1 in the NLog package.
 - As of NLog 4.1.1, the Mapped Diagnostics Context supports any `Object` type, not just `String`.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${mdlc:item=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **item** - Name of the item. Required.
 
-##Example
-###Simple Properties
+## Example
+### Simple Properties
 The following example demonstrates the basic usage of the Mapped Diagnostic Logical Context.
 
 ```c#
