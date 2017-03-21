@@ -7,25 +7,23 @@ The global context is one of the context.
 - When you need the context for all threads, use the [GDC](Gdc-Layout-Renderer). 
 - When you need the context for one threads, use the [MDC](MDC-Layout-Renderer). 
 - When you work with async, use the [MDLC](MDLC-Layout-Renderer)
-- If the context is different for every message, use the [Log event properties](https://github.com/NLog/NLog/wiki/EventProperties-Layout-Renderer). 
-
-
+- If the context is different for every message, use the [[Log event properties]]
 
 As of NLog 4.1, the Global Diagnostics Context supports any `Object` type, not just `String`.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${gdc:item=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **item** - Name of the item. Required.
 
-##Example
-###Simple Properties
+## Example
+### Simple Properties
 The following example demonstrates the basic usage of the Global Diagnostics Context.
 
 ```c#
@@ -41,7 +39,7 @@ ${gdc:item=informationGroup}
 ${gdc:item=anyObject}
 ```
 
-###Dynamic Properties
+### Dynamic Properties
 In some instances you may have thread-local information that you want to make available to all logger instances in the current process. This can be achieved with the [Mapped Diagnostics Context](https://github.com/NLog/NLog/wiki/MDC-Layout-Renderer), but requires that your create the property within the context of every thread that may reference it. Using Dynamic Properties and the Global Diagnostics Context, you can achieve the same result while only creating the property once.
 
 ```
@@ -70,5 +68,5 @@ To reference the ManagedThreadId Global Diagnostics Context property.
 ${gdc:item=ManagedThreadId}
 ```
 
-##Notes
+## Notes
 When rendering context items, the item is passed to `String.Format` along with the current configuration's `DefaultCultureInfo` value.
