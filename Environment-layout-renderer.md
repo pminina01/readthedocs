@@ -9,7 +9,7 @@ ${environment:variable=String}
 
 ## Parameters
 ### Rendering Options
-* _variable_ - Name of the environment variable. Required. Examples: Path, TMP, USERPROFILE, PROCESSOR_ARCHITECTURE
+* **variable** - Name of the environment variable. Required. Examples: Path, TMP, USERPROFILE, PROCESSOR_ARCHITECTURE
 
 ## Remarks
 
