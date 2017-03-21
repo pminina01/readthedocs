@@ -87,4 +87,4 @@ Package|Version     |Description
 <!-- PLEASE keep SORTED -->
 
 # Writing your own target
-NLog supports custom target. For more information, see: [Extending NLog](Extending NLog)
+NLog supports custom target. For more information, see: [[Extending NLog]]
