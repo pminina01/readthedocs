@@ -2,20 +2,20 @@ ASP.NET Session variable.
 
 Supported in .NET and Mono
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${aspnet-session:variable=String;evaluateAsNestedProperties:boolean}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **variable** - Session variable name.
 * _EvaluateAsNestedProperties_ - boolean. Default: `false`. Evaluate the `variable` as nested properties. The dots in the `variable` are special interpreted. See example below.
 
-##Remarks
+## Remarks
 Use this layout renderer to insert the value of the specified variable stored in the ASP.NET Session dictionary.
 
-##Examples
+## Examples
 
 Log the username in the session.
 
