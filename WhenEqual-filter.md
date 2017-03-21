@@ -14,7 +14,6 @@ Supported in .NET, Silverlight, Compact Framework and Mono
 ```
 ## Parameters
 ### Filtering Options
-* **ignoreCase** - Indicates whether to ignore case when comparing strings. Boolean Default: False
 * **layout** - Layout to be used to filter log messages. Layout Required.
 * **action** - Action to be taken when filter matches. Required.  
 Possible values:  
@@ -24,3 +23,4 @@ Possible values:
   * _LogFinal_ - The message should be logged and processing should be finished.
   * _Neutral_ - The filter doesn't want to decide whether to log or discard the message.
 * **compareTo** - String to compare the layout to. Required.
+* **ignoreCase** - Indicates whether to ignore case when comparing strings. Boolean Default: False
