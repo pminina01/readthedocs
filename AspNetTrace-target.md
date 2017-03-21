@@ -19,7 +19,7 @@ Read more about using the [Configuration File](Configuration file).
 ### Layout Options
 * **layout** - Layout used to format log messages. [Layout](Layout) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
-### Remarks
+## Remarks
 Log entries can then be viewed by navigating to http://server/path/Trace.axd.
 
 AspNetTrace uses the `HttpContext.Current`. Therefore async/buffered writing does not works for AspNetTrace due to different thread.
