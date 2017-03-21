@@ -27,7 +27,7 @@ NLog supports creating custom targets. For more information, see: [[Extending NL
 * [Trace](Trace-target) - Sends log messages through System.Diagnostics.Trace.
 * [WebService](WebService-target) - Calls the specified web service on each log message.
 
-####Wrappers
+#### Wrappers
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
 * [AutoFlushWrapper](AutoFlushWrapper-target) - Causes a flush after each write on a wrapped target.
 * [BufferingWrapper](BufferingWrapper-target) - A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.
