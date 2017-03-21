@@ -2,11 +2,11 @@ ASP Session variable.
 
 Supported in .NET and Mono
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${asp-session:variable=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+## #Rendering Options
 * **variable** - Session variable name. Required.
