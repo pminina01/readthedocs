@@ -1,7 +1,7 @@
-##Log Viewers/Analyzers
+## Log Viewers/Analyzers
 Logs produced by NLog can be analyzed using a number of GUI tools:
 
-##NLog-specific viewers
+## NLog-specific viewers
 * Gibraltar (using Gibraltar Adapter for NLog) - http://nlog-project.org/2009/11/01/gibraltar-adapter-for-nlog-released.html
 * Sentinel - http://sentinel.codeplex.com/
 * NLogViewer - http://github.com/jkowalski/NLogViewer (functional, but no longer in development, not recommended)
@@ -9,7 +9,7 @@ Logs produced by NLog can be analyzed using a number of GUI tools:
 * Legit Log Viewer - http://www.legitlog.com/ (Although their website is down, it is Free and powerful log viewer.)
 * ReflectInsight Viewer (using the ReflectInsight Extension for NLog) - http://insightextensions.codeplex.com/
 
-##Log4x-compatible viewers
+## Log4x-compatible viewers
 In general, any viewer supporting Log4J or Log4Net should work fine with NLog - see http://nlog-project.org/target.Chainsaw.html for information on configuring NLog for use with those viewers.
 * LogWizard - https://github.com/jtorjo/logwizard
 * Apache Chainsaw - http://logging.apache.org/chainsaw/index.html
