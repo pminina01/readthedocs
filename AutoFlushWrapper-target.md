@@ -13,8 +13,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ## Parameters
 ### General Options
-_name_ - Name of the target.  
-_condition_ - [Condition](https://github.com/NLog/NLog/wiki/When-Filter#conditions) is expression used to determine if flush must be executed. (*introduced in NLog 4.4*)
+* **name** - Name of the target.  
+* **condition** - [Condition](https://github.com/NLog/NLog/wiki/When-Filter#conditions) is expression used to determine if flush must be executed. (*introduced in NLog 4.4*)
 
 ## Examples
 Flush into target on each write
