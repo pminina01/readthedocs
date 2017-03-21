@@ -36,7 +36,7 @@ Invoke in this method `builder.Append(..)` to render your custom layout renderer
 
 Don't forget to [register your custom layout renderer](Register your custom component)!
 
-###Example
+### Example
 We create a `${hello-world}` layout renderer, which renders..."hello world!".
 
 ```c#
@@ -52,7 +52,7 @@ public class HelloWorldLayoutRenderer : LayoutRenderer
 
 ```
 
-###How to pass configuration options to the layout render?
+### How to pass configuration options to the layout render?
 Just create public properties on the Layout Renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` is can be passed to the layout renderer without using the name.
 
 
