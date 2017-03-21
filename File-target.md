@@ -105,7 +105,7 @@ Possible values:
 
 * **archiveDateFormat** - Specifies the date format used for archive numbering. Default format depends on the archive period. This option works only when the "ArchiveNumbering" parameter is set to Date or DateAndSequence
 
-* **_ArchiveOldFileOnStartup** - Achive old log file on startup.
+* **ArchiveOldFileOnStartup** - Achive old log file on startup.
 
 ### Output Options
 * **replaceFileContentsOnEachWrite** - Indicates whether to replace file contents on each write instead of appending log message at the end. [Boolean](Data-types) Default: False  
