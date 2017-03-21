@@ -28,13 +28,13 @@ Supported in .NET
 Read more about using the [[Configuration File]].
 
 ## Parameters
-#¤# General Options
+### General Options
 * **name** - Name of the target.
 
-###Layout Options
+### Layout Options
 * **layout** - Layout used to format log messages. Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
 
-###Form Options
+### Form Options
 * **height** - Initial height of the form with rich text box.  
 This parameter is ignored when logging to existing form control.   
 > This parameter is not supported in:
