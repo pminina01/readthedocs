@@ -14,7 +14,7 @@ Note that this syntax replaces the deprecated `${event-context}` syntax.
 
 ### Rendering Options
 
-* _item_ - Name of the item (required)
+* **item** - Name of the item (required)
 
 ## Example
 
