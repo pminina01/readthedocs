@@ -11,17 +11,17 @@ As of NLog 4.1, the Mapped Diagnostics Context supports any `Object` type, not j
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${mdc:item=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **item** - Name of the item. Required.
 
-##Example
-###Simple Properties
+## Example
+### Simple Properties
 The following example demonstrates the basic usage of the Mapped Diagnostics Context.
 
 ```c#
@@ -37,7 +37,7 @@ ${mdc:item=Property2}
 ${mdc:item=Property3}
 ```
 
-###Dynamic Properties
+### Dynamic Properties
 The following example demonstrates a Mapped Diagnostics Context property that renders the value of `Environment.TickCount` at the time that the context item is rendered.
 
 ```c#
@@ -68,5 +68,5 @@ In the logging configuration, include:
 ${mdc:item=TickCount}
 ```
 
-##Notes
+## Notes
 When rendering context items, the item is passed to `String.Format` along with the current configuration's `DefaultCultureInfo` value.
