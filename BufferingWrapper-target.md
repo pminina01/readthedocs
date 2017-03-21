@@ -1,7 +1,8 @@
 A target that buffers log events and sends them in batches to the wrapped target. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="BufferingWrapper"
@@ -13,8 +14,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   </target>
 </targets>
 ```
-##Parameters
-###General Options
+## Parameters
+### General Options
 _name_ - Name of the target.
 ###Buffering Options
 _bufferSize_ - Number of log events to be buffered. When the limit is reached, then a synchronously flush is performed. `Integer` Default: `100`
@@ -24,10 +25,10 @@ _flushTimeout_ - Timeout (in milliseconds) after a write, until the entire buffe
 _slidingTimeout_ - Indicates whether to use sliding _flushTimeout_. `Boolean` Default: `True`  
 This value determines how the inactivity period is determined. If sliding timeout is enabled, the inactivity timer is reset after each write, if it is disabled - inactivity timer will count from the first event written to the buffer.
 
-##Remarks
+## Remarks
 
-###Buffer and asynchronously writing
+### Buffer and asynchronously writing
 
-If `slidingTimeout` is set to `true`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target). Using the `slidingTimeout` is preferred over the `async` attribute and AsyncWrapper. Combining both can lead to lost messages.
+If `flushTimeout` is larger than `0`, then the messages are written asynchronously. There is then no need to use this target in combination with the `async` attribute or the [AsyncWrapper](https://github.com/NLog/NLog/wiki/AsyncWrapper-target).
 
-When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.
+When messages are written asynchronously, this is done in another thread. This means context information like thread-user-identity is different. If the buffer is filled before the 'flushTimeout' fires and triggers the asynchronously flush, then the logging thread will be performing the flush, and be blocked by the operation.
