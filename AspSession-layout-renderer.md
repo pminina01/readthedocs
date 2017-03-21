@@ -8,5 +8,5 @@ ${asp-session:variable=String}
 ```
 
 ## Parameters
-## #Rendering Options
+### Rendering Options
 * **variable** - Session variable name. Required.
