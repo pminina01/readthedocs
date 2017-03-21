@@ -4,7 +4,7 @@ Added in NLog 4.0
 
 
 ```xml
-<target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json" includeAllProperties="Boolean" excludeProperties="Comma-separated list (string)"   >
+<target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json" includeAllProperties="Boolean" excludeProperties="Comma-separated list (string)">
       <layout xsi:type="JsonLayout">
               <attribute name="time" layout="${longdate}" />
               <attribute name="level" layout="${level:upperCase=true}"/>
@@ -23,24 +23,21 @@ Added in NLog 4.1
 
 Optional _encode_ parameter.
 
-You can disable JSON encoding by setting **encode="false"**. This will let you to write any string without JSON encoding. Including custom JSON.
+You can disable JSON encoding by setting **encode="false"**. This will let you to write any string without JSON encoding. Including custom JSON (Ex. boolean/numeric values)
 
 ```xml
 <attribute name="Details" layout="${event-context:item=Details}" encode="false" />
 ```
 
-##Parameters
-* _name_: required. The name of the key in JSON
-* _layout_: The [layout](Layouts) for they key.
-* _encode_: Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
-* _suppressSpaces_: Enable to suppress extra spaces in the output JSON. Disabled by default. (Added in NLog 4.1)
-* _renderEmptyObject_: Gets or sets the option to render the empty object value `{}`, default `true`. (Added in NLog 4.3.7)
-
-* _includeAllProperties_: Include all events properties of a logevent? default: `false`.  Introduced in NLog 4.4
-* _excludeProperties_: comma separated string with names which properties to exclude. Only used when _includeAllProperties_ is `true`. Case sensitive. Default empty
+## Parameters
+* **name** - Required. The name of the key in JSON
+* **layout** - The [layout](Layouts) for they key.
+* **encode** - Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
+* **suppressSpaces** - Enable to suppress extra spaces in the output JSON. Disabled by default. (Added in NLog 4.1)
+* **renderEmptyObject** - Gets or sets the option to render the empty object value `{}`, default `true`. (Added in NLog 4.3.7)
+* **includeAllProperties** - Include all events properties of a logevent? default: `false`.  Introduced in NLog 4.4
+* **excludeProperties** - comma separated string with names which properties to exclude. Only used when _includeAllProperties_ is `true`. Case sensitive. Default empty
 When a name contains a comma, single quote the value. E.g. `'value,withquote',value2`. Introduced in NLog 4.4
-
-  . 
  
 ## Notes
 * Currently the layout will always create a non-nested object with properties.
@@ -100,7 +97,6 @@ returns: `{ "type": "NLog.NLogRuntimeException", "message": "test", "innerExcept
   </rules>
 </nlog>
 ```
-
 
 will render: `{ "time": "2016-10-30 13:30:55.0000", "level": "INFO", "nested": { "message": "this is message", "exception": "test" } }`
 
