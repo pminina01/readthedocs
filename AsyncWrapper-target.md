@@ -15,10 +15,13 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   </target>
 </targets>
 ```
-##Parameters
-###General Options
+
+## Parameters
+
+### General Options
 _name_ - Name of the target.
-###Buffering Options
+
+### Buffering Options
 _queueLimit_ - Limit on the number of requests in the lazy writer thread request queue. Integer Default: `10000`
 
 _timeToSleepBetweenBatches_ - Time in milliseconds to sleep between batches. Integer Default: `50`. When set to `0`, this  will lead to a high CPU usage.
@@ -35,10 +38,10 @@ Possible values:
 
 _optimizeBufferReuse_ - Instead of allocating new buffers for every _batchSize_ write, then it reuse the same buffer. This means that the wrapped target no longer can take ownership of the buffers. All targets in the NLog package supports this mode. It is enabled automatically if the wrapped target has enabled _optimizeBufferReuse_. Introduced in NLog 4.4.2
 
-##Remarks
+## Remarks
 
 
-###Async attribute
+### Async attribute
 Asynchronous target wrapper allows the logger code to execute more quickly, by queuing messages and processing them in a separate thread. You should wrap targets that spend a non-trivial amount of time in their `Write()` method with asynchronous target to speed up logging. Because asynchronous logging is quite a common scenario, NLog supports a shorthand notation for wrapping all targets with AsyncWrapper. Just add `async="true"` to the `<targets/>` element in the configuration file.
 
 Example:
@@ -48,7 +51,7 @@ Example:
 </targets>
 ```
 
-###AsyncWrapper and `<rules>`
+### AsyncWrapper and `<rules>`
 
 When using the `AsyncWrapper`, do write to the wrapper in your ` <rules>` section! In the following example: do write to 
 "target2". If the `<logger>` is writing to "target1", the messages are not written asynchronously!
@@ -66,10 +69,10 @@ When using the `AsyncWrapper`, do write to the wrapper in your ` <rules>` sectio
   </targets> 
 ```
 
-###Async attribute and AsyncWrapper 
+### Async attribute and AsyncWrapper 
 Don't combine the Async attribute and AsyncWrapper. This will only slow down processing and will behave unreliably.
 
-###Async attribute will discard by default
+### Async attribute will discard by default
 The async attribute is a shorthand for:
 
 ```xml
@@ -80,10 +83,9 @@ So if you write a lot of messages (more then 10000) in a short time, it's possib
 
 If you need all the log messages, do use the AsyncWrapper instead of the async attribute. 
 
-###Asynchronously writing and threads
+### Asynchronously writing and threads
 
 When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.
 
-
-###BufferingWrapper  and Async
+### BufferingWrapper and Async
 The [BufferingWrapper](https://github.com/NLog/NLog/wiki/BufferingWrapper-target) can write asynchronously by itself. No need to use the async attribute or AsyncWrapper. See [remarks at the BufferingWrapper](https://github.com/NLog/NLog/wiki/BufferingWrapper-target#buffer-and-asynchronously-writing).
