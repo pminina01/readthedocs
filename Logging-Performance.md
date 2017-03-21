@@ -7,8 +7,7 @@ There are some things to know for the optimal performance:
 - If even the small overhead of NLog is too much, use "Conditional logging", as described below.
 
 
-
-###Conditional logging
+### Conditional logging
 
 In extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages.
 Starting of NLog 4.0 it’s possible to only include the `Trace` and `Debug` call with a debug release. 
@@ -27,7 +26,7 @@ Logger.ConditionalTrace("entering method {0}", methodname);
 This call will be removed by the .Net compiler if the DEBUG conditional compilation symbol is not set – default on a release build.
 
 
-##File Logging Performance
+## File Logging Performance
 Single process applications (in single AppDomain). Can optimize performance by configuring the FileTarget attributes:
 - _keepFileOpen_ = True
 - _concurrentwrites_ = False
