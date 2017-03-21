@@ -8,7 +8,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   <target xsi:type="Memory" name="String" layout="Layout" />
 </targets>
 ```
-Read more about using the [Configuration File](Configuration file).
+Read more about using the [[Configuration File]].
 
 ## Parameters
 ### General Options
