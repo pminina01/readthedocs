@@ -105,7 +105,7 @@ The network address can be:
 * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a named parameter. [Collection](Data-types) 
 Each collection item is represented by \<parameter /> element with the following attributes:
 
-* **layout** - Layout that should be use to calcuate the value for the parameter. [Layout](Data-types) Required.
+  * **layout** - Layout that should be use to calcuate the value for the parameter. [Layout](Data-types) Required.
 
-* **name** - Viewer parameter name. Required.
-* **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data-types)
+  * **name** - Viewer parameter name. Required.
+  * **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data-types)
