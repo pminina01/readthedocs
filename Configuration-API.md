@@ -1,6 +1,6 @@
 NLog can be also configured programmatically.
 
-##Use
+## Use
 In order to configure NLog in code you must complete the following steps:
  1. Create a `LoggingConfiguration` object that will hold the configuration
  2. Create one or more targets (objects of classes inheriting from `Target`)
@@ -8,8 +8,8 @@ In order to configure NLog in code you must complete the following steps:
  4. Define logging rules through `LoggingRule` objects and add them to the configuration's `LoggingRules`
  5. Activate the configuration by assigning the configuration object to `LogManager.Configuration`
 
-##Examples
-###Multiple targets
+## Examples
+### Multiple targets
 This sample demonstrates the programmatic creation of two targets: one is a colored console, and the other is a file and rules that send messages to them for messages whose level is `Debug` or higher.
 ```c#
 using NLog;
@@ -58,5 +58,5 @@ class Example
 }
 ```
 
-###Passing Custom Values
-Another simple example of additional functionality in code is the use of the [${event-context}](Event-context layout renderer) layout renderer.
+### Passing Custom Values
+Another simple example of additional functionality in code is the use of the [${event-context}](Event-Context-Layout-Renderer) layout renderer.
