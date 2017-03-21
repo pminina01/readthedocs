@@ -23,14 +23,16 @@ Configuration Syntax
   </target>
 </targets>
 ```
-##Parameters
-##Layout Options
+
+## Parameters
+### Layout Options
 _layout_ - Body layout (can be repeated multiple times). Layout
 
 _footer_ - Footer layout. Layout
 
 _header_ - Header layout. Layout
-###CSV Options
+
+### CSV Options
 _quoting_ - Quoting mode. Default: Auto  
 Possible values:  
 * All - Quote all column.
