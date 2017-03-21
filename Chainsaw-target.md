@@ -2,7 +2,7 @@ Sends log messages to the remote instance of Chainsaw application from log4j.
 
 Supported in .NET, Silverlight, Compact Framework and Mono
 
-##Configuration Syntax
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="Chainsaw"
@@ -28,11 +28,11 @@ Supported in .NET, Silverlight, Compact Framework and Mono
 ```
 Read more about using the [Configuration File](Configuration file).
 
-##Parameters
-###General Options
+## Parameters
+### General Options
 _name_ - Name of the target.
 
-###Layout Options
+### Layout Options
 _newLine_ - Indicates whether to append newline at the end of log message. [Boolean](Data types) Default: False
 
 _layout_ - Instance of Log4JXmlEventLayout that is used to format log messages. [Layout](Layout) Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
@@ -46,7 +46,7 @@ Possible values:
 _maxMessageSize_ - Maximum message size in bytes. [Integer](Data types) Default: 65000
 encoding - Encoding to be used. [Encoding](Data types) Default: utf-8
 
-###Connection Options
+### Connection Options
 _connectionCacheSize_ - Size of the connection cache (number of connections which are kept alive). [Integer](Data types) Default: 5
 This parameter is not supported in:
 * NLog v1.0 for .NET Compact Framework 1.0
@@ -69,7 +69,7 @@ For SOAP-based webservice support over HTTP use WebService target.
 
 _keepConnection_ - Indicates whether to keep connection open whenever possible. [Boolean](Data types) Default: True
 
-###Payload Options
+### Payload Options
 _includeSourceInfo_ - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data types)  
 This parameter is not supported in:
 * NLog v1.0 for .NET Compact Framework 1.0
@@ -91,7 +91,7 @@ This parameter is not supported in:
 
 _appInfo_ - AppInfo field. By default it's the friendly name of the current AppDomain.
 
-_ndcItemSeparator _- NDC item separator.
+_ndcItemSeparator_ - NDC item separator.
 This parameter is not supported in:
 * NLog v1.0 for .NET Compact Framework 1.0
 * NLog v1.0 for .NET Compact Framework 2.0
