@@ -2,7 +2,7 @@ The log level.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${level}
 ```
@@ -11,8 +11,8 @@ Alternatively, add padding to align the message.
 ${pad:padding=5:inner=${level:uppercase=true}}
 ```
 
-##Examples
-###Basic
+## Examples
+### Basic
 Configuration:
 ```
 ${level}
