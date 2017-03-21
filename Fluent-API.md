@@ -1,4 +1,4 @@
-##Fluent API
+## Fluent API
 
 Writing info message via fluent API.
 
@@ -28,7 +28,7 @@ catch (Exception ex)
 }
 ```
 
-##Caller Info
+## Caller Info
 
 Use the static Log class so you don't have to include loggers in all of classes.  The static Log class using .net 4.5 caller info to get the logger from the file name. 
 
