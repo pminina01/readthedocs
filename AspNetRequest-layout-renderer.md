@@ -3,9 +3,8 @@ ASP.NET Request variable.
 Supported in .NET and Mono
 
 
-##Legacy
+## Legacy
 This layout renderer is broken down to separate layout renders who are more ASP.NET Core compatible / future proof:
-
 
 * [${aspnet-Request-Cookie}](https://github.com/NLog/NLog/wiki/AspNetRequest-Cookie-Layout-Renderer) - ASP.NET Request cookie content. 
 * [${aspnet-Request-Host}](https://github.com/NLog/NLog/wiki/AspNetRequest-Host-Layout-Renderer) - ASP.NET Request host.
@@ -15,14 +14,14 @@ This layout renderer is broken down to separate layout renders who are more ASP.
 * [${aspnet-Request-UserAgent}](https://github.com/NLog/NLog/wiki/AspNetRequest-UserAgent-Layout-Renderer) - ASP.NET Request useragent.
 * [${aspnet-Request-Url}](https://github.com/NLog/NLog/wiki/AspNetRequest-Url-Layout-Renderer) - ASP.NET Request URL.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${aspnet-request:cookie=String:serverVariable=String:queryString=String
                 :item=String:form=String:header=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **cookie** - Cookie to be rendered.
 * **header** - Request header. Introduced in NLog.Web 4.2
 * **serverVariable** - ServerVariables item to be rendered. See for possible options: [msdn](https://msdn.microsoft.com/en-us/library/ms524602(v=vs.90).aspx). Not supported in ASP.NET Core. 
@@ -30,10 +29,10 @@ ${aspnet-request:cookie=String:serverVariable=String:queryString=String
 * **item** - Item name. The QueryString, Form, Cookies, or ServerVariables collection variables having the specified name are rendered.
 * **form** - Form variable to be rendered. Note: The Form property is populated when the HTTP request Content-Type value is either "application/x-www-form-urlencoded" or "multipart/form-data". (see [msdn](https://msdn.microsoft.com/en-us/library/system.web.httprequest.form(v=vs.110).aspx))
 
-##Remarks
+## Remarks
 Use this layout renderer to insert the value of the specified parameter of the ASP.NET Request object. This renderer requires the NLog.Web package.
 
-##Examples
+## Examples
 
 ### Full URL
 Full URL without domain, eg `default.aspx?id=512`
