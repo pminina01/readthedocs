@@ -2,7 +2,7 @@ A newline literal.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${newline}
 ```
