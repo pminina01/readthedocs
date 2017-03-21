@@ -2,7 +2,7 @@ Filter events in the config.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```xml
 <rules>
   <logger ... >
@@ -12,8 +12,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   </logger>
 </rules>
 ```
-##Parameters
-###Filtering Options
+
+## Parameters
+### Filtering Options
 * _condition_ - Condition expression. Condition Required. See section Conditions below.
 * _action_ - Action to be taken when filter matches. Required.  
 Possible values:
@@ -50,9 +51,7 @@ The following condition functions are available:
 * `starts-with(s1,s2)` Determines whether the second string is a prefix of the first one. Returns: `true` when the second string is a prefix of the first string, `false` otherwise.
 
 
-
 ### Quotes
-
 Single quotes should be escaped with another single quote. 
 Example:
 
@@ -60,7 +59,7 @@ Example:
 contains('${message}', 'Cannot insert the value NULL into column ''Col1')
 ```
 
-##Extensibility
+## Extensibility
 New condition functions are easy to add; just create a public static class with a static function and mark the class and method with the attributes `[ConditionMethods]` and `[ConditionMethod]` respectively. 
 
 You can find a sample implementation of a custom filter [here](https://github.com/NLog/NLog/blob/8201a362b8702be97facae2c6af83c2a6e9b54d1/tests/SampleExtensions/MyConditionMethods.cs)
@@ -76,8 +75,7 @@ Then you have to tell NLog where to find your assembly
 <nlog>
 ```
 
-
-##Examples
+## Examples
 Here are several examples with conditions:
 
 ```xml
@@ -104,6 +102,3 @@ Ignore all `Microsoft.*` logs but log `Microsoft.AspNetCore.Hosting.Internal.Web
     </logger>
 </rules>
 ```
-
-
-
