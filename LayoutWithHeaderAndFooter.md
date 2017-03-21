@@ -1,7 +1,8 @@
 A specialized layout that supports header and footer. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target>
@@ -15,10 +16,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono
   </target>
 </targets>
 ```
-##Parameters
-###Layout Options
-_layout_ - Body layout (can be repeated multiple times). Layout
 
-_header_ - Header layout. Layout
-
-_footer_ - Footer layout. Layout
+## Parameters
+### Layout Options
+* **layout** - Body layout (can be repeated multiple times). Layout
+* **header** - Header layout. Layout
+* **footer** - Footer layout. Layout
