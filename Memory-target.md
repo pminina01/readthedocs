@@ -1,21 +1,25 @@
 Writes log messages to an ArrayList in memory for programmatic retrieval. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="Memory" name="String" layout="Layout" />
 </targets>
 ```
 Read more about using the [Configuration File](Configuration file).
-##Parameters
-###General Options
-_name_ - Name of the target.
-###Layout Options
-_layout_ - Layout used to format log messages. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
-##Examples
-###Logging to an array (snippet from    [Memory Simple Example.cs](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/examples/targets/Configuration%20API/Memory/Simple/Example.cs)  )
+## Parameters
+### General Options
+* **name** - Name of the target.
+
+### Layout Options
+* **layout** - Layout used to format log messages. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
+
+## Examples
+### Logging to an array
+(snippet from    [Memory Simple Example.cs](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/examples/targets/Configuration%20API/Memory/Simple/Example.cs)  )
 
         MemoryTarget target = new MemoryTarget();
         target.Layout = "${message}";
