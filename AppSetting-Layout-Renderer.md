@@ -2,17 +2,20 @@ Value from the App Settings configuration
 
 From NLog 3.0+, in NLog.Extended
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${appsetting:name=String:default=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+
+### Rendering Options
+
 * **name** - Key in the apps setting. Required.
 * **Default** - Default value if not present. Optional.
 
-##Example
+## Example
+
 Example .config
 
 ```xml
