@@ -2,7 +2,7 @@ Causes a flush on a wrapped target if LogEvent satisfies provided condition.
 If condition isn't set, a flush will occur after each write.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="AutoFlushWrapper" name="String" condition="Condition">
@@ -10,12 +10,13 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   </target>
 </targets>
 ```
-##Parameters
-###General Options
+
+## Parameters
+### General Options
 _name_ - Name of the target.  
 _condition_ - [Condition](https://github.com/NLog/NLog/wiki/When-Filter#conditions) is expression used to determine if flush must be executed. (*introduced in NLog 4.4*)
 
-##Examples
+## Examples
 Flush into target on each write
 ```xml
 <?xml version="1.0" ?>
