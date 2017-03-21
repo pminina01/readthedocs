@@ -19,12 +19,12 @@ Read more about using the [Configuration File](Configuration file).
 
 ## Parameters
 ### General Options
-_name_ - Name of the target.
+* **name** - Name of the target.
 
 ### Layout Options
-_layout_ - Text to be rendered. [Layout](Layouts) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}  
-_footer_ - Footer. [Layout](Layouts)  
-_header_ - Header. [Layout](Layouts)
+* **layout** - Text to be rendered. [Layout](Layouts) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
+* **footer** - Footer. [Layout](Layouts)  
+* **header** - Header. [Layout](Layouts)
 
 ### Console Options
 _encoding_ - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx). Defaults to `Encoding.Default` (`UTF-8` on silverlight). Starting for NLog 4.0.
