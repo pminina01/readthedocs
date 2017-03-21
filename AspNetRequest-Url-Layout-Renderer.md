@@ -10,9 +10,9 @@ ${aspnet-request-url:IncludeHost=boolean:IncludePort=boolean:IncludeQueryString=
 ```
 
 ## Parameters
-- *IncludeHost*: include the host name? Default is `true`.
-- *IncludePort*: include the port number? Default is `false`.
-- *IncludeQueryString*: include the querystring. Default is `false`.
+* **IncludeHost** - include the host name? Default is `true`.
+* **IncludePort** - include the port number? Default is `false`.
+* **IncludeQueryString** - include the querystring. Default is `false`.
 
 ## Examples
 
