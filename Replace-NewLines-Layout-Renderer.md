@@ -8,9 +8,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 `${replace-newlines:replacement=String}`
 
 ## Parameters
-_replacement_ - Text to replace newlines with. Default is `" "` (space)
+* **replacement** - Text to replace newlines with. Default is `" "` (space)
 
-##Examples
+## Examples
 
 Examples are using the MDC:
 
@@ -18,17 +18,14 @@ Examples are using the MDC:
 MappedDiagnosticsContext.Set("foo", "bar" + System.Environment.NewLine + "123");
 ```
 
-###To space
+### To space
 ```
 ${replace-newlines:${mdc:foo}}
 ```
 Will result in "bar 123"
 
-###To other char
+### To other char
 ```
 ${replace-newlines:replacement=|:${mdc:foo}}
 ```
 Will result in "bar|123"
-
-
-
