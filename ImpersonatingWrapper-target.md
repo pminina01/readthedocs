@@ -49,4 +49,4 @@ Possible values:
 
 * **logOnProvider** - Type of the logon provider.  
 Possible values:  
- * Default - Use the standard logon provider for the system.
+  * Default - Use the standard logon provider for the system.
