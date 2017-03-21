@@ -1,7 +1,8 @@
 Filters log entries based on a condition. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="FilteringWrapper" name="String" condition="Condition">
@@ -9,8 +10,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   </target>
 </targets>
 ```
-##Parameters
-###General Options
-_name_ - Name of the target.
+
+## Parameters
+### General Options
+**name** - Name of the target.
+
 ###Filtering Options
-_condition_ - Condition expression. Log events who meet this condition will be forwarded to the wrapped target. Condition Required.
+**condition** - Condition expression. Log events who meet this condition will be forwarded to the wrapped target. Condition Required.
