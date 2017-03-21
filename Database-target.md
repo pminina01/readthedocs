@@ -31,21 +31,20 @@ Read more about using the [Configuration File](Configuration file).
 
 ## Parameters
 ### General Options
-_name_ - Name of the target.
+* **name** - Name of the target.
 
 ### Connection Options
-_dbUserName_ - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
+* **dbUserName** - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
 
-_dbProvider_ - Name of the database provider. Required. Default: sqlserver  
+* **dbProvider** - Name of the database provider. Required. Default: sqlserver  
 The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
-* System.Data.SqlClient -
-* System.Data.SqlServerCe.3.5 -
-* System.Data.OracleClient - (deprecated in .NET Framework 4)
-* Oracle.DataAccess.Client -
-* System.Data.SQLite -
-* Npgsql -
-* MySql.Data.MySqlClient -
-
+  * System.Data.SqlClient -
+  * System.Data.SqlServerCe.3.5 -
+  * System.Data.OracleClient - (deprecated in .NET Framework 4)
+  * Oracle.DataAccess.Client -
+  * System.Data.SQLite -
+  * Npgsql -
+  * MySql.Data.MySqlClient -
 (Note that provider invariant names are not supported on .NET Compact Framework). Alternatively the parameter value can be be a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the following tokens:
 * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
 * oledb - OLEDB Data Provider
@@ -55,19 +54,19 @@ Example of using a fully qualified name with Mono.Data.Sqlite
  
     dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"
 
-_useTransactions_ - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
+* **useTransactions** - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
 
-_connectionStringName_ - Name of the connection string. The ProviderName of the connectionstring will be used to determine the SQL type. Since NLog 4.3 this  ProviderName attribute isn't required anymore and the `dbProvider` will be used as fallback.
+* **connectionStringName** - Name of the connection string. The ProviderName of the connectionstring will be used to determine the SQL type. Since NLog 4.3 this  ProviderName attribute isn't required anymore and the `dbProvider` will be used as fallback.
 
-_connectionString_ - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
+* **connectionString** - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
 
-_keepConnection_ - Indicates whether to keep the database connection open between the log events. [Boolean](Data types) Default: `false`  
+* **keepConnection** - Indicates whether to keep the database connection open between the log events. [Boolean](Data types) Default: `false`  
 
-_dbDatabase_ - Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string. [Layout](Data types)  
+* **dbDatabase** - Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string. [Layout](Data types)  
 
-_dbPassword_ - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
+* **dbPassword*' - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
 
-_dbHost_ - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
+* **dbHost* - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
 
 ### Installation Options
 See  [Installing targets](Installing-targets).
@@ -110,10 +109,10 @@ Each collection item is represented by \<parameter /> element with the following
 
 
 ### SQL Statement
-_commandText_ - Text of the SQL command to be run on each log level. [Layout](Data types) Required.  
+* **commandText** - Text of the SQL command to be run on each log level. [Layout](Data types) Required.  
 Typically this is a SQL INSERT statement or a stored procedure call. It should use the database-specific parameters (marked as @parameter for SQL server or :parameter for Oracle, other data providers have their own notation) and not the layout renderers, because the latter is prone to SQL injection attacks. The layout renderers should be specified as \<parameter /> elements instead.
 
-_parameters_ - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Data types)  
+* **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Data types)  
 Each collection item is represented by \<parameter /> element with the following attributes:
 * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data types) Required.  
 * _name_ - Database parameter name. Required.
