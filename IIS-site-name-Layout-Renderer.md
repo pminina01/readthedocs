@@ -1,7 +1,7 @@
 IIS site name - printing `HostingEnvironment.SiteName`
 
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${iis-site-name}
 ```
