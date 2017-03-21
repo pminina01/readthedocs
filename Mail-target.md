@@ -3,7 +3,8 @@ Sends log messages by email using SMTP protocol.
 Combines well with [FallbackGroup Target](https://github.com/NLog/NLog/wiki/FallbackGroup-target) in order to create a fallback with multiple SMTP Hosts, example see [here](https://github.com/NLog/NLog/wiki/Mail-target#mail-target-wrapped-by-fallbackgroup-target).
 
 Supported in .NET and Mono
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="Mail"
@@ -34,65 +35,69 @@ Supported in .NET and Mono
 </targets>
 ```
 Read more about using the [Configuration File](Configuration file).
-##Parameters
-###General Options
-_name_ - Name of the target.
-###Layout Options
-_header_ - Header. [Layout](Data-types)
 
-_footer_ - Footer. [Layout](Data-types)
+## Parameters
+### General Options
+* **name** - Name of the target.
 
-_layout_ - Text to be rendered. [Layout](Data-types) Required. Default: `${message}${newline}`. Same as _body_ property
+### Layout Options
+* **header** - Header. [Layout](Data-types)
 
-_html_ - Indicates whether to send message as HTML instead of plain text. [Boolean](Data-types) Default: `false`
+* **footer** - Footer. [Layout](Data-types)
 
-_addNewLines_ - Indicates whether to add new lines between log entries. [Boolean](Data-types)
+* **layout** - Text to be rendered. [Layout](Data-types) Required. Default: `${message}${newline}`. Same as _body_ property
 
-_replaceNewlineWithBrTagInHtml_ - Indicates whether NewLine characters in the body should be replaced with `<br/>` tags. [Boolean](Data-types) Default: `false`
+* **html** - Indicates whether to send message as HTML instead of plain text. [Boolean](Data-types) Default: `false`
 
-_encoding_ - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: `UTF-8`
-###Message Options
-_subject_ - Mail subject. [Layout](Data-types) Required. Default: Message from NLog on ${machinename}
+* **addNewLines** - Indicates whether to add new lines between log entries. [Boolean](Data-types)
 
-_to_ - Recipients' email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types). Starting in NLog 4.0 this field is no longer required, but To, BCC or CC should be defined otherwise an exception is thrown. 
+* **replaceNewlineWithBrTagInHtml** - Indicates whether NewLine characters in the body should be replaced with `<br/>` tags. [Boolean](Data-types) Default: `false`
 
-_bcc_ - BCC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types)
+* **encoding** - Encoding to be used for sending e-mail. [Encoding](Data-types) Default: `UTF-8`
 
-_cc_ - CC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types)
+### Message Options
+* **subject** - Mail subject. [Layout](Data-types) Required. Default: Message from NLog on ${machinename}
 
-_from_ - Sender's email address (e.g. joe@domain.com). [Layout](Data-types) Required.
+* **to** - Recipients' email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types). Starting in NLog 4.0 this field is no longer required, but To, BCC or CC should be defined otherwise an exception is thrown. 
 
-_body_ - Same as _Layout_ property. Mail message body (repeated for each log message send in one mail). [Layout](Data-types) Default: `${message}${newline}` 
+* **bcc** - BCC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types)
 
-###SMTP Options
-_smtpUserName_ - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
+* **cc** - CC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). [Layout](Data-types)
 
-_enableSsl_ - Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server. [Boolean](Data-types) Default: False  
+* **from** - Sender's email address (e.g. joe@domain.com). [Layout](Data-types) Required.
 
-_smtpPassword_ - Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
+* **body** - Same as _Layout_ property. Mail message body (repeated for each log message send in one mail). [Layout](Data-types) Default: `${message}${newline}` 
 
-_smtpAuthentication_ - SMTP Authentication mode. Default: None  
+### SMTP Options
+* **smtpUserName** - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
+
+* **enableSsl** - Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server. [Boolean](Data-types) Default: False  
+
+* **smtpPassword** - Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
+
+* **smtpAuthentication** - SMTP Authentication mode. Default: None  
 Possible values:
-* Basic - Basic - username and password.
-* None - No authentication.
-* Ntlm - NTLM Authentication.
+  * _Basic_ - Basic - username and password.
+  * _None_ - No authentication.
+  * _Ntlm_ - NTLM Authentication.
 
-_smtpServer_ - SMTP Server to be used for sending. [Layout](Data-types) Required.
+* **smtpServer** - SMTP Server to be used for sending. [Layout](Data-types) Required.
 
-_smtpPort_ - Port number that SMTP Server is listening on. [Integer](Data-types) Default: 25
+* **smtpPort** - Port number that SMTP Server is listening on. [Integer](Data-types) Default: 25
 
-_useSystemNetMailSettings_ - Force using smtp configuration from system.net/mailSettings. [Boolean](Data-types) Default: False
+* **useSystemNetMailSettings** - Force using smtp configuration from system.net/mailSettings. [Boolean](Data-types) Default: False
 
-_timeout_ - Indicates the SMTP client timeout in milliseconds. [Integer](Data-types) Default: 10000 (10 seconds)
+* **timeout** - Indicates the SMTP client timeout in milliseconds. [Integer](Data-types) Default: 10000 (10 seconds)
 
-_pickupDirectoryLocation_ - Gets or sets the folder where applications save mail messages to be processed by the local SMTP server (__introduced in NLog 4.2__).
+* **pickupDirectoryLocation** - Gets or sets the folder where applications save mail messages to be processed by the local SMTP server (__introduced in NLog 4.2__).
 
-_smtpDeliveryMethod_ - Specifies how outgoing email messages will be handled (__introduced in NLog 4.2__). Default: Network 
+* **smtpDeliveryMethod** - Specifies how outgoing email messages will be handled (__introduced in NLog 4.2__). Default: Network 
 Possible values:
-* Network - Email is sent through the network to an SMTP server.
-* PickupDirectoryFromIis - Email is copied to the pickup directory used by a local Internet Information Services (IIS) for delivery.
-* SpecifiedPickupDirectory - Email is copied to the directory specified by the PickupDirectoryLocation property for delivery by an external application.
-##Remarks
+  * _Network_ - Email is sent through the network to an SMTP server.
+  * _PickupDirectoryFromIis_ - Email is copied to the pickup directory used by a local Internet Information Services (IIS) for delivery.
+  * _SpecifiedPickupDirectory_ - Email is copied to the directory specified by the PickupDirectoryLocation property for delivery by an external application.
+
+## Remarks
 
 ### Application Configuration File
 If the application config file contains mail settings, fx.:
