@@ -2,18 +2,18 @@ System special folder path (includes My Documents, My Music, Program Files, Desk
 
 Supported in .NET, Silverlight and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${specialfolder:dir=String:file=String:folder=Enum}
 ```
 
-##Parameters
-###Advanced Options
-* _dir_ - Name of the directory to be Path.Combine()'d with the directory name.
-* _file_ - Name of the file to be Path.Combine()'d with the directory name.
+## Parameters
+### Advanced Options
+* **dir** - Name of the directory to be Path.Combine()'d with the directory name.
+* **file* - Name of the file to be Path.Combine()'d with the directory name.
 
-###Rendering Options
-* _folder_ - System special folder to use.  
+### Rendering Options
+* **folder** - System special folder to use.  
   Possible values:
   * AdminTools -
   * ApplicationData -
