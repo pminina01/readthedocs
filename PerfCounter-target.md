@@ -23,7 +23,7 @@ Read more about using the [[Configuration File]].
 * **counterName** - Name of the counter.
 
 ### Performance Counter Options
-* **instanceName_ - Performance counter instance name.
+* **instanceName** - Performance counter instance name.
 
 * **counterHelp** - Counter help text.  
 
