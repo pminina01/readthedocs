@@ -2,13 +2,13 @@ The formatted log message.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${message:exceptionSeparator=String:withException=Boolean}
 ```
 
-##Parameters
-###Layout Options
+## Parameters
+### Layout Options
 * **exceptionSeparator** - String that separates message from the exception.
 
   > This parameter is not supported in:
