@@ -2,20 +2,20 @@ A string literal.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${literal:text=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **text** - Literal text.
-
-##Remarks
+ 
+## Remarks
 This is used to escape `'${' sequence as ;${literal:text=${}'`.
 
-##Examples
-###Basic
+## Examples
+### Basic
 Configuration:
 ```
 ${literal:text=Some Text with ${ in it}
