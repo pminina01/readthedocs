@@ -16,10 +16,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ## Parameters
 ### General Options
-**name** - Name of the target.
+* **name** - Name of the target.
 
 ### Fallback Options
-**returnToFirstOnSuccess** - Indicates whether to return to the first target after any successful write. `Boolean`. Default `false`
+* **returnToFirstOnSuccess** - Indicates whether to return to the first target after any successful write. `Boolean`. Default `false`
 
 ## Example
 
