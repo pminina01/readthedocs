@@ -1,7 +1,8 @@
 Sends log messages to a NLog Receiver Service (using WCF or Web Services).
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="LogReceiverService"
@@ -16,28 +17,31 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
-##Parameters
-###General Options
-_name_ - Name of the target.
-###Connection Options
-_endpointConfigurationName_ - Name of the endpoint configuration in WCF configuration file.  
 
-_endpointAddress_ - Endpoint address. Required.
-###Payload Options
-_useBinaryEncoding_ - Indicates whether to use binary message encoding. [Boolean](Data-types)  
+## Parameters
+### General Options
+* **name** - Name of the target.
 
-_parameters_ - The list of parameters. [Collection](Data-types)  
+### Connection Options
+* **endpointConfigurationName** - Name of the endpoint configuration in WCF configuration file.  
+
+* **endpointAddress** - Endpoint address. Required.
+
+### Payload Options
+* **useBinaryEncoding** - Indicates whether to use binary message encoding. [Boolean](Data-types)  
+
+* **parameters** - The list of parameters. [Collection](Data-types)  
 Each collection item is represented by \<parameter /> element with the following attributes:
   * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data-types) Required.
   * _name_ - Name of the parameter.
   * _type_ - Type of the parameter.System.Type
 
-_clientId_ - Client ID. [Layout](Data-types)
+* **clientId** - Client ID. [Layout](Data-types)
 
-_includeEventProperties_ - Indicates whether to include per-event properties in the payload sent to the server. [Boolean](Data-types)
+* **includeEventProperties** - Indicates whether to include per-event properties in the payload sent to the server. [Boolean](Data-types)
 
-##Examples
-###Passing Parameters
+## Examples
+### Passing Parameters
 Parameters are passed to the WCF LogReceiverService target using one or more configuration lines such as:
 ```xml
 <parameter name="MyParameter" layout="My Value!" />
@@ -45,7 +49,7 @@ Parameters are passed to the WCF LogReceiverService target using one or more con
 ```
 These parameters are passed over the network to the service and can be accessed by emitting events from your receiver application.
 
-###Application for receiving events
+### Application for receiving events
 ```csharp
 namespace MyLogReceiverApp
 {
@@ -78,7 +82,7 @@ The line:
 
 emits each event to the appropriate targets defined in the server side NLog.config file.
 
-###Accessing Custom Values
+### Accessing Custom Values
 On the server side NLog.config file, you may use the ${event-context} layout renderer to access any parameters passed from the client side config. A line such as:
 
 ```xml
