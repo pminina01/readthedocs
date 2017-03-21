@@ -11,11 +11,11 @@ ${appdomain:format=Format}
 
 ### Rendering Options
 
-**format - The formating.  Default to `Long`.
+* **format** - The formating.  Default to `Long`.
 possible options:
-* Long: default. The id as four number digit, colon, friendlyname. E.g. 0003:NLog.UnitTests
-* Short. Only the id as two number digit, like "03".
-* or custom like {0} -  {1}. The first parameter is the"AppDomain.Id", the second is the "AppDomain.FriendlyName". Note: use escaping of the brackets. See examples.
+  * _Long_ - default. The id as four number digit, colon, friendlyname. E.g. 0003:NLog.UnitTests
+  * _Short_ - Only the id as two number digit, like "03".
+  * or custom like {0} -  {1}. The first parameter is the"AppDomain.Id", the second is the "AppDomain.FriendlyName". Note: use escaping of the brackets. See examples.
 
 
 ## Example
