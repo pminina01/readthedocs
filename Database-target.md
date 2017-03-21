@@ -1,7 +1,8 @@
 Writes log messages to the database using an ADO.NET provider. The database operation is always executed outside of a transaction.
 
 Supported in .NET, Compact Framework and Mono
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="Database"
@@ -27,10 +28,12 @@ Supported in .NET, Compact Framework and Mono
 </targets>
 ```
 Read more about using the [Configuration File](Configuration file).
-##Parameters
-###General Options
+
+## Parameters
+### General Options
 _name_ - Name of the target.
-###Connection Options
+
+### Connection Options
 _dbUserName_ - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
 
 _dbProvider_ - Name of the database provider. Required. Default: sqlserver  
@@ -56,7 +59,6 @@ _useTransactions_ - This option was removed in NLog 4.0 because the logging code
 
 _connectionStringName_ - Name of the connection string. The ProviderName of the connectionstring will be used to determine the SQL type. Since NLog 4.3 this  ProviderName attribute isn't required anymore and the `dbProvider` will be used as fallback.
 
-
 _connectionString_ - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
 
 _keepConnection_ - Indicates whether to keep the database connection open between the log events. [Boolean](Data types) Default: `false`  
@@ -67,7 +69,7 @@ _dbPassword_ - Database password. If the ConnectionString is not provided this v
 
 _dbHost_ - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
 
-###Installation Options
+### Installation Options
 See  [Installing targets](Installing-targets).
 
 _installDdlCommands_ - The installation DDL commands. [Collection](Data types)  . 
@@ -107,7 +109,7 @@ Each collection item is represented by \<parameter /> element with the following
         * _text_ - Command text. [Layout](Data types) Required.
 
 
-###SQL Statement
+### SQL Statement
 _commandText_ - Text of the SQL command to be run on each log level. [Layout](Data types) Required.  
 Typically this is a SQL INSERT statement or a stored procedure call. It should use the database-specific parameters (marked as @parameter for SQL server or :parameter for Oracle, other data providers have their own notation) and not the layout renderers, because the latter is prone to SQL injection attacks. The layout renderers should be specified as \<parameter /> elements instead.
 
@@ -119,7 +121,7 @@ Each collection item is represented by \<parameter /> element with the following
 * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
 * _size_ - Database parameter size. [Integer](Data types) Default: 0
 
-##Example Configurations
+## Example Configurations
 
 ### SQL Server and ASP.NET Example Configuration
 ```xml
