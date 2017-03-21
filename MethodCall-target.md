@@ -1,7 +1,8 @@
 Calls the specified static method on each log message and passes contextual parameters to it. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="MethodCall"
@@ -12,16 +13,18 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
   </target>
 </targets>
 ```
-Read more about using the [Configuration File](Configuration-file).
-##Parameters
-###General Options
-_name_ - Name of the target.
-###Invocation Options
-_methodName_ - Method name. The method must be `public` and `static`.
+Read more about using the [[Configuration File]].
 
-_className_ - Class name. Do include the assembly name, e.g. `"NLog.UnitTests.Targets.MethodCallTests, NLog.UnitTests"`
+## Parameters
+### General Options
+* **name** - Name of the target.
+
+### Invocation Options
+* **methodName** - Method name. The method must be `public` and `static`.
+* **className** - Class name. Do include the assembly name, e.g. `"NLog.UnitTests.Targets.MethodCallTests, NLog.UnitTests"`
+
 ### Parameter Options
-_parameters_ - The array of parameters to be passed. [Collection](Data-types)  
+* **parameters** - The array of parameters to be passed. [Collection](Data-types)  
 Each collection item is represented by `<parameter />` element with the following attributes:
   * _layout_ - Layout that should be use to calculate the value for the parameter. [Layout](Data-types) Required.
   * _name_ - Name of the parameter.
@@ -29,8 +32,8 @@ Each collection item is represented by `<parameter />` element with the followin
 
 Note: Since NLog 4.3 these parameters can be optional.
 
-##Examples
-###Logging to a static method
+## Examples
+### Logging to a static method
 In order to send all logs to a static method, use the following configuration file:
 ```xml
 <?xml version="1.0" ?>
