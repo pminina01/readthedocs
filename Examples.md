@@ -1,4 +1,5 @@
-##Using NLog with GMail
+## Using NLog with GMail
+
 In order to use [Mail target](Mail-target) with GMail, you need to use the following server configuration:
 ```xml
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
@@ -24,10 +25,11 @@ In order to use [Mail target](Mail-target) with GMail, you need to use the follo
 </nlog>
 ```
 
-##Using NLog with Growl for Windows
+## Using NLog with Growl for Windows
+
 [Ryan Farley](http://ryanfarley.com/blog/articles/about.aspx) has a great article on [how to use NLog with Growl for Windows](http://ryanfarley.com/blog/archive/2010/05/06/announcing-the-growl-for-windows-target-for-nlog.aspx)
 
-##Changing log file name at runtime
+## Changing log file name at runtime
 
 ```c#
 using NLog.Targets;
