@@ -2,7 +2,7 @@ ASP.NET User variable.
 
 Supported in .NET and Mono
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${aspnet-user-identity}
 ```
