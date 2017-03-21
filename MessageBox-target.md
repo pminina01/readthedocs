@@ -17,5 +17,5 @@ Read more about using the [[Configuration File]].
 ### Layout Options
 * **layout** - Layout used to format log messages. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
-###UI Options
+### UI Options
 * **caption** - Message box title. [Layout](Data-types)
