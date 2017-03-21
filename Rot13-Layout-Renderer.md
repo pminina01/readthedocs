@@ -21,5 +21,5 @@ ${rot13:inner=Layout:text=Layout}
 * **text** - Layout to be wrapped. Layout  
 This variable is for backwards compatibility
 
-##Remarks
+## Remarks
 See http://en.wikipedia.org/wiki/ROT13.
