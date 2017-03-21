@@ -4,11 +4,11 @@ Introduced in NLog v4.1
 
 Supported in .NET and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${callsite-linenumber:skipFrames=Integer}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **skipFrames** - The number of frames to skip. Integer Default: 0
