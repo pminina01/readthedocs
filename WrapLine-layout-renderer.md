@@ -4,7 +4,7 @@ Introduced in NLog 4.3.4
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${wrapline=Integer:inner=Layout}
 ```
@@ -15,12 +15,12 @@ or by using ambient property to modify output of other layout renderer:
 ${other:wrapline=Integer}
 ```
 
-##Parameters
-###Transformation Options
-* _inner_ - Wrapped layout. Layout.  Default attribute.
-* _wrapline_ - Indicates wrapping position. Integer greater than 0. Default: 80
+## Parameters
+### Transformation Options
+* **inner** - Wrapped layout. Layout.  Default attribute.
+* **wrapline** - Indicates wrapping position. Integer greater than 0. Default: 80
 
-##Examples
+## Examples
 
 ```
 ${wrapline:${message}}
