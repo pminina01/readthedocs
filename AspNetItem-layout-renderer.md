@@ -4,18 +4,18 @@ Use this layout renderer to insert the value of the specified variable stored
 
 Supported in .NET and Mono
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${aspnet-item:variable=String;evaluateAsNestedProperties:boolean}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **variable** - Variable name.
 * _EvaluateAsNestedProperties_ - boolean. Default: `false`. Evaluate the  as nested properties. The dots in the `variable` are special interpreted. See example below.
 
 
-##Examples
+## Examples
 
 <para>You can set the value of an ASP.NET Item variable by using the following code:</para>
 	
