@@ -1,4 +1,4 @@
-##General
+## General
 Feature|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 read app.config/web.config|✓ |✓ |✓ |✓ |||✓ |||	
@@ -7,7 +7,7 @@ auto reload|✓ |✓ |✓ |✓ |||✓ |||
 stacktrace with source|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 fluent interface|||✓ |✓ |||?|||	
 	
-##Layout Renderers
+## Layout Renderers
 Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AllEventProperties|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ | Include Caller Information: .NET 4.5 only	
@@ -64,8 +64,8 @@ Time|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 TraceActivityId|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 WindowsIdentity|✓ |✓ |✓ ||✓ |✓ |✓ |||	
-n
-##Layout renderer (wrapped)
+
+## Layout renderer (wrapped)
 Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 Cached|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
@@ -84,7 +84,7 @@ WrapLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 WhenEmpty|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 XmlEncode|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
-##Targets
+## Targets
 Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AspResponse|✓ |✓ |✓ |||||||	
@@ -108,7 +108,7 @@ PerformanceCounter|✓ |✓ |✓ ||||✓ |||
 Trace|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
-##Target-wrappers
+## Target-wrappers
 Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AsyncWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
