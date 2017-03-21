@@ -3,9 +3,9 @@ Targets are used to display, store, or pass log messages to another destination.
 
 NLog supports creating custom targets. For more information, see: [Extending NLog](Extending NLog)
 
-##Targets
+## Targets
 
-###NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
+### NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
 * [AspResponse](AspResponse-target) - Outputs log messages through the ASP Response object.
 * [Chainsaw](Chainsaw-target) - Sends log messages to the remote instance of Chainsaw application from log4j.
 * [ColoredConsole](ColoredConsole-target) - Writes log messages to the console with customizable coloring.
@@ -42,27 +42,26 @@ NLog supports creating custom targets. For more information, see: [Extending NLo
 * [SplitGroup](SplitGroup-target) - Writes log events to all targets.
 
 
-
-###NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
+### NLog.Extended package  [![Version](https://img.shields.io/nuget/v/NLog.Extended.svg)](https://www.nuget.org/packages/NLog.Extended)
 * [MSMQ](MSMQ-target) - Writes log message to the specified message queue handled by MSMQ.
 
-###NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
+### NLog.Web package [![Version](https://img.shields.io/nuget/v/NLog.Web.svg)](https://www.nuget.org/packages/NLog.Web)
 
 * [AspNetTrace](AspNetTrace-target) - Writes log messages to the ASP.NET trace.
 
-####Wrappers
+#### Wrappers
 * [AspNetBufferingWrapper](AspNetBufferingWrapper-target) - Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.
 
 
-###NLog.Windows.Forms package [![Version](https://img.shields.io/nuget/v/NLog.Windows.Forms.svg)](https://www.nuget.org/packages/NLog.Windows.Forms)
+### NLog.Windows.Forms package [![Version](https://img.shields.io/nuget/v/NLog.Windows.Forms.svg)](https://www.nuget.org/packages/NLog.Windows.Forms)
 * [FormControl](FormControl-target) - Logs text to Windows.Forms.Control.Text property control of specified Name.
 * [MessageBox](MessageBox-target) - Pops up log messages as message boxes.
 * [RichTextBox](https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget) - Log text a Rich Text Box control in an existing or new form.
 
-###NLog.Elmah package [![Version](https://img.shields.io/nuget/v/NLog.Elmah.svg)](https://www.nuget.org/packages/NLog.Elmah)
+### NLog.Elmah package [![Version](https://img.shields.io/nuget/v/NLog.Elmah.svg)](https://www.nuget.org/packages/NLog.Elmah)
 * [Elmah](Elmah-target) - Logs to Elmah
 
-###External packages
+### External packages
 External packages, not maintained by the NLog team.
 
 
@@ -87,5 +86,5 @@ Package|Version     |Description
 
 <!-- PLEASE keep SORTED -->
 
-#Writing your own target
+# Writing your own target
 NLog supports custom target. For more information, see: [Extending NLog](Extending NLog)
