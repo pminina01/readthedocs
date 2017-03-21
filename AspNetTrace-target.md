@@ -2,7 +2,7 @@ Writes log messages to the ASP.NET trace.
 
 Supported in .NET and Mono
 
-##Configuration Syntax
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="AspNetTrace" name="String" layout="Layout" />
@@ -11,17 +11,19 @@ Supported in .NET and Mono
 
 Read more about using the [Configuration File](Configuration file).
 
-##Parameters
-###General Options
+## Parameters
+
+### General Options
 name - Name of the target
-###Layout Options
+
+### Layout Options
 layout - Layout used to format log messages. [Layout](Layout) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 ###Remarks
 Log entries can then be viewed by navigating to http://server/path/Trace.axd.
 
 AspNetTrace uses the `HttpContext.Current`. Therefore async/buffered writing does not works for AspNetTrace due to different thread.
  
-##Examples
+## Examples
 In order to use this target, put the following code in the [configuration file](Configuration file) such as Web.nlog or NLog.config:
 ```xml
 <?xml version="1.0" ?>
