@@ -19,27 +19,26 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ## Parameters
 
 ### General Options
-_name_ - Name of the target.
+* **name** - Name of the target.
 
 ### Buffering Options
-_queueLimit_ - Limit on the number of requests in the lazy writer thread request queue. Integer Default: `10000`
+* **queueLimit** - Limit on the number of requests in the lazy writer thread request queue. Integer Default: `10000`
 
-_timeToSleepBetweenBatches_ - Time in milliseconds to sleep between batches. Integer Default: `50`. When set to `0`, this  will lead to a high CPU usage.
+* **timeToSleepBetweenBatches** - Time in milliseconds to sleep between batches. Integer Default: `50`. When set to `0`, this  will lead to a high CPU usage.
 
-_batchSize_ - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100 (NLog 4.4.2 and newer has Default: 200)
+* **batchSize** - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100 (NLog 4.4.2 and newer has Default: 200)
 
-_fullBatchSizeWriteLimit_ - Max number of consecutive full _batchSize_ writes to perform within the same timer event. Integer Default: 5. Introduced in NLog 4.4.2
+* **fullBatchSizeWriteLimit** - Max number of consecutive full _batchSize_ writes to perform within the same timer event. Integer Default: 5. Introduced in NLog 4.4.2
 
-_overflowAction_ - Action to be taken when the lazy writer thread request queue count exceeds the set limit. Default: Discard  
+* **overflowAction** - Action to be taken when the lazy writer thread request queue count exceeds the set limit. Default: Discard  
 Possible values:  
- * Block - Block until there's more room in the queue.  
- * Discard - Discard the overflowing item.
- * Grow - Grow the queue.
+  * Block - Block until there's more room in the queue.  
+  * Discard - Discard the overflowing item.
+  * Grow - Grow the queue.
 
-_optimizeBufferReuse_ - Instead of allocating new buffers for every _batchSize_ write, then it reuse the same buffer. This means that the wrapped target no longer can take ownership of the buffers. All targets in the NLog package supports this mode. It is enabled automatically if the wrapped target has enabled _optimizeBufferReuse_. Introduced in NLog 4.4.2
+* **optimizeBufferReuse** - Instead of allocating new buffers for every _batchSize_ write, then it reuse the same buffer. This means that the wrapped target no longer can take ownership of the buffers. All targets in the NLog package supports this mode. It is enabled automatically if the wrapped target has enabled _optimizeBufferReuse_. Introduced in NLog 4.4.2
 
 ## Remarks
-
 
 ### Async attribute
 Asynchronous target wrapper allows the logger code to execute more quickly, by queuing messages and processing them in a separate thread. You should wrap targets that spend a non-trivial amount of time in their `Write()` method with asynchronous target to speed up logging. Because asynchronous logging is quite a common scenario, NLog supports a shorthand notation for wrapping all targets with AsyncWrapper. Just add `async="true"` to the `<targets/>` element in the configuration file.
