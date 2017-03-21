@@ -23,7 +23,7 @@ Read more about using the [Configuration File](Configuration-file).
 
 * **layout** - Layout used to format log messages. [Layout](Data-types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
 
-###Form Options
+### Form Options
 * **append** - Indicates whether log text should be appended to the text of the control instead of overwriting it. [Boolean](Data-types) Default: True
 
 * **reverseOrder** - Indicates whether log text should be appended or prepended. [Boolean](Data-types) Default: False
