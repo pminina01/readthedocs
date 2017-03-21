@@ -1,7 +1,8 @@
 Writes log message to the Event Log. 
 
 Supported in .NET and Mono
-##Configuration Syntax
+
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="EventLog"
@@ -19,14 +20,14 @@ Supported in .NET and Mono
 ```
 Read more about using the [Configuration File](Configuration file).
 
-##Parameters
-###General Options
+## Parameters
+### General Options
  * _name_ - Name of the target.
 
-###Layout Options
+### Layout Options
  * _layout_ - Layout used to format log messages. [Layout](Layouts) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`. Note: max size of 16384 characters (limitation of the `EventLog` API)
 
-###Event Log Options
+### Event Log Options
  * _machineName_ - Name of the machine on which Event Log service is running. Default: `.`  
  * _source_ - Value to be used as the event Source. By default this is the friendly name of the current AppDomain. From NLog 4.0 this is layoutable(Layouts). 
  * _category_ - [Layout](Layouts) that renders event Category.  The categories must be predefined for the specified _source_ and needs to be numeric.   
@@ -38,7 +39,7 @@ Read more about using the [Configuration File](Configuration file).
    * Split. Splits the message and writes multiple entries to the Event Log. Warning: the message layout will be spread across multiple Event Log entries; if there is an application reading and parsing the Event Log, split messages will not have the expected layout of a log entry.
    * Discard. Discards of the message. It will not be written to the Event Log.
 
-##Notes
+## Notes
 To log to the event log, an event source is required to exist. This involves creating the event source.
 
 When install/uninstalling, the event source is only created / removed when the _source_ doesn't contain layout renderers.
@@ -51,7 +52,7 @@ The Event Log has a limit in the number of bytes in a message. From [MSDN](https
 
 > The message string is longer than 31,839 bytes (32,766 bytes on Windows operating systems before Windows Vista).
 
-##Example
+## Example
 ```xml
 <target xsi:type="EventLog"
             name="eventlog"
