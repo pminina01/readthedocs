@@ -1,7 +1,8 @@
 Matches when the calculated layout does NOT contain the specified substring. This filter is deprecated in favour of \<when /> which is based on contitions. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono
-##Configuration Syntax
+
+## Configuration Syntax
 ```
 <rules>
   <logger ... >
@@ -11,15 +12,15 @@ Supported in .NET, Silverlight, Compact Framework and Mono
   </logger>
 </rules>
 ```
-##Parameters
-###Filtering Options
-* _layout_ - Layout to be used to filter log messages. Layout Required.
-* _substring_ - Substring to be matched. Required.
-* _action_ - Action to be taken when filter matches. Required.  
+## Parameters
+### Filtering Options
+* **layout** - Layout to be used to filter log messages. Layout Required.
+* **substring** - Substring to be matched. Required.
+* **action** - Action to be taken when filter matches. Required.  
 Possible values:
-  * Ignore - The message should not be logged.
-  * IgnoreFinal - The message should not be logged and processing should be finished.
-  * Log - The message should be logged.
-  * LogFinal - The message should be logged and processing should be finished.
-  * Neutral - The filter doesn't want to decide whether to log or discard the message.
-* _ignoreCase_ - Indicates whether to ignore case when comparing strings. Boolean Default: False
+  * _Ignore_ - The message should not be logged.
+  * _IgnoreFinal_ - The message should not be logged and processing should be finished.
+  * _Log_ - The message should be logged.
+  * _LogFinal_ - The message should be logged and processing should be finished.
+  * _Neutral_ - The filter doesn't want to decide whether to log or discard the message.
+* **ignoreCase** - Indicates whether to ignore case when comparing strings. Boolean Default: False
