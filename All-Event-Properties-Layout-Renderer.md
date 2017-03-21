@@ -16,9 +16,9 @@ ${all-event-properties:format=String:separator=String:includeCallerInformation=B
 
 ### Rendering Options
 
-* _format_ - How key/value pairs will be formatted. The placeholder used to define placement of the key is, `[key]`, and the placeholder for value is, `[value]`.
+* **format** - How key/value pairs will be formatted. The placeholder used to define placement of the key is, `[key]`, and the placeholder for value is, `[value]`.
   * Default value: `[key]=[value]`
-* _separator_ - The string that will be used to separate key/value pairs.
+* **separator** - The string that will be used to separate key/value pairs.
   * Default value: `, `
-* _includeCallerInformation_ - Also render the caller information attributes? .Net 4.5 required.
+* **includeCallerInformation** - Also render the caller information attributes? .Net 4.5 required.
   * Default value: `false`
