@@ -45,6 +45,8 @@ The parameter name should be a provider invariant name as registered in machine.
   * System.Data.SQLite -
   * Npgsql -
   * MySql.Data.MySqlClient -
+
+
 (Note that provider invariant names are not supported on .NET Compact Framework). Alternatively the parameter value can be be a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the following tokens:
   * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
   * oledb - OLEDB Data Provider
