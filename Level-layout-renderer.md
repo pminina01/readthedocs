@@ -1,4 +1,4 @@
-The log level. 
+The [log level](Log-Levels). 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
