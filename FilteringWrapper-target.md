@@ -15,5 +15,5 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ### General Options
 **name** - Name of the target.
 
-###Filtering Options
+### Filtering Options
 **condition** - Condition expression. Log events who meet this condition will be forwarded to the wrapped target. Condition Required.
