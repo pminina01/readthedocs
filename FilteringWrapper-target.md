@@ -13,7 +13,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ## Parameters
 ### General Options
-**name** - Name of the target.
+* **name** - Name of the target.
 
 ### Filtering Options
-**condition** - Condition expression. Log events who meet this condition will be forwarded to the wrapped target. Condition Required.
+* **condition** - Condition expression. Log events who meet this condition will be forwarded to the wrapped target. Condition Required.
