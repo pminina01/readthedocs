@@ -18,7 +18,8 @@ _name_ - Name of the target.
 _layout_ - Layout used to format log messages. [Layout](Data types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
 
 ## Examples
-### Logging to Debug Target(snippet from    [Debug Simple Example.cs](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/examples/targets/Configuration%20API/Debug/Simple/Example.cs)  )
+### Logging to Debug Target
+(snippet from [Debug Simple Example.cs](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/examples/targets/Configuration%20API/Debug/Simple/Example.cs)  )
 
         DebugTarget target = new DebugTarget();
         target.Layout = "${message}";
