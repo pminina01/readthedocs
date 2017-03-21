@@ -2,15 +2,15 @@ XML event description compatible with log4j, Chainsaw and NLogViewer.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSite=Boolean
                :includeMdc=Boolean:appInfo=String:includeNdc=Boolean
                :indentXml=Boolean:includeNLogData=Boolean}
 ```
 
-##Parameters
-###Payload Options
+## Parameters
+### Payload Options
 * **ndcItemSeparator** - NDC item separator. Default:
 
   > This parameter is not supported in:
