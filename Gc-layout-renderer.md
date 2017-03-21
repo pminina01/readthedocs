@@ -2,13 +2,13 @@ The information about the garbage collector.
 
 Supported in .NET and Silverlight
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${gc:property=Enum}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **property** - Property to retrieve. Default: TotalMemory  
   Possible values:
   * CollectionCount0 - The number of Gen0 collections.
