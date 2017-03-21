@@ -45,16 +45,16 @@ The parameter name should be a provider invariant name as registered in machine.
   * System.Data.SQLite -
   * Npgsql -
   * MySql.Data.MySqlClient -
-
-
-(Note that provider invariant names are not supported on .NET Compact Framework). Alternatively the parameter value can be be a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the following tokens:
-  * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
-  * oledb - OLEDB Data Provider
-  * odbc - ODBC Data Provider
-
-Example of using a fully qualified name with Mono.Data.Sqlite
- 
-    dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"
+> (Note that provider invariant names are not supported on .NET Compact Framework). Alternatively the parameter value > can be be a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the
+> following tokens:
+>  * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
+>  * oledb - OLEDB Data Provider
+>  * odbc - ODBC Data Provider
+>
+> Example of using a fully qualified name with Mono.Data.Sqlite
+> 
+>   dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral,
+> PublicKeyToken=0738eb9f132ed756"
 
 * **useTransactions** - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
 
