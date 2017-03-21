@@ -1,21 +1,18 @@
 Renders the assembly version of the entry or a named assembly.
 
-
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${assembly-version:name=string}
 ```
 ## Parameters
 
-- _name_: the name of the assembly. Note will load it. If `null`, will find the entry assembly. Introduced in NLog 4.3.7
+* **name** - The name of the assembly. Note will load it. If `null`, will find the entry assembly. Introduced in NLog 4.3.7
 
 ## Examples
 
 ```
 ${assembly-version:NLogAutloadExtension}
 ```
-
-
 
 ## Notes
 - is uses [`Version.ToString`](https://msdn.microsoft.com/en-us/library/e31ax1a7(v=vs.110).aspx)
