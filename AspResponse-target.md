@@ -16,7 +16,7 @@ Read more about using the [configuration file](Configuration file).
 * **name** - Name of the target
 
 ### Layout Options
-* **addComments** - Indicates whether to add <!-- --> comments around all written texts. [Boolean](Data types)
+* **addComments** - Indicates whether to add `<!-- -->` comments around all written texts. [Boolean](Data types)
 * **layout** - Layout used to format log messages. [Layout](Layout) Required. Default:  `{longdate}|${level:uppercase=true}|${logger}|${message}`
 
 ## Examples
