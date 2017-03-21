@@ -2,13 +2,15 @@ Render the application domain name.
 
 From NLog 4.0+, in NLog.Extended
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${appdomain:format=Format}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+
+### Rendering Options
+
 **format - The formating.  Default to `Long`.
 possible options:
 * Long: default. The id as four number digit, colon, friendlyname. E.g. 0003:NLog.UnitTests
@@ -16,7 +18,7 @@ possible options:
 * or custom like {0} -  {1}. The first parameter is the"AppDomain.Id", the second is the "AppDomain.FriendlyName". Note: use escaping of the brackets. See examples.
 
 
-##Example
+## Example
 Examples in the .config
 
 ```xml
