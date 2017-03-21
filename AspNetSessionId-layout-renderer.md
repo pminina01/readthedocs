@@ -2,7 +2,7 @@ ASP.NET Session ID.
 
 Supported in .NET and Mono
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${aspnet-sessionid}
 ```
