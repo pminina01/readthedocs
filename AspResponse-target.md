@@ -8,7 +8,7 @@ Supported in .NET and Mono
   <target xsi:type="AspResponse" name="String" addComments="Boolean" layout="Layout" />
 </targets>
 ```
-Read more about using the [configuration file](Configuration file).
+Read more about using the [[configuration file]].
 
 ## Parameters
 
