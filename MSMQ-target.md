@@ -16,7 +16,7 @@ Supported in .NET, Compact Framework and Mono.
           queue="Layout" />
 </targets>
 ```
-Read more about using the [[[Configuration File]].
+Read more about using the [[Configuration File]].
 
 ## Parameters
 ### General Options
