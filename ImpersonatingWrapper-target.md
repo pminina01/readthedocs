@@ -3,7 +3,7 @@ Impersonates another user for the duration of the write.
 Supported in .NET and Mono
 
 ## Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="ImpersonatingWrapper"
           name="String"
