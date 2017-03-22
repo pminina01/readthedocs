@@ -3,7 +3,7 @@ Repeats each log event the specified number of times.
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ## Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="RepeatingWrapper" name="String" repeatCount="Integer">
     <target xsi:type="wrappedTargetType" ...target properties... />
