@@ -9,7 +9,7 @@ Supported in .NET, Compact Framework and Mono
           name="String"
           dbUserName="Layout"
           dbProvider="String"
-          *useTransactions="Boolean"
+          useTransactions="Boolean"
           connectionStringName="String"
           connectionString="Layout"
           keepConnection="Boolean"
@@ -27,7 +27,7 @@ Supported in .NET, Compact Framework and Mono
   </target>
 </targets>
 ```
-Read more about using the [Configuration File](Configuration file).
+Read more about using the [[Configuration File]].
 
 ## Parameters
 ### General Options
