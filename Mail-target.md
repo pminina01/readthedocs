@@ -34,7 +34,7 @@ Supported in .NET and Mono
           timeout="Integer" />
 </targets>
 ```
-Read more about using the [Configuration File](Configuration file).
+Read more about using the [[Configuration File]].
 
 ## Parameters
 ### General Options
