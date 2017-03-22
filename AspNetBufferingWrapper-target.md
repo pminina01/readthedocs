@@ -3,7 +3,7 @@ Buffers log events for the duration of ASP.NET request and sends them down to th
 Supported in .NET and Mono
 
 ## Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="AspNetBufferingWrapper"
           name="String"
