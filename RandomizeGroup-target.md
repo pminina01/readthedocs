@@ -3,7 +3,7 @@ Sends log messages to a randomly selected target.
 Supported in .NET, Silverligt, Compact Framework and Mono.
 
 ## Configuration Syntax
-```
+```xml
 <targets>
   <target xsi:type="RandomizeGroup" name="String">
     <target xsi:type="wrappedTargetType" ... />
