@@ -1,7 +1,7 @@
 Writes log message to the specified message queue handled by MSMQ. 
 
 Supported in .NET, Compact Framework and Mono.
-##Configuration Syntax
+## Configuration Syntax
 ```xml
 <targets>
   <target xsi:type="MSMQ"
@@ -16,31 +16,31 @@ Supported in .NET, Compact Framework and Mono.
           queue="Layout" />
 </targets>
 ```
-Read more about using the [Configuration File](Configuration-file).
-##Parameters
-###General Options
-_name_ - Name of the target.
+Read more about using the [[[Configuration File]].
+
+## Parameters
+### General Options
+* **name** - Name of the target.
 ###Layout Options
-_useXmlEncoding_ - Indicates whether to use the XML format when serializing message. [Boolean](Data-types) Default: False
+* **useXmlEncoding** - Indicates whether to use the XML format when serializing message. [Boolean](Data-types) Default: False
 
-_encoding_ - Encoding to be used when writing text to the queue. [Encoding](Data-types)
+* **encoding** - Encoding to be used when writing text to the queue. [Encoding](Data-types)
 
-_layout_ - Layout used to format log messages. [Layout](Data-types) Required. Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
-###Queue Options
-_queue_ - Name of the queue to write to. [Layout](Data-types) **Required**.  
+* **layout** - Layout used to format log messages. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
+
+### Queue Options
+* **queue** - Name of the queue to write to. [Layout](Data-types) **Required**.  
 To write to a private queue on a local machine use .\private$\QueueName. For other available queue names, consult MSMQ documentation.
 
-_recoverable_ - Indicates whether to use recoverable messages (with guaranteed delivery). [Boolean](Data-types) Default: False
+* **recoverable** - Indicates whether to use recoverable messages (with guaranteed delivery). [Boolean](Data-types) Default: False
 
-_createQueueIfNotExists_ - Indicates whether to create the queue if it doesn't exists. Won't do anything when _checkIfQueueExists_ is false.  [Boolean](Data-types) Default: False
+* **createQueueIfNotExists** - Indicates whether to create the queue if it doesn't exists. Won't do anything when _checkIfQueueExists_ is false.  [Boolean](Data-types) Default: False
 
-_checkIfQueueExists_- If false, won't check for the existence of the queue. This is sometimes needed for private remote queues (where the `.exists` would throw an Exception). [Boolean](Data-types) Default: True
+* **checkIfQueueExists** - If false, won't check for the existence of the queue. This is sometimes needed for private remote queues (where the `.exists` would throw an Exception). [Boolean](Data-types) Default: True
 
-_label_ - Label to associate with each message. [Layout](Data-types) Default: "NLog"
+* **label** - Label to associate with each message. [Layout](Data-types) Default: "NLog"
 
-
-
-##Notes
+## Notes
 The MSMQ target requires that:
 * NLog.extended.dll be along side the NLog.dll at runtime.
 * The machine doing the logging have MSMQ installed with the Active Directory Domain Services Integration option. If the option is not installed, the target will throw an exception.
