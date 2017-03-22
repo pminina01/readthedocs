@@ -26,7 +26,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono
   </target>
 </targets>
 ```
-Read more about using the [Configuration File](Configuration file).
+Read more about using the [[Configuration File]].
 
 ## Parameters
 ### General Options
