@@ -15,10 +15,9 @@ Supported in .NET and Mono
           log="String"
           maxMessageLength="Integer" />
 <!-- note: source is a string in NLog before 4.0 -->
-
 </targets>
 ```
-Read more about using the [Configuration File](Configuration file).
+Read more about using the [[Configuration File]].
 
 ## Parameters
 ### General Options
