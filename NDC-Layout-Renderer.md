@@ -3,13 +3,13 @@ of strings and provides methods to output them in layouts.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
-##Configuration Syntax
+## Configuration Syntax
 ```
 ${ndc:bottomFrames=Integer:topFrames=Integer:separator=String}
 ```
 
-##Parameters
-###Rendering Options
+## Parameters
+### Rendering Options
 * **bottomFrames** - Number of bottom stack frames to be rendered. `-1` is no limit. `Integer`. Default `-1`.
 * **topFrames** - Number of top stack frames to be rendered. `-1` is no limit. `Integer`.  Default `-1`
 * **separator** - Separator to be used for concatenating nested diagnostics context output. `string`. Default ` ` (space)
