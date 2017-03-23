@@ -59,4 +59,4 @@
 * [How to configure logging in a component?](Configure-component-logging)
 * [How do I get the most optimal performance?](performance)
 * [How do I writing custom Targets, layouts and layout renderers?](Extending%20NLog)
-* [How do I combine programmatic configuration with the XML configuration?](Combine-XML-config-with-C#-config)
+* [How do I combine programmatic configuration with the XML configuration?](Combine-XML-config-with-C%23-config)
