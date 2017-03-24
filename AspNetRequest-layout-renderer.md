@@ -1,9 +1,9 @@
-ASP.NET Request variable. 
+ASP.NET Request variable. This layout renderer is non supported ASP.NET Core!
 
 Supported in .NET and Mono
 
 
-## Legacy
+## ASP.NET Core
 This layout renderer is broken down to separate layout renders who are more ASP.NET Core compatible / future proof:
 
 * [${aspnet-Request-Cookie}](https://github.com/NLog/NLog/wiki/AspNetRequest-Cookie-Layout-Renderer) - ASP.NET Request cookie content. 
