@@ -10,9 +10,9 @@
 * [Platform support](platform-support)
 
 ## Configuration
-* [Possible Targets](Targets)
-* [Possible Layouts](Layouts)
-* [Possible Layout Renderers](Layout-Renderers)
+* [Targets list](Targets)
+* [Layouts list](Layouts)
+* [Layout Renderers list](Layout-Renderers)
 
 ## Programmatic Configuration
 * [Tutorial Configuration API](Configuration-API)
