@@ -27,8 +27,8 @@
 * [Who is using NLog](Who-Is-Using-NLog) 
 
 ## Extending NLog
-* [Write custom extensions](Extending NLog)
-* [How to write a custom target](How to write a custom target)
+* [Write custom extensions](Extending-NLog)
+* [How to write a custom target](How-to-write-a-custom-target)
 * [How to write a custom layout renderer](How to write a custom layout renderer)
 * [Writing custom conditions](When-Filter#extensibility)
 * [[Properties constraints for custom extensions]]
