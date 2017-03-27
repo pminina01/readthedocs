@@ -11,8 +11,19 @@
 
 ## Configuration
 * [Targets list](Targets)
+  * [File](File-Target)
+  * [Database](Database-Target)
+  * [Colored Console](ColoredConsole-target)
+
 * [Layouts list](Layouts)
+  * [CSV](CsvLayout)
+  * [JSON](JsonLayout)
 * [Layout Renderers list](Layout-Renderers)
+  * [${message}](Message-Layout-Renderer)
+  * [${exception}](Exception-Layout-Renderer)
+  * [${logger}](Logger-Layout-Renderer)
+  * [${level}](Level-Layout-Renderer)
+  * [${date}](Date-Layout-Renderer)
 
 ## Programmatic Configuration
 * [Tutorial Configuration API](Configuration-API)
