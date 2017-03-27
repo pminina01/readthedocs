@@ -28,8 +28,8 @@
 
 ## Extending NLog
 * [Write custom extensions](Extending NLog)
-*  [How to write a custom target](How to write a custom target)
-*  [How to write a custom layout renderer](How to write a custom layout renderer)
+* [How to write a custom target](How to write a custom target)
+* [How to write a custom layout renderer](How to write a custom layout renderer)
 * [Writing custom conditions](When-Filter#extensibility)
 * [[Properties constraints for custom extensions]]
 * [Register your custom component](Register your custom component)
