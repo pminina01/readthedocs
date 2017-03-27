@@ -11,14 +11,14 @@
 
 ## Configuration
 
-* [Targets list](Targets)
+* [Targets list](Targets), popular:
   * [File](File-Target)
   * [Database](Database-Target)
   * [Colored Console](ColoredConsole-target)
-* [Layouts list](Layouts)
+* [Layouts list](Layouts),  popular:
   * [CSV](CsvLayout)
   * [JSON](JsonLayout)
-* [Layout Renderers list](Layout-Renderers)
+* [Layout Renderers list](Layout-Renderers),  popular:
   * [${message}](Message-Layout-Renderer)
   * [${exception}](Exception-Layout-Renderer)
   * [${logger}](Logger-Layout-Renderer)
