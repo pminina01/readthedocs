@@ -10,11 +10,11 @@
 * [Platform support](platform-support)
 
 ## Configuration
+
 * [Targets list](Targets)
   * [File](File-Target)
   * [Database](Database-Target)
   * [Colored Console](ColoredConsole-target)
-
 * [Layouts list](Layouts)
   * [CSV](CsvLayout)
   * [JSON](JsonLayout)
