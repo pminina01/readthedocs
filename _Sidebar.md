@@ -21,7 +21,7 @@
 ## Advanced
 * [Advanced Configuration file options](Configuration-file)
 * [Filtering log messages](Filtering-log-messages)
-* [Using Time Sources](Time Source)
+* [Using Time Sources](Time-Source)
 * [Installing targets](Installing-targets)
 * [Visual Studio support](Visual-Studio-support)
 * [Who is using NLog](Who-Is-Using-NLog) 
@@ -29,7 +29,7 @@
 ## Extending NLog
 * [Write custom extensions](Extending-NLog)
 * [How to write a custom target](How-to-write-a-custom-target)
-* [How to write a custom layout renderer](How to write a custom layout renderer)
+* [How to write a custom layout renderer](How-to-write-a-custom-layout-renderer)
 * [Writing custom conditions](When-Filter#extensibility)
 * [[Properties constraints for custom extensions]]
-* [Register your custom component](Register your custom component)
+* [Register your custom component](Register-your-custom-component)
