@@ -22,13 +22,13 @@ ${event-properties:item=String:culture=String:format=String}
 In C# class, create an event and add an element to the Properties dictionary (or the deprecated Context dictionary):
 ```csharp
 ...
-Logger log = LogManager.GetCurrentClassLogger();
+Logger logger = LogManager.GetCurrentClassLogger();
 LogEventInfo theEvent = new LogEventInfo(LogLevel.Debug, "", "Pass my custom value");
 theEvent.Properties["MyValue"] = "My custom string";
 theEvent.Properties["MyDateTimeValue"] = new DateTime(2015, 08, 30, 11, 26, 50);
 theEvent.Properties["MyDateTimeValueWithCulture"] = new DateTime(2015, 08, 30, 11, 26, 50);
 theEvent.Properties["MyDateTimeValueWithCultureAndFormat"] = new DateTime(2015, 08, 30, 11, 26, 50);
-log.Log(theEvent);
+logger.Log(theEvent);
 ...
 ```
 
