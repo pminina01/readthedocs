@@ -28,9 +28,6 @@ theEvent.Properties["MyValue"] = "My custom string";
 theEvent.Properties["MyDateTimeValue"] = new DateTime(2015, 08, 30, 11, 26, 50);
 theEvent.Properties["MyDateTimeValueWithCulture"] = new DateTime(2015, 08, 30, 11, 26, 50);
 theEvent.Properties["MyDateTimeValueWithCultureAndFormat"] = new DateTime(2015, 08, 30, 11, 26, 50);
-
-// deprecated
-theEvent.Context["TheAnswer"] = 42;
 log.Log(theEvent);
 ...
 ```
