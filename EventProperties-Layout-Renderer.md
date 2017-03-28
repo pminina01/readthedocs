@@ -36,7 +36,6 @@ and in your NLog.config file:
 
 ```
 ${event-properties:item=MyValue} -- renders "My custom string"
-${event-properties:item=TheAnswer} -- renders "42"
 ${event-properties:MyDateTimeValue:format=yyyy-M-dd}"; -- renders "2015-8-30"
 ${event-properties:MyDateTimeValueWithCulture:culture=en-US} -- renders "8/30/2015 11:26:50 AM"
 ${event-properties:MyDateTimeValueWithCultureAndFormat:format=yyyy-M-dd HH:mm:ss:culture=en-US} -- renders "2015-8-30 11:26:50"
