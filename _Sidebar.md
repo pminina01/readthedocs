@@ -15,6 +15,7 @@
   * [File](File-Target)
   * [Database](Database-Target)
   * [Colored Console](ColoredConsole-target)
+  * [Mail](Mail-Target)
 * [Layouts list](Layouts),  popular:
   * [CSV](CsvLayout)
   * [JSON](JsonLayout)
