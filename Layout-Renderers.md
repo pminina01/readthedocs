@@ -1,6 +1,6 @@
 Layout renderers are template macros that are used in [Layouts](Layouts).
 
-NLog supports creating custom layout renderers. For more information, see: [Extending NLog](Extending NLog)
+NLog supports creating custom layout renderers. For more information, see: [Extending NLog](Extending-NLog)
 
 
 ## Layout Renderers
