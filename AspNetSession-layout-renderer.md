@@ -4,7 +4,7 @@ Supported in .NET and Mono
 
 ## Configuration Syntax
 ```
-${aspnet-session:variable=String;evaluateAsNestedProperties:boolean}
+${aspnet-session:variable=String:evaluateAsNestedProperties:boolean}
 ```
 
 ## Parameters
