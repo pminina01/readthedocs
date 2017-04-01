@@ -8,4 +8,4 @@ ASP.NET Core users should use [NLog.Extensions.Logging](https://github.com/NLog/
 
 ASP.NET (Core) users, The [NLog.Web](https://github.com/NLog/NLog.Web/blob/master/README.md) package contains additional renderers and targets. 
 
-Are you missing some targets, layout renderers or renderers in NLog? [Check to extend NLog](Extending NLog) or even better, [contribute to NLog](https://github.com/NLog/NLog#contributing)!
+Are you missing some targets, layout renderers or renderers in NLog? [Check to extend NLog](Extending-NLog) or even better, [contribute to NLog](https://github.com/NLog/NLog#contributing)!
