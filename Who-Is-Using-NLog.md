@@ -14,7 +14,7 @@ The following open source software projects are using or supporting NLog:
 * Ember Media Manager - http://embermediamanager.org/
 
 ## Commercial software
-* Gibraltar - http://nlog-project.org/blog/2009/11/01/gibraltar-adapter-for-nlog-released.html
+* Gibraltar - http://nlog-project.org/2009/11/01/gibraltar-adapter-for-nlog-released.html
 * TradeBullet - http://www.tradebullet.com
 * LiteStock - http://www.lightweightlabs.com
 * Silverlight Map Server - http://www.itacasoft.com/silverlightmapserver
