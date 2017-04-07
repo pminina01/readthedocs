@@ -34,7 +34,7 @@ LayoutRenderer.Register("targetCount",(logEvent, config) => config.AllTargets.Co
 Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
 Invoke in this method `builder.Append(..)` to render your custom layout renderer.
 
-Don't forget to [register your custom layout renderer](Register your custom component)!
+Don't forget to [[register your custom component|Register-your-custom-component]]!
 
 ### Example
 We create a `${hello-world}` layout renderer, which renders..."hello world!".
