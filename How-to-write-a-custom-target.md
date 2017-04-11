@@ -1,6 +1,6 @@
 It’s really easy. Create a class that inherits from `NLog.Targets.TargetWithLayout` and override the `Write()` method. In the body of the method invoke `this.Layout.Render()` to get the message text, then send the text to the destination media.
 
-Don't forget to [register your custom target](Register your custom component)!
+Don't forget to [[register your custom target|register-your-custom-component]]!
 
 ### Example
 This is a skeleton target that writes messages to the specified host. Compile using:
