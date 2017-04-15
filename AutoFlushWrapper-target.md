@@ -15,6 +15,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ### General Options
 * **name** - Name of the target.  
 * **condition** - [Condition](https://github.com/NLog/NLog/wiki/When-Filter#conditions) is expression used to determine if flush must be executed. (*introduced in NLog 4.4*)
+* **asyncFlush ** - Delay the flush until the LogEvent has been confirmed as written. Default `true`. (*introduced in NLog 4.4.6*)
 
 ## Examples
 Flush into target on each write
