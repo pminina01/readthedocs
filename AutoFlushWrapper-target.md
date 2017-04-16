@@ -1,5 +1,5 @@
 Causes a flush on a wrapped target if LogEvent satisfies provided condition.  
-If condition isn't set, a flush will occur after each write.
+If condition isn't set, a flush will occur after each successful write.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ## Configuration Syntax
