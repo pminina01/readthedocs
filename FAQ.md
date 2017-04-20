@@ -16,7 +16,7 @@
   - Check the [tutorial](https://github.com/NLog/NLog/wiki/Tutorial) to get started!
  
 * **Just show me a config example**
- - [voilà](https://github.com/NLog/NLog/wiki/NLog-config-Example)
+  - [voilà](https://github.com/NLog/NLog/wiki/NLog-config-Example)
   
 
 * **I can't see anything?!**
