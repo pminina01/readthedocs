@@ -1,5 +1,5 @@
 * **What is NLog?**
- - NLog is a free and open source library which helps to write log messages. 
+  - NLog is a free and open source library which helps to write log messages. 
 
 * **Why should I use a log library? I can just do `file.WriteLine()`**
   - Beside writing to files, you can write to many different targets, like databases, event viewer, trace etc. 
