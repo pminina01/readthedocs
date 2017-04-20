@@ -1,7 +1,7 @@
 * **What is NLog?**
  - NLog is a free and open source library which helps to write log messages. 
 
-* **Why should I use a log libary? I can just do `file.WriteLine()`**
+* **Why should I use a log library? I can just do `file.WriteLine()`**
   - Beside writing to files, you can write to many different targets, like databases, event viewer, trace etc. 
   - The output is templatable with many predefined template values. 
   - With a simple configuration file you can decide runtime (after deployment), what to log and where! No need to restart the program or recyle the app pool!
