@@ -19,9 +19,9 @@ ${ndc:bottomFrames=Integer:topFrames=Integer:separator=String}
 ### One level
 
 ```c#
-NestDiagnosticsContext.Push("entering method X");
+NestedDiagnosticsContext.Push("entering method X");
 ... // log here
-NestDiagnosticsContext.Pop(); //leaving methods
+NestedDiagnosticsContext.Pop(); //leaving methods
 ```
 
 Then in the log config:
@@ -33,11 +33,11 @@ logs `entering method X`  if logged between `push()`  and `pop()`
 
 ### Multiple levels
  ```c#
-NestDiagnosticsContext.Push("entering method X1");
-NestDiagnosticsContext.Push("entering method X2");
+NestedDiagnosticsContext.Push("entering method X1");
+NestedDiagnosticsContext.Push("entering method X2");
 ... // log here
-NestDiagnosticsContext.Pop(); //leaving method X2
-NestDiagnosticsContext.Pop(); //leaving method X1
+NestedDiagnosticsContext.Pop(); //leaving method X2
+NestedDiagnosticsContext.Pop(); //leaving method X1
 ```
 
 logs `entering method X1 entering method X2`
