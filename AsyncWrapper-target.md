@@ -24,7 +24,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ### Buffering Options
 * **queueLimit** - Limit on the number of requests in the lazy writer thread request queue. Integer Default: `10000`
 
-* **timeToSleepBetweenBatches** - Time in milliseconds to sleep between batches. Integer Default: `50`. When set to `0`, this  will lead to a high CPU usage.
+* **timeToSleepBetweenBatches** - Time in milliseconds to sleep between batches. Integer Default: `50`. When set to `0`, then it will only trigger timer when something is logged (Less timer activity when idle, Faster logging and improved garbage collection behavior).
 
 * **batchSize** - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100 (NLog 4.4.2 and newer has Default: 200)
 
