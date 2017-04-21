@@ -4,8 +4,8 @@ Added in NLog 4.0
 
 
 ```xml
-<target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json" includeAllProperties="Boolean" excludeProperties="Comma-separated list (string)">
-      <layout xsi:type="JsonLayout">
+<target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json" >
+      <layout xsi:type="JsonLayout" includeAllProperties="Boolean" excludeProperties="Comma-separated list (string)">
               <attribute name="time" layout="${longdate}" />
               <attribute name="level" layout="${level:upperCase=true}"/>
               <attribute name="message" layout="${message}" />
