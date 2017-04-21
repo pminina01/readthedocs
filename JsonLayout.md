@@ -31,9 +31,9 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 
 ## Parameters
 * **Attribute**
-* * **name** - Required. The name of the key in JSON
-* * **layout** - The [layout](Layouts) for they key.
-* * **encode** - Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
+ * **name** - Required. The name of the key in JSON
+ * **layout** - The [layout](Layouts) for they key.
+ * **encode** - Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
 * **suppressSpaces** - Enable to suppress extra spaces in the output JSON. Disabled by default. (Added in NLog 4.1)
 * **renderEmptyObject** - Gets or sets the option to render the empty object value `{}`, default `true`. (Added in NLog 4.3.7)
 * **includeAllProperties** - Include all events properties of a logevent? default: `false`.  Introduced in NLog 4.4
