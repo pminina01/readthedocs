@@ -39,6 +39,7 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 * **includeAllProperties** - Include all events properties of a logevent? default: `false`.  Introduced in NLog 4.4
 * **excludeProperties** - comma separated string with names which properties to exclude. Only used when _includeAllProperties_ is `true`. Case sensitive. Default empty
 When a name contains a comma, single quote the value. E.g. `'value,withquote',value2`. Introduced in NLog 4.4
+* **EscapeUnicode**  -  escape non-ascii characters? Boolean. Default `true`.  Introduced in NLog 4.4.7
  
 ## Notes
 * Currently the layout will always create a non-nested object with properties.
