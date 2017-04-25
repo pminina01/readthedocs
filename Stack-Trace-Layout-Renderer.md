@@ -23,6 +23,7 @@ ${stacktrace:format=Enum:topFrames=Integer:skipFrames=Integer:separator=String}
 ### Raw
 
 Note: To get the filenames and line numbers, include the PDB files. 
+
 Note: Prior NLog 4.4.7, the result was always `<filename unknown>:0:0  `
 
     Main at offset 638 in file:line:column file1.cs:100:10  
