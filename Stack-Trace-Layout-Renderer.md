@@ -21,9 +21,13 @@ ${stacktrace:format=Enum:topFrames=Integer:skipFrames=Integer:separator=String}
 ## Examples
 
 ### Raw
-    Main at offset 638 in file:line:column <filename unknown>:0:0  
-    TestLogging at offset 590 in file:line:column <filename unknown>:0:0  
-    WriteToLog at offset 112 in file:line:column <filename unknown>:0:0  
+
+Note: To get the filenames and line numbers, include the PDB files. 
+Note: Prior NLog 4.4.7, the result was always `<filename unknown>:0:0  `
+
+    Main at offset 638 in file:line:column file1.cs:100:10  
+    TestLogging at offset 590 in file:line:column testlogger.cs:30:10  
+    WriteToLog at offset 112 in file:line:column testlogger.cs:10:20
 
 ### Flat
     Program.Main  
