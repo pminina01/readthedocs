@@ -5,7 +5,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ## Configuration Syntax
 ```
 ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSite=Boolean
-               :includeMdc=Boolean:appInfo=String:includeNdc=Boolean
+               :includeMdc=Boolean:includeMdlc=Boolean:appInfo=String:includeNdc=Boolean
                :indentXml=Boolean:includeNLogData=Boolean}
 ```
 
@@ -37,6 +37,9 @@ ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSit
   > * NLog v2.0 for .NET Compact Framework 3.5
 
 * **includeMdc** - Indicates whether to include contents of the MappedDiagnosticsContext dictionary. Boolean
+* **includeMdlc** - Indicates whether to include contents of the MappedDiagnosticsLogicalContext dictionary. Boolean
+  > Introduced in NLog 4.4.8. .NET 4.0 or 4.5 required.
+
 * **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
 * **includeNdc** - Indicates whether to include contents of the NestedDiagnosticsContext stack. Boolean
 * **indentXml** - Indicates whether the XML should use spaces for indentation. Boolean
