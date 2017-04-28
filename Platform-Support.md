@@ -34,7 +34,7 @@ Identity|✓ |✓ |✓ ||✓ |✓ |✓ |||
 InstallContext|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Level|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Literal|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Log4JXmlEvent|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |±|±: no file name or source path	
+Log4JXmlEvent|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no file name or source path	
 LoggerName|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 LongDate|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 MachineName|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ ||	
@@ -43,8 +43,8 @@ Mdlc||✓ |✓ |✓||||||
 Message|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NLogDir|✓ |✓ |✓ |1.5+|✓ |✓ |✓ |||	
-Ndc|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
-NewLine|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
+Ndc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
+NewLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 ProcessId|✓ |✓ |✓ |✓||✓ |✓ |||	
 ProcessInfo|✓ |✓ |✓ |✓|✓ |✓ ||||	
@@ -58,12 +58,12 @@ SpecialFolder|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |
 StackTrace|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 TempDir|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 ThreadId|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-ThreadName|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
+ThreadName|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Ticks|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Time|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 TraceActivityId|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-WindowsIdentity|✓ |✓ |✓ ||✓ |✓ |✓ |||	
+WindowsIdentity|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
 
 ## Layout renderer (wrapped)
 Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
@@ -88,7 +88,7 @@ XmlEncode|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AspResponse|✓ |✓ |✓ |||||||	
-Chainsaw|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
+Chainsaw|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 ColoredConsole|✓ |✓ |✓ |±|||✓ |||±: no encoding	
 Console|✓ |✓ |✓ |±|±|±|✓ |±|±|±: no encoding	
 Database|✓ |✓ |✓ |±|||✓ |||	±: no transactions or reading from .config
@@ -100,12 +100,12 @@ LogReceiverWebService|✓ |✓ |✓ ||||✓ ||✓ |
 Mail|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Memory|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 MethodCall|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-NLogViewer|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |±|±: no UDP	
+NLogViewer|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no UDP	
 Network|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ |✓ |	
 Null|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-OutputDebugString|✓ |✓ |✓ |1.3|||✓ |||	
+OutputDebugString|✓ |✓ |✓ |✓ |||✓ |||	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
-Trace|✓ |✓ |✓ ||✓ |✓ |✓ |||	
+Trace|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
 ## Target-wrappers
