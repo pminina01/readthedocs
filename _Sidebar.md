@@ -2,6 +2,7 @@
 
 * [Search in documentation](https://github.com/NLog/NLog/search?q=&type=Wikis&utf8=%E2%9C%93)
 * [Getting started](Tutorial)
+  * [Getting started .NET Core](https://github.com/NLog/NLog.web/wiki)
 * [Examples](Examples)
 * [External articles and tutorials](Web-resources)
 * [Troubleshooting](Logging-troubleshooting)
