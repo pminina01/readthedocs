@@ -39,16 +39,16 @@ LoggerName|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 LongDate|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 MachineName|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ ||	
 Mdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Mdlc||✓ |✓ |||||||	
+Mdlc||✓ |✓ |✓||||||	
 Message|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NLogDir|✓ |✓ |✓ |1.5+|✓ |✓ |✓ |||	
 Ndc|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
-ProcessId|✓ |✓ |✓ |||✓ |✓ |||	
-ProcessInfo|✓ |✓ |✓ ||✓ |✓ ||||	
-ProcessName|✓ |✓ |✓ |||✓ |✓ |||	
+ProcessId|✓ |✓ |✓ |✓||✓ |✓ |||	
+ProcessInfo|✓ |✓ |✓ |✓|✓ |✓ ||||	
+ProcessName|✓ |✓ |✓ |✓||✓ |✓ |||	
 ProcessTime|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 QueryPerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 Registry|✓ |✓ |✓ ||||✓ |||	
