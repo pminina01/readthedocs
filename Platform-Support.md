@@ -8,14 +8,14 @@ stacktrace with source|✓ |✓ |✓ ||✓ |✓ |✓ |||
 fluent interface|||✓ |✓ |||?|||	
 	
 ## Layout Renderers
-Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
+Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AllEventProperties|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ | Include Caller Information: .NET 4.5 only	
 AppDomain|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 AspApplicationValue|✓ |✓ |✓ |||||||	
 AspRequestValue|✓ |✓ |✓ |||||||	
 AspSessionValue|✓ |✓ |✓ |||||||	
-AssemblyVersion|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
+AssemblyVersion|✓ |✓ |✓ |1.5+|✓ |✓ |✓ |✓ |✓ |	
 BaseDir|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
 CallSite|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no file name or source path	
 CallSiteLineNumber|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
@@ -37,12 +37,12 @@ Literal|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Log4JXmlEvent|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |±|±: no file name or source path	
 LoggerName|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 LongDate|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-MachineName|✓ |✓ |✓ |1.5|✓ |✓ |✓ |✓ ||	
+MachineName|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ ||	
 Mdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Mdlc||✓ |✓ |||||||	
 Message|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-NLogDir|✓ |✓ |✓ ||✓ |✓ |✓ |||	
+NLogDir|✓ |✓ |✓ |1.5+|✓ |✓ |✓ |||	
 Ndc|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 NewLine|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
@@ -103,7 +103,7 @@ MethodCall|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 NLogViewer|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |±|±: no UDP	
 Network|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ |✓ |	
 Null|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-OutputDebugString|✓ |✓ |✓ ||||✓ |||	
+OutputDebugString|✓ |✓ |✓ |1.3|||✓ |||	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 Trace|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
