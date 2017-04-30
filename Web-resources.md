@@ -25,7 +25,7 @@
 ## NLog extensions
 
 * [Growl for Windows Notification Target for NLog 2.0](http://github.com/RyanFarley/NLogGrowlNotify) by Ryan Farley
-* [Growl for Windows Notification Target for NLog 3 upwards][(https://www.codeproject.com/Articles/786304/Logging-How-to-Growl-with-NLog-or) by Noctis. This is based or Ryan Farley's article, and include updated Growl extensions for .Net 4.
+* [Growl for Windows Notification Target for NLog 3 upwards](https://www.codeproject.com/Articles/786304/Logging-How-to-Growl-with-NLog-or) by Noctis. This is based or Ryan Farley's article, and include updated Growl extensions for .Net 4.
 * [Syslog Target for NLog](http://github.com/graffen/NLog.Targets.Syslog) by Graffen - [read more](http://blog.graffen.dk/post/logging-messages-to-a-syslog-server-using-nlog)
 * [ProcMon target](http://zine.net.pl/blogs/mgrzeg/archive/2011/09/16/procmon-call-stack-czyli-symbole-a-narz-dzia-sysinternals.aspx) by Michał Grzegorzewski (in Polish)
 * [ReflectInsight Extension for NLog] (https://insightextensions.codeplex.com/) by ReflectSoftware
