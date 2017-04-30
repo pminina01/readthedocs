@@ -16,7 +16,8 @@
 * [Introducing Caliburn.Micro.Logging.NLog](http://buksbaum.us/2011/07/06/introducing-caliburn-micro-logging-nlog/)
 * [Procmon Call Stack or Symbols and SysInternals tools](http://zine.net.pl/blogs/mgrzeg/archive/2011/09/16/procmon-call-stack-czyli-symbole-a-narz-dzia-sysinternals.aspx) by Michał Grzegorzewski (in Polish)
 * [Getting started with ReflectInsight Extension for NLog](https://insightextensions.codeplex.com/wikipage?title=Getting%20Started%20with%20NLog%20Extension&referringTitle=Documentation) by ReflectSoftware
-
+* [How to NLog (2.1 & 3.1) with VisualStudio 2013](https://www.codeproject.com/Articles/749612/How-to-NLog-with-VisualStudio) By Noctis on CodeProject
+* [How to NLog (4.2) with Visual Studio 2015](https://www.codeproject.com/Tips/1052902/How-to-NLog-with-Visual-Studio) By Noctis on CodeProject
 ## Screencasts
 
 * [Mastering ASP.NET MVC2](http://tekpub.com/production/starter) by Steven Sanderson and Rob Conery from http://tekpub.com (**Link Broken**)
@@ -24,6 +25,7 @@
 ## NLog extensions
 
 * [Growl for Windows Notification Target for NLog 2.0](http://github.com/RyanFarley/NLogGrowlNotify) by Ryan Farley
+* [Growl for Windows Notification Target for NLog 3 upwards][(https://www.codeproject.com/Articles/786304/Logging-How-to-Growl-with-NLog-or) by Noctis. This is based or Ryan Farley's article, and include updated Growl extensions for .Net 4.
 * [Syslog Target for NLog](http://github.com/graffen/NLog.Targets.Syslog) by Graffen - [read more](http://blog.graffen.dk/post/logging-messages-to-a-syslog-server-using-nlog)
 * [ProcMon target](http://zine.net.pl/blogs/mgrzeg/archive/2011/09/16/procmon-call-stack-czyli-symbole-a-narz-dzia-sysinternals.aspx) by Michał Grzegorzewski (in Polish)
 * [ReflectInsight Extension for NLog] (https://insightextensions.codeplex.com/) by ReflectSoftware
