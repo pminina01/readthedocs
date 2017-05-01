@@ -74,5 +74,5 @@ Config:
 ```
 Will print 
 ```json
-"{"username"="JohnDoe"}"
+{"username":"JohnDoe"}
 ```
