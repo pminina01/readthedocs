@@ -6,7 +6,7 @@ Supported in ASP.NET, ASP.NET Core and Mono
 
 ## Configuration Syntax
 ```
-${aspnet-request-cookie:CookieNames=Keys;OutputFormat:AspNetLayoutOutputFormat}
+${aspnet-request-cookie:CookieNames=Keys:OutputFormat:format}
 ```
 
 ## Parameters
