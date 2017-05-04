@@ -6,7 +6,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ```
 ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSite=Boolean
                :includeMdc=Boolean:includeMdlc=Boolean:appInfo=String:includeNdc=Boolean
-               :indentXml=Boolean:includeNLogData=Boolean}
+               :indentXml=Boolean:IncludeAllProperties=Boolean:includeNLogData=Boolean}
 ```
 
 ## Parameters
