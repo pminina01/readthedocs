@@ -6,7 +6,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ```
 ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSite=Boolean
                :includeMdc=Boolean:includeMdlc=Boolean:appInfo=String:includeNdc=Boolean
-               :indentXml=Boolean:IncludeAllProperties=Boolean:includeNLogData=Boolean}
+               :indentXml=Boolean:includeAllProperties=Boolean:includeNLogData=Boolean}
 ```
 
 ## Parameters
@@ -18,7 +18,7 @@ ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSit
 * **includeMdc** - Indicates whether to include contents of the MappedDiagnosticsContext dictionary. Boolean
 * **includeMdlc** - Indicates whether to include contents of the MappedDiagnosticsLogicalContext dictionary. Boolean
   > Introduced in NLog 4.4.8. .NET 4.0 or 4.5 required.
-* **IncludeAllProperties** - Indicates whether to include contents of all the log-event properties. Boolean
+* **includeAllProperties** - Indicates whether to include contents of all the log-event properties. Boolean
   > Introduced in NLog 4.4.9
 
 * **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
