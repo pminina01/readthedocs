@@ -11,5 +11,14 @@ Supported in .NET, Silverlight, Compact Framework and Mono
   </target>
 </targets>
 ```
+
+## Parameters
+* **includeMdc** - Indicates whether to include contents of the MappedDiagnosticsContext dictionary. Boolean
+  > Introduced in NLog 4.4.9
+* **includeMdlc** - Indicates whether to include contents of the MappedDiagnosticsLogicalContext dictionary. Boolean
+  > Introduced in NLog 4.4.9. .NET 4.0 or 4.5 required.
+* **includeAllProperties** - Indicates whether to include contents of all the log-event properties. Boolean
+  > Introduced in NLog 4.4.9
+
 ## Remarks
 This layout is not meant to be used explicitly. Instead you can use ${log4jxmlevent} layout renderer.
