@@ -1,7 +1,8 @@
-Log messages could be filtered by using the routing or filtering abilities of NLog.
+Log messages may be filtered via either _routing_ or _filtering_.
 
 ## Filters
-With the use of `<Filters>` you could ignore (blacklist) and/or allow (whitelist) events. See the [when filter](When-filter).
+
+With the use of `<filters>` you may ignore (blacklist) and/or allow (whitelist) events. See the [`<when>` filter](When-filter).
 
 e.g.
 ```xml
@@ -12,10 +13,9 @@ e.g.
 </logger> 
 ```
 
-
-
 ## Routing
-Log messages could be filtered on the logger name. Write the messages to a Null target and use final, e.g.
+
+Log messages may be filtered by logger name. Write the messages to a `Null` target and use `final="true"`.
 
 ```xml
 <targets>
@@ -30,9 +30,10 @@ Log messages could be filtered on the logger name. Write the messages to a Null 
 Compared to the `<filters>` this is more efficient and could be easier to write. 
 
 ### Deprecated filters
-These filters is deprecated in favour of `<when />` which is based on conditions.
 
-* [whenContains filter](WhenContains-filter) - Matches when the calculated layout contains the specified substring. 
-* [whenEqual filter](WhenEqual-filter) - Matches when the calculated layout is equal to the specified substring. 
-* [whenNotContains filter](WhenNotContains-filter) - Matches when the calculated layout does NOT contain the specified substring. 
-* [whenNotEqual filter](WhenNotEqual-filter) - Matches when the calculated layout is NOT equal to the specified substring. 
+These filters are deprecated. They have been replace by the `<when>` filter, which exposes uses modifiable conditions for filtering log events.
+
+* [`<whenContains>` filter](WhenContains-filter) - Matches when the calculated layout contains the specified substring. 
+* [`<whenEqual>` filter](WhenEqual-filter) - Matches when the calculated layout is equal to the specified substring. 
+* [`<whenNotContains>` filter](WhenNotContains-filter) - Matches when the calculated layout does NOT contain the specified substring. 
+* [`<whenNotEqual>` filter](WhenNotEqual-filter) - Matches when the calculated layout is NOT equal to the specified substring. 
