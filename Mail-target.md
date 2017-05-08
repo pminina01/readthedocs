@@ -71,7 +71,7 @@ Read more about using the [[Configuration File]].
 ### SMTP Options
 * **smtpUserName** - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
 
-* **enableSsl** - Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server. [Boolean](Data-types) Default: False  
+* **enableSsl** - Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server. [Boolean](Data-types) Default: False. Note: port 465 isn't working with SSL. See [issue 1226](https://github.com/NLog/NLog/issues/1226)  
 
 * **smtpPassword** - Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
 
@@ -83,7 +83,7 @@ Possible values:
 
 * **smtpServer** - SMTP Server to be used for sending. [Layout](Data-types) Required.
 
-* **smtpPort** - Port number that SMTP Server is listening on. [Integer](Data-types) Default: 25
+* **smtpPort** - Port number that SMTP Server is listening on. [Integer](Data-types) Default: 25. Note: port 465 isn't working with SSL. See [issue 1226](https://github.com/NLog/NLog/issues/1226)
 
 * **useSystemNetMailSettings** - Force using smtp configuration from system.net/mailSettings. [Boolean](Data-types) Default: False
 
