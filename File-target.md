@@ -68,7 +68,7 @@ Possible values:
 ### Archival Options
 * **archiveAboveSize** - Size in bytes above which log files will be automatically archived. [Long](Layouts)  
 Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance. 
-**Warning: combining this mode with _Archive Numbering Date_ is not supported. Archive files are not merged.    _ DateAndSequence_ do will work. **
+**Warning: combining this mode with _Archive Numbering Date_ is not supported. Archive files are not merged. _DateAndSequence_ will work**
  
 * **maxArchiveFiles** - Maximum number of archive files that should be kept. If _maxArchiveFiles_ is less or equal to 0, old files aren't deleted [Integer](Layouts) Default: 0  
 
