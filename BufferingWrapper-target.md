@@ -17,7 +17,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ## Parameters
 ### General Options
 * **name** - Name of the target.
-###Buffering Options
+### Buffering Options
 * **bufferSize** - Number of log events to be buffered. When the limit is reached, then a synchronously flush is performed. `Integer` Default: `100`
 
 * **flushTimeout** - Timeout (in milliseconds) after a write, until the entire buffer is asynchronously flushed. Use `-1` to disable timed flushes. `Integer` Default: `-1`
