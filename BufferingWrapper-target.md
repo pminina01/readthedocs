@@ -7,9 +7,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 <targets>
   <target xsi:type="BufferingWrapper"
           name="String"
-          slidingTimeout="Boolean"
           bufferSize="Integer"
-          flushTimeout="Integer">
+          flushTimeout="Integer"
+          slidingTimeout="Boolean">
     <target xsi:type="wrappedTargetType" ...target properties... />
   </target>
 </targets>
@@ -18,7 +18,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ### General Options
 * **name** - Name of the target.
 ### Buffering Options
-* **bufferSize** - Number of log events to be buffered. When the limit is reached, then a synchronously flush is performed. `Integer` Default: `100`
+* **bufferSize** - Number of log events to be buffered. When the limit is reached, then a synchronous flush is performed. `Integer` Default: `100`
 
 * **flushTimeout** - Timeout (in milliseconds) after a write, until the entire buffer is asynchronously flushed. Use `-1` to disable timed flushes. `Integer` Default: `-1`
 
@@ -33,4 +33,4 @@ If `flushTimeout` is larger than `0`, then the messages are written asynchronous
 
 When messages are written asynchronously, this is done in another thread. This means context information like thread-user-identity is different.
 
-If the buffer is filled before the 'flushTimeout' fires and triggers the asynchronously flush, then the logging thread will be performing the flush, and be blocked by the operation.
+If the buffer is filled before the `flushTimeout` fires and triggers the asynchronous flush, then the logging thread will be performing the flush, and be blocked by the operation.
