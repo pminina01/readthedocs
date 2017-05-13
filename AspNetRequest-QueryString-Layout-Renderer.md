@@ -12,7 +12,14 @@ ${aspnet-request-querystring:QueryStringKeys=Keys;OutputFormat:AspNetLayoutOutpu
 ## Parameters
 ### Rendering Options
 * **Keys** - Query String Key. A list of keys can be passed as a Comma separated value. Eg: Key1, Key2. Since NLog.Web 4.3.1 optional. No value is all query string values
-* **OutputFormat** - AspNetLayoutOutputFormat. Possible Values: `FLAT`, `JSON`. Default: `flat`. Evaluate the `querysttring` and `values` flat string. See example below.
+### Formatting options
+* **OutputFormat** - Possible Values: `FLAT`, `JSON`. Default: `flat`. Renders as flat string or JSON object array.
+
+* **ItemSeparator** Separator between item. Only used Flat. `string` Default `,`. Introducted in NLog.Web 4.4
+* **ValueSeparator** Separator between value and key. `string`  Default `=`. Only used Flat. Introducted in NLog.Web 4.4
+* **SingleAsArray** Single item in array? If false, then a single item will be an single object. Only used JSON. `boolean` Default `true`. Introducted in NLog.Web 4.4
+
+
 
 ## Remarks
 Use this layout renderer to insert the value of the specified cookie stored in the ASP.NET Query String Collection.
