@@ -15,9 +15,9 @@ ${aspnet-request-querystring:QueryStringKeys=Keys;OutputFormat:AspNetLayoutOutpu
 ### Formatting options
 * **OutputFormat** - Possible Values: `FLAT`, `JSON`. Default: `flat`. Renders as flat string or JSON object array.
 
-* **ItemSeparator** Separator between item. Only used Flat. `string` Default `,`. Introducted in NLog.Web 4.4
-* **ValueSeparator** Separator between value and key. `string`  Default `=`. Only used Flat. Introducted in NLog.Web 4.4
-* **SingleAsArray** Single item in array? If false, then a single item will be an single object. Only used JSON. `boolean` Default `true`. Introducted in NLog.Web 4.4
+* **ItemSeparator** Separator between item. Only used Flat. `string` Default `,`. Introduced in NLog.Web 4.4
+* **ValueSeparator** Separator between value and key. `string`  Default `=`. Only used Flat. Introduced in NLog.Web 4.4
+* **SingleAsArray** Single item in array? If false, then a single item will be an single object. Only used JSON. `boolean` Default `true`. Introduced in NLog.Web 4.4
 
 
 
