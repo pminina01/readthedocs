@@ -16,4 +16,4 @@ ${assembly-version:NLogAutloadExtension}
 
 ## Notes
 - is uses [`Version.ToString`](https://msdn.microsoft.com/en-us/library/e31ax1a7(v=vs.110).aspx)
-- Does not work in ASP.NET apps. Returns "Could not find entry assembly" in this case.
+- For ASP.NET / ASP.NET Core you need NLog.Web 4.5.0 /  NLog Web.AspNetCore 4.4.0 
