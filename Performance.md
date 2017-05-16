@@ -27,7 +27,7 @@ This call will be removed by the .Net compiler if the DEBUG conditional compilat
 
 
 ## File Logging Performance
-Single process applications (in single AppDomain). Can optimize performance by configuring the FileTarget attributes:
+Single process applications (in single AppDomain) can optimize performance by configuring the FileTarget attributes:
 - _keepFileOpen_ = True
 - _concurrentwrites_ = False
 
