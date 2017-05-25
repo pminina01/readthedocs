@@ -6,7 +6,6 @@ NLog supports creating custom targets. For more information, see: [[Extending NL
 ## Targets
 
 ### NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
-* [AspResponse](AspResponse-target) - Outputs log messages through the ASP Response object.
 * [Chainsaw](Chainsaw-target) - Sends log messages to the remote instance of Chainsaw application from log4j.
 * [ColoredConsole](ColoredConsole-target) - Writes log messages to the console with customizable coloring.
 * [Console](Console-target) - Writes log messages to the console.
