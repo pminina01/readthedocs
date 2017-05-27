@@ -1,4 +1,4 @@
-Use the Mapped Diagnostic Logical Context when you have information that you want available to every logger executing on the current logical context.
+Use the Mapped Diagnostic Logical Context when you have information that you want available to every logger executing on the current logical context (Similar to "Thread Context Map" in Log4j)
 
 Mapped Diagnostic Logical Context is the async version of the [Mapped Diagnostics Context](Mdc-Layout-Renderer) - a logical call context structure that keeps a dictionary of strings and provides methods to output them in layouts. Allows for maintaining state across asynchronous tasks and call contexts. 
 
