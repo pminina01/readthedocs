@@ -3,6 +3,8 @@ of strings and provides methods to output them in layouts.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
+When you work with async, use the [[NDLC|NDLC-Layout-Renderer]]
+
 ## Configuration Syntax
 ```
 ${ndc:bottomFrames=Integer:topFrames=Integer:separator=String}
