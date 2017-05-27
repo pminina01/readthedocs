@@ -35,6 +35,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${mdlc}](Mdlc-Layout-Renderer) - Async Mapped Diagnostics Context - a thread-local structure.
 * [${message}](Message-Layout-Renderer) - The formatted log message.
 * [${ndc}](Ndc-Layout-Renderer) - Nested Diagnostics Context - a thread-local structure.
+* [${ndlc}](Ndlc-Layout-Renderer) - Async Nested Diagnostics Context - a thread-local structure.
 * [${newline}](Newline-Layout-Renderer) - A newline literal.
 * [${nlogdir}](NLogDir-Layout-Renderer) - The directory where NLog.dll is located.
 * [${performancecounter}](PerformanceCounter-Layout-Renderer) - The performance counter.
