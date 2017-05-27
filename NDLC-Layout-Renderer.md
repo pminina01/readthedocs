@@ -18,7 +18,7 @@ ${ndlc:bottomFrames=Integer:topFrames=Integer:separator=String}
 ```c#
 using (NLog.NestedDiagnosticsLogicalContext.Push("Outer Scope"))
 {
-   Logger.Write("Hello Outer");
+   Logger.Info("Hello Outer");
    await InnerOperationAsync();
 }
 
@@ -26,7 +26,7 @@ static async Task InnerOperationAsync()
 {
     using (NLog.NestedDiagnosticsLogicalContext.Push("Inner Scope"))
     {
-        Logger.Write("Hello Inner");
+        Logger.Info("Hello Inner");
         await Task.Yield();
     }
 }
