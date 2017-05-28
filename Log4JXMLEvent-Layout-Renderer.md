@@ -15,9 +15,9 @@ ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSit
 
 * **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. Boolean
 
-* **includeMdc** - Indicates whether to include contents of the MappedDiagnosticsContext dictionary. Boolean
-* **includeMdlc** - Indicates whether to include contents of the MappedDiagnosticsLogicalContext dictionary. Boolean
-  > Introduced in NLog 4.4.8. .NET 4.0 or 4.5 required.
+* **includeMdc** - Indicates whether to include contents of the [[MappedDiagnosticsContext|MDC-Layout-Renderer]] dictionary. Boolean
+* **includeMdlc** - Indicates whether to include contents of the async [[MappedDiagnosticsLogicalContext|MDLC-Layout-Renderer]] dictionary (Thread Context Map). Boolean
+  > Introduced in NLog 4.4.8 (.NET 4.0 or 4.5 required)
 * **includeAllProperties** - Indicates whether to include contents of all the log-event properties. Boolean
   > Introduced in NLog 4.4.9
 
