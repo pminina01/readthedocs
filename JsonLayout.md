@@ -42,7 +42,7 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 * **includeMdc** - Indicates whether to include contents of the [[MappedDiagnosticsContext|MDC-Layout-Renderer]] dictionary. Boolean
   > Introduced in NLog 4.4.10
 * **includeMdlc** - Indicates whether to include contents of the async [[MappedDiagnosticsLogicalContext|MDLC-Layout-Renderer]] dictionary. Boolean
-  > Introduced in NLog 4.4.10. .NET 4.0 or 4.5 required.
+  > Introduced in NLog 4.4.10 (.NET 4.0 or 4.5 required)
 * **includeAllProperties** - Include all events properties of a logevent? default: `false`.
   > Introduced in NLog 4.4
 * **excludeProperties** - comma separated string with names which properties to exclude. Only used when _includeAllProperties_ is `true`. Case sensitive. Default empty
