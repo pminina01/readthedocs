@@ -33,17 +33,23 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 * **Attribute**
   * **name** - Required. The name of the key in JSON
   * **layout** - The [layout](Layouts) for the key.
-  * **encode** - Enable or disable JSON encoding for the attribute. Enabled by default. (Added in NLog 4.1) 
-* **suppressSpaces** - Enable to suppress extra spaces in the output JSON. Disabled by default. (Added in NLog 4.1)
-* **renderEmptyObject** - Gets or sets the option to render the empty object value `{}`, default `true`. (Added in NLog 4.3.7)
+  * **encode** - Enable or disable JSON encoding for the attribute. Enabled by default.
+  > Introduced in NLog 4.1
+* **suppressSpaces** - Enable to suppress extra spaces in the output JSON. Disabled by default.
+  > Introduced in NLog 4.1
+* **renderEmptyObject** - Gets or sets the option to render the empty object value `{}`, default `true`.
+  > Introduced in NLog 4.3.7
 * **includeMdc** - Indicates whether to include contents of the [[MappedDiagnosticsContext|MDC-Layout-Renderer]] dictionary. Boolean
   > Introduced in NLog 4.4.10
 * **includeMdlc** - Indicates whether to include contents of the async [[MappedDiagnosticsLogicalContext|MDLC-Layout-Renderer]] dictionary. Boolean
   > Introduced in NLog 4.4.10. .NET 4.0 or 4.5 required.
-* **includeAllProperties** - Include all events properties of a logevent? default: `false`.  Introduced in NLog 4.4
+* **includeAllProperties** - Include all events properties of a logevent? default: `false`.
+  > Introduced in NLog 4.4
 * **excludeProperties** - comma separated string with names which properties to exclude. Only used when _includeAllProperties_ is `true`. Case sensitive. Default empty
-When a name contains a comma, single quote the value. E.g. `'value,withquote',value2`. Introduced in NLog 4.4
-* **EscapeUnicode**  -  escape non-ascii characters? Boolean. Default `true`.  Introduced in NLog 4.4.7
+When a name contains a comma, single quote the value. E.g. `'value,withquote',value2`.
+  > Introduced in NLog 4.4
+* **EscapeUnicode**  -  escape non-ascii characters? Boolean. Default `true`.
+  > Introduced in NLog 4.4.7
  
 ## Notes
 * Currently the layout will always create a non-nested object with properties.
