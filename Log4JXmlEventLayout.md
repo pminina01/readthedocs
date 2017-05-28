@@ -13,9 +13,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono
 ```
 
 ## Parameters
-* **includeMdc** - Indicates whether to include contents of the MappedDiagnosticsContext dictionary. Boolean
+* **includeMdc** - Indicates whether to include contents of the [[MappedDiagnosticsContext|MDC-Layout-Renderer]] dictionary. Boolean
   > Introduced in NLog 4.4.9
-* **includeMdlc** - Indicates whether to include contents of the MappedDiagnosticsLogicalContext dictionary. Boolean
+* **includeMdlc** - Indicates whether to include contents of the async [[MappedDiagnosticsLogicalContext|MDLC-Layout-Renderer]] dictionary. Boolean
   > Introduced in NLog 4.4.9. .NET 4.0 or 4.5 required.
 * **includeAllProperties** - Indicates whether to include contents of all the log-event properties. Boolean
   > Introduced in NLog 4.4.9
