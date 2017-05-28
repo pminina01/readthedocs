@@ -22,7 +22,7 @@ ${log4jxmlevent:ndcItemSeparator=String:includeSourceInfo=Boolean:includeCallSit
   > Introduced in NLog 4.4.9
 
 * **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
-* **includeNdc** - Indicates whether to include contents of the NestedDiagnosticsContext stack. Boolean
+* **includeNdc** - Indicates whether to include contents of the [[NestedDiagnosticsContext|NDC-Layout-Renderer]] stack. Boolean
 * **ndcItemSeparator** - NDC item separator. Default: 
 * **indentXml** - Indicates whether the XML should use spaces for indentation. Boolean
 * **includeNLogData** - Indicates whether to include NLog-specific extensions to log4j schema. Boolean Default: True
