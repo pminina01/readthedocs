@@ -1,7 +1,8 @@
 Provides asynchronous, buffered execution of target writes. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
-##Configuration Syntax
+
+## Configuration Syntax
 
 ```xml
 <targets>
