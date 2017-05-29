@@ -13,6 +13,7 @@ Supported in .NET and Mono
           category="Layout"
           eventId="Layout"
           log="String"
+          maxKilobytes="long"
           maxMessageLength="Integer" />
 <!-- note: source is a string in NLog before 4.0 -->
 </targets>
@@ -37,6 +38,7 @@ Read more about using the [[Configuration File]].
    * _Truncate_ - Truncates the message before writing to the Event Log. This is the default.
    * _Split_ - Splits the message and writes multiple entries to the Event Log. Warning: the message layout will be spread across multiple Event Log entries; if there is an application reading and parsing the Event Log, split messages will not have the expected layout of a log entry.
    * _Discard_ - Discards of the message. It will not be written to the Event Log.
+* **MaxKilobytes**  - maximum Event log size in kilobytes. `null` is default (512KB). Value should be multiples of 64 and between 64 and 4194240. Note, this requires admin rights. Introduced in NLog 4.4.10
 
 ## Notes
 To log to the event log, an event source is required to exist. This involves creating the event source.
