@@ -1,5 +1,7 @@
 Nested Diagnostics Logical Context - Is the async version of [[NDC Layout Renderer|NDC-Layout-Renderer]]. It makes the nested context available to every logger executing on the current logical context. (Similar to "Thread Context" in Log4j)
 
+Introduced in NLog 4.4.10
+
 Supported in .NET 4.0 and 4.5.
 
 ## Configuration Syntax
