@@ -4,7 +4,7 @@ Combines well with [FallbackGroup Target](https://github.com/NLog/NLog/wiki/Fall
 
 Supported in .NET and Mono
 
-See [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit) when using **.NET Core.**
+Install [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit) when using **.NET Core.**
 
 ## Configuration Syntax
 ```xml
