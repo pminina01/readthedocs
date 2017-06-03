@@ -47,12 +47,6 @@ Possible values:
 
 ### Connection Options
 * **connectionCacheSize** - Size of the connection cache (number of connections which are kept alive). [Integer](Data-types) Default: 5
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v1.0 for .NET Framework 1.0
-> * NLog v1.0 for .NET Framework 1.1
-> * NLog v1.0 for .NET Framework 2.0
 
 * **address** - Network address. [Layout](Data-types)  
 The network address can be:
@@ -70,33 +64,13 @@ The network address can be:
 
 ### Payload Options
 * **includeSourceInfo** - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data-types)  
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 3.5
-> * NLog v2.0 for Silverlight 2.0
-> * NLog v2.0 for Silverlight 3.0
-> * NLog v2.0 for Silverlight 4.0
-> * NLog v2.0 for Silverlight for Windows Phone 7
-> * NLog v2.0 for Silverlight for Windows Phone 7.1
+
 
 * **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. [Boolean](Data-types)  
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 2.0
-> * NLog v2.0 for .NET Compact Framework 3.5
 
 * **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
 
 * **ndcItemSeparator** - NDC item separator.
-> This parameter is not supported in:
-> * NLog v1.0 for .NET Compact Framework 1.0
-> * NLog v1.0 for .NET Compact Framework 2.0
-> * NLog v1.0 for .NET Framework 1.0
-> * NLog v1.0 for .NET Framework 1.1
-> * NLog v1.0 for .NET Framework 2.0
 
 * **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data-types)
 
