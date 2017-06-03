@@ -79,7 +79,7 @@ The network address can be:
 * **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data-types)
 
 * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a named parameter. [Collection](Data-types) 
-Each collection item is represented by \<parameter /> element with the following attributes:
+Each collection item is represented by `<parameter />` element with the following attributes:
 
   * **layout** - Layout that should be use to calcuate the value for the parameter. [Layout](Data-types) Required.
 
