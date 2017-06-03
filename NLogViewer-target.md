@@ -1,4 +1,4 @@
-Sends log messages to the remote instance of NLog Viewer. 
+Sends log messages to the remote instance of NLog Viewer. For example, [Log4View](http://www.log4view.com/log4view/)
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 ## Configuration Syntax
