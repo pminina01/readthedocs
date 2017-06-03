@@ -26,6 +26,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 </targets>
 ```
 Read more about using the [Configuration File](Configuration-file).
+
+This target inherits from the [Network Target](Network-target), and so it has also all the properties of the Network Target available. 
+
 ## Parameters
 ### General Options
 * **name** - Name of the target.
