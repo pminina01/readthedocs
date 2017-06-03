@@ -84,3 +84,33 @@ Each collection item is represented by `<parameter />` element with the followin
   * **layout** - Layout that should be use to calcuate the value for the parameter. [Layout](Data-types) Required.
 
   * **name** - Viewer parameter name. Required.
+
+
+## Example
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd"
+      autoReload="true"
+      throwExceptions="true"
+      internalLogLevel="Warn" internalLogFile="c:\temp\nlog-internal.log">
+
+  <targets>
+
+
+    <target name="log4view" xsi:type="NLogViewer" address="tcp://127.0.0.1:878" 
+                 KeepConnection="false" OnConnectionOverflow="Block" MaxConnections="5" />
+  
+    <target xsi:type="ColoredConsole" name="console" layout="${longdate} ${logger} ${uppercase:${level}} ${message}" />
+  </targets>
+
+  <rules>
+    <logger name="*" minlevel="Trace" writeTo="log4view" />
+  </rules>
+</nlog>
+```
+
+note: ignore the XSD errors.
