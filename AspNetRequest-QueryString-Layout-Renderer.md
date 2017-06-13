@@ -25,7 +25,7 @@ Use this layout renderer to insert the value of the specified cookie stored in t
 
 ## Examples
 
-Log the username in the session.
+Log the QueryString variable.
 
 In the C# code:
 ```c#
