@@ -13,5 +13,6 @@ Read more about using the [[Configuration File]].
 ## Parameters
 ### General Options
 * **name** - Name of the target.
-###Layout Options
+
+### Layout Options
 * **layout** - Layout used to format log messages. Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
