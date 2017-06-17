@@ -15,6 +15,8 @@ install the package [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit):
 </extensions>
 ```
 
+Bug/feature requests for NLog.MailKit please [on the NLog.MailKit repo](https://github.com/NLog/NLog.MailKit)
+
 ## Configuration Syntax
 ```xml
 <targets>
