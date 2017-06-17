@@ -6,6 +6,7 @@ autoloading .dll|✓ |✓ |✓ |±|✓ |✓ |✓ |||±: expected
 auto reload|✓ |✓ |✓ |✓ |||✓ |||	
 stacktrace with source|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 fluent interface|||✓ |✓ |||?|||	
+NLogTraceListener|✓ |✓ |✓ ||||✓ |||	
 	
 ## Layout Renderers
 Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
