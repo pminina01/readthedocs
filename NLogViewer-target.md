@@ -13,6 +13,9 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           encoding="Encoding"
           connectionCacheSize="Integer"
           address="Layout"
+          lineEnding="CRLF|LF|CR|None"
+          maxConnections="Integer"
+          maxQueueSize="Integer"
           keepConnection="Boolean"
           onConnectionOverflow="Enum"
           includeSourceInfo="Boolean"
@@ -49,6 +52,13 @@ Possible values:
 
 * **encoding** - Encoding to be used. [Encoding](Data-types) Default: utf-8
 
+* **lineEnding** - Line Ending to be used if _newLine_ is set to true. `LineEndingMode` Default: `CRLF`. Not used if _newLine_ is `false`. Introduced in 4.3.8.
+Possible values:
+  * _CRLF_ - Carriage Return and Line Feed. (default)
+  * _CR_ - Carriage Return.
+  * _LF_ - Line Feed.
+  * _None_ - No end of line characters.
+
 ### Connection Options
 * **connectionCacheSize** - Size of the connection cache (number of connections which are kept alive). [Integer](Data-types) Default: 5
 
@@ -65,6 +75,16 @@ The network address can be:
   For SOAP-based webservice support over HTTP use WebService target.
 
 * **keepConnection** - Indicates whether to keep connection open whenever possible. [Boolean](Data-types) Default: True
+
+* **maxConnections** - Maximum current connections. 0 = no maximum. `Integer` Default: `0`. Not used if _keepConnection_ is `true`. Introduced in NLog 4.2.1
+
+* **onConnectionOverflow** - Action that should be taken if the will be more connections than _maxConnections_ . Introduced in NLog 4.2.1. 
+Possible values:
+  * _AllowNewConnnection_ - Just allow it. (default)
+  * _Block_ - Block until there's more room in the queue.
+  * _DiscardMessage_ - Discard the connection item.
+
+* **maxQueueSize** - Maximum queue size. Only used for TCP (not http/https/udp). Will removes messages when if too many. 0 is no max. `Integer`. Default: 0
 
 ### Payload Options
 * **includeSourceInfo** - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data-types)  
