@@ -22,6 +22,13 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           keepConnection="Boolean"
           onConnectionOverflow="Enum"
           address="Layout" 
+          includeSourceInfo="Boolean"
+          includeCallSite="Boolean"
+          appInfo="String"
+          ndcItemSeparator="String"
+          includeNdc="Boolean"
+          includeNLogData="Boolean"
+          includeMdc="Boolean"
 />
 </targets>
 ```
@@ -78,3 +85,19 @@ The network address can be:
   * udp6://host:port - force UDP/IPv6 (not supported on Silverlight and on Windows Phone 7.0)
   * http://host:port/pageName - HTTP using POST verb
   * https://host:port/pageName - HTTPS using POST verb
+
+### Payload Options
+* **includeSourceInfo** - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data-types)  
+
+
+* **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. [Boolean](Data-types)  
+
+* **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
+
+* **ndcItemSeparator** - NDC item separator.
+
+* **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data-types)
+
+* **includeNLogData** - Indicates whether to include NLog-specific extensions to log4j schema. [Boolean](Data-types)
+
+* **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data-types)
