@@ -6,9 +6,8 @@ Supported in .NET and Mono
 
 ### .NET Core
 
-Install [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit) when using **.NET Core.**
-
-Install the package: Install-Package NLog.MailKit and add to your nlog.config:
+When using **.NET Core.**, 
+install the package [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit): `Install-Package NLog.MailKit` and add to your nlog.config:
 
 ```xml
 <extensions>
