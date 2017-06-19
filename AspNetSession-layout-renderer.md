@@ -35,7 +35,7 @@ Config:
     </targets>
 
     <rules>
-        <logger name="*" minlevel="Info" writeTo="logfile" layout="${aspnet-session:Variable=Username}/>
+        <logger name="*" minlevel="Info" writeTo="logfile" layout="${aspnet-session:Variable=Username}" />
     </rules>
 </nlog>
 ```
@@ -58,7 +58,7 @@ Config:
     </targets>
 
     <rules>
-        <logger name="*" minlevel="Info" writeTo="logfile" layout="${aspnet-session:Variable=User.Name:EvaluateAsNestedProperties=true}/>
+        <logger name="*" minlevel="Info" writeTo="logfile" layout="${aspnet-session:Variable=User.Name:EvaluateAsNestedProperties=true}" />
     </rules>
 </nlog>
 ```
