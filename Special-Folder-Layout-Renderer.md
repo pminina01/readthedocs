@@ -63,7 +63,7 @@ ${specialfolder:dir=String:file=String:folder=Enum}
   * UserProfile -
   * Windows -
 
-  Full list of options is available at MSDN. The most common ones are:
+  Full list of options is available at [MSDN](https://msdn.microsoft.com/en-us/library/system.environment.specialfolder(v=vs.110).aspx). The most common ones are:
   * ApplicationData - roaming application data for current user.
   * CommonApplicationData - application data for all users.
   * MyDocuments - My Documents
