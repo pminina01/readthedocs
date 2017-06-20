@@ -2,6 +2,7 @@ NLog is being used in a number of software projects, both commercial and open so
 
 ## Open source projects
 The following open source software projects are using or supporting NLog:
+* SimplePM (programming contests management system) - https://github.com/SirkadirovTeam/SimplePM_Server
 * Castle Project/Windsor Container - http://www.castleproject.org/container/facilities/v1rc3/logging/index.html
 * Ninject - http://ninject.org/
 * Common Infrastructure Libraries for .NET - http://netcommon.sourceforge.net/
