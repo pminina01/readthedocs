@@ -1,4 +1,4 @@
-All configuration of NLog can be done with a single XML file. 
+All configuration of NLog can be done with a single XML file. 哈哈哈哈哈
 
 # Contents
 [Configuration file locations](#configuration-file-locations)<br />
