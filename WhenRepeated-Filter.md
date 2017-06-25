@@ -7,7 +7,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 <rules>
   <logger ... >
     <filters>
-      <whenContains layout="Layout" timeoutSeconds="30" action="Enum" />
+      <whenRepeated layout="Layout" timeoutSeconds="30" action="Enum" />
     </filters>
   </logger>
 </rules>
