@@ -1,5 +1,7 @@
 Matches when the calculated layout has already been logged. Useful if having an aggressive logger, and wants to throttle the output.
 
+Introduced with NLog ver. 4.5
+
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ## Configuration Syntax
