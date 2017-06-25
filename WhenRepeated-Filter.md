@@ -32,5 +32,5 @@ Possible values:
 * **MaxLength** - Max number of characters to include when checking for identical messages (Default 1000 characters)
 * **MaxFilterCacheSize** - Max number of unique log messages to keep in cache, before starting to prune (Default 50000)
 * **DefaultFilterCacheSize** - Initial start size of the cache for keep track of unique log messages (Default 1000)
-* **OptimizeBufferReuse** - Enables reusable buffers to minimize garbage allocation when performing filtering.
-* **OptimizeBufferDefaultLength** - Initial allocated size of the reusable buffers.
+* **OptimizeBufferReuse** - Enables reusable buffers to minimize garbage allocation when performing filtering (Default true)
+* **OptimizeBufferDefaultLength** - Initial allocated size of the reusable buffers (Default 1000)
