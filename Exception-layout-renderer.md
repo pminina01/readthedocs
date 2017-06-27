@@ -63,5 +63,5 @@ ${exception:format=toString,Data:maxInnerExceptionLevel=10}
 ```
 
 
-##More Info and Examples
+## More Info and Examples
 For more information, see [How to properly log exceptions](How-to-log-exceptions).
