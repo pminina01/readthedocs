@@ -1,14 +1,14 @@
 ## Content
 * [[Installing NLog|tutorial#installing-nlog]]
 * [[Creating Log messages|tutorial#creating-log-messages]]
- * [[Creating loggers|tutorial#creating-loggers]]
- * [[Log levels|tutorial#log-levels]]
- * [[Writing log messages|tutorial#writing-log-messages]]
+* [[Creating loggers|tutorial#creating-loggers]]
+* [[Log levels|tutorial#log-levels]]
+* [[Writing log messages|tutorial#writing-log-messages]]
 * [[Configuration|tutorial#configuration]]
- * [[Multiple targets|tutorial#multiple-targets]]
- * [[Logger-specific routing|tutorial#logger-specific-routing]]
- * [[Wrappers|tutorial#wrappers]]
- * [[Layouts|tutorial#layouts]]
+* [[Multiple targets|tutorial#multiple-targets]]
+* [[Logger-specific routing|tutorial#logger-specific-routing]]
+* [[Wrappers|tutorial#wrappers]]
+* [[Layouts|tutorial#layouts]]
 * [[Advanced|tutorial#advanced]]
 
 ## Installing NLog
