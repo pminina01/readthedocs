@@ -16,6 +16,8 @@ ${other:jsonEncode=Boolean}
 ## Parameters
 ### Transformation Options
 * **jsonEncode** - Indicates whether to apply JSON encoding. Boolean Default: True
+* **escapeUnicode** - Indicates whether it should escape unicode characters using **\u**. Boolean Default: True
+  * Introduced with NLog 4.4.7
 * **inner** - Wrapped layout. Layout
 
 
