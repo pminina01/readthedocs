@@ -35,6 +35,8 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
   * **layout** - The [layout](Layouts) for the key.
   * **encode** - Enable or disable JSON encoding for the attribute. Enabled by default.
   > Introduced in NLog 4.1
+  * **escapeUnicode** - Escape unicode-characters (non-ascii) using **\u**. Enabled by default.
+  > Introduced in NLog 4.4.7
 * **suppressSpaces** - Enable to suppress extra spaces in the output JSON. Disabled by default.
   > Introduced in NLog 4.1
 * **renderEmptyObject** - Gets or sets the option to render the empty object value `{}`, default `true`.
