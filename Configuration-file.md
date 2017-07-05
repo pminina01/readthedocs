@@ -129,7 +129,7 @@ This example demonstrates a `<targets />` section which defines multiple targets
 </targets>
 ```
 
-NLog provides many predefined [Targets](Targets). It’s actually very easy to create your own target - see [How to write a Target](How to write a Target).
+NLog provides many predefined [Targets](Targets). It’s actually very easy to create your own target - see [How to write a Target](How-to-write-a-custom-target).
 
 <a name="rules" />
 
