@@ -117,7 +117,7 @@ The \<targets /> section defines log [Targets](Targets). Each target is represen
 
 In addition to these attributes, targets usually accept other parameters, which impact the way diagnostic traces are written. Each target has a different set of parameters, they are described in detail on project’s homepage and they are context-sensitive. Intellisense is also available in Visual Studio.
 
-For example – the [File target](File Target) accepts the `fileName` parameter which defines output file name and the [Console target](Console Target) has the `error` parameter which determines whether the diagnostic traces are written to standard error (stderr) instead of standard output (stdout) of the process.
+For example – the [File target](File-target) accepts the `fileName` parameter which defines output file name and the [Console target](Console-target) has the `error` parameter which determines whether the diagnostic traces are written to standard error (stderr) instead of standard output (stdout) of the process.
 
 This example demonstrates a `<targets />` section which defines multiple targets: two files, one network target and OutputDebugString target:
 ```xml
