@@ -21,17 +21,19 @@ Read more about using the [[Configuration File]].
 ### Logging to an array
 (snippet from    [Memory Simple Example.cs](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/examples/targets/Configuration%20API/Memory/Simple/Example.cs)  )
 
-        MemoryTarget target = new MemoryTarget();
-        target.Layout = "${message}";
+```c#
+  MemoryTarget target = new MemoryTarget();
+  target.Layout = "${mess
 
-        NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, LogLevel.Debug);
+  NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, LogLevel.D
 
-        Logger logger = LogManager.GetLogger("Example");
-        logger.Debug("log message");
+  Logger logger = LogManager.GetLogger("Example");
+  logger.Debug("log mess
 
-        foreach (string s in target.Logs)
-        {
-            Console.Write("logged: {0}", s);
-        }
+  foreach (string s in target.Logs)
+  {
+      Console.Write("logged: {0}", s);
+  }
+```
 
 See also [Memory Target Tests](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/tests/NLog.UnitTests/Targets/MemoryTargetTests.cs)
