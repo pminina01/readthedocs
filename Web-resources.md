@@ -6,7 +6,7 @@
 * [Tracing and logging in .NET](http://www.hieu.co.uk/blog/index.php/2009/02/11/tracing-and-logging-in-net/) by Hieu Pham (**Link Broken**)
 * [Logging with PostSharp and NLog](http://www.artemiswest.com/Articles/LoggingWithPostSharp.aspx) by Artemis West Ltd (**Link Broken**)
 * [Using NLog in C#](http://kristjansson.us/?p=686) by Orn Kristjansson
-* [Logging NLog messages to a non-static method](http://thevalerios.net/matt/2008/05/logging-nlog-messages-to-a-non-static-method/) by Matt Valerio
+* [Logging NLog messages to a non-static method](http://thevalerios.net/matt/2008/05/logging-nlog-messages-to-a-non-static-method/) by Matt Valerio (**Link Broken**)
 * [NLog](http://www.peteonsoftware.com/index.php/2008/07/29/nlog/) by Pete on Software
 * [Switching to NLog](http://robertmccarter.wordpress.com/2009/11/13/switching-to-nlog/) by Robert A. McCarter
 * [Sending the output from Linq to SQL to a Log file](http://weblogs.asp.net/grantbarrington/archive/2010/02/08/sending-the-output-from-linq-to-sql-to-a-log-file.aspx) by Grant Barrington
