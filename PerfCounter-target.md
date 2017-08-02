@@ -16,6 +16,9 @@ Supported in .NET and Mono.
            />
 </targets>
 ```
+
+The actual Performance Counter is created by [[Installing target|Installing targets]]
+
 Read more about using the [[Configuration File]].
 
 ## Parameters
