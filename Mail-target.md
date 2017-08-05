@@ -44,7 +44,9 @@ Bug/feature requests for NLog.MailKit please [on the NLog.MailKit repo](https://
           useSystemNetMailSettings="Boolean"
           deliveryMethod="Enum"
           pickupDirectoryLocation="String"
-          timeout="Integer" />
+          timeout="Integer"
+          skipCertificateValidation="Boolean"
+ />
 </targets>
 ```
 Read more about using the [[Configuration File]].
@@ -109,6 +111,8 @@ Possible values:
   * _Network_ - Email is sent through the network to an SMTP server.
   * _PickupDirectoryFromIis_ - Email is copied to the pickup directory used by a local Internet Information Services (IIS) for delivery.
   * _SpecifiedPickupDirectory_ - Email is copied to the directory specified by the PickupDirectoryLocation property for delivery by an external application.
+
+* **skipCertificateValidation** - Only for NLog.MailKit. Introduced in NLog.MailKit 1.1 - skip SSL certification check
 
 ## Remarks
 
