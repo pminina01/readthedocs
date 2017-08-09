@@ -13,6 +13,7 @@ The following open source software projects are using or supporting NLog:
 * ReflectInsight Extensions - https://insightextensions.codeplex.com/
 * Fop2DD - https://fop2dd.codeplex.com/
 * Ember Media Manager - http://embermediamanager.org/
+* ArchiSteamFarm (steam cards farmer) - https://github.com/JustArchi/ArchiSteamFarm
 
 ## Commercial software
 * Gibraltar - http://nlog-project.org/2009/11/01/gibraltar-adapter-for-nlog-released.html
