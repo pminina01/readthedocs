@@ -42,7 +42,7 @@ ${when:when=level<=LogLevel.Info:inner=Good:else=Bad}
 
 ### Since NLog 4.2 
 
-When using `:` and `}` in a internal layout those characters need to be scape (there is no need to scape `\`).
+When using `:` and `}` in a internal layout those characters need to be escaped (there is no need to escape `\`).
 
 -  `:` because it's a value separator. 
 -  `}` because it's the end of the layout
