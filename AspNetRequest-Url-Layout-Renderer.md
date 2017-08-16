@@ -26,9 +26,7 @@ ${aspnet-request-url:IncludePort=true:IncludeQueryString=true} - produces http:/
 
 Introduced in NLog.Web.AspNetCore 4.4.1 & NLog.Web 4.5.1. 
 
-ASP.NET Request URL.
-
-Supported in .NET, .NET Core and Mono
+IncludeScheme Parameter
 
 ## Configuration Syntax
 ```
@@ -42,6 +40,5 @@ ${aspnet-request-url:IncludeHost=boolean:IncludePort=boolean:IncludeQueryString=
 
 ```
 ${aspnet-request-url:IncludeScheme=true} - produces http://www.exmaple.com
-${aspnet-request-url:IncludeScheme=false} - produces www.exmaple.com
- 
+${aspnet-request-url:IncludeScheme=false} - produces www.exmaple.com 
 ```
