@@ -37,3 +37,10 @@ foreach (string s in target.Logs)
 ```
 
 See also [Memory Target Tests](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/tests/NLog.UnitTests/Targets/MemoryTargetTests.cs)
+
+### reading from existing target
+
+```
+var target = LogManager.Configuration.FindTargetByName<MemoryTarget>("target1");
+var logs = target.Logs;
+```
