@@ -111,7 +111,7 @@ Examples when you could use which level:
 <a name="targets" />
 
 ## Targets
-The \<targets /> section defines log [Targets](Targets). Each target is represented by a <target /> element. There are two attributes required for each target:
+The \<targets /> section defines log [Targets](Targets). Each target is represented by a \<target /> element. There are two attributes required for each target:
  * `name` – target name
  * `type` – target type – such as "File", "Database", "Mail". When using namespaces this attribute is named `xsi:type`.
 
