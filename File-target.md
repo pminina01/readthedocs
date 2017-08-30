@@ -66,11 +66,11 @@ Possible values:
   * None - Don't insert any line ending.
 
 ### Archival Options
-* **archiveAboveSize** - Size in bytes above which log files will be automatically archived. [Long](Layouts)  
+* **archiveAboveSize** - Size in bytes above which log files will be automatically archived. [Long](Data-types#long)  
 Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance. 
 **Warning: combining this mode with _Archive Numbering Date_ is not supported. Archive files are not merged. _DateAndSequence_ will work**
  
-* **maxArchiveFiles** - Maximum number of archive files that should be kept. If _maxArchiveFiles_ is less or equal to 0, old files aren't deleted [Integer](Layouts) Default: 0  
+* **maxArchiveFiles** - Maximum number of archive files that should be kept. If _maxArchiveFiles_ is less or equal to 0, old files aren't deleted [Integer](Data-types#integer) Default: 0  
 
 * **archiveFileName** - Name of the file to be used for an archive. [Layout](Layouts)  
 It may contain a special placeholder {#####} that will be replaced with a sequence of numbers depending on the archiving strategy. The number of hash characters used determines the number of numerical digits to be used for numbering files.  
@@ -154,9 +154,9 @@ Setting this to false may improve performance a bit, but you'll receive an error
 
 * **concurrentWrites** - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host, when using _keepFileOpen_ = true. By using a special technique that lets it keep the files open from multiple processes. If only single process (and single AppDomain) application is logging, then it is faster to set to _concurrentWrites_ = False.  [Boolean](Data-types) Default: True
 
-* **openFileCacheTimeout** - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. [Integer](Data-types) Default: -1  
+* **openFileCacheTimeout** - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. [Integer](Data-types#integer) Default: -1  
 
-* **openFileCacheSize** - Number of files to be kept open. Setting this to a higher value may improve performance in a situation where a single File target is writing to many files (such as splitting by level or by logger). [Integer](Data-types) Default: 5  
+* **openFileCacheSize** - Number of files to be kept open. Setting this to a higher value may improve performance in a situation where a single File target is writing to many files (such as splitting by level or by logger). [Integer](Data-types#integer) Default: 5  
 The files are managed on a LRU (least recently used) basis, which flushes the files that have not been used for the longest period of time should the cache become full. As a rule of thumb, you shouldn't set this parameter to a very high value. A number like 10-15 shouldn't be exceeded, because you'd be keeping a large number of files open which consumes system resources.
 
 * **optimizeBufferReuse** - Instead of allocating new buffers for every file write and for each layout rendering of log message, then it reuse the same buffers. [Boolean](Data-types) Default: True. Introduced in NLog 4.4.2
@@ -164,15 +164,15 @@ The files are managed on a LRU (least recently used) basis, which flushes the fi
 * **networkWrites** - Indicates whether concurrent writes to the log file by multiple processes on different network hosts. [Boolean](Data-types) Default: False  
 This effectively prevents files from being kept open.
 
-* **concurrentWriteAttemptDelay** - Delay in milliseconds to wait before attempting to write to the file again. [Integer](Data-types) Default: 1  
+* **concurrentWriteAttemptDelay** - Delay in milliseconds to wait before attempting to write to the file again. [Integer](Data-types#integer) Default: 1  
 The actual delay is a random value between 0 and the value specified in this parameter. On each failed attempt the delay base is doubled up to ConcurrentWriteAttempts times.  
 Assuming that ConcurrentWriteAttemptDelay is 10 the time to wait will be: a random value between 0 and 10 milliseconds - 1st attempt a random value between 0 and 20 milliseconds - 2nd attempt a random value between 0 and 40 milliseconds - 3rd attempt a random value between 0 and 80 milliseconds - 4th attempt ... and so on.
 
-* **concurrentWriteAttempts** - Number of times the write is appended on the file before NLog discards the log message. [Integer](Data-types) Default: 10  
+* **concurrentWriteAttempts** - Number of times the write is appended on the file before NLog discards the log message. [Integer](Data-types#integer) Default: 10  
 
 * **cleanupFileName** - before writing to a file, the name of the file get checked for illegal characters (OS dependent). This can be costly if a lot of messages are written. The cleanup is cached for fixed names (no layout renderers). Set this to `false` for optimal performance (but beware of the file name, if it's wrong, nothing gets written). Default: `true`. Introduced in NLog 4.2.3.
 
-* **bufferSize** - Log file buffer size in bytes. [Integer](Data-types) Default: 32768  
+* **bufferSize** - Log file buffer size in bytes. [Integer](Data-types#integer) Default: 32768  
 
 * **autoFlush** - Indicates whether to automatically flush the file buffers after each log message. [Boolean](Data-types) Default: True  
 
