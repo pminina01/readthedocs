@@ -33,9 +33,9 @@ Read more about using the [[Configuration File]].
 * **name** - Name of the target.
 
 ### Layout Options
-* **newLine** - Indicates whether to append newline at the end of log message. [Boolean](Data types) Default: False
+* **newLine** - Indicates whether to append newline at the end of log message. [Boolean](Data-types) Default: False
 
-* **layout** - Instance of Log4JXmlEventLayout that is used to format log messages. [Layout](Layout) Default: ${longdate}|${level:uppercase=true}|${logger}|${message}
+* **layout** - Instance of Log4JXmlEventLayout that is used to format log messages. [Layout](Layout) Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
 * **onOverflow** - Action that should be taken if the message is larger than maxMessageSize.  
 Possible values:
@@ -43,11 +43,11 @@ Possible values:
   * Error - Report an error.
   * Split - Split the message into smaller pieces.
 
-* **maxMessageSize* - Maximum message size in bytes. [Integer](Data types) Default: 65000
-encoding - Encoding to be used. [Encoding](Data types) Default: utf-8
+* **maxMessageSize* - Maximum message size in bytes. [Integer](Data-types) Default: 65000
+encoding - Encoding to be used. [Encoding](Data-types) Default: utf-8
 
 ### Connection Options
-* **connectionCacheSize** - Size of the connection cache (number of connections which are kept alive). [Integer](Data types) Default: 5
+* **connectionCacheSize** - Size of the connection cache (number of connections which are kept alive). [Integer](Data-types) Default: 5
 > This parameter is not supported in:
 > * NLog v1.0 for .NET Compact Framework 1.0
 > * NLog v1.0 for .NET Compact Framework 2.0
@@ -67,10 +67,10 @@ The network address can be:
   * https://host:port/pageName - HTTPS using POST verb
 For SOAP-based webservice support over HTTP use WebService target.
 
-* **keepConnection** - Indicates whether to keep connection open whenever possible. [Boolean](Data types) Default: True
+* **keepConnection** - Indicates whether to keep connection open whenever possible. [Boolean](Data-types) Default: True
 
 ### Payload Options
-* **includeSourceInfo** - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data types)  
+* **includeSourceInfo** - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data-types)  
 > This parameter is not supported in:
 > * NLog v1.0 for .NET Compact Framework 1.0
 > * NLog v1.0 for .NET Compact Framework 2.0
@@ -82,7 +82,7 @@ For SOAP-based webservice support over HTTP use WebService target.
 > * NLog v2.0 for Silverlight for Windows Phone 7
 > * NLog v2.0 for Silverlight for Windows Phone 7.1
 
-* **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. [Boolean](Data types)  
+* **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. [Boolean](Data-types)  
 > This parameter is not supported in:
 > * NLog v1.0 for .NET Compact Framework 1.0
 > * NLog v1.0 for .NET Compact Framework 2.0
@@ -99,13 +99,13 @@ For SOAP-based webservice support over HTTP use WebService target.
 > * NLog v1.0 for .NET Framework 1.1
 > * NLog v1.0 for .NET Framework 2.0
 
-* **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data types)
+* **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data-types)
 
-* **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data types)
+* **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data-types)
 
-* **includeNLogData** - Indicates whether to include NLog-specific extensions to log4j schema. [Boolean](Data types)
+* **includeNLogData** - Indicates whether to include NLog-specific extensions to log4j schema. [Boolean](Data-types)
 
-* **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a named parameter. [Collection](Data types)  
+* **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a named parameter. [Collection](Data-types)  
 Each collection item is represented by <parameter /> element with the following attributes:
   * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Layout) Required.
   * _name_ - Viewer parameter name. Required.
