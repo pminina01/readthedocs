@@ -27,3 +27,4 @@ Rules for creating a custom logger interface:
 - The custom logger interface should be a pure-interface, instead of a class. This will ensure that all log methods becomes virtual and cannot be inlined.
 - The custom logger interface implementation should not have multiple levels of inheritance and aggregations. This will ensure that you don't fall into the inline-trap again.
 - There should only be two types. The pure-interface-type and the implementation-class-type. The type provided for the `loggerType` should be the implementation-class-type.
+- All log statements hit the pure-interface, and not directly calling the implementation-class.
