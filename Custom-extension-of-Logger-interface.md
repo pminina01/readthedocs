@@ -19,7 +19,7 @@ NLog has a special [Callsite](Callsite-layout-renderer) feature, that allows it 
 
 When creating an extension to the NLog Logger-interface, then one will notice the input-parameter `loggerType`. It is used for scanning the captured StackTrace for the source location of the log-statement. If extending the NLog Logger-interface without providing the correct `loggerType`, then [Callsite](Callsite-layout-renderer) will stop working.
 
-In the perfect world then one just have to provide the .NET-Type of the custom logger-interface as value for the `loggerType`-parameter. But the .NET JIT compiler can performing inlining so the custom logger-interface might get inlined completely and the `loggerType` becomes a lie. NLog will trust the `loggerType`, and will attempt to perform filtering based on a type that doesn't exist in the StackTrace (NLog ver. 4.5 will automatically fallback to the default NLog `loggerType`).
+In the perfect world then one just have to provide the .NET-Type of the custom logger-interface as value for the `loggerType`-parameter. But the .NET JIT compiler can performing inlining so the custom logger-interface might get inlined completely and the `loggerType` becomes a lie. NLog will trust the `loggerType`, and will attempt to perform filtering based on a type that doesn't exist in the StackTrace (NLog ver. 4.5 will automatically fallback to the default NLog `ILogger`).
 
 ### Providing a correct loggerType
 Rules for creating a custom logger interface:
