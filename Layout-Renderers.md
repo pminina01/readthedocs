@@ -1,4 +1,4 @@
-Layout renderers are template macros that are used in [Layouts](Layouts).
+Layout renderers are template macros that are used in [Layouts](Layouts), e.g. `${message}`, `${level}` etc
 
 NLog supports creating custom layout renderers. For more information, see: [Extending NLog](Extending-NLog)
 
