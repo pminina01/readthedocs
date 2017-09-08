@@ -9,7 +9,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           name="String"
           bufferSize="Integer"
           flushTimeout="Integer"
-          slidingTimeout="Boolean">
+          slidingTimeout="Boolean"
+          overflowAction="Enum">
     <target xsi:type="wrappedTargetType" ...target properties... />
   </target>
 </targets>
