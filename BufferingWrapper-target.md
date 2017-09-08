@@ -25,10 +25,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 * **slidingTimeout** - Indicates whether to use sliding _flushTimeout_. `Boolean` Default: `True`  
 This value determines how the inactivity period is determined. If sliding timeout is enabled, the inactivity timer is reset after each write, if it is disabled - inactivity timer will count from the first event written to the buffer.
 
-* **overflowAction** - Action to be taken when the buffer exceeds the set bufferSize. `Enum` Default: `Flush`. Introduced in NLog 4.5  
+* **overflowAction** - Action to be taken when the buffer exceeds the set `bufferSize`. `Enum` Default: `Flush`. Introduced in NLog 4.5  
 Possible values:
   * Flush - All the log events in the buffer will be written in the wrapped target.
-  * Discard - The oldest log event will be removed from the buffer.
+  * Discard - The oldest log event will be removed from the buffer. If this setting is used, the Flush action will need to be triggered manually using another wrapper like the [AsyncWrapper](https://github.com/nlog/NLog/wiki/AsyncWrapper-target) or by using the `flushTimeout` option.
 
 ## Remarks
 
