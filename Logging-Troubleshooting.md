@@ -12,7 +12,7 @@ When you get no log output from NLog, this can be because of the following reaso
 ## Troubleshooting steps
 
  1. The first step is to make sure that NLog finds your config file. It is recommended to use NLog.config located in the same directory as your application, but there are other options. See [NLog Configuration](Configuration-file) for more information. Once you've made sure that the configuration file is there, proceed to the next step.
- 2. Configuration file is read when you create your first Logger, so the best way to validate that your configuration file is syntactically valid is to create one in the Main() method of your program.
+ 2. Configuration file is read when you create your first Logger, so the best way to validate that your configuration file is syntactically valid is to create one in the `Main()` method of your program.
 ```csharp
 class Program
 {
@@ -42,7 +42,7 @@ class Program
 ```
 Now, when loading the configuration file, you should see exception being raised.
 
- 3. To eliminate the possibility that your logging rules are incorrect, add the rule which matches all loggers and all levels at the beginning of your \<rules> section.
+ 3. To eliminate the possibility that your logging rules are incorrect, add the rule which matches all loggers and all levels at the beginning of your `<rules>` section.
 ```xml
 <nlog throwExceptions="true">
   <targets>
@@ -53,7 +53,7 @@ Now, when loading the configuration file, you should see exception being raised.
   </rules>
 </nlog>
 ```
- 4. If it still does not work, there is a possiblity is that the code in your application may be incorrect. To make sure this is not the case, add the following code to your `Main()` method:
+ 4. If it still does not work, there is a possibility is that the code in your application may be incorrect. To make sure this is not the case, add the following code to your `Main()` method:
 ```csharp
 class Program
 {
@@ -64,8 +64,8 @@ class Program
     }
 }
 ```
- 5. If there is any problem with the target your're using (such as insufficient permissions when writing to a file), you should get an exception explaining the problem right from the place where the problem occured.
- 6. If after following steps 1..5 you still don't see your log messages - there is another possibility: your log files may be written to a different location. If you don't use a fully qualified name of the file (such as c:\logs\log.txt, or ${basedir}\log.txt your logs may be written to the working directory, which is not necessarily the same directory as where the application resides.
+ 5. If there is any problem with the target your're using (such as insufficient permissions when writing to a file), you should get an exception explaining the problem right from the place where the problem occurred.
+ 6. If after following steps 1..5 you still don't see your log messages - there is another possibility: your log files may be written to a different location. If you don't use a fully qualified name of the file (such as c:\logs\log.txt, or `${basedir}\log.txt` your logs may be written to the working directory, which is not necessarily the same directory as where the application resides.
 
 
 ## Internal Logging
