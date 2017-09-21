@@ -21,5 +21,5 @@ For an ASP.Net WebAPI application, initialize the `Trace.CorrelationManager.Acti
     protected void Application_BeginRequest(object sender, EventArgs e)
     {
         ...
-        Trace.CorrelationManager.ActivityId = new Guid();
+        Trace.CorrelationManager.ActivityId = Guid.NewGuid();
     }
