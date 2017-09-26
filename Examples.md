@@ -38,7 +38,7 @@ FileTarget target = LogManager.Configuration.FindTargetByName<FileTarget>(target
 target.FileName = filename;
 ```
 
-Note that it is often easier to create the file name with a combination of [Layout-Renderers](layout renderers).
+Note that it is often easier to create the file name with a combination of [[Layout Renderers|layout-renderers]].
 
 
 ## Using NLog with [Autofac](https://autofac.org/) - [ASP.NET Web API 2](http://www.asp.net/web-api)
