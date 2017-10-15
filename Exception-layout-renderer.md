@@ -10,15 +10,16 @@ ${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSepa
 
 ## Parameters
 ### Rendering Options
-* **innerFormat** - Format of the output of inner exceptions. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method` & `StackTrace`. This parameter value is case-insensitive. 
+* **format** - Format of the output. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method`, `StackTrace`, `Data` & `@`. This parameter value is case-insensitive. Default: `message`
+  * `@` means serialize all Exception-properties into Json-format. Introduced in NLog 4.5
+
+* **innerFormat** - Format of the output of inner exceptions. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method`, `StackTrace`, `Data` & `@`. This parameter value is case-insensitive. 
 
 * **maxInnerExceptionLevel** - Maximum number of inner exceptions to include in the output. By default inner exceptions are not enabled for compatibility with NLog 1.0.Integer. Default: 0
 
 * **separator** - Separator used to concatenate parts specified in the Format. Default: single space
 * **innerExceptionSeparator** - Separator between inner exceptions. Default: new line
 * **exceptionDataSeparator** -  Separator used to concatenate the exception data parts. Default: `;`. Introduced in NLog 4.3.9
-
-* **format** - Format of the output. Must be a comma-separated list of exception properties: `Message`, `Type`, `ShortType`, `ToString`, `Method`, `StackTrace` & `Data`. This parameter value is case-insensitive. Default: `message`
 
 ## Examples
 
