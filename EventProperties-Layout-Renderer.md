@@ -16,6 +16,7 @@ ${event-properties:item=String:culture=String:format=String}
 * **item** - Name of the item. Required.
 * **culture** - The culture used for rendering. Introduced in NLog 4.1. Default value is `CultureInfo.InvariantCulture`
 * **format** - Format for conversion from object to string. Introduced in NLog 4.1. 
+  * `@` means serialize object properties into Json-format. Introduced in NLog 4.5.
 
 
 ## Example
