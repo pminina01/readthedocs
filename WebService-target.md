@@ -57,6 +57,15 @@ Possible values:
 
 * **methodName** - Web service method name.
 
+* **ProxyType** - Configuration of HttpWebRequest.Proxy. Default: DefaultWebProxy (Introduced with NLog 4.5)
+Possible values:
+  * DefaultWebProxy - Default proxy configuration from WebRequest.DefaultWebProxy (defaultProxy in app.config)
+  * AutoProxy - WebRequest.GetSystemWebProxy() with default network credentials.
+  * ProxyAddress - User defined proxy address retrieved the ProxyAddress parameter.
+  * NoProxy - Disables use of proxy (fast)
+
+* **ProxyAddress** - User defined proxy address, include port separated by a colon (Introduced with NLog 4.5)
+
 ## Remarks
 The web service must implement a method that accepts a number of string parameters.
 
