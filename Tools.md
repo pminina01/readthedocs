@@ -3,7 +3,7 @@ Logs produced by NLog can be analyzed using a number of GUI tools:
 
 ## NLog-specific viewers
 * Gibraltar (using Gibraltar Adapter for NLog) - http://nlog-project.org/2009/11/01/gibraltar-adapter-for-nlog-released.html
-* Sentinel - http://sentinel.codeplex.com/
+* Sentinel - http://sentinel.codeplex.com/      Moved to     https://github.com/yarseyah/sentinel
 * NLogViewer - http://github.com/jkowalski/NLogViewer (functional, but no longer in development, not recommended)
 * LogEntries - http://www.logentries.com (service for cloud logging, has .net NLog target)
 * Legit Log Viewer - http://www.legitlog.com/ (Although their website is down, it is Free and powerful log viewer.)
