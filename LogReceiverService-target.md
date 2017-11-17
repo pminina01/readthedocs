@@ -83,10 +83,10 @@ The line:
 emits each event to the appropriate targets defined in the server side NLog.config file.
 
 ### Accessing Custom Values
-On the server side NLog.config file, you may use the ${event-context} layout renderer to access any parameters passed from the client side config. A line such as:
+On the server side NLog.config file, you may use the ${event-properties} layout renderer to access any parameters passed from the client side config. A line such as:
 
 ```xml
-<target name="c" xsi:type="ColoredConsole" layout="testing ${event-context:item=MyParameter}" />
+<target name="c" xsi:type="ColoredConsole" layout="testing ${event-properties:item=MyParameter}" />
 ```
 
 would print to the console:
