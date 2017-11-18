@@ -98,6 +98,9 @@ Possible values:
 
 * **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
 
+* **LoggerName** - Logger field. By default it's the output of `${logger}`
+  > Introduced in NLog 4.5
+
 * **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data-types)
 
 * **ndcItemSeparator** - NDC item separator.
