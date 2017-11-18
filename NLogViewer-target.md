@@ -46,7 +46,7 @@ This target inherits from the [Network Target](Network-target), and so it has al
 Possible values:
   * _Discard_ - Discard the entire message.
   * _Error_ - Report an error.
-  * _Split_ - Split the message into smaller pieces.
+  * _Split_ - Split the message into smaller pieces (Default)
 
 * **maxMessageSize** - Maximum message size in bytes. [Integer](Data-types) Default: 65000
 
@@ -89,18 +89,29 @@ Possible values:
 ### Payload Options
 * **includeSourceInfo** - Indicates whether to include source info (file name and line number) in the information sent over the network. [Boolean](Data-types)  
 
+* **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. [Boolean](Data-types)
 
-* **includeCallSite** - Indicates whether to include call site (class and method name) in the information sent over the network. [Boolean](Data-types)  
-
-* **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
-
-* **ndcItemSeparator** - NDC item separator.
-
-* **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data-types)
+* **IncludeAllProperties** -  Indicates whether to include contents of all the log-event properties. 
+  > Introduced in NLog 4.5
 
 * **includeNLogData** - Indicates whether to include NLog-specific extensions to log4j schema. [Boolean](Data-types)
 
+* **appInfo** - AppInfo field. By default it's the friendly name of the current AppDomain.
+
+* **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data-types)
+
+* **ndcItemSeparator** - NDC item separator.
+
+* **includeNdlc** - Indicates whether to include async NestedDiagnosticsLogicalContext stack contents. [Boolean](Data-types)
+  > Introduced in NLog 4.5
+
+* **ndlcItemSeparator** - NDLC item separator.
+  > Introduced in NLog 4.5
+
 * **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data-types)
+
+* **includeMdlc** - Indicates whether to include async MappedDiagnosticsLogicalContext dictionary contents. [Boolean](Data-types)
+  > Introduced in NLog 4.4.8
 
 * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a named parameter. [Collection](Data-types) 
 Each collection item is represented by `<parameter />` element with the following attributes:
