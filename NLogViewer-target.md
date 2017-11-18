@@ -101,19 +101,19 @@ Possible values:
 * **loggerName** - Logger field. By default it's the output of `${logger}`
   > Introduced in NLog 4.5
 
-* **includeNdc** - Indicates whether to include NestedDiagnosticsContext stack contents. [Boolean](Data-types)
+* **includeNdc** - Indicates whether to include contents of the [[MappedDiagnosticsContext|NDC-Layout-Renderer]] stack. [Boolean](Data-types)
 
 * **ndcItemSeparator** - NDC item separator.
 
-* **includeNdlc** - Indicates whether to include async NestedDiagnosticsLogicalContext stack contents. [Boolean](Data-types)
+* **includeNdlc** - Indicates whether to include contents of the async [[NestedDiagnosticsLogicalContext|NDLC-Layout-Renderer]] stack. [Boolean](Data-types)
   > Introduced in NLog 4.5
 
 * **ndlcItemSeparator** - NDLC item separator.
   > Introduced in NLog 4.5
 
-* **includeMdc** - Indicates whether to include MappedDiagnosticsContext dictionary contents. [Boolean](Data-types)
+* **includeMdc** - Indicates whether to include contents of the [[MappedDiagnosticsContext|MDC-Layout-Renderer]] dictionary. [Boolean](Data-types)
 
-* **includeMdlc** - Indicates whether to include async MappedDiagnosticsLogicalContext dictionary contents. [Boolean](Data-types)
+* **includeMdlc** - Indicates whether to include contents of the async [[MappedDiagnosticsLogicalContext|MDLC-Layout-Renderer]] dictionary. [Boolean](Data-types)
   > Introduced in NLog 4.4.8
 
 * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a named parameter. [Collection](Data-types) 
