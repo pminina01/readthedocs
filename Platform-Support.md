@@ -69,7 +69,7 @@ Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 WindowsIdentity|✓ |✓ |✓ |± |✓ |✓ |✓ |||±: NLog.WindowsIdentity nuget package
 
 ## Layout renderer (wrapped)
-Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
+Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 Cached|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 FileSystemNormalize|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
@@ -88,7 +88,7 @@ WhenEmpty|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 XmlEncode|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
 ## Targets
-Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
+Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AspResponse|✓ |✓ |✓ |||||||	
 Chainsaw|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
@@ -112,7 +112,7 @@ Trace|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
 ## Target-wrappers
-Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
+Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AsyncWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 AutoFlushWrapper |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
