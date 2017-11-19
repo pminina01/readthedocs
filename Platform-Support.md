@@ -1,13 +1,15 @@
 ## General
-Feature|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
- -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
-read app.config/web.config|✓ |✓ |✓ |✓ |||✓ |||	
-autoloading .dll|✓ |✓ |✓ |±|✓ |✓ |✓ |||±: expected 	
-auto reload|✓ |✓ |✓ |✓ |||✓ |||	
-stacktrace with source|✓ |✓ |✓ ||✓ |✓ |✓ |||	
-fluent interface|||✓ |✓ |||?|||	
-NLogTraceListener|✓ |✓ |✓ ||||✓ |||	
-	
+Feature|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight
+ -----| -----| -----| -----| -----| -----| -----| -----| -----| -----
+read app.config/web.config|✓ |✓ |✓ |✓ |||✓ ||
+autoloading .dll|✓ |✓ |✓ |✓|✓ |✓ |✓ ||
+auto reload|✓ |✓ |✓ |✓ |||✓ ||
+stacktrace with source|✓ |✓ |✓ |1.5+|✓ |✓ |✓ ||
+fluent interface|||✓ |✓ |||?||
+NLogTraceListener|✓ |✓ |✓ |2.0|||✓ ||
+
+> autoload .dll doesn't work with nuget-packages that places dlls in sub-folders.
+
 ## Layout Renderers
 Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
@@ -64,7 +66,7 @@ Ticks|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Time|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 TraceActivityId|✓ |✓ |✓ ||✓ |✓ |✓ |||	
 Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-WindowsIdentity|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
+WindowsIdentity|✓ |✓ |✓ |NLog.WindowsIdentity |✓ |✓ |✓ |||	
 
 ## Layout renderer (wrapped)
 Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard 1.3|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
@@ -97,8 +99,8 @@ Debug|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Debugger|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
 EventLog|✓ |✓ |✓ ||||✓ |||	
 File|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-LogReceiverWebService|✓ |✓ |✓ ||||✓ ||✓ |	
-Mail|✓ |✓ |✓ ||✓ |✓ |✓ |||	
+LogReceiverWebService|✓ |✓ |✓ |NLog.WCF|||✓ ||✓ |	
+Mail|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
 Memory|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 MethodCall|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 NLogViewer|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no UDP	
