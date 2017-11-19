@@ -64,7 +64,7 @@ ThreadId|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 ThreadName|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Ticks|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Time|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-TraceActivityId|✓ |✓ |✓ ||✓ |✓ |✓ |||	
+TraceActivityId|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
 Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 WindowsIdentity|✓ |✓ |✓ |± |✓ |✓ |✓ |||±: NLog.WindowsIdentity nuget package
 
