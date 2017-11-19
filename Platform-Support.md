@@ -57,7 +57,7 @@ QueryPerformanceCounter|✓ |✓ |✓ ||||✓ |||
 Registry|✓ |✓ |✓ ||||✓ |||	
 ShortDate|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 SilverlightApplicationInfo|||||||||✓ |	
-SpecialFolder|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
+SpecialFolder|✓ |✓ |✓ |2.0|✓ |✓ |✓ |✓ |✓ |	
 StackTrace|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 TempDir|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 ThreadId|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
