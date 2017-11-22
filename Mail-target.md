@@ -37,6 +37,7 @@ Bug/feature requests for NLog.MailKit please [on the NLog.MailKit repo](https://
           body="Layout"
           smtpUserName="Layout"
           enableSsl="Boolean"
+          secureSocketOption="None|Auto|SslOnConnect|StartTls|StartTlsWhenAvailable"*
           smtpPassword="Layout"
           smtpAuthentication="Enum"
           smtpServer="Layout"
@@ -87,6 +88,8 @@ Read more about using the [[Configuration File]].
 * **smtpUserName** - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
 
 * **enableSsl** - Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server. [Boolean](Data-types) Default: False. Note: port 465 isn't working with SSL. See [issue 1226](https://github.com/NLog/NLog/issues/1226)  
+
+* **secureSocketOption** - Only in NLog.Mailkit 2.1+. Provides a way of specifying the SSL and/or TLS encryption. Default StartTlsWhenAvailable. Options: None, Auto, SslOnConnect, StartTls & StartTlsWhenAvailable. If **enableSsl** is set to `true`, SslOnConnect will be used
 
 * **smtpPassword** - Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic"). [Layout](Data-types)
 
