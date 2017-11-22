@@ -43,3 +43,4 @@ LogManager.Configuration.Variables.Remove("password");
 * A default value can be configured for a variable, e.g. `${var:password:default=unknown}`
 * The old variables can still be used and so this is completely backwards-compatible.
 * the `<variable>` is optional if no default is needed
+* Variables configured at runtime will be reset on `autoReload="true"`, unless also using `keepVariablesOnReload="true"`
