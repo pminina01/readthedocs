@@ -246,6 +246,36 @@ The following configuration will create one log file for each day. Log files wil
 </nlog>
 ```
 
+
+### One log file per application instance, remove old logs
+The following configuration will create a dedicated log file for each start of your application. Multiple instances can run in parallel and write to their respective log file. By adding a timestamp to the filename, each filename is unique (up to the second). Up to ten log files (active + nine archive) are kept. The removal of old logs works, when the `archiveFileName` contains a placeholder, `archiveDateFormat` has the same datetime format as in the `name` property, and `archiveNumbering` and `archiveEvery` are enabled. The `$(cached:...)` directive prevents that a new log file name is generated for every log entry. Log files will be named:
+ * 2017-11-05 08_00_00.log
+ * 2017-11-05 08_00_01.log
+ * 2017-11-05 12_35_04.log
+ * 2017-11-06 09_54_32.log
+ * ...
+```xml
+<?xml version="1.0" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+     <targets>
+        <target name="file" xsi:type="File"
+            layout="${longdate} ${logger} ${message}" 
+            fileName="${basedir}/${cached:${date:format=yyyy-MM-dd HH_mm_ss}}.log"
+            archiveFileName="${basedir}/{#}.log"
+            archiveDateFormat="yyyy-MM-dd HH_mm_ss"
+            archiveNumbering="Date"
+            archiveEvery="Year"
+            maxArchiveFiles="9" />
+    </targets>
+ 
+    <rules>
+        <logger name="*" minlevel="Debug" writeTo="file" />
+    </rules>
+</nlog>
+```
+
 ### Asynchronous logging
 Depending on your usage scenario it may be useful to add an AsyncWrapper target the file target. This way all your log messages will be written on a separate thread so your main thread can be unblocked more quickly. Asynchronous logging is recommended for multi-threaded server applications which run for a long time and is not recommended for quickly-finishing command line applications.
 ```xml
