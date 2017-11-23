@@ -45,6 +45,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${processtime}](ProcessTime-Layout-Renderer) - The process time in format HH:mm:ss.mmm.
 * [${qpc}](QPC-Layout-Renderer) - High precision timer, based on the value returned from QueryPerformanceCounter() optionally converted to seconds.
 * [${registry}](Registry-Layout-Renderer) - A value from the Registry.
+* [${sequenceid}](SequenceId-layout-renderer) - The log sequence id
 * [${shortdate}](ShortDate-Layout-Renderer) - The short date in a sortable format yyyy-MM-dd.
 * [${sl-appinfo}](Sl-AppInfor-Layout-Renderer) - Information about Silverlight application.
 * [${specialfolder}](Special-Folder-Layout-Renderer) - System special folder path (includes My Documents, My Music, Program Files, Desktop, and more).
