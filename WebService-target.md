@@ -25,7 +25,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 * **name** - Name of the target.
 
 ### HttpRequest Parameter Options
-* **parameters** - The array of parameters to be passed. Collection  
+* **parameters** - The array of parameters to be passed in the Http request. Collection  
 Each collection item is represented by `<parameter />` element with the following attributes:  
   * **name** - Name of the parameter.
   * **layout** - Layout that should be use to calculate the value for the parameter. Layout Required.
