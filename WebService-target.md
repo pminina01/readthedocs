@@ -12,8 +12,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           includeBOM="Nullable boolean"
           protocol="Enum"
           namespace="String"
-          methodName="String">
-    <parameter layout="Layout" name="String" type="System.Type"/><!-- repeated -->
+          methodName="String"
+          preAuthenticate="Boolean">
+    <parameter name="String" layout="Layout" type="System.Type"/><!-- repeated -->
+    <header name="String" layout="Layout"/><!-- repeated -->
   </target>
 </targets>
 ```
