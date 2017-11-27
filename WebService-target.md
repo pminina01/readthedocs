@@ -24,14 +24,14 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ### General Options
 * **name** - Name of the target.
 
-### Parameter Options
+### HttpRequest Parameter Options
 * **parameters** - The array of parameters to be passed. Collection  
 Each collection item is represented by `<parameter />` element with the following attributes:  
   * **name** - Name of the parameter.
   * **layout** - Layout that should be use to calculate the value for the parameter. Layout Required.
   * **type** - Type of the parameter. System.Type
 
-### Header Options
+### HttpRequest Header Options
 * **headers** - The array of Http-headers to be passed. Collection
 Each collection item is represented by `<header />` element with the following attributes:  
   * **name** - Name of the header parameter.
