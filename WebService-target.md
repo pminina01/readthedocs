@@ -25,9 +25,15 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ### Parameter Options
 * **parameters** - The array of parameters to be passed. Collection  
 Each collection item is represented by `<parameter />` element with the following attributes:  
-  * **layout** - Layout that should be use to calculate the value for the parameter. Layout Required.
   * **name** - Name of the parameter.
+  * **layout** - Layout that should be use to calculate the value for the parameter. Layout Required.
   * **type** - Type of the parameter. System.Type
+
+### Header Options
+* **headers** - The array of Http-headers to be passed. Collection
+  * **name** - Name of the header parameter.
+  * **layout** - Layout that should be use to calculate the value for the parameter. Layout Required.
+
 
 ### Web Service Options
 * **url** - Web service URL. System.Uri
@@ -56,6 +62,10 @@ Possible values:
 * **namespace** - Web service namespace.
 
 * **methodName** - Web service method name.
+
+* **PreAuthenticate** - Indicates whether to pre-authenticate the HttpWebRequest (Requires 'Authorization' **Headers** parameters)
+
+* **
 
 * **ProxyType** - Configuration of HttpWebRequest.Proxy. Default: DefaultWebProxy (Introduced with NLog 4.5)  
 Possible values:
