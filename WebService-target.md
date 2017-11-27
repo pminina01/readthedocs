@@ -33,6 +33,7 @@ Each collection item is represented by `<parameter />` element with the followin
 
 ### Header Options
 * **headers** - The array of Http-headers to be passed. Collection
+Each collection item is represented by `<header />` element with the following attributes:  
   * **name** - Name of the header parameter.
   * **layout** - Layout that should be use to calculate the value for the parameter. Layout Required.
 
