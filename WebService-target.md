@@ -63,7 +63,7 @@ Possible values:
 
 * **methodName** - Web service method name.
 
-* **PreAuthenticate** - Indicates whether to pre-authenticate the HttpWebRequest (Requires 'Authorization' **Headers** parameters)
+* **PreAuthenticate** - Indicates whether to pre-authenticate the HttpWebRequest (Requires 'Authorization' in **Headers** parameters)
 
 * **
 
