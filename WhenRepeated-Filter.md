@@ -24,6 +24,8 @@ Possible values:
   * _Log_ - The message should be logged.
   * _LogFinal_ - The message should be logged and processing should be finished.
   * _Neutral_ - The filter doesn't want to decide whether to log or discard the message.
+* **includeFirst - Should action also be applied to the initial logevent? When enabled then it will only perform the first logging if the messages continues after the initial timeout. (Default: false)
+
 ### Logging Options
 * **FilterCountPropertyName** - Tell how many identical log messages has been ignored. By adding LogEvent-Property with this name to the next LogEvent after timeout expires.
 * **FilterCountMessageAppendFormat** - Tell how many identical log messages has been ignored. By appending to LogEVent-Message to the next LogEvent after timeout expires (Ex. " (Hits: {0}")
