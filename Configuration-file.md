@@ -27,7 +27,7 @@ NLog attempts to automatically configure itself on startup, by looking for the c
 The following locations will be searched when executing a stand-alone *.exe application:
 * standard application configuration file (usually applicationname.exe.config)
 * applicationname.exe.nlog in application’s directory
-* NLog.config in application’s directory
+* NLog.config in application’s directory (_Name sensitive; using docker dotnet core_)
 * NLog.dll.nlog in a directory where NLog.dll is located (only if NLog isn't installed in the GAC)
 
 In case of an ASP.NET application, the following files are searched:
