@@ -49,6 +49,9 @@ The following condition functions are available:
 * `equals(o1,o2)` Compares two objects for equality. Returns: `true` when two objects are equal, `false` otherwise.
 * `length(s)` Returns the length of a string.
 * `starts-with(s1,s2)` Determines whether the second string is a prefix of the first one. Returns: `true` when the second string is a prefix of the first string, `false` otherwise.
+* `regex-matches(input, pattern, options)` Introduced in NLog 4.5. Indicates whether the regular expression `pattern` finds a match in the specified `input` string. `options` is an optional comma separated list of values from the [RegexOptions](https://docs.microsoft.com/fr-fr/dotnet/api/system.text.regularexpressions.regexoptions?view=netstandard-2.0) enumeration.  
+Returns : `true` when a match is found in the input string, `false` otherwise.  
+Example : `regex-matches('${message}', '^foo$', 'ignorecase,singleline')`
 
 
 ### Quotes
