@@ -3,7 +3,7 @@ Feature|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----
 read app.config/web.config|✓ |✓ |✓ |✓ |||✓ ||
 autoloading .dll|✓ |✓ |✓ |✓|✓ |✓ |✓ ||
-auto reload|✓ |✓ |✓ |✓ |||✓ ||
+auto reload|✓ |✓ |✓ |1.5+ |||✓ ||
 stacktrace with source|✓ |✓ |✓ |1.5+|✓ |✓ |✓ ||
 fluent interface|||✓ |✓ |||?||
 NLogTraceListener|✓ |✓ |✓ |2.0|||✓ ||
