@@ -49,9 +49,9 @@ Ndc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Ndlc||✓ |✓ |✓||||||	
 NLogDir|✓ |✓ |✓ |1.5+|✓ |✓ |✓ |||	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
-ProcessId|✓ |✓ |✓ |✓||✓ |✓ |||	
-ProcessInfo|✓ |✓ |✓ |✓|✓ |✓ ||||	
-ProcessName|✓ |✓ |✓ |✓||✓ |✓ |||	
+ProcessId|✓ |✓ |✓ |1.5+||✓ |✓ |||	
+ProcessInfo|✓ |✓ |✓ |1.5+|✓ |✓ ||||	
+ProcessName|✓ |✓ |✓ |1.5+||✓ |✓ |||	
 ProcessTime|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 QueryPerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 Registry|✓ |✓ |✓ ||||✓ |||	
@@ -92,8 +92,8 @@ Target|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|W
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AspResponse|✓ |✓ |✓ |||||||	
 Chainsaw|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-ColoredConsole|✓ |✓ |✓ |±|||✓ |||±: no encoding	
-Console|✓ |✓ |✓ |±|±|±|✓ |±|±|±: no encoding	
+ColoredConsole|✓ |✓ |✓ |1.5+|||✓ |||±: no encoding	
+Console|✓ |✓ |✓ |1.5+|±|±|✓ |±|±|±: no encoding	
 Database|✓ |✓ |✓ |±|||✓ |||	±: no transactions or reading from .config
 Debug|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Debugger|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
@@ -108,7 +108,7 @@ Network|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ |✓ |
 Null|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 OutputDebugString|✓ |✓ |✓ |✓ |||✓ |||	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
-Trace|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
+Trace|✓ |✓ |✓ |1.5+ |✓ |✓ |✓ |||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 
 ## Target-wrappers
