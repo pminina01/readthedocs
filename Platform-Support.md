@@ -33,7 +33,7 @@ FileContents|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 GarbageCollectorInfo|✓ |✓ |✓ |✓ |✓ |✓ ||✓ |±|±: no collection count option	
 Gdc|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Guid|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-Identity|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
+Identity|✓ |✓ |✓ |1.5+|✓ |✓ |✓ |||	
 InstallContext|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Level|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Literal|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
