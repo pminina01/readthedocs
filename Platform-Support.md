@@ -18,7 +18,7 @@ AppDomain|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||
 AspApplicationValue|✓ |✓ |✓ |||||||	
 AspRequestValue|✓ |✓ |✓ |||||||	
 AspSessionValue|✓ |✓ |✓ |||||||	
-AssemblyVersion|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |See [notes](AssemblyVersion Layout Renderer)
+AssemblyVersion|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |See [notes](AssemblyVersion-Layout-Renderer)
 BaseDir|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
 CallSite|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no file name or source path	
 CallSiteLineNumber|✓ |✓ |✓ |✓ |✓ |✓ |✓ |||	
