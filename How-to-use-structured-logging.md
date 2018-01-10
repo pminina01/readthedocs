@@ -3,7 +3,7 @@ Structured logging makes it easier to store and query log-events, as the logeven
 
 The normal .NET `string.Format(...)` will only accept input strings like this:
 
-```
+```c#
 logger.Info("Logon by userid:{0} from ip_address:{1}", "Kenny", "127.0.0.1");
 logger.Debug("Shopitem:{0} added to basket by userid:{1}", "Jacket", "Kenny");
 ```
@@ -19,7 +19,7 @@ NLog has always supported log-event metadata called [event-properties](EventProp
 
 NLog 4.5 makes it a little easier to capture and preserve log-event-properties, so they can be easily processed by the NLog destination target:
 
-```
+```c#
 logger.Info("Logon by {userid} from {ip_address}", "Kenny", "127.0.0.1");
 logger.Debug("{shopitem} added to basket by {userid}", new { Id=6, Name = "Jacket", Color = "Orange" }, "Kenny");
 ```
@@ -53,4 +53,8 @@ NLog will by default attempt to parse log-events as structured log-events. This 
 
 It is possible to disable that NLog should not attempt to parse log-events as structured log-events with this xml-setting:
 
-`<nlog parseMessageTemplates="false">`
+```xml
+<nlog parseMessageTemplates="false">
+    ...
+</nlog>
+```
