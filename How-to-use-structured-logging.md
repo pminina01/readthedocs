@@ -8,7 +8,7 @@ logger.Info("Logon by userid:{0} from ip_address:{1}", "Kenny", "127.0.0.1");
 logger.Debug("Shopitem:{0} added to basket by userid:{1}", "Jacket", "Kenny");
 ```
 
-When storing these log-events in a database (or somewhere else), then it can be difficult to query all actions performed by a certain userid.
+When storing these log-events in a database (or somewhere else), then it can be difficult to query all actions performed by a certain userid. Also it could be hard to group similar events. 
 
 The workaround would then be to perform RegEx-queries to recognize logevent messages and convert them into a more structured format, and register which parameter index is the userid. The RegEx might even have to extract the needed details from the formatted message, making it even more fragile. Maintaining these RegEx-queries can become rather cumbersome.
 
