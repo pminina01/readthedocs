@@ -29,7 +29,7 @@ Any NLog destination target that is able to handle log-event-properties will aut
 # NLog Layout Support
 The [Json Layout](JsonLayout) and [Log4JXml Layout](Log4JXmlEventLayout) already has builtin support for [event-properties](EventProperties-Layout-Renderer), and automatically supports structured logging. Just configure the setting `includeAllProperties="true"`
 
-NLog 4.5 adds support for rendering the raw mesage-template, instead of the formatted message:
+NLog 4.5 adds support for rendering the raw mesage-template, instead of just the formatted message:
 * [$(message:raw=true)](Message-Layout-Renderer)
 
 NLog 4.5 extends the following NLog LayoutRenderers with support for serializing with property reflection into JSON when `format="@"`
