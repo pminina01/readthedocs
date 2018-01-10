@@ -1,0 +1,56 @@
+# Why structured logging
+Structured logging makes it easier to store and query log-events, as the logevent message-template and message-parameters are preserved, instead of just transforming them into a formatted message.
+
+The normal .NET `string.Format(...)` will only accept input strings like this:
+
+```
+logger.Info("Logon by userid:{0} from ip_address:{1}", "Kenny", "127.0.0.1");
+logger.Debug("Shopitem:{0} added to basket by userid:{1}", "Jacket", "Kenny");
+```
+
+When storing these log-events in a database (or somewhere else), then it can be difficult to query all actions performed by a certain userid.
+
+The workaround would then be to perform RegEx-queries to recognize logevent messages and convert them into a more structured format, and register which parameter index is the userid. The RegEx might even have to extract the needed details from the formatted message, making it even more fragile. Maintaining these RegEx-queries can become rather cumbersome.
+
+Further history: [messagetemplates.org](http://messagetemplates.org/)
+
+# Using structured logging
+NLog has always supported log-event metadata called [event-properties](EventProperties-Layout-Renderer), but it requires a little effort to generate a log-event with properties.
+
+NLog 4.5 makes it a little easier to capture and preserve log-event-properties, so they can be easily processed by the NLog destination target:
+
+```
+logger.Info("Logon by {userid} from {ip_address}", "Kenny", "127.0.0.1");
+logger.Debug("{shopitem} added to basket by {userid}", new { Id=6, Name = "Jacket", Color = "Orange" }, "Kenny");
+```
+
+Any NLog destination target that is able to handle log-event-properties will automatically experience the benefit of doing structured logging.
+
+# NLog Layout Support
+The [Json Layout](JsonLayout) and [Log4JXml Layout](Log4JXmlEventLayout) already has builtin support for [event-properties](EventProperties-Layout-Renderer), and automatically supports structured logging. Just configure the setting `includeAllProperties="true"`
+
+NLog 4.5 extends the following NLog LayoutRenderers with support for serializing with property reflection into JSON when `format="@"`
+
+* [$(event-properties)](EventProperties-Layout-Renderer)
+* [$(all-event-properties)](All-Event-Properties-Layout-Renderer)
+* [$(exception)](Exception-Layout-Renderer)
+* [$(gdc)](Gdc-Layout-Renderer) - Global Context
+* [$(mdc)](Mdc-Layout-Renderer) - Thread Context
+* [$(mdlc)](Mdlc-Layout-Renderer) - Async Context
+
+# NLog Target Support
+Any NLog destination target that handles[event-properties](EventProperties-Layout-Renderer) will be able to take advantage from structured logging.
+
+These NLog targets already supports structured logging:
+
+* [NLogViewer Target](NLogViewer-target) has automatic support as it is using the [Log4JXml Layout](Log4JXmlEventLayout).
+* [WebService Target](WebService-target) has automatic support as it is using the [Json Layout](JsonLayout) for JSON-post.
+
+There are already many custom NLog targets, that provides the ability to store and query log-events along with their event-properties. These will automatically benefit from doing structured logging.
+
+# Disabling Structured Logging
+NLog will by default attempt to parse log-events as structured log-events. This gives a minor overhead, that will not be noticable by most.
+
+It is possible to disable that NLog should not attempt to parse log-events as structured log-events with this xml-setting:
+
+`<nlog parseMessageTemplates="false">`
