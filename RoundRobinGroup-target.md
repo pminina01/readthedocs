@@ -17,3 +17,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ## Parameters
 ### General Options
 * **name** - Name of the target.
+
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+  > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
