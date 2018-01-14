@@ -17,6 +17,10 @@ Read more about using the [[Configuration File]].
 ### Layout Options
 * **layout** - Layout used to format log messages. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+
 ## Examples
 ### Logging to an array
 (snippet from    [Memory Simple Example.cs](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/examples/targets/Configuration%20API/Memory/Simple/Example.cs)  )
