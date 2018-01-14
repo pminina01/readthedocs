@@ -79,9 +79,9 @@ Example of using a fully qualified name with `Microsoft.Data.Sqlite` (for dotnet
 
 * **dbDatabase** - Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string. [Layout](Data types)  
 
-* **dbPassword*' - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
+* **dbPassword** - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
 
-* **dbHost* - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
+* **dbHost** - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
 
 ### Installation Options
 See  [Installing targets](Installing-targets).
