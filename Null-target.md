@@ -19,6 +19,10 @@ Read more about using the [[Configuration File]].
 
 * **layout** - Layout used to format log messages. [Boolean](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+
 
 ## Example
 
