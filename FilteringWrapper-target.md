@@ -17,3 +17,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ### Filtering Options
 * **condition** - Condition expression. Log events who meet this condition will be forwarded to the wrapped target. Condition Required.
+
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
