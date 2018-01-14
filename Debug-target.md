@@ -19,7 +19,7 @@ Read more about using the [[Configuration File]].
 
 ### Performance Options
 * **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
- > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+  > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
 
 ## Examples
 ### Logging to Debug Target
