@@ -31,6 +31,10 @@ Read more about using the [[Configuration File]].
 * **header** - Header. [Layout](Layout)  
 * **footer** - Footer. [Layout](Layout)
 
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+
 ### Highlighting Rules
 * **useDefaultRowHighlightingRules** - Indicates whether to use default row highlighting rules. [Boolean](Data types) Default: True
 The default rules are:
