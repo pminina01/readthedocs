@@ -37,7 +37,7 @@ Read more about using the [[Configuration File]].
 
 ### Performance Options
 * **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
- > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+  > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
 
 ### Connection Options
 * **dbUserName** - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
