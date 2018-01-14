@@ -26,3 +26,7 @@ Introduced in NLog 4.4.
 * **messageLimit** - Indicates the maximum number of log events written per Interval. Log events in the current interval received after the message limit has been reached will be discarded. `Integer` Default: `1000`
 
 * **interval** - Indicates a time interval in which messages will be written up to the maximum number of messages (_messageLimit_). `TimeSpan`Default: `"01:00"` (1 hour)
+
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
