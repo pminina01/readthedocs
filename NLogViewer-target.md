@@ -80,11 +80,11 @@ The network address can be:
   > Introduced with NLog v4.2.1. Default became `16` with NLog v4.5 (Before `0`)
 
 * **onConnectionOverflow** - Action that should be taken if the will be more connections than _maxConnections_. 
+  > Introduced with NLog v4.2.1. Default became `Block` with NLog v4.5 (Before `AllowNewConnnection`)
 Possible values:
   * _AllowNewConnnection_ - Just allow it. 
   * _Block_ - Block until there's more room in the queue. (default)
   * _DiscardMessage_ - Discard the connection item.
-  > Introduced with NLog v4.2.1. Default became `Block` with NLog v4.5 (Before `AllowNewConnnection`)
 
 * **maxQueueSize** - Maximum queue size. Only used for TCP (not http/https/udp). Will removes messages when if too many. 0 is no max. `Integer`. Default: 0
 
