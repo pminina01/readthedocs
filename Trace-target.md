@@ -16,4 +16,4 @@ Supported in .NET and Mono.
 * **layout** - Layout used to format log messages. Layout Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 ### Performance Options
 * **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
- > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+  > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
