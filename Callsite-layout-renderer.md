@@ -4,14 +4,14 @@ Supported in .NET, Silverlight and Mono.
 
 ## Configuration Syntax
 ```
-${callsite:className=Boolean:includeNamespace=Boolean:fileName=Boolean:includeSourcePath=Boolean
-         :methodName=Boolean}
+${callsite:className=Boolean:fileName=Boolean:includeSourcePath=Boolean:methodName=Boolean}
 ```
 
 ## Parameters
 ### Rendering Options
 * **className** - Indicates whether to render the class name.Boolean Default: `True`
-* **includeNamespace** - Include namespace in class name? Introduced in NLog 4.4. Default: `True`
+* **includeNamespace** - Include namespace in class name? Boolean Default: `True`
+  > Introduced with NLog v4.4
 * **fileName** - Indicates whether to render the source file name and line number.Boolean Default: `False`
 * **includeSourcePath** - Indicates whether to include source file path.Boolean Default: `True`
 * **methodName** - Indicates whether to render the method name.Boolean Default: `True`
