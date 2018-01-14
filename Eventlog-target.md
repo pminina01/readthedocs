@@ -27,6 +27,10 @@ Read more about using the [[Configuration File]].
 ### Layout Options
 * **layout** - Layout used to format log messages. [Layout](Layouts) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`. Note: max size of 16384 characters (limitation of the `EventLog` API)
 
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+
 ### Event Log Options
 * **machineName** - Name of the machine on which Event Log service is running. Default: `.`  
 * **source** - Value to be used as the event Source. By default this is the friendly name of the current AppDomain. From NLog 4.0 this is layoutable(Layouts). 
