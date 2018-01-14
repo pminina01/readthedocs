@@ -14,7 +14,12 @@ Supported in .NET, Silverligt, Compact Framework and Mono.
 ## Parameters
 ### General Options
 * **name** - Name of the target.
+
 ### Retrying Options
 * **retryDelayMilliseconds** - Time to wait between retries in milliseconds. Integer Default: 100
 
 * **retryCount** - Number of retries that should be attempted on the wrapped target in case of a failure. Integer Default: 3
+
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
