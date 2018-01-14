@@ -21,6 +21,10 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 ### Fallback Options
 * **returnToFirstOnSuccess** - Indicates whether to return to the first target after any successful write. `Boolean`. Default `false`
 
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+
 ## Example
 
 Fallback to another mail if the mailserver is down
