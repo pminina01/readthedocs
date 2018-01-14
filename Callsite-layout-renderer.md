@@ -16,6 +16,9 @@ ${callsite:className=Boolean:includeNamespace=Boolean:fileName=Boolean:includeSo
 * **includeSourcePath** - Indicates whether to include source file path.Boolean Default: `True`
 * **methodName** - Indicates whether to render the method name.Boolean Default: `True`
 * **cleanNamesOfAnonymousDelegates** - Indicates whether the method name will be cleaned up if it is detected as an anonymous delegate. Boolean Default: `False`
+  > Introduced with NLog v4.3.9
+* **cleanNamesOfAsyncContinuations** - Indicates whether the method and class names will be cleaned up if it is detected as an async continuation. Boolean Default: `False`
+  > Introduced with NLog v4.5
 * **skipFrames** - The number of frames to skip. Integer Default: `0`
 
 ## Notes
