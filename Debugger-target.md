@@ -17,10 +17,15 @@ Read more about using the [[Configuration File]].
 ## Parameters
 ### General Options
 * **name** - Name of the target.
-###Layout Options
+
+### Layout Options
 * **footer** - Footer. [Layout](Data-types)  
 * **layout** - Text to be rendered. [Layout](Data-types) Required. Default: `${longdate}|${level:uppercase=true}|${logger}|${message}`
 * **header** - Header. [Layout](Data-types)
+
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+ > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
 
 ### Examples
 From [stackoverflow](https://stackoverflow.com/a/260576/767425) 
