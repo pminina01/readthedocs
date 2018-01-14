@@ -28,7 +28,7 @@ Read more about using the [Configuration File](Configuration file).
 
 ### Performance Options
 * **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
-  > Introduced with NLog v4.4.2. Default became `True` until NLog v4.5
+  > Introduced with NLog v4.4.2. Default became `True` with NLog v4.5
 
 ### Console Options
 * **encoding** - File encoding name like "utf-8", "ascii" or "utf-16". See [Encoding class on MSDN](http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx). Defaults to `Encoding.Default` (`UTF-8` on silverlight). Starting for NLog 4.0.
