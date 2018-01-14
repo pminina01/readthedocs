@@ -6,8 +6,11 @@ Supported in .NET and Mono
 
 ### .NET Core
 
-When using **.NET Core.**, 
-install the package [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit): `Install-Package NLog.MailKit` and add to your nlog.config:
+The `SmtpClient` is not part of NetStandard1.X, instead one should install the package [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit):
+
+- `Install-Package NLog.MailKit`
+
+And add to your nlog.config:
 
 ```xml
 <extensions>
@@ -134,6 +137,8 @@ If the application config file contains mail settings, fx.:
 ```
 
 These values will be used, if target doesn't override them (see _useSystemNetMailSettings_ attribute).
+* NetStandard2.X does not support mail settings in the application config file.
+
 
 ### Email Address Format
 
