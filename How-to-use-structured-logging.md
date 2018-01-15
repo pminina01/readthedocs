@@ -4,13 +4,13 @@ Structured logging makes it easier to store and query log-events, as the logeven
 The normal .NET `string.Format(...)` will only accept input strings like this:
 
 ```c#
-logger.Info("Logon by userid:{0} from ip_address:{1}", "Kenny", "127.0.0.1");
-logger.Debug("Shopitem:{0} added to basket by userid:{1}", "Jacket", "Kenny");
+logger.Info("Logon by user:{0} from ip_address:{1}", "Kenny", "127.0.0.1");
+logger.Debug("Shopitem:{0} added to basket by user:{1}", "Jacket", "Kenny");
 ```
 
-When storing these log-events in a database (or somewhere else), then it can be difficult to query all actions performed by a certain userid. Also it could be hard to group similar events. 
+When storing these log-events in a database (or somewhere else), then it can be difficult to query all actions performed by a certain user. Also it could be hard to group similar events. 
 
-The workaround would then be to perform RegEx-queries to recognize logevent messages and convert them into a more structured format, and register which parameter index is the userid. The RegEx might even have to extract the needed details from the formatted message, making it even more fragile. Maintaining these RegEx-queries can become rather cumbersome.
+The workaround would then be to perform RegEx-queries to recognize logevent messages and convert them into a more structured format, and register which parameter index is the user. The RegEx might even have to extract the needed details from the formatted message, making it even more fragile. Maintaining these RegEx-queries can become rather cumbersome.
 
 Further history: [messagetemplates.org](http://messagetemplates.org/)
 
@@ -20,8 +20,8 @@ NLog has always supported log-event metadata called [event-properties](EventProp
 NLog 4.5 makes it a little easier to capture and preserve log-event-properties, so they can be easily processed by the NLog destination target:
 
 ```c#
-logger.Info("Logon by {userid} from {ip_address}", "Kenny", "127.0.0.1");
-logger.Debug("{shopitem} added to basket by {userid}", new { Id=6, Name = "Jacket", Color = "Orange" }, "Kenny");
+logger.Info("Logon by {user} from {ip_address}", "Kenny", "127.0.0.1");
+logger.Debug("{shopitem} added to basket by {user}", new { Id=6, Name = "Jacket", Color = "Orange" }, "Kenny");
 ```
 
 Any NLog destination target that is able to handle log-event-properties will automatically experience the benefit of doing structured logging.
