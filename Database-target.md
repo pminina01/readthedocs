@@ -61,6 +61,8 @@ If you get the following error you might have to use the fully qualified name:
 
 ```Error during initialization of Database Target[Database_wrapped] Could not load type '<Name Of DbProvider>' from assembly 'NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c'.```
 
+If there is still a problem, try to remove ```dbProvider```
+
 Example of using a fully qualified name with `Mono.Data.Sqlite`:
  
 `dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"`
