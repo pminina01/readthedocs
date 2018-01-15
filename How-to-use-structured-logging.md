@@ -17,7 +17,7 @@ Further history: [messagetemplates.org](http://messagetemplates.org/)
 # Using structured logging
 NLog has always supported log-event metadata called [event-properties](EventProperties-Layout-Renderer), but it requires a little effort to generate a log-event with properties.
 
-NLog 4.5 makes it a little easier to capture and preserve log-event-properties, so they can be easily processed by the NLog destination target:
+NLog 4.5 makes it a easier to capture and preserve log-event-properties, so they can be easily processed by the NLog destination target:
 
 ```c#
 logger.Info("Logon by {user} from {ip_address}", "Kenny", "127.0.0.1");
