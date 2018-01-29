@@ -1,15 +1,15 @@
-## 内容
-* [[安装 NLog|tutorial#installing-nlog]]
+## 目录
+* [[安装NLog|tutorial#installing-nlog]]
 * [[Creating Log messages|tutorial#creating-log-messages]]
-* [[Creating loggers|tutorial#creating-loggers]]
-* [[Log levels|tutorial#log-levels]]
-* [[Writing log messages|tutorial#writing-log-messages]]
-* [[Configuration|tutorial#configuration]]
-* [[Multiple targets|tutorial#multiple-targets]]
+* [[创建记录器|tutorial#creating-loggers]]
+* [[日志级别|tutorial#log-levels]]
+* [[写日志消息|tutorial#writing-log-messages]]
+* [[配置|tutorial#configuration]]
+* [[多目标|tutorial#multiple-targets]]
 * [[Logger-specific routing|tutorial#logger-specific-routing]]
-* [[Wrappers|tutorial#wrappers]]
-* [[Layouts|tutorial#layouts]]
-* [[Advanced|tutorial#advanced]]
+* [[包裹器|tutorial#wrappers]]
+* [[布局|tutorial#layouts]]
+* [[高级|tutorial#advanced]]
 
 ## Installing NLog
 
