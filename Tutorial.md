@@ -1,5 +1,5 @@
-## Content
-* [[Installing NLog|tutorial#installing-nlog]]
+## 内容
+* [[安装 NLog|tutorial#installing-nlog]]
 * [[Creating Log messages|tutorial#creating-log-messages]]
 * [[Creating loggers|tutorial#creating-loggers]]
 * [[Log levels|tutorial#log-levels]]
