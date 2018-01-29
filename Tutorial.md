@@ -1,6 +1,6 @@
 ## 目录
-* [[安装NLog|tutorial#installing-nlog]]
-* [[创建日志消息|tutorial#creating-log-messages]]
+* [[安装NLog|tutorial#安装NLog]]
+* [[创建日志消息|tutorial#创建日志消息]]
 * [[创建记录器|tutorial#creating-loggers]]
 * [[日志级别|tutorial#log-levels]]
 * [[写日志消息|tutorial#writing-log-messages]]
