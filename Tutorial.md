@@ -1,15 +1,15 @@
 ## 目录
-* [[安装NLog|tutorial#安装NLog]]
+* [[安装NLog|tutorial#安装nlog]]
 * [[创建日志消息|tutorial#创建日志消息]]
-* [[创建记录器|tutorial#creating-loggers]]
-* [[日志级别|tutorial#log-levels]]
-* [[写日志消息|tutorial#writing-log-messages]]
-* [[配置|tutorial#configuration]]
-* [[多目标|tutorial#multiple-targets]]
-* [[特定记录器的路由|tutorial#logger-specific-routing]]
-* [[包裹器|tutorial#wrappers]]
-* [[布局|tutorial#layouts]]
-* [[高级|tutorial#advanced]]
+* [[创建记录器|tutorial#创建记录器]]
+* [[日志级别|tutorial#日志级别]]
+* [[写日志消息|tutorial#写日志消息]]
+* [[配置|tutorial#配置]]
+* [[多目标|tutorial#多目标]]
+* [[特定记录器的路由|tutorial#特定记录器的路由]]
+* [[包裹器|tutorial#包裹器]]
+* [[布局|tutorial#布局]]
+* [[高级|tutorial#高级]]
 
 ## 安装NLog
 
