@@ -1,17 +1,17 @@
 ## 目录
 * [[安装NLog|tutorial#installing-nlog]]
-* [[Creating Log messages|tutorial#creating-log-messages]]
+* [[创建日志消息|tutorial#creating-log-messages]]
 * [[创建记录器|tutorial#creating-loggers]]
 * [[日志级别|tutorial#log-levels]]
 * [[写日志消息|tutorial#writing-log-messages]]
 * [[配置|tutorial#configuration]]
 * [[多目标|tutorial#multiple-targets]]
-* [[Logger-specific routing|tutorial#logger-specific-routing]]
+* [[特定记录器的路由|tutorial#logger-specific-routing]]
 * [[包裹器|tutorial#wrappers]]
 * [[布局|tutorial#layouts]]
 * [[高级|tutorial#advanced]]
 
-## Installing NLog
+## 安装NLog
 
 
 > ASP.NET Core users should follow [Getting started with ASP.NET Core](https://github.com/NLog/NLog.Web/wiki/Getting-started-with-ASP.NET-Core-(csproj---vs2017)) first.
@@ -34,7 +34,7 @@ In order to create log messages from the application you need to use the logging
 
 It is important to understand that `Logger` does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
-### Creating loggers
+### 创建记录器
 It is advised to create one (`private static`) `Logger` per class.  As mentioned before, you must use `LogManager` to create `Logger` instances.
 
 This will create a `Logger` instance with the same name of the `class`.
@@ -62,7 +62,7 @@ Because loggers are thread-safe, you can simply create the logger once and store
 
 
 
-### Log levels
+### 日志级别
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
 
 NLog supports the following [log levels](Log-levels):
@@ -73,7 +73,7 @@ NLog supports the following [log levels](Log-levels):
 * `Error` - error messages - most of the time these are `Exceptions`
 * `Fatal` - very serious errors!
 
-### Writing log messages
+### 写日志消息
 In order to emit log message you can simply call one of the methods on the `Logger`. `Logger` class has six methods whose names correspond to log levels: `Trace()`, `Debug()`, `Info()`, `Warn()`, `Error()` and `Fatal()`. There is also `Log()` method which takes log level as a parameter.
 ```csharp
 using NLog;
@@ -126,7 +126,7 @@ TIP: You should avoid doing string formatting (such as concatenation, or calling
 
 Formatting log messages takes a lot of time, so NLog tries to defer formatting until it knows that log message will actually be written to some output. If the message ends up being skipped because of logging configuration, you will not pay the price of `String.Format()` at all. See also Optimizing Logging Performance.
 
-## Configuration
+## 配置
 So far we have learned how to create log messages from code, but we have not configured any outputs for our logs. So, when you run your instrumented application at this point, you will see - well - nothing. Time to open the NLog.config file and add some logging rules:
 
 1. In the `<targets>` section, add:
@@ -178,7 +178,7 @@ Let's try something more complex now. Imagine you want to send very detailed log
 ```
 As you can see, we now have multiple targets and multiple rules which route logs to them.
 
-### Logger-specific routing
+### 特定记录器的路由
 Another scenario which is very common requires producing more detailed logs from some components which are being currently developed, while reducing output from some other components. We can use the following configuration:
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -228,7 +228,7 @@ In order to use wrappers, simply enclose the `<target />` element with another o
 ```
 This will make all writes to the file be asynchronous, which will improve responsiveness of the calling thread.
 
-### Layouts
+### 布局
 Layouts provide a way to format the contents of the logs as it is written to a file. There are 2 main kinds of layouts:
 * simple layout - which is composed of [Layout Renderers](Layout-renderers)
 * structural layouts - which can output XML, CSV, and other complex formats
@@ -239,7 +239,7 @@ Simple layout is just a string, with special tags embedded between **${** and **
 ```
 
 
-## Advanced
+## 高级
 
 ### Expose logger to sub-classes
 When we wish to expose the logger into sub classes the following pattern could be used.
