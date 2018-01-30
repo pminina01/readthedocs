@@ -47,7 +47,7 @@ Read more about using the [[Configuration File]].
 ## Notes
 To log to the event log, an event source is required to exist. This involves creating the event source.
 
-When install/uninstalling, the event source is only created / removed when the _source_ doesn't contain layout renderers.
+When installing/uninstalling, the event source is only created / removed when the _source_ doesn't contain layout renderers.
 
 When installing, the event source can only be created when run as an Administrator. Alternatively a simple PowerShell command to create this source is shown below (run PowerShell as Administrator).
 
