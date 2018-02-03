@@ -68,8 +68,6 @@ Possible values:
 
 * **PreAuthenticate** - Indicates whether to pre-authenticate the HttpWebRequest (Requires 'Authorization' in **Headers** parameters)
 
-* **
-
 * **ProxyType** - Configuration of HttpWebRequest.Proxy. Default: DefaultWebProxy (Introduced with NLog 4.5)  
 Possible values:
   * DefaultWebProxy - Default proxy configuration from WebRequest.DefaultWebProxy (defaultProxy in app.config)
