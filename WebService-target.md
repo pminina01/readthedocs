@@ -74,7 +74,7 @@ Possible values:
 Possible values:
   * DefaultWebProxy - Default proxy configuration from WebRequest.DefaultWebProxy (defaultProxy in app.config)
   * AutoProxy - WebRequest.GetSystemWebProxy() with default network credentials (Not supported on NetCore)
-  * ProxyAddress - User defined proxy address retrieved the ProxyAddress parameter.
+  * ProxyAddress - User defined proxy address retrieved from the ProxyAddress parameter.
   * NoProxy - Disables use of proxy (fast)
 
 * **ProxyAddress** - User defined proxy address, include port separated by a colon (Introduced with NLog 4.5) 
