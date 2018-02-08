@@ -4,8 +4,8 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ## Configuration Syntax
 ```
-${exception:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSeparator=String
-           :separator=String:format=String:exceptionDataSeparator=string}
+${exception:format=String:innerFormat=String:maxInnerExceptionLevel=Integer:innerExceptionSeparator=String
+           :separator=String:exceptionDataSeparator=string}
 ```
 
 ## Parameters
