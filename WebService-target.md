@@ -32,7 +32,7 @@ Each collection item is represented by `<parameter />` element with the followin
   * **type** - Type of the parameter. System.Type
 
 ### HttpRequest Header Options
-* **headers** - The array of Http-headers to be passed. Collection
+* **headers** - The array of Http-headers to be passed. Collection (Introduced with NLog 4.5)
 Each collection item is represented by `<header />` element with the following attributes:  
   * **name** - Name of the header parameter.
   * **layout** - Layout that should be use to calculate the value for the parameter. Layout Required.
