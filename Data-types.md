@@ -17,4 +17,4 @@ An 8 bytes integral number.
 # Collection
 
 # Encoding
-An encoding name. Possible values are listed in the Name column of the table that appears in the [Encoding](https://msdn.microsoft.com/EN-US/library/86hf4sb8(v=VS.110,d=hv.2).aspx#Remarks) class topic.
+An encoding name. Possible values are listed in the Name column of the table that appears in the [Encoding](https://docs.microsoft.com/he-il/dotnet/api/system.text.encoding?view=netframework-4.7#Remarks) class topic.
