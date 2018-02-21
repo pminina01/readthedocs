@@ -50,8 +50,10 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 * **excludeProperties** - comma separated string with names which properties to exclude. Only used when _includeAllProperties_ is `true`. Case sensitive. Default empty
 When a name contains a comma, single quote the value. E.g. `'value,withquote',value2`.
   > Introduced in NLog 4.4
-* **EscapeUnicode**  -  escape non-ascii characters? Boolean. Default `true`.
+* **EscapeUnicode** - escape non-ascii characters? Boolean. Default `true`.
   > Introduced in NLog 4.4.7
+* **MaxRecursionLimit** - How far should the JSON serializer follow object references before backing off. Integer. Default `0` (0 = No object reflection)
+  > Introduced in NLog 4.5
  
 ## Notes
 * Currently the layout will always create a non-nested object with properties.
