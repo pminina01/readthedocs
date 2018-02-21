@@ -8,12 +8,12 @@ This layout renderer is broken down to separate layout renders who are more ASP.
 
 * [${aspnet-Request-Cookie}](https://github.com/NLog/NLog/wiki/AspNetRequest-Cookie-Layout-Renderer) - ASP.NET Request cookie content. 
 * [${aspnet-Request-Host}](https://github.com/NLog/NLog/wiki/AspNetRequest-Host-Layout-Renderer) - ASP.NET Request host.
+* [${aspnet-request-ip}](https://github.com/NLog/NLog/wiki/AspNet-Request-IP-Layout-Renderer) - ASP.NET Request Client IP address
 * [${aspnet-Request-Method}](https://github.com/NLog/NLog/wiki/AspNetRequest-Method-Layout-Renderer) - ASP.NET Request method (GET, POST etc).
 * [${aspnet-Request-QueryString}](https://github.com/NLog/NLog/wiki/AspNetRequest-QueryString-Layout-Renderer) - ASP.NET Request querystring.
 * [${aspnet-Request-Referrer}](https://github.com/NLog/NLog/wiki/AspNetRequest-Referrer-Renderer) - ASP.NET Request referrer.
 * [${aspnet-Request-UserAgent}](https://github.com/NLog/NLog/wiki/AspNetRequest-UserAgent-Layout-Renderer) - ASP.NET Request useragent.
 * [${aspnet-Request-Url}](https://github.com/NLog/NLog/wiki/AspNetRequest-Url-Layout-Renderer) - ASP.NET Request URL.
-* [${aspnet-request-ip}](https://github.com/NLog/NLog/wiki/AspNet-Request-IP-Layout-Renderer) - ASP.NET Request Client IP address
 
 ## Configuration Syntax
 ```
