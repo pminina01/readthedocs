@@ -13,6 +13,7 @@ This layout renderer is broken down to separate layout renders who are more ASP.
 * [${aspnet-Request-Referrer}](https://github.com/NLog/NLog/wiki/AspNetRequest-Referrer-Renderer) - ASP.NET Request referrer.
 * [${aspnet-Request-UserAgent}](https://github.com/NLog/NLog/wiki/AspNetRequest-UserAgent-Layout-Renderer) - ASP.NET Request useragent.
 * [${aspnet-Request-Url}](https://github.com/NLog/NLog/wiki/AspNetRequest-Url-Layout-Renderer) - ASP.NET Request URL.
+* [${aspnet-request-ip}](https://github.com/NLog/NLog/wiki/AspNet-Request-IP-Layout-Renderer) - ASP.NET Request Client IP address
 
 ## Configuration Syntax
 ```
