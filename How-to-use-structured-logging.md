@@ -33,9 +33,9 @@ By default the values will be printed as JSON-like into the message,
 
 e.g.
 
-`logger.Info("Hello {user}", user);`
+`logger.Info("Hello {user}", user1);`
 
-If `user` is a:
+If `user1` is a:
 - string: surrounded with quotes
 - number: no quotes
 - null: printed as `NULL`
