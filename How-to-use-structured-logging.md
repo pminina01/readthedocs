@@ -20,11 +20,40 @@ NLog has always supported log-event metadata called [event-properties](EventProp
 NLog 4.5 makes it a easier to capture and preserve log-event-properties, so they can be easily processed by the NLog destination target:
 
 ```c#
-logger.Info("Logon by {user} from {ip_address}", "Kenny", "127.0.0.1");
+logger.Info("Logon by {user} from {ip_address}", "Kenny", "127.0.0.1"); // Logon by "Kenny" from "127.0.0.1"
 logger.Debug("{shopitem} added to basket by {user}", new { Id=6, Name = "Jacket", Color = "Orange" }, "Kenny");
 ```
 
 Any NLog destination target that is able to handle log-event-properties will automatically experience the benefit of doing structured logging.
+
+
+## Formatting 
+
+By default the values will be printed as JSON-like into the message,
+
+e.g.
+
+logger.Info("Hello {user}");
+
+If `user` is a:
+- string: surrounded with quotes
+- number: no quotes
+- null: printed as `NULL`
+- list/ienumerable: comma separated, without `[` and `]`
+- dictionary: "key1"="value1", "key2"="value2"
+- objects: toString by default
+
+It's possible to prefix the hole names with the operator `@` or `$`:
+
+- '@' will destructure the object
+- `$` will force toString
+
+
+# Examples
+
+`Process order {OrderId} for {ClientName}` =>    Message: `Process order 2500002 for "CoolClient"`. Properties: OrderId:2500002 & ClientName:CoolClient
+
+
 
 # NLog Layout Support
 The [Json Layout](JsonLayout) and [Log4JXml Layout](Log4JXmlEventLayout) already has builtin support for [event-properties](EventProperties-Layout-Renderer), and automatically supports structured logging. Just configure the setting `includeAllProperties="true"`
