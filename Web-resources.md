@@ -25,7 +25,7 @@
 ## NLog extensions
 
 * **[Microsoft ApplicationInsights](http://azure.microsoft.com/services/application-insights/)**
-  * [Microsoft.ApplicationInsights.NLogTarget](https://github.com/Microsoft/ApplicationInsights-dotnet-logging])
+  * [Microsoft.ApplicationInsights.NLogTarget](https://github.com/Microsoft/ApplicationInsights-dotnet-logging)
 
 * **[Seq](https://getseq.net/)**
   * [NLog seq-target](https://github.com/datalust/nlog-targets-seq) for NLog 4.5 (And newer)
