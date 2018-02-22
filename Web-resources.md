@@ -47,6 +47,7 @@
   * [NLog.Raygun](https://github.com/MindscapeHQ/raygun4net) - [Nuget package](https://www.nuget.org/packages/NLog.Raygun/)
 
 * **[LogEntries](https://www.rapid7.com/info/logentries-insightops/)**
+  * [logentries.nlog](https://github.com/rapid7/le_dotnet) - [Nuget package](https://www.nuget.org/packages/logentries.nlog)
   * [NLog.Contrib.Targets.LogEntries](https://www.nuget.org/packages/NLog.Contrib.Targets.LogEntries) - [Nuget package](https://www.nuget.org/packages/NLog.Contrib.Targets.LogEntries)
 
 * **AzureTableStorage**
