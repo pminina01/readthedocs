@@ -14,16 +14,16 @@ e.g.
 ```
 
 ## Routing
+[Logging Rules](https://github.com/nlog/NLog/wiki/Configuration-file#rules) is the most efficient way to perform filtering using the name of the Logger.
 
-Log messages may be filtered by logger name. Write the messages to a `Null` target and use `final="true"`.
+By not specifying `writeTo=` then it act like a blackhole with almost no overhead:
+> NLog 4.5 allows one to specify an empty `writeTo=""`
 
 ```xml
-<targets>
-  <target xsi:type="Null" name="BlackHole" formatMessage="false"  />
-</targets>
 <rules>
    <!-- ignore events written that are written to a logger which starts with "Namespace." -->
-   <logger name="Namespace.*" minlevel="Debug" writeTo="BlackHole" final="true" />     
+   <logger name="Namespace.*" minlevel="Trace" final="true" /> <!-- BlackHole that swallows everything -->
+   <logger name="Namespace.*" maxLevel="Info" final="true" />  <!-- BlackHole that swallows non-critical -->
 </rules>
 ```
 
