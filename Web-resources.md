@@ -40,6 +40,9 @@
 * **[ExceptionLess](https://exceptionless.com/)**
   * [Exceptionless.NLog](https://github.com/exceptionless/Exceptionless.Net) - [Nuget package](https://www.nuget.org/packages/Exceptionless.NLog/)
 
+* **[Loggly](https://www.loggly.com/)**
+  * [NLog.Targets.Loggly](https://github.com/neutmute/loggly-csharp) - [Nuget package](https://www.nuget.org/packages/NLog.Targets.Loggly/)
+
 * **[Raygun](https://raygun.com/blog/getting-started-with-nlog-and-raygun/)**
   * [NLog.Raygun](https://github.com/MindscapeHQ/raygun4net) - [Nuget package](https://www.nuget.org/packages/NLog.Raygun/)
 
