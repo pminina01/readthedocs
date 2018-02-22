@@ -80,6 +80,7 @@
   * [Growl for Windows Notification Target for NLog 3 upwards](https://www.codeproject.com/Articles/786304/Logging-How-to-Growl-with-NLog-or) by Noctis. This is based or Ryan Farley's article, and include updated Growl extensions for .Net 4.
 
 * **Splunk**
+  * [NLog.Targets.Splunk](https://github.com/AlanBarber/NLog.Targets.Splunk)
   * [NLog.Splunk.Simple](https://github.com/valeev/NLog.Splunk)
 
 * **Syslog**
