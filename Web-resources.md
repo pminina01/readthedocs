@@ -64,6 +64,7 @@
   * [Gelf4NLog - NLog Target for GrayLog2](https://github.com/Certegy/Gelf4NLog)
   * [EasyGelf](https://github.com/Pliner/EasyGelf) - [Nuget package](https://www.nuget.org/packages/EasyGelf.NLog/)
   * [NLog.Gelf](https://github.com/mantasaudickas/NLog.Gelf) - [Nuget package](https://www.nuget.org/packages/NLog.Gelf/)
+  * [NLog.GelfTarget](https://github.com/travelrepublic/NLog.Targets.Gelf) - [Nuget package](https://www.nuget.org/packages/NLog.GelfTarget)
   * [NLog.Targets.GraylogHttp](https://github.com/dustinchilson/NLog.Targets.GraylogHttp)
   * [NLog.GelfLayout](https://github.com/farzadpanahi/NLog.GelfLayout)
 
@@ -86,6 +87,9 @@
 
 * **Syslog**
   * [Syslog Target for NLog](http://github.com/graffen/NLog.Targets.Syslog) by Graffen - [read more](http://blog.graffen.dk/post/logging-messages-to-a-syslog-server-using-nlog)
+
+* **Http**
+  * [Nlog.RestTarget](https://github.com/ParallelTask/Nlog.RestTarget) - [Nuget package](https://www.nuget.org/packages/NLog.RestTarget)
 
 * **DebugView**
   * [ProcMon target](http://zine.net.pl/blogs/mgrzeg/archive/2011/09/16/procmon-call-stack-czyli-symbole-a-narz-dzia-sysinternals.aspx) by Michał Grzegorzewski (in Polish)
