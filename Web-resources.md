@@ -43,6 +43,9 @@
 * **[Loggly](https://www.loggly.com/)**
   * [NLog.Targets.Loggly](https://github.com/neutmute/loggly-csharp) - [Nuget package](https://www.nuget.org/packages/NLog.Targets.Loggly/)
 
+* **[Gibraltar Loupe](https://onloupe.com/)**
+  * [Gibraltar.Agent.NLog4](https://github.com/GibraltarSoftware/Gibraltar.Agent.NLog2) - [Nuget package](https://www.nuget.org/packages/Gibraltar.Agent.NLog4)
+
 * **[Raygun](https://raygun.com/blog/getting-started-with-nlog-and-raygun/)**
   * [NLog.Raygun](https://github.com/MindscapeHQ/raygun4net) - [Nuget package](https://www.nuget.org/packages/NLog.Raygun/)
 
