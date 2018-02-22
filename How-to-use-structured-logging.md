@@ -33,7 +33,7 @@ By default the values will be printed as JSON-like into the message,
 
 e.g.
 
-logger.Info("Hello {user}");
+`logger.Info("Hello {user}", user);`
 
 If `user` is a:
 - string: surrounded with quotes
