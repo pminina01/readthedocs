@@ -107,7 +107,9 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 
 External packages, not maintained by the NLog team.
 
-* [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
+* [${xml}](https://github.com/loresoft/NLog.Xml) - [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) - Converts to XML format
+
+* [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) - [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
 
 ## Passing Custom Values to a Layout
 Even though the layout renderers provide many pre-defined values, you may need to pass application specific values to your [Layouts](Layouts). You can pass your own values in code by adding custom properties to the event. You then retrieve the value using the [${event-properties}](Event-Context-Layout-Renderer) renderer. See the documentation for the [${event-properties}](Event-Context-Layout-Renderer) for an example.
