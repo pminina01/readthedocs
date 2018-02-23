@@ -102,8 +102,6 @@ Package|Version     |Description
 [SignalR](https://github.com/toddmeinershagen/NLog.SignalR)      | [![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg)](https://www.nuget.org/packages/NLog.SignalR/) | Writes NLog messages to a SignalR hub.
 [Splunk](https://github.com/AlanBarber/NLog.Targets.Splunk)                   | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Splunk.svg)](https://www.nuget.org/packages/NLog.Targets.Splunk) | Writes NLog messages to Splunk
 [Syslog](https://github.com/graffen/NLog.Targets.Syslog)         | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Syslog.svg)](https://www.nuget.org/packages/NLog.Targets.Syslog) | Writes NLog messages to Syslog.
-[XML](https://github.com/loresoft/NLog.Xml)                      | [![Version](https://img.shields.io/nuget/v/NLog.Xml.svg)](https://www.nuget.org/packages/nlog.xml) | Write to XML files. 
-
 
 <!-- PLEASE keep SORTED -->
 
