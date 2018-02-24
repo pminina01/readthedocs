@@ -78,7 +78,7 @@ When using `NLog.LogManager.GetCurrentClassLogger()`, then it will create a logg
 
 The logger can write messages with different LogLevels, which is used by the logging-rules (See `minLevel` in configuration example above) so only relevant messages are redirected to the wanted targets:
 
-The logger is not tied to a specific target. The messages written to one logger can reach multiple targets based on the logging-rules configuration. Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
+The logger is not tied to a specific target. The messages written to one logger can reach multiple targets based on the [[logging-rules configuration|Configuration-file#rules]]. Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
 ### Log levels
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
