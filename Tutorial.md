@@ -195,3 +195,4 @@ If something is not working as expected then check here:
 * [Troubleshooting Logging](Logging-troubleshooting)
 * [Check Internal Logging](Internal-logging)
 * [[FAQ]]
+* [External articles and tutorials](Web-resources)
