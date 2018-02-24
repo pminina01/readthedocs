@@ -166,66 +166,23 @@ NLog supports special kinds of targets which do not do any logging by themselves
 * [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
 * [RetryingWrapper](RetryingWrapper-target) - Provides retry-on-error.
 
-See full list here: (Target Wrappers)[Targets#wrappers]
+See full list here: [Target Wrappers](Targets#wrappers)
 
-In order to use wrappers, simply enclose the `<target />` element with another one representing a wrapper and use the name of the wrapper in your `<rules/>` section as in the following example:
+There is a shortcut for enabling the AsyncWrapper for all targets, by adding `async="true"`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <targets>
-        <target name="asyncFile" xsi:type="AsyncWrapper">
-            <target name="logfile" xsi:type="File" fileName="file.txt" />
-        </target>
+    <targets async="true">
+        <target name="logfile" xsi:type="File" fileName="file.txt" />
     </targets>
 
     <rules>
-        <logger name="*" minlevel="Info" writeTo="asyncFile" />
+        <logger name="*" minlevel="Info" writeTo="logfile" />
     </rules>
 </nlog>
 ```
+
 This will make all writes to the file be asynchronous, which will improve responsiveness of the calling thread.
-
-## Advanced
-
-### Expose logger to sub-classes
-When we wish to expose the logger into sub classes the following pattern could be used.
-
-```csharp
-class BaseClass
-{
-    protected BaseClass()
-    {
-        Log = LogManager.GetLogger(GetType().FullName);
-    }
-
-    protected Logger Log { get; private set; }
-}
-
-class ExactClass : BaseClass
-{
-    public ExactClass() : base() { }
-    ...
-}
-```
-
-The `LogManager.GetLogger()` method should NOT be invoked in the constructor of the BaseClass with Type parameter argument i.e. 
-
-``` C#
-protected BaseClass()
-{
-    Log = LogManager.GetLogger(GetType().FullName, GetType());
-}
-```
-
-as an exception will be thrown.
-
-In case of the ExactClass has a default constructor which invokes the BaseClass constructor a ```System.StackOverflowException``` is thrown. This is because the ExactClass calls the BaseClass the GetLogger(String, Type) attempts to construct a ExactClass until the exception is thrown.
-
-```
-ExactClass => BaseClass => ExactClass => BaseClass => ...
-```
-
-When there is no default constructor at the ExactClass the GetLogger(String, Type) method call does not know how to construct the ExactClass and it fails with a ```NLog.NLogConfigurationException```.
