@@ -1,9 +1,8 @@
 ## Content
 * [[Installing NLog|tutorial#installing-nlog]]
-* [[Creating Log messages|tutorial#creating-log-messages]]
-* [[Creating loggers|tutorial#creating-loggers]]
-* [[Log levels|tutorial#log-levels]]
+* [[Configure NLog Targets for output|#configure-nlog-targets-for-output]]
 * [[Writing log messages|tutorial#writing-log-messages]]
+* [[Log levels|tutorial#log-levels]]
 * [[Configuration|tutorial#configuration]]
 * [[Multiple targets|tutorial#multiple-targets]]
 * [[Logger-specific routing|tutorial#logger-specific-routing]]
@@ -12,7 +11,6 @@
 * [[Advanced|tutorial#advanced]]
 
 ## Installing NLog
-
 
 > ASP.NET Core users should follow [Getting started with ASP.NET Core](https://github.com/NLog/NLog.Web/wiki/Getting-started-with-ASP.NET-Core-(csproj---vs2017)) first.
 
