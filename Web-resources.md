@@ -14,11 +14,15 @@
 * [Logging to SQLite with NLog](http://www.beckshome.com/index.php/2010/03/logging-to-sqlite-with-nlog/) by Thomas Beck
 * [Aspect-Oriented Instrumentation With PostSharp, NLog, and SQLite](http://www.beckshome.com/index.php/2010/04/lightweight-aspect-oriented-instrumentation-with-postsharp-nlog-and-sqlite/) by Thomas Beck
 * [Logging messages to a Syslog server using NLog](http://blog.graffen.dk/post/logging-messages-to-a-syslog-server-using-nlog) by Graffen
-* [Introducing Caliburn.Micro.Logging.NLog](http://buksbaum.us/2011/07/06/introducing-caliburn-micro-logging-nlog/)
 * [Procmon Call Stack or Symbols and SysInternals tools](http://zine.net.pl/blogs/mgrzeg/archive/2011/09/16/procmon-call-stack-czyli-symbole-a-narz-dzia-sysinternals.aspx) by Michał Grzegorzewski (in Polish)
 * [How to NLog (2.1 & 3.1) with VisualStudio 2013](https://www.codeproject.com/Articles/749612/How-to-NLog-with-VisualStudio) By Noctis on CodeProject
 * [How to NLog (4.2) with Visual Studio 2015](https://www.codeproject.com/Tips/1052902/How-to-NLog-with-Visual-Studio) By Noctis on CodeProject
 * [NLog Tutorial for .NET Logging – Best Practices](https://stackify.com/nlog-guide-dotnet-logging/) by Stackify.com
+
+### Logging Facades
+* [LibLog](http://dhickey.ie/2015/04/introducing-liblog/)
+* [Common Logging](http://www.broculos.net/2014/04/how-to-use-nlog-and-commonlogging-with.html)
+* [Caliburn.Micro](http://buksbaum.us/2010/08/08/how-to-do-logging-with-caliburn.micro/)
 
 ## Screencasts
 
