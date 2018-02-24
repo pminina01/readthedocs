@@ -162,7 +162,7 @@ logger.Info("Hello {0}", "Earth");
 
 ## Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
-* [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
+* [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes for better [[Performance]]
 * [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
 * [RetryingWrapper](RetryingWrapper-target) - Provides retry-on-error.
 
