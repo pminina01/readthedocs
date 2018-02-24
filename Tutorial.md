@@ -62,6 +62,8 @@ NLog.LogManager.Configuration = config;
 
 See also [Configuration File](Configuration-file) or [Configuration API](Configuration-API)
 
+See full list here: [[Targets]]
+
 ## Writing log messages
 Example of how to acquire a logger and writing a message to the logger:
 
