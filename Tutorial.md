@@ -163,6 +163,19 @@ Therefore it is advise to perform the logging like this:
 logger.Info("Hello {0}", "Earth");
 ```
 
+#### 3. Logger should be given the Exception
+Avoid giving the Exception as formatting parameter, but instead provide it explicitly as first parameter. This will help the NLog targets to provide better logging.
+
+```csharp
+try
+{
+}
+catch (Exception ex)
+{
+    logger.Error(ex, "Something bad happened");
+}
+```
+
 ## Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
 * [AsyncWrapper](AsyncWrapper-target) - Improves [[Performance]] by providing asynchronous, buffered execution of target writes.
