@@ -48,7 +48,7 @@ The formatting is controlled by the datatype of the parameter:
 
 It's possible to prefix the hole names with the operator `@` or `$`:
 
-- '@' will destructure the object into JSON
+- '@' will destructure the object into JSON (Supports object property reflection)
 - `$` will force toString
 
 # NLog Layout Support
