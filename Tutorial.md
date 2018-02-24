@@ -16,8 +16,6 @@
 
 Just install [NLog.Config package](https://www.nuget.org/packages/NLog.Config/) and this will install also [NLog](https://www.nuget.org/packages/NLog) and [NLog.Schema](https://www.nuget.org/packages/NLog.Schema) packages - this will result in a starter config and intellisense.
 
-
-
 Use the GUI or the following command in the Package Manager Console:
 ```
 Install-Package NLog.Config
@@ -28,7 +26,7 @@ That's it, you can now compile and run your application and it will be able to u
 ## Configure NLog Targets for output
 NLog will only produce output if having configured one (or more) NLog targets.
 
-To configure using XML, then add a `NLog.config` file to your application project (File Properties: Copy Always). This is a very simple example of a `NLog.config`:
+NLog can be configured using XML by adding a `NLog.config` file to your application project (File Properties: Copy Always). This is a simple example of the content for `NLog.config`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
