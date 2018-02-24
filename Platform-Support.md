@@ -8,7 +8,7 @@ stacktrace with source|✓ |✓ |✓ |1.5+|✓ |✓ |✓ ||
 fluent interface|||✓ |✓ |||?||
 NLogTraceListener|✓ |✓ |✓ |2.0|||✓ ||
 
-> autoload .dll doesn't work with nuget-packages that places dlls in sub-folders.
+> NetStandard 1.5 cannot perform autoload of DLLs from nuget-packages that places dlls in sub-folders.
 
 ## Layout Renderers
 Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
