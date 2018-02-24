@@ -4,6 +4,7 @@
 * [[Writing log messages|tutorial#writing-log-messages]]
 * * [[Log levels|tutorial#log-levels]]
 * * [[Layouts and LayoutRenderers|tutorial#layouts-and-layoutrenderers]]
+* * [[Best Practises for Logging|tutorial#best-practises-for-logging]]
 * [[Wrappers|tutorial#wrappers]]
 
 ## Installing NLog
