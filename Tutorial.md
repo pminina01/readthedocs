@@ -4,10 +4,7 @@
 * [[Writing log messages|tutorial#writing-log-messages]]
 * * [[Log levels|tutorial#log-levels]]
 * * [[Layouts and LayoutRenderers|tutorial#layouts-and-layoutrenderers]]
-* [[Multiple targets|tutorial#multiple-targets]]
-* [[Logger-specific routing|tutorial#logger-specific-routing]]
 * [[Wrappers|tutorial#wrappers]]
-* [[Advanced|tutorial#advanced]]
 
 ## Installing NLog
 
