@@ -19,6 +19,7 @@
 * [How to NLog (2.1 & 3.1) with VisualStudio 2013](https://www.codeproject.com/Articles/749612/How-to-NLog-with-VisualStudio) By Noctis on CodeProject
 * [How to NLog (4.2) with Visual Studio 2015](https://www.codeproject.com/Tips/1052902/How-to-NLog-with-Visual-Studio) By Noctis on CodeProject
 * [Configure NLog for ASP.NET MVC in 3 Steps](https://weblogs.asp.net/jhallal/configure-nlog-for-asp-net-mvc)
+* [NLog Tutorial for .NET Logging – Best Practices](https://stackify.com/nlog-guide-dotnet-logging/)
 
 ## Screencasts
 
