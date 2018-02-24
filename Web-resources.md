@@ -28,7 +28,7 @@
 
 * [Mastering ASP.NET MVC2](http://tekpub.com/production/starter) by Steven Sanderson and Rob Conery from http://tekpub.com (**Link Broken**)
 
-# NLog Extensions
+## NLog Extensions
 
 * [Targets - External Packages](https://github.com/NLog/NLog/wiki/Targets#external-packages)
 * [Layouts - External Packages](https://github.com/NLog/NLog/wiki/Layout-Renderers#external-packages)
