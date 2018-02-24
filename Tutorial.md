@@ -156,7 +156,7 @@ namespace MyNamespace
 #### 2. Logger should handle string formatting
 Avoid performing string allocation or string concatenation upfront, but instead let the Logger do the formatting. This will allow NLog to defer the formatting and reduce overhead.
 
-Therefore it is recommended ise to perform the logging like this:
+Therefore it is recommended to perform the logging like this:
 ```csharp
 logger.Info("Hello {0}", "Earth");
 ```
