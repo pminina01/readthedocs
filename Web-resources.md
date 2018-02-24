@@ -1,6 +1,7 @@
 ## Articles and tutorials about NLog
 
 * [ASP.Net Logging Using NLog](http://rickyrosario.com/blog/asp-net-logging-using-nlog/) by Ricky Rosario
+* [Configure NLog for ASP.NET MVC in 3 Steps](https://weblogs.asp.net/jhallal/configure-nlog-for-asp-net-mvc) by Jamil Hallal
 * [Using NLog to Track Events](http://blogs.popart.com/2008/09/using-nlog-to-track-events/) by Andrew Hay (**Link Broken**)
 * [Ninject (Part 2): Customizing your infrastructure for logging](http://flanders.co.nz/2008/04/18/ninject-part-2-customizing-your-infrastructure-for-logging/) by Ivan Porto Carrero
 * [Tracing and logging in .NET](http://www.hieu.co.uk/blog/index.php/2009/02/11/tracing-and-logging-in-net/) by Hieu Pham (**Link Broken**)
@@ -18,7 +19,6 @@
 * [Getting started with ReflectInsight Extension for NLog](https://insightextensions.codeplex.com/wikipage?title=Getting%20Started%20with%20NLog%20Extension&referringTitle=Documentation) by ReflectSoftware
 * [How to NLog (2.1 & 3.1) with VisualStudio 2013](https://www.codeproject.com/Articles/749612/How-to-NLog-with-VisualStudio) By Noctis on CodeProject
 * [How to NLog (4.2) with Visual Studio 2015](https://www.codeproject.com/Tips/1052902/How-to-NLog-with-Visual-Studio) By Noctis on CodeProject
-* [Configure NLog for ASP.NET MVC in 3 Steps](https://weblogs.asp.net/jhallal/configure-nlog-for-asp-net-mvc) by Jamil Hallal
 * [NLog Tutorial for .NET Logging – Best Practices](https://stackify.com/nlog-guide-dotnet-logging/) by Stackify.com
 
 ## Screencasts
