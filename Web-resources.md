@@ -24,11 +24,11 @@
 * [Common Logging](http://www.broculos.net/2014/04/how-to-use-nlog-and-commonlogging-with.html)
 * [Caliburn.Micro](http://buksbaum.us/2010/08/08/how-to-do-logging-with-caliburn.micro/)
 
-## Screencasts
+### Screencasts
 
 * [Mastering ASP.NET MVC2](http://tekpub.com/production/starter) by Steven Sanderson and Rob Conery from http://tekpub.com (**Link Broken**)
 
-## NLog Extensions
+# NLog Extensions
 
 * [Targets - External Packages](https://github.com/NLog/NLog/wiki/Targets#external-packages)
 * [Layouts - External Packages](https://github.com/NLog/NLog/wiki/Layout-Renderers#external-packages)
