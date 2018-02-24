@@ -18,6 +18,8 @@
 * [Getting started with ReflectInsight Extension for NLog](https://insightextensions.codeplex.com/wikipage?title=Getting%20Started%20with%20NLog%20Extension&referringTitle=Documentation) by ReflectSoftware
 * [How to NLog (2.1 & 3.1) with VisualStudio 2013](https://www.codeproject.com/Articles/749612/How-to-NLog-with-VisualStudio) By Noctis on CodeProject
 * [How to NLog (4.2) with Visual Studio 2015](https://www.codeproject.com/Tips/1052902/How-to-NLog-with-Visual-Studio) By Noctis on CodeProject
+* [Configure NLog for ASP.NET MVC in 3 Steps](https://weblogs.asp.net/jhallal/configure-nlog-for-asp-net-mvc)
+
 ## Screencasts
 
 * [Mastering ASP.NET MVC2](http://tekpub.com/production/starter) by Steven Sanderson and Rob Conery from http://tekpub.com (**Link Broken**)
