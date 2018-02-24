@@ -1,13 +1,12 @@
 ## Content
 * [[Installing NLog|tutorial#installing-nlog]]
-* [[Configure NLog Targets for output|#configure-nlog-targets-for-output]]
+* [[Configure NLog Targets for output|tutorial#configure-nlog-targets-for-output]]
 * [[Writing log messages|tutorial#writing-log-messages]]
-* [[Log levels|tutorial#log-levels]]
-* [[Configuration|tutorial#configuration]]
+* * [[Log levels|tutorial#log-levels]]
+* * [[Layouts and LayoutRenderers|tutorial#layouts-and-layoutrenderers]]
 * [[Multiple targets|tutorial#multiple-targets]]
 * [[Logger-specific routing|tutorial#logger-specific-routing]]
 * [[Wrappers|tutorial#wrappers]]
-* [[Layouts|tutorial#layouts]]
 * [[Advanced|tutorial#advanced]]
 
 ## Installing NLog
@@ -115,7 +114,7 @@ public class MyClass
 }
 ```
 
-### Layouts and Layout Renderers
+### Layouts and LayoutRenderers
 It is possible to configure how log messages are written to a NLog target.
 
 This shows the default `SimpleLayout` used by most NLog targets:
