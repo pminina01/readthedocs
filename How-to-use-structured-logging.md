@@ -42,7 +42,7 @@ The formatting is controlled by the datatype of the parameter:
 - `string`: surrounded with quotes
 - `number`: no quotes
 - `null`: printed as `NULL`
-- `list/ienumerable`: comma separated, without `[` and `]`
+- `list/ienumerable`: "item1", "item2", etc. (comma separated)
 - `dictionary`: "key1"="value1", "key2"="value2"
 - `objects`: toString by default
 
