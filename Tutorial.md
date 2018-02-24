@@ -2,9 +2,9 @@
 * [[Installing NLog|tutorial#installing-nlog]]
 * [[Configure NLog Targets for output|tutorial#configure-nlog-targets-for-output]]
 * [[Writing log messages|tutorial#writing-log-messages]]
-* * [[Log levels|tutorial#log-levels]]
-* * [[Layouts and LayoutRenderers|tutorial#layouts-and-layoutrenderers]]
-* * [[Best Practises for Logging|tutorial#best-practises-for-logging]]
+  * [[Log levels|tutorial#log-levels]]
+  * [[Layouts and LayoutRenderers|tutorial#layouts-and-layoutrenderers]]
+  * [[Best Practises for Logging|tutorial#best-practises-for-logging]]
 * [[Wrappers|tutorial#wrappers]]
 * [[Troubleshooting|tutorial#troubleshooting]]
 
