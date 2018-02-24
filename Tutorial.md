@@ -6,6 +6,7 @@
 * * [[Layouts and LayoutRenderers|tutorial#layouts-and-layoutrenderers]]
 * * [[Best Practises for Logging|tutorial#best-practises-for-logging]]
 * [[Wrappers|tutorial#wrappers]]
+* [[Troubleshooting|tutorial#troubleshooting]]
 
 ## Installing NLog
 
@@ -188,3 +189,9 @@ There is a shortcut for enabling the AsyncWrapper for all targets, by adding `as
 ```
 
 This will make all writes to the file be asynchronous, which will improve responsiveness of the calling thread.
+
+## Troubleshooting
+If something is not working as expected then check here:
+* [Troubleshooting Logging](Logging-troubleshooting)
+* [Check Internal Logging](Internal-logging)
+* [[FAQ]]
