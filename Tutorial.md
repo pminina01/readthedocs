@@ -29,38 +29,61 @@ Install-Package NLog.Config
 
 That's it, you can now compile and run your application and it will be able to use NLog.
 
-## Creating Log messages
-In order to create log messages from the application you need to use the logging API. There are two classes that you will be using the most: `Logger` and `LogManager`, both in the NLog namespace. `Logger` represents the named source of logs and has methods to emit log messages, and `LogManager` creates and manages instances of loggers.
+## Configure NLog Targets for output
+NLog will only produce output if having configured one (or more) NLog targets.
 
-It is important to understand that `Logger` does not represent any particular log output (and thus is never tied to a particular log file, etc.) but is only a source, which typically corresponds to a class in your code. Mapping from log sources to outputs is defined separately through [Configuration File](Configuration-file) or [Configuration API](Configuration-API). Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
+To configure using XML, then add a `NLog.config` file to your application project (File Properties: Copy Always). This is a very simple example of a `NLog.config`:
 
-### Creating loggers
-It is advised to create one (`private static`) `Logger` per class.  As mentioned before, you must use `LogManager` to create `Logger` instances.
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-This will create a `Logger` instance with the same name of the `class`.
+    <targets>
+        <target name="logfile" xsi:type="File" fileName="file.txt" />
+        <target name="logconsole" xsi:type="Console" />
+    </targets>
 
-```csharp
-namespace MyNamespace
-{
-  public class MyClass
-  {
-    private static Logger logger = LogManager.GetCurrentClassLogger();
-  }
-}
+    <rules>
+        <logger name="*" minlevel="Info" writeTo="logconsole" />
+        <logger name="*" minlevel="Debug" writeTo="logfile" />
+    </rules>
+</nlog>
 ```
 
-It's also possible to control the `Logger`'s name:
-
+To configure programmatically, then one can do this in code:
 
 ```csharp
-using NLog;
+var config = new NLog.Config.LoggingConfiguration();
 
-Logger logger = LogManager.GetLogger("MyClassName");
+var logfile = new NLog.Targets.FileTarget() { FileName = "file.txt", Name = "logfile" };
+var logconsole = new NLog.Targets.ConsoleTarget() { Name = "logconsole" };
+
+config.LoggingRules.Add(new NLog.Config.LoggingRule("*", LogLevel.Info, logconsole));
+config.LoggingRules.Add(new NLog.Config.LoggingRule("*", LogLevel.Debug, logfile));
+
+NLog.LogManager.Configuration = config;
 ```
 
-Because loggers are thread-safe, you can simply create the logger once and store it in a `static` variable.
+See also [Configuration File](Configuration-file) or [Configuration API](Configuration-API)
 
+## Writing log messages
+Example of how to acquire a logger and writing a message to the logger:
 
+```csharp
+var logger = NLog.LogManager.GetCurrentClassLogger();
+logger.Info("Hello World");
+```
+
+If having configured the NLog targets correctly, then it will output the message to the configured targets.
+
+The logger has a name, which is used by the logging-rules (See `name="*"` in configuration example above) to redirect to the wanted targets.
+
+When using `NLog.LogManager.GetCurrentClassLogger()`, then it will create a logger with the name of the calling class (with namespace). One can also specify an explicit name by using `NLog.LogManager.GetLogger("MyLogger")`.
+
+The logger can write messages with different LogLevels, which is used by the logging-rules (See `minLevel` in configuration example above) so only relevant messages are redirected to the wanted targets:
+
+The logger is not tied to a specific target. The messages written to one logger can reach multiple targets based on the logging-rules configuration. Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place.
 
 ### Log levels
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
@@ -73,11 +96,7 @@ NLog supports the following [log levels](Log-levels):
 * `Error` - error messages - most of the time these are `Exceptions`
 * `Fatal` - very serious errors!
 
-### Writing log messages
-In order to emit log message you can simply call one of the methods on the `Logger`. `Logger` class has six methods whose names correspond to log levels: `Trace()`, `Debug()`, `Info()`, `Warn()`, `Error()` and `Fatal()`. There is also `Log()` method which takes log level as a parameter.
 ```csharp
-using NLog;
-
 public class MyClass
 {
   private static Logger logger = LogManager.GetCurrentClassLogger();
@@ -98,115 +117,61 @@ public class MyClass
 }
 ```
 
-Log messages can also be parameterized - you can use the same format strings as when using `Console.WriteLine()` and `String.Format()`:
+### Layouts and Layout Renderers
+It is possible to configure how log messages are written to a NLog target.
+
+This shows the default `SimpleLayout` used by most NLog targets:
+
+```xml
+<target name="logfile" xsi:type="File" fileName="file.txt" layout="${longdate}|${level:uppercase=true}|${logger}|${message}" />
+```
+
+This can be configured to include much details:
+
+```xml
+<target name="logfile" xsi:type="File" fileName="file.txt" layout="${longdate}|${level:uppercase=true}|${logger}|${threadid}|${message}|{exception:format=tostring}" />
+```
+
+See full list here: [Layout Renderers](Layout-Renderers)
+
+One can also use a more complex Layout instead of `SimpleLayout`:
+* [[CsvLayout]]
+* [[JsonLayout]]
+
+See full list here: [[Layouts]]
+
+### Best Practises for Logging
+
+#### 1. Logger should be a static variable in each class
+Creating a new Logger has an overhead, as it has to acquire locks and allocate objects.
+
+Therefore it is advise to create the logger like this:
+
 ```csharp
-using NLog;
-
-public class MyClass
+namespace MyNamespace
 {
-  private static Logger logger = LogManager.GetCurrentClassLogger();
-
-  public void MyMethod1()
+  public class MyClass
   {
-    int k = 42;
-    int l = 100;
-
-    logger.Trace("Sample trace message, k={0}, l={1}", k, l);
-    logger.Debug("Sample debug message, k={0}, l={1}", k, l);
-    logger.Info("Sample informational message, k={0}, l={1}", k, l);
-    logger.Warn("Sample warning message, k={0}, l={1}", k, l);
-    logger.Error("Sample error message, k={0}, l={1}", k, l);
-    logger.Fatal("Sample fatal error message, k={0}, l={1}", k, l);
-    logger.Log(LogLevel.Info, "Sample informational message, k={0}, l={1}", k, l);
+    private static Logger logger = NLog.LogManager.GetCurrentClassLogger();
   }
 }
 ```
 
-TIP: You should avoid doing string formatting (such as concatenation, or calling `String.Format()`) yourself and instead use built-in formatting functionality of NLog. The main reason for this is performance:
+#### 2. Logger should handle string formatting
+Avoid performing string allocation or string concatenation upfront, but instead let the Logger do the formatting. This will allow NLog to defer the formatting and reduce overhead.
 
-Formatting log messages takes a lot of time, so NLog tries to defer formatting until it knows that log message will actually be written to some output. If the message ends up being skipped because of logging configuration, you will not pay the price of `String.Format()` at all. See also Optimizing Logging Performance.
-
-## Configuration
-So far we have learned how to create log messages from code, but we have not configured any outputs for our logs. So, when you run your instrumented application at this point, you will see - well - nothing. Time to open the NLog.config file and add some logging rules:
-
-1. In the `<targets>` section, add:
-```xml
-<target name="logfile" xsi:type="File" fileName="file.txt" />
+Therefore it is advise to perform the logging like this:
+```csharp
+logger.Info("Hello {0}", "Earth");
 ```
-This will define a [file target](File-target) which will send logs to a file named file.txt.
 
-2. In the `<rules>` section, add:
-```xml
-<logger name="*" minlevel="Info" writeTo="logfile" />
-```
-This snippet will direct all logs (name="\*") of level **Info** or higher (which includes **Info**, **Warn**, **Error** and **Fatal**) to a target named logfile.
-
-Note that as you are typing this in Visual Studio, you should see IntelliSense suggesting attribute names and validating their values. The final configuration should look like this:
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-    <targets>
-        <target name="logfile" xsi:type="File" fileName="file.txt" />
-    </targets>
-
-    <rules>
-        <logger name="*" minlevel="Info" writeTo="logfile" />
-    </rules>
-</nlog>
-```
-Now, when you run the application, you should see log messages written to file.txt in current directory.
-
-### Multiple targets
-Let's try something more complex now. Imagine you want to send very detailed logs to a file, and you also want to see the logs in the console window, but slightly less detailed. Here's the configuration file which implements this:
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-    <targets>
-        <target name="logfile" xsi:type="File" fileName="file.txt" />
-        <target name="console" xsi:type="Console" />
-    </targets>
-
-    <rules>
-        <logger name="*" minlevel="Trace" writeTo="logfile" />
-        <logger name="*" minlevel="Info" writeTo="console" />
-    </rules>
-</nlog>
-```
-As you can see, we now have multiple targets and multiple rules which route logs to them.
-
-### Logger-specific routing
-Another scenario which is very common requires producing more detailed logs from some components which are being currently developed, while reducing output from some other components. We can use the following configuration:
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-    <targets>
-        <target name="logfile" xsi:type="File" fileName="file.txt" />
-    </targets>
-
-    <rules>
-        <logger name="SomeNamespace.Component.*" minlevel="Trace" writeTo="logfile" final="true" />
-        <logger name="*" minlevel="Info" writeTo="logfile" />
-    </rules>
-</nlog>
-```
-The first rule will send logs from loggers whose names begin with `SomeNamespace.Component`. and where level is `Trace` or higher to the log file. The attribute `final="true"` will cause further processing to be stopped after performing the write.
-
-The second rule will send all remaining logs to the same log file with the restriction that the level must be `Info` or higher.
-
-### Wrappers
+## Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
-* [ImpersonatingWrapper](ImpersonatingWrapper-target) - Impersonates another user for the duration of the write.
 * [AsyncWrapper](AsyncWrapper-target) - Provides asynchronous, buffered execution of target writes.
 * [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
-* [FilteringWrapper](FilteringWrapper-target) - Filters log entries based on a condition.
+* [RetryingWrapper](RetryingWrapper-target) - Provides retry-on-error.
 
-Many more wrappers are available. You can find the full list [here](Targets).
+See full list here: (Target Wrappers)[Targets#wrappers]
 
 In order to use wrappers, simply enclose the `<target />` element with another one representing a wrapper and use the name of the wrapper in your `<rules/>` section as in the following example:
 
@@ -227,17 +192,6 @@ In order to use wrappers, simply enclose the `<target />` element with another o
 </nlog>
 ```
 This will make all writes to the file be asynchronous, which will improve responsiveness of the calling thread.
-
-### Layouts
-Layouts provide a way to format the contents of the logs as it is written to a file. There are 2 main kinds of layouts:
-* simple layout - which is composed of [Layout Renderers](Layout-renderers)
-* structural layouts - which can output XML, CSV, and other complex formats
-
-Simple layout is just a string, with special tags embedded between **${** and **}**. For example the following declaration will cause each log message to be prefixed with date formatted as **yyyyMMddHHmmss**:
-```xml
-<target name="logfile" xsi:type="File" fileName="file.txt" layout="${date:format=yyyyMMddHHmmss} ${message}" />
-```
-
 
 ## Advanced
 
