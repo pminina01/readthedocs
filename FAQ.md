@@ -60,3 +60,4 @@
 * [How do I get the most optimal performance?](performance)
 * [How do I writing custom Targets, layouts and layout renderers?](Extending%20NLog)
 * [How could I combine programmatic configuration with XML configuration?](Combine-XML-config-with-C%23-config)
+* [How-to-create-Logger-for-sub-classes](How-to-create-Logger-for-sub-classes)
