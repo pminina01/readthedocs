@@ -28,32 +28,28 @@ Any NLog destination target that is able to handle log-event-properties will aut
 
 
 ## Formatting 
+The formatting of message templates parameters depends on the datatype (and not just `ToString`):
 
-By default the values will be printed as JSON-like into the message,
+Example:
 
-e.g.
+`logger.Info("Order {orderid} created for {user}", 42, "Kenny");`
 
-`logger.Info("Hello {user}", user1);`
+Will be formatted as:
 
-If `user1` is a:
-- string: surrounded with quotes
-- number: no quotes
-- null: printed as `NULL`
-- list/ienumerable: comma separated, without `[` and `]`
-- dictionary: "key1"="value1", "key2"="value2"
-- objects: toString by default
+`Order 42 created for "Kenny"`
+
+The formatting is controlled by the datatype of the parameter:
+- `string`: surrounded with quotes
+- `number`: no quotes
+- `null`: printed as `NULL`
+- `list/ienumerable`: comma separated, without `[` and `]`
+- `dictionary`: "key1"="value1", "key2"="value2"
+- `objects`: toString by default
 
 It's possible to prefix the hole names with the operator `@` or `$`:
 
-- '@' will destructure the object
+- '@' will destructure the object into JSON
 - `$` will force toString
-
-
-# Examples
-
-`Process order {OrderId} for {ClientName}` =>    Message: `Process order 2500002 for "CoolClient"`. Properties: OrderId:2500002 & ClientName:CoolClient
-
-
 
 # NLog Layout Support
 The [Json Layout](JsonLayout) and [Log4JXml Layout](Log4JXmlEventLayout) already has builtin support for [event-properties](EventProperties-Layout-Renderer), and automatically supports structured logging. Just configure the setting `includeAllProperties="true"`
