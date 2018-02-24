@@ -24,4 +24,5 @@
 
 ## NLog Extensions
 
-See also [External Packages](https://github.com/NLog/NLog/wiki/Targets#external-packages)
+See also [Targets - External Packages](https://github.com/NLog/NLog/wiki/Targets#external-packages)
+See also [Layouts - External Packages](https://github.com/NLog/NLog/wiki/Layout-Renderers#external-packages)
