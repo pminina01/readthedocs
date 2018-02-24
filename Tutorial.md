@@ -195,4 +195,5 @@ If something is not working as expected then check here:
 * [Troubleshooting Logging](Logging-troubleshooting)
 * [Check Internal Logging](Internal-logging)
 * [[FAQ]]
+* [Platform support](Platform-support)
 * [External articles and tutorials](Web-resources)
