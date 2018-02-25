@@ -30,7 +30,8 @@
 
 ## NLog Extensions
 
-* [Targets - External Packages](https://github.com/NLog/NLog/wiki/Targets#external-packages)
-* [Layouts - External Packages](https://github.com/NLog/NLog/wiki/Layout-Renderers#external-packages)
+* [Targets - External Packages](Targets#external-packages)
+* [Layouts - External Packages](Layout-Renderers#external-packages)
+* [Tools - External Packages](Tools)
 
 See also: [[Extending NLog|Extending-NLog]]
