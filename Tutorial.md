@@ -10,7 +10,7 @@
 
 ## Installing NLog
 
-> ASP.NET Core users should follow [Getting started with ASP.NET Core](https://github.com/NLog/NLog.Web/wiki/Getting-started-with-ASP.NET-Core-(csproj---vs2017)) first.
+> ASP.NET Core users should follow [Getting started with ASP.NET Core](https://github.com/NLog/NLog.Web/wiki/Getting-started-with-ASP.NET-Core-2) first.
 
 [NLog](https://www.nuget.org/packages/NLog/) can be downloaded from NuGet.
 
