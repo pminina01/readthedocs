@@ -174,6 +174,20 @@ catch (Exception ex)
 }
 ```
 
+#### 4. Validate XML configuration from `NLog.config`
+NLog swallows by default all exceptions, so problems with logging will not cause the application to break. But for many application the logging is very critical, so if the initial NLog configuration fails, then it is fatal.
+
+Added `throwConfigExceptions="true"` will make NLog complain, when something is wrong with the configuration:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" throwConfigExceptions="true">
+</nlog>
+```
+
+There is also a setting called `throwExceptions="true"`, which should never be used in production as it can cause havoc for your application. It is intended for unit testing, and local troubleshooting.
+
 ## Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
 * [AsyncWrapper](AsyncWrapper-target) - Improves [[Performance]] by providing asynchronous, buffered execution of target writes.
