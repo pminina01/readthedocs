@@ -32,6 +32,6 @@
 
 * [Targets - External Packages](Targets#external-packages)
 * [Layouts - External Packages](Layout-Renderers#external-packages)
-* [Tools - External Packages](Tools)
+* [LogViewer Tools - External Packages](Tools)
 
 See also: [[Extending NLog|Extending-NLog]]
