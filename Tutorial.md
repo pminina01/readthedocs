@@ -182,7 +182,8 @@ Added `throwConfigExceptions="true"` will make NLog complain, when something is 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" throwConfigExceptions="true">
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      throwConfigExceptions="true">
 </nlog>
 ```
 
