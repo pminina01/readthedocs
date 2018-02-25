@@ -187,7 +187,7 @@ Added `throwConfigExceptions="true"` will make NLog complain, when something is 
 </nlog>
 ```
 
-There is also a setting called `throwExceptions="true"`, which should never be used in production as it can cause havoc for your application. It is intended for unit testing, and local troubleshooting. See also [Troubleshooting Logging](Configuration-file#troubleshooting-logging)
+There is also a setting called `throwExceptions="true"`, which should never be used in production as it can cause havoc for your application. It is intended for unit testing, and local troubleshooting. See also [Troubleshooting Configuration](Configuration-file#troubleshooting-logging)
 
 ## Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
