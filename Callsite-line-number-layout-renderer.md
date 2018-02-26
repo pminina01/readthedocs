@@ -12,3 +12,6 @@ ${callsite-linenumber:skipFrames=Integer}
 ## Parameters
 ### Rendering Options
 * **skipFrames** - The number of frames to skip. Integer Default: 0
+
+## Notes
+Please also note that this infers heavy performance hit when doing lots of logging, as it has to capture full StackTrace for every log message.
