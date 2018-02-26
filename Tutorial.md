@@ -95,7 +95,7 @@ NLog supports the following [log levels](Log-levels):
 ```csharp
 public class MyClass
 {
-  private static Logger logger = LogManager.GetCurrentClassLogger();
+  private static NLog.Logger logger = LogManager.GetCurrentClassLogger();
 
   public void MyMethod1()
   {
@@ -148,7 +148,7 @@ namespace MyNamespace
 {
   public class MyClass
   {
-    private static Logger logger = NLog.LogManager.GetCurrentClassLogger();
+    private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
   }
 }
 ```
