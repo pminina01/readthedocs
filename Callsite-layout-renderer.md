@@ -23,3 +23,5 @@ ${callsite:className=Boolean:fileName=Boolean:includeSourcePath=Boolean:methodNa
 
 ## Notes
 please note that the method name won't work well with async methods before NLog 4.3 - it will always show `MoveNext`. 
+
+Please also note that this infers heavy performance hit when doing lots of logging, as it has to capture full StackTrace for every log message.
