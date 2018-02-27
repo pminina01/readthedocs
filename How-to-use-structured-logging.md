@@ -31,8 +31,9 @@ Any NLog destination target that is able to handle log-event-properties will aut
 The formatting of message templates parameters depends on the datatype (and not just `ToString`):
 
 Example:
-
-`logger.Info("Order {orderid} created for {user}", 42, "Kenny");`
+```c#
+logger.Info("Order {orderid} created for {user}", 42, "Kenny");
+```
 
 Will be formatted as:
 
