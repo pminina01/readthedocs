@@ -177,7 +177,7 @@ catch (Exception ex)
 #### 4. Validate XML configuration from `NLog.config`
 NLog swallows by default all exceptions, so problems with logging will not cause the application to break. But for many application the logging is very critical, so if the initial NLog configuration fails, then it is fatal.
 
-Added `throwConfigExceptions="true"` will make NLog complain, when something is wrong with the configuration:
+Adding `throwConfigExceptions="true"` will make NLog complain, when something is wrong with the configuration:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
