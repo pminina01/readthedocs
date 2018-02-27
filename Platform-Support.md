@@ -14,7 +14,7 @@ NLogTraceListener|✓ |✓ |✓ |2.0|||✓ ||
 Layout Renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----| -----	
 AllEventProperties|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ | Include Caller Information: .NET 4.5 only	
-AppDomain|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
+AppDomain|✓ |✓ |✓ |1.5|✓ |✓ |✓ |||	
 AspApplicationValue|✓ |✓ |✓ |||||||	
 AspRequestValue|✓ |✓ |✓ |||||||	
 AspSessionValue|✓ |✓ |✓ |||||||	
