@@ -40,3 +40,15 @@ If `flushTimeout` is larger than `0`, then the messages are written asynchronous
 When messages are written asynchronously, this is done in another thread. This means context information like thread-user-identity is different.
 
 If the buffer is filled before the `flushTimeout` fires and triggers the asynchronous flush, then the logging thread will be performing the flush, and be blocked by the operation.
+
+### Send batch when triggered by event
+This will send the last 50 messages to the `wrappedTargetType`, when an Error occurs:
+
+```xml
+  <target name="String" xsi:type="AutoFlushWrapper" condition="level >= LogLevel.Error">
+     <target xsi:type="BufferingWrapper"
+          bufferSize="50"
+          overflowAction="Discard">
+     <target xsi:type="wrappedTargetType" ...target properties... />
+  </target>
+```
