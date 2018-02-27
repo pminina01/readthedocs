@@ -192,6 +192,7 @@ There is also a setting called `throwExceptions="true"`, which should never be u
 ## Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
 * [AsyncWrapper](AsyncWrapper-target) - Improves [[Performance]] by providing asynchronous, buffered execution of target writes.
+* [BufferingWrapper](BufferingWrapper-target) - Simple batching of log messages. Maybe only send batch when certain log event occurs (Ex. Exception).
 * [FallbackGroup](FallbackGroup-target) - Provides fallback-on-error.
 * [RetryingWrapper](RetryingWrapper-target) - Provides retry-on-error.
 
