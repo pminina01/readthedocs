@@ -125,7 +125,7 @@ This shows the default `SimpleLayout` used by most NLog targets:
 This can be configured to include more details:
 
 ```xml
-<target name="logfile" xsi:type="File" fileName="file.txt" layout="${longdate}|${level:uppercase=true}|${logger}|${threadid}|${message}|{exception:format=tostring}" />
+<target name="logfile" xsi:type="File" fileName="file.txt" layout="${longdate}|${level:uppercase=true}|${logger}|${threadid}|${message}|${exception:format=tostring}" />
 ```
 
 See full list here: [Layout Renderers](Layout-Renderers)
