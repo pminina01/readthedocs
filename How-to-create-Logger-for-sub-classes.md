@@ -17,3 +17,19 @@ class ExactClass : BaseClass
     ...
 }
 ```
+
+Alternative solution could be this:
+
+```csharp
+class BaseClass
+{
+    protected virtual Logger Log { get { _logger } }
+    private static Logger _logger = LogManager.GetCurrentClassLogger();
+}
+
+class ExactClass : BaseClass
+{
+    protected override Logger Log { get { _logger } }
+    private static Logger _logger = LogManager.GetCurrentClassLogger();
+}
+```
