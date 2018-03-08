@@ -1,4 +1,4 @@
-Writes log messages to the attached managed debugger. 
+Writes log messages to the attached managed debugger. See also [System.Diagnostics.Debugger.Log](https://msdn.microsoft.com/en-us/library/system.diagnostics.debugger.log.aspx)
 
 Supported in .NET, Silverlight and Mono
 
