@@ -189,6 +189,15 @@ Adding `throwConfigExceptions="true"` will make NLog complain, when something is
 
 There is also a setting called `throwExceptions="true"`, which should never be used in production as it can cause havoc for your application. It is intended for unit testing, and local troubleshooting. See also [Troubleshooting Configuration](Configuration-file#troubleshooting-logging)
 
+#### 5. Remember to Flush
+NLog will by default attempt to flush automatically at application shutdown. Microsoft Windows give .NET applications a limited amount of time to perform shutdown (usually 2 sec) before being terminated. If having a NLog configuration with NLog Targets that requires network-traffic (Http, Mail, Tcp), then it is a really good idea to perform a manually Flush/Shutdown independent on running on Linux/Windows.
+
+```C#
+NLog.LogManager.Shutdown(); // Flush and close down internal threads and timer
+```
+
+NET Application running on Mono/Linux are required to stop threads/timers before entering application shutdown phase. Failing to do this will cause unhandled exceptions and segmentation faults, and other unpredictable behavior.
+
 ## Wrappers
 NLog supports special kinds of targets which do not do any logging by themselves, but which modify the behavior of other loggers. Those targets are called wrappers. The most commonly used ones are:
 * [AsyncWrapper](AsyncWrapper-target) - Improves [[Performance]] by providing asynchronous, buffered execution of target writes.
