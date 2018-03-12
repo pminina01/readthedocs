@@ -193,7 +193,7 @@ There is also a setting called `throwExceptions="true"`, which should never be u
 NLog will by default attempt to flush automatically at application shutdown. Microsoft Windows give .NET applications a limited amount of time to perform shutdown (usually 2 sec) before being terminated. If having a NLog configuration with NLog Targets that requires network-traffic (Http, Mail, Tcp), then it is a really good idea to perform a manually Flush/Shutdown independent on running on Linux/Windows.
 
 ```C#
-NLog.LogManager.Shutdown(); // Flush and close down internal threads and timer
+NLog.LogManager.Shutdown(); // Flush and close down internal threads and timers
 ```
 
 NET Application running on Mono/Linux are required to stop threads/timers before entering application shutdown phase. Failing to do this will cause unhandled exceptions and segmentation faults, and other unpredictable behavior.
