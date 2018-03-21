@@ -4,7 +4,7 @@
 * [[Writing log messages|tutorial#writing-log-messages]]
   * [[Log levels|tutorial#log-levels]]
   * [[Layouts and LayoutRenderers|tutorial#layouts-and-layoutrenderers]]
-  * [[Best Practises for Logging|tutorial#best-practises-for-logging]]
+  * [[Best Practices for Logging|tutorial#best-practices-for-logging]]
 * [[Wrappers|tutorial#wrappers]]
 * [[Troubleshooting|tutorial#troubleshooting]]
 
@@ -136,7 +136,7 @@ One can also use a more complex Layout instead of `SimpleLayout`:
 
 See full list here: [[Layouts]]
 
-### Best Practises for Logging
+### Best Practices for Logging
 
 #### 1. Logger should be a static variable in each class
 Creating a new Logger has an overhead, as it has to acquire locks and allocate objects.
