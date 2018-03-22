@@ -38,3 +38,5 @@ From [stackoverflow](https://stackoverflow.com/a/260576/767425)
   <logger name="*" minlevel="Trace" writeTo="debugger" />
 </rules>
 ```
+### See Also
+There is similar [OutputDebugString-Target](https://github.com/NLog/NLog/wiki/OutputDebugString-target), that  writes to [OutputDebugString](https://msdn.microsoft.com/da-dk/library/windows/desktop/aa363362.aspx) - that can be monitored by [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview) (And friends) 
