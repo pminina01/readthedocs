@@ -21,3 +21,6 @@ Read more about using the [[Configuration File]].
 ### Performance Options
 * **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
   > Introduced with NLog v4.4.2. Default became `True` with NLog v4.5
+
+### See Also
+There is similar [Debugger-target](https://github.com/NLog/NLog/wiki/Debugger-target), that  writes to [System.Diagnostics.Debugger.Log](https://msdn.microsoft.com/en-us/library/system.diagnostics.debugger.log.aspx) - Posts a message for the attached debugger.  
