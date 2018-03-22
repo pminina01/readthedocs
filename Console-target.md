@@ -15,7 +15,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono
           detectConsoleAvailable="Boolean" />
 </targets>
 ```
-Read more about using the [Configuration File](Configuration file).
+Read more about using the [Configuration File](https://github.com/NLog/NLog/wiki/Configuration-file).
 
 ## Parameters
 ### General Options
