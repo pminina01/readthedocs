@@ -36,3 +36,6 @@ Read more about using the [Configuration File](https://github.com/NLog/NLog/wiki
 * **error** - Indicates whether to send the log messages to the standard error instead of the standard output. [Boolean](Data types) Default: `false`
 
 * **detectConsoleAvailable** - Indicates whether the console target should disable itself when no console detected. [Boolean](Data types) Default: `false` (introduced in 4.3.10 with default: `true`. Since NLog 4.4 default `false`)
+
+### Example
+`<target name="Console" xsi:type="Console"  layout="${longdate} ${callsite} ${level} ${message}"/>`
