@@ -168,11 +168,10 @@ e.g.
 
 e.g. logging `"Hello {0} with {Message}"`
 
-if one of the parameters is non-numeric, then all the parameters will be treated as structured parameters. 
+For backward compatibility (and performance), then NLog will by default skip full parsing if it detects the first parameter as being positional index.
 
-This is supported but not recommend because of performance (we need a backtrack) and numerics are most of the time not so descriptive.
-
+When `parseMessageTemplates='true'` then NLog will always parse all parameters, and if one is non-numeric, then all the parameters will be treated as structured parameters. Mixing and numeric and structured parameters is not recommended, as it hurts performance (backtrack) and numeric parameters are most of the time not so descriptive.
 
 ### Parameter Names
 
-The Names of the paramters should be unique
+The Names of the parameters should be unique
