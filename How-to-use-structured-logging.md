@@ -40,17 +40,45 @@ Will be formatted as:
 `Order 42 created for "Kenny"`
 
 The formatting is controlled by the datatype of the parameter:
-- `string`: surrounded with quotes
+- `string`: surrounded with double quotes
 - `number`: no quotes
 - `null`: printed as `NULL`
-- `list/ienumerable`: "item1", "item2", etc. (comma separated)
+- `list/ienumerable/array`: "item1", "item2", etc. (comma separated)
 - `dictionary`: "key1"="value1", "key2"="value2"
-- `objects`: toString by default
+- `objects`: `ToString()` 
 
 It's possible to prefix the hole names with the operator `@` or `$`:
 
 - '@' will destructure the object into JSON (Supports object property reflection)
-- `$` will force toString
+- `$` forces `ToString()`
+
+
+### Examples
+
+
+
+```c#
+Object o = null;
+
+logger.Info("Test {value1}", o); // null case. Result:  Test NULL
+logger.Info("Test {value1}", new DateTime(2018,03, 25)); // datetime case. Result:  Test 25-3-2018 00:00:00 (locale TString)
+logger.Info("Test {value1}", new List<string> { "a", "b" }); // list of strings. Result: Test "a", "b"
+logger.Info("Test {value1}", new[] { "a", "b" }); // array. Result: Test "a", "b"
+logger.Info("Test {value1}", new Dictionary<string, int> { { "key1", 1 }, { "key2", 2 } }); // dict. Result:  Test "key1"=1, "key2"=2
+
+var order = new Order
+{
+    OrderId = 2,
+    Status = OrderStatus.Processing
+};
+
+logger.Info("Test {value1}", order); // object Result:  Test MyProgram.Program+Order
+logger.Info("Test {@value1}", order); // object Result:  Test {"OrderId":2, "Status":"Processing"}
+logger.Info("Test {value1}", new { OrderId = 2, Status = "Processing"}); // anomynous object. Result: Test { OrderId = 2, Status = Processing }
+logger.Info("Test {@value1}", new { OrderId = 2, Status = "Processing"}); // anomynous object. Result:Test {"OrderId":2, "Status":"Processing"}
+
+```
+
 
 # NLog Layout Support
 The [Json Layout](JsonLayout) and [Log4JXml Layout](Log4JXmlEventLayout) already has builtin support for [event-properties](EventProperties-Layout-Renderer), and automatically supports structured logging. Just configure the setting `includeAllProperties="true"`
