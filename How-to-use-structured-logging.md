@@ -46,13 +46,13 @@ The formatting is controlled by the datatype of the parameter:
 - string: surrounded with double quotes, e.g `"hello"`
 - number: no quotes
 - null: printed as `NULL`
-- list/ienumerable/array: `"item1", "item2"`, etc. (comma separated)
+- list/ienumerable/array: `"item1", "item2"` 
 - dictionary: `"key1"="value1", "key2"="value2"`
 - objects: `ToString()` 
 
 It's possible to control formatting by preceding `@` or `$`:
 
-- '@' will format the object as JSON
+- `@` will format the object as JSON
 - `$` forces `ToString()`
 
 
