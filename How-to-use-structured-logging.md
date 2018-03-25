@@ -164,7 +164,7 @@ Create a new class that `NLog.IValueFormatter` and set ` NLog.Config.Configurati
 
 ### I like to use Json.NET for creating JSON.
 
-You need a custom `NLog.IJsonConverter` and set 
+You need a custom `NLog.IJsonConverter` and set `NLog.Config.ConfigurationItemFactory.Default.JsonConverter`
 
 e.g.
 
