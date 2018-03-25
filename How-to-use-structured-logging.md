@@ -87,7 +87,7 @@ logger.Info("Test {@value1}", new { OrderId = 2, Status = "Processing"}); // ano
 
 ## Capture parameters
 
-The parameters will be serialized to the message (see formatting) and could be retrieved as object with 
+The parameters will be serialized to the message (see Formatting of the message) and could be retrieved as object by using 
 
 `${event-properties}` or `${all-event-properties}`, for example:
 
