@@ -1,3 +1,6 @@
+NLog 4.5 introduced structured logging - also called message templates and structural logging. This document describes how to use structured logging. The implementation in NLog uses the message templates rules and so it's also recommend to check: https://messagetemplates.org/
+
+
 # Why structured logging
 Structured logging makes it easier to store and query log-events, as the logevent message-template and message-parameters are preserved, instead of just transforming them into a formatted message.
 
