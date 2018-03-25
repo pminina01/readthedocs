@@ -169,8 +169,18 @@ You need a custom `NLog.IJsonConverter` and set
 e.g.
 
 ```c#
-    internal class JsonNetSerializer : IJsonConverter
+    internal class JsonNetSerializer : NLog.IJsonConverter
     {
+        readonly JsonSerializerSettings _settings;
+
+        public JsonNetSerializer()
+        {
+           _settings = new JsonSerializerSettings
+                {
+                    Formatting = Formatting.Indented,
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                };
+        }
 
         /// <summary>Serialization of an object into JSON format.</summary>
         /// <param name="value">The object to serialize to JSON.</param>
@@ -180,28 +190,23 @@ e.g.
         {
             try
             {
-
-                var settings = new JsonSerializerSettings
+                JsonSerializer jsonSerializer = JsonSerializer.CreateDefault(_settings);
+                System.IO.StringWriter sw = new StringWriter(builder, System.Globalization.CultureInfo.InvariantCulture);
+                using (JsonTextWriter jsonWriter = new JsonTextWriter(sw))
                 {
-                    Formatting = Formatting.Indented
-                };
-                var json = JsonConvert.SerializeObject(value, settings);
-                builder.Append(json);
-
+                    jsonWriter.Formatting = jsonSerializer.Formatting;
+                    jsonSerializer.Serialize(jsonWriter, value, null);
+                }
             }
             catch (Exception e)
             {
-                InternalLogger.Error(e, "Error when custom JSON serialization");
+                NLog.Common.InternalLogger.Error(e, "Error when custom JSON serialization");
                 return false;
-
             }
             return true;
         }
-
     }
-
 ```
-
 
 ### Combine indexed and structured logging
 
