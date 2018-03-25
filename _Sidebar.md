@@ -2,6 +2,7 @@
 
 * [Getting started](Tutorial)
   * [Getting started .NET Core](https://github.com/NLog/NLog.web/wiki)
+  * [How to use structured logging](How-to-use-structured-logging)
 * [Examples](Examples)
 * [External articles and tutorials](Web-resources)
 * [Troubleshooting](Logging-troubleshooting)
