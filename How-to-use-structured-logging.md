@@ -171,3 +171,8 @@ e.g. logging `"Hello {0} with {Message}"`
 if one of the parameters is non-numeric, then all the parameters will be treated as structured parameters. 
 
 This is supported but not recommend because of performance (we need a backtrack) and numerics are most of the time not so descriptive.
+
+
+### Names
+
+Names should be uniqnue
