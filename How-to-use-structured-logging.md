@@ -31,7 +31,7 @@ Any NLog destination target that is able to handle log-event-properties will aut
 
 
 ## Formatting 
-The formatting of message templates parameters depends on the datatype (and not just `ToString`):
+The formatting of message depends on the datatype of the parameters.
 
 Example:
 ```c#
@@ -43,7 +43,7 @@ Will be formatted as:
 `Order 42 created for "Kenny"`
 
 The formatting is controlled by the datatype of the parameter:
-- string`: surrounded with double quotes, e.g `"hello"`
+- string: surrounded with double quotes, e.g `"hello"`
 - number`: no quotes
 - null`: printed as `NULL`
 - list/ienumerable/array: `"item1", "item2"`, etc. (comma separated)
