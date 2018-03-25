@@ -115,3 +115,59 @@ It is possible to disable that NLog should not attempt to parse log-events as st
     ...
 </nlog>
 ```
+
+
+## Advanced
+
+### I need a custom formatter
+
+Create a new class that `NLog.IValueFormatter` and set ` NLog.Config.ConfigurationItemFactory.Default.ValueFormatter`
+
+### I like to use Json.NET for creating JSON.
+
+You need a custom `NLog.IJsonConverter` and set 
+
+e.g.
+
+```c#
+    internal class JsonNetSerializer : IJsonConverter
+    {
+
+        /// <summary>Serialization of an object into JSON format.</summary>
+        /// <param name="value">The object to serialize to JSON.</param>
+        /// <param name="builder">Output destination.</param>
+        /// <returns>Serialize succeeded (true/false)</returns>
+        public bool SerializeObject(object value, StringBuilder builder)
+        {
+            try
+            {
+
+                var settings = new JsonSerializerSettings
+                {
+                    Formatting = Formatting.Indented
+                };
+                var json = JsonConvert.SerializeObject(value, settings);
+                builder.Append(json);
+
+            }
+            catch (Exception e)
+            {
+                InternalLogger.Error(e, "Error when custom JSON serialization");
+                return false;
+
+            }
+            return true;
+        }
+
+    }
+
+```
+
+
+### Combine indexed and structured logging
+
+e.g. logging `"Hello {0} with {Message}"`
+
+if one of the parameters is non-numeric, then all the parameters will be treated as structured parameters. 
+
+This is supported but not recommend because of performance (we need a backtrack) and numerics are most of the time not so descriptive.
