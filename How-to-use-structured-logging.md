@@ -214,3 +214,10 @@ When `parseMessageTemplates='true'` then NLog will always parse all parameters, 
 ### Parameter Names
 
 The Names of the parameters should be unique
+
+
+### I just need the template
+
+e.g. `Order {orderId}`
+
+Use `${message:raw=true}`
