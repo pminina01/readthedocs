@@ -190,9 +190,9 @@ e.g.
         {
             try
             {
-                JsonSerializer jsonSerializer = JsonSerializer.CreateDefault(_settings);
-                System.IO.StringWriter sw = new StringWriter(builder, System.Globalization.CultureInfo.InvariantCulture);
-                using (JsonTextWriter jsonWriter = new JsonTextWriter(sw))
+                var jsonSerializer = JsonSerializer.CreateDefault(_settings);
+                var sw = new System.IO.StringWriter(builder, System.Globalization.CultureInfo.InvariantCulture);
+                using (var jsonWriter = new JsonTextWriter(sw))
                 {
                     jsonWriter.Formatting = jsonSerializer.Formatting;
                     jsonSerializer.Serialize(jsonWriter, value, null);
