@@ -30,7 +30,7 @@ logger.Debug("{shopitem} added to basket by {user}", new { Id=6, Name = "Jacket"
 Any NLog destination target that is able to handle log-event-properties will automatically experience the benefit of doing structured logging.
 
 
-## Formatting 
+## Formatting of the message
 The formatting of message depends on the datatype of the parameters.
 
 Example:
@@ -85,9 +85,9 @@ logger.Info("Test {@value1}", new { OrderId = 2, Status = "Processing"}); // ano
 
 
 
-## Extracting parameters
+## Capture parameters
 
-The parameters will be serialized to the message (see formatting) and call be retrieved as object with 
+The parameters will be serialized to the message (see formatting) and could be retrieved as object with 
 
 `${event-properties}` or `${all-event-properties}`, for example:
 
@@ -118,6 +118,8 @@ For the JSON layout you could also use: `includeAllProperties`:
     </target>
 
 ```
+
+In code you could use `LogEventInfo.MessageTemplateParameters`
 
 # NLog Layout Support
 The [Json Layout](JsonLayout) and [Log4JXml Layout](Log4JXmlEventLayout) already has builtin support for [event-properties](EventProperties-Layout-Renderer), and automatically supports structured logging. Just configure the setting `includeAllProperties="true"`
