@@ -146,16 +146,7 @@ These NLog targets already supports structured logging:
 
 There are already many custom NLog targets, that provides the ability to store log-events in central storage, and allowing a Web-Application to query the log-events along with their event-properties. These targets will automatically benefit from doing structured logging, and allow the Web-Application to perform effective queries.
 
-# Disabling Structured Logging
-NLog will by default attempt to parse log-events as structured log-events. This gives a minor overhead, that will not be noticable by most.
 
-It is possible to disable that NLog should not attempt to parse log-events as structured log-events with this xml-setting:
-
-```xml
-<nlog parseMessageTemplates="false">
-    ...
-</nlog>
-```
 
 
 ## Advanced
@@ -228,3 +219,15 @@ The Names of the parameters should be unique
 e.g. `Order {orderId}`
 
 Use `${message:raw=true}`
+
+
+### Disabling Structured Logging
+NLog will by default attempt to parse log-events as structured log-events. This gives a minor overhead, that will not be noticable by most.
+
+It is possible to disable that NLog should not attempt to parse log-events as structured log-events with this xml-setting:
+
+```xml
+<nlog parseMessageTemplates="false">
+    ...
+</nlog>
+```
