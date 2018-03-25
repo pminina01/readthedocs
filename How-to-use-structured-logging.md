@@ -40,16 +40,16 @@ Will be formatted as:
 `Order 42 created for "Kenny"`
 
 The formatting is controlled by the datatype of the parameter:
-- `string`: surrounded with double quotes
-- `number`: no quotes
-- `null`: printed as `NULL`
-- `list/ienumerable/array`: "item1", "item2", etc. (comma separated)
-- `dictionary`: "key1"="value1", "key2"="value2"
-- `objects`: `ToString()` 
+- string`: surrounded with double quotes, e.g `"hello"`
+- number`: no quotes
+- null`: printed as `NULL`
+- list/ienumerable/array: `"item1", "item2"`, etc. (comma separated)
+- dictionary: `"key1"="value1", "key2"="value2"`
+- objects: `ToString()` 
 
-It's possible to prefix the hole names with the operator `@` or `$`:
+It's possible to control formatting by preceding `@` or `$`:
 
-- '@' will destructure the object into JSON (Supports object property reflection)
+- '@' will format the object as JSON
 - `$` forces `ToString()`
 
 
