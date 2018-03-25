@@ -173,6 +173,6 @@ if one of the parameters is non-numeric, then all the parameters will be treated
 This is supported but not recommend because of performance (we need a backtrack) and numerics are most of the time not so descriptive.
 
 
-### Names
+### Parameter Names
 
-Names should be uniqnue
+The Names of the paramters should be unique
