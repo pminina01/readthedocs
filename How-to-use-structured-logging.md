@@ -44,8 +44,8 @@ Will be formatted as:
 
 The formatting is controlled by the datatype of the parameter:
 - string: surrounded with double quotes, e.g `"hello"`
-- number`: no quotes
-- null`: printed as `NULL`
+- number: no quotes
+- null: printed as `NULL`
 - list/ienumerable/array: `"item1", "item2"`, etc. (comma separated)
 - dictionary: `"key1"="value1", "key2"="value2"`
 - objects: `ToString()` 
