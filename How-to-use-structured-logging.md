@@ -117,6 +117,8 @@ For the JSON layout you could also use: `includeAllProperties`:
 
     </target>
 
+```
+
 # NLog Layout Support
 The [Json Layout](JsonLayout) and [Log4JXml Layout](Log4JXmlEventLayout) already has builtin support for [event-properties](EventProperties-Layout-Renderer), and automatically supports structured logging. Just configure the setting `includeAllProperties="true"`
 
