@@ -25,6 +25,11 @@
 * **I'm missing important stuff!**
   - You can send a feature request, but do you know you can [extend NLog with a few lines of code](http://nlog-project.org/2015/06/30/extending-nlog-is-easy.html)?
 
+* **I'm missing the trace and debug logs in ASP.NET Core 2**
+
+  -  [Check your appsettings.json](https://github.com/NLog/NLog.Web/wiki/Missing-trace%5Cdebug-logs-in-ASP.NET-Core-2%3F)
+
+
 * **How do I upgrade to NLog 4.x?** 
   - Check the [4.0 release post](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html), there are some breaking changes.
   - Update all the NLog packages. The latest stable version is recommend. 
