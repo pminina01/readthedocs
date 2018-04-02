@@ -148,3 +148,81 @@ Writing without an exception will render
 with `RenderEmptyObject=true` (default) it will render:
 
 ` "type": "NLog.NLogRuntimeException", "message": "test", "innerException": {  } }`
+
+
+## Nested JSON with structured logging
+
+```c#
+        public class TestObject
+        {
+            public string A { get; set; }
+            public int B { get; set; }
+
+            public override string ToString() { return A; }
+        }
+```
+
+```c#
+var testObj = new TestObject
+{
+    A = "AlphaObject",
+    B = 2
+};
+
+var testObjB = new TestObject
+{
+    A = "BetaObject",
+    B = 3
+};
+
+log.Info("First: {alpha}, Second: {beta}", testObj, testObjB)
+```
+
+With this config:
+
+```xml
+ <target xsi:type="File" name="jsonFile2" fileName="c:\temp\nlog-json-nested-${shortdate}.log">
+     <layout type="JsonLayout">
+         <attribute name="time" layout="${longdate}" />
+         <attribute name="level" layout="${level}" />
+         <attribute name="message" layout="${message}" />
+         <attribute name="eventProperties" encode="false" >
+             <layout type='JsonLayout' includeAllProperties="true"/>
+         </attribute>
+     </layout>
+ </target>
+```
+
+Will render:
+
+```json
+{ "time": "2018-04-02 02:00:00.2349", "level": "Info", "message": "First: AlphaObject, Second: BetaObject", "eventProperties": { "alpha": {
+  "A": "AlphaObject",
+  "B": 2
+}, "beta": {
+  "A": "BetaObject",
+  "B": 3
+} } }
+
+```
+
+pretty printed:
+
+```json
+{
+  "time": "2018-04-02 02:00:00.2349",
+  "level": "Info",
+  "message": "First: AlphaObject, Second: BetaObject",
+  "eventProperties": {
+    "alpha": {
+      "A": "AlphaObject",
+      "B": 2
+    },
+    "beta": {
+      "A": "BetaObject",
+      "B": 3
+    }
+  }
+}
+```
+
