@@ -152,16 +152,20 @@ with `RenderEmptyObject=true` (default) it will render:
 
 ## Nested JSON with structured logging
 
-```c#
-        public class TestObject
-        {
-            public string A { get; set; }
-            public int B { get; set; }
+Writing JSON with the structured logging parameters as eventProperties.
 
-            public override string ToString() { return A; }
-        }
+Object for test:
+```c#
+public class TestObject
+{
+    public string A { get; set; }
+    public int B { get; set; }
+
+    public override string ToString() { return A; }
+}
 ```
 
+Logger calls:
 ```c#
 var testObj = new TestObject
 {
