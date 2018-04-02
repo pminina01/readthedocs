@@ -53,7 +53,7 @@ public class HelloWorldLayoutRenderer : LayoutRenderer
 ```
 
 ### How to pass configuration options to the layout render?
-Just create public properties on the Layout Renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` is can be passed to the layout renderer without using the name.
+Just create public properties on the Layout Renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` can be passed to the layout renderer without using the name.
 
 
 
@@ -87,4 +87,4 @@ Example usages
 - `${hello-world}` - raises exception: required parameter Config2 isn't set
 - `${hello-world:Config2=abc}` - OK, Config2 property set
 - `${hello-world:true:config2=abc}` - default parameter (Caps) set to `true`
-- `${hello-world:true:config2=abc:config1=yes}` - all the three properties se
+- `${hello-world:true:config2=abc:config1=yes}` - all the three properties set
