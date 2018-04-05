@@ -191,7 +191,7 @@ With this config:
          <attribute name="level" layout="${level}" />
          <attribute name="message" layout="${message}" />
          <attribute name="eventProperties" encode="false" >
-             <layout type='JsonLayout' includeAllProperties="true"/>
+             <layout type='JsonLayout' includeAllProperties="true"  maxRecursionLimit="2"/>
          </attribute>
      </layout>
  </target>
