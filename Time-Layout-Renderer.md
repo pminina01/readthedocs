@@ -1,4 +1,4 @@
-The time in a 24-hour, sortable format HH:mm:ss.mmm. 
+The time in a 24-hour, sortable format HH:mm:ss.mmmm. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
