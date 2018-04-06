@@ -30,3 +30,13 @@ Add the following to your logger configuration to reference the above properties
 ${mdlc:item=PropertyName}
 ${mdlc:item=PropertyName2}
 ```
+
+### Scoped item
+The SetScoped method returns an `IDisposable` that removes the added item when disposed. It can be used in conjunction with the `using` statement to limit the scope during which the item will be present in the context.
+
+```c#
+using (MappedDiagnosticsLogicalContext.SetScoped("Property", "PropertyValue")) {
+    // "Property" item is present in current context
+}
+// "Property" item has been removed from current context
+```
