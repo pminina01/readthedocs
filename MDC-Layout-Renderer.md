@@ -67,6 +67,15 @@ In the logging configuration, include:
 ```xml
 ${mdc:item=TickCount}
 ```
+### Scoped item
+The SetScoped method returns an `IDisposable` that removes the added item when disposed. It can be used in conjunction with the `using` statement to limit the scope during which the item will be present in the context.
+
+```c#
+using (MappedDiagnosticsContext.SetScoped("Property", "PropertyValue")) {
+    // "Property" item is present in current context
+}
+// "Property" item has been removed from current context
+```
 
 ## Notes
 When rendering context items, the item is passed to `String.Format` along with the current configuration's `DefaultCultureInfo` value.
