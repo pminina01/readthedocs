@@ -14,6 +14,7 @@ NLog supports creating custom layout renderers. For more information, see: [Exte
 * [${callsite}](Callsite-Layout-Renderer) - The call site (class name, method name and source information).
 * [${callsite-linenumber}](Callsite-line-number-layout-renderer) - The call site source line number. 
 * [${counter}](Counter-Layout-Renderer) - A counter value (increases on each layout rendering).
+* [${currentdir}](CurrentDir-Layout-Renderer) - The current working directory of the application.
 * [${date}](Date-Layout-Renderer) - Current date and time.
 * [${document-uri}](DocumentUri-Layout-Renderer) - URI of the HTML page which hosts the current Silverlight application.
 * [${environment}](Environment-Layout-Renderer) - The environment variable.
