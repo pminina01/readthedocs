@@ -1,3 +1,6 @@
+NLog ver. 4.5 makes it very [easy to perform archive of old files](https://github.com/NLog/NLog/wiki/File-target#archive-old-log-files). 
+
+But there are many [archival options](https://github.com/NLog/NLog/wiki/File-target#archival-options), which allows one to configure the archive logic even further. This can be needed if using NLog older than ver. 4.5.
 
 ### Size-based file archival
 Log files can be automatically archived by moving them to another location after reaching certain size. The following configuration will create logs/logfile.txt which will be archived to archives/log.000000.txt', archives/log.000001.txt', archives/log.000002.txt' and so on once the main log file reaches 10KB.
