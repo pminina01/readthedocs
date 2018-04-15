@@ -200,6 +200,45 @@ The simplest use of File target is to produce single log file. In order to do th
     </rules>
 </nlog>
 ```
+
+### Archive old log files
+NLog 4.5 makes it easy to setup archive logic to move/cleanup old files. You just need to configure `maxArchiveFiles` and it will automatically perform cleanup.
+
+If the `fileName` is static and doesn't include a `${date}` layout, then you can use `archiveEvery="Day"` to ensure that it starts a new logfile every day. If the `fileName` does include `${date}` layout, then you should NOT configure `archiveEvery` (Unless it is `Year`).
+
+If the logfile becomes very large and slow to view, then you can use `archiveAboveSize="10240"` to ensure that it starts a new logfile when filesize reaches a certain limit.
+
+```xml
+<?xml version="1.0" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ 
+    <targets>
+        <target name="file" xsi:type="File"
+            layout="${longdate} ${logger} ${message}${exception:format=ToString}" 
+            fileName="${basedir}/logs/logfile.txt" 
+            maxArchiveFiles="4"
+            archiveAboveSize="10240"
+            archiveEvery="Day" />
+    </targets>
+ 
+    <rules>
+        <logger name="*" minlevel="Debug" writeTo="file" />
+    </rules>
+</nlog>
+```
+
+It will generate the following filenames:
+```
+* logfile.txt
+* logfile.3.txt
+* logfile.2.txt
+* logfile.1.txt
+```
+
+If using NLog older than ver. 4.5 (or have very special needs), then also see [[FileTarget-Archive-Examples]]
+
+
 ### Per-level log files
 Single File target can be used to write to multiple files at once. The following configuration will cause log entries for each log level to be written to a separate file, so you will get:
  * Trace.log
@@ -293,40 +332,3 @@ In order to create comma-separated files (CSV), use the following configuration,
     </rules>
 </nlog>
 ```
-
-### Archive old log files
-NLog 4.5 makes it easy to setup archive logic to move/cleanup old files. You just need to configure `maxArchiveFiles` and it will automatically perform cleanup.
-
-If the `fileName` is static and doesn't include a `${date}` layout, then you can use `archiveEvery="Day"` to ensure that it starts a new logfile every day. If the `fileName` does include `${date}` layout, then you should NOT configure `archiveEvery` (Unless it is `Year`).
-
-If the logfile becomes very large and slow to view, then you can use `archiveAboveSize="10240"` to ensure that it starts a new logfile when filesize reaches a certain limit.
-
-```xml
-<?xml version="1.0" ?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- 
-    <targets>
-        <target name="file" xsi:type="File"
-            layout="${longdate} ${logger} ${message}${exception:format=ToString}" 
-            fileName="${basedir}/logs/logfile.txt" 
-            maxArchiveFiles="4"
-            archiveAboveSize="10240"
-            archiveEvery="Day" />
-    </targets>
- 
-    <rules>
-        <logger name="*" minlevel="Debug" writeTo="file" />
-    </rules>
-</nlog>
-```
-
-It will generate the following filenames:
-```
-* logfile.txt
-* logfile.3.txt
-* logfile.2.txt
-* logfile.1.txt
-```
-
-If using NLog older than ver. 4.5 (or have very special needs), then also see [[FileTarget-Archive-Examples]]
