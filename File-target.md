@@ -204,7 +204,7 @@ The simplest use of File target is to produce single log file. In order to do th
 ### Archive old log files
 NLog 4.5 makes it easy to setup archive logic to move/cleanup old files. You just need to configure `maxArchiveFiles` and it will automatically perform cleanup.
 
-If the `fileName` is static and doesn't include a `${date}` layout, then you can use `archiveEvery="Day"` to ensure that it starts a new logfile every day. If the `fileName` does include `${date}` layout, then you should NOT configure `archiveEvery` (Unless it is `Year`).
+If the `fileName` is static and doesn't include a `${date}` layout, then you can use `archiveEvery="Day"` to ensure that it starts a new logfile every day. If the `fileName` does include `${date}` layout, then you should NOT configure `archiveEvery` (Unless it is `Year` for very special cases).
 
 If the logfile becomes very large and slow to view, then you can use `archiveAboveSize="10240"` to ensure that it starts a new logfile when filesize reaches a certain limit.
 
