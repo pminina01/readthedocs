@@ -189,10 +189,10 @@ The simplest use of File target is to produce single log file. In order to do th
  
     <targets>
         <target name="file" xsi:type="File"
-            layout="${longdate} ${logger} ${message}" 
+            layout="${longdate} ${logger} ${message}${exception:format=ToString}" 
             fileName="${basedir}/logs/logfile.txt" 
-            keepFileOpen="false"
-            encoding="iso-8859-2" />
+            keepFileOpen="true"
+            encoding="UTF8" />
     </targets>
  
     <rules>
