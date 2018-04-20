@@ -192,7 +192,7 @@ The simplest use of File target is to produce single log file. In order to do th
             layout="${longdate} ${logger} ${message}${exception:format=ToString}" 
             fileName="${basedir}/logs/logfile.txt" 
             keepFileOpen="true"
-            encoding="Utf8" />
+            encoding="utf-8" />
     </targets>
  
     <rules>
