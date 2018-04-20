@@ -144,7 +144,7 @@ These NLog targets already supports structured logging:
 * [NLogViewer Target](NLogViewer-target) has automatic support by using the [Log4JXml Layout](Log4JXmlEventLayout).
 * [WebService Target](WebService-target) has automatic support by using the [Json Layout](JsonLayout) for JSON-post.
 
-There are already many custom NLog targets that provide the ability to store log-events in central storage, and allowing a Web-Application to query the log-events along with their event-properties. These targets will automatically benefit from structured logging, and allow the Web-Application to perform effective queries.
+There are already many custom NLog targets that provide the ability to store log-events in central storage, and allow a Web-Application to query the log-events along with their event-properties. These targets will automatically benefit from structured logging, and allow the Web-Application to perform effective queries.
 
 
 
