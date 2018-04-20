@@ -137,7 +137,7 @@ NLog 4.5 extends the following NLog LayoutRenderers with support for serializing
 * [$(mdlc)](Mdlc-Layout-Renderer) - Async Context
 
 # NLog Target Support
-Any NLog destination target that handles [event-properties](EventProperties-Layout-Renderer) will be able to take advantage from structured logging.
+Any NLog destination target that handles [event-properties](EventProperties-Layout-Renderer) will be able to take advantage of structured logging.
 
 These NLog targets already supports structured logging:
 
