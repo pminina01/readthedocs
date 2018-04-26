@@ -45,7 +45,7 @@ The .NET Compact Framework doesn’t recognize application configuration files (
 ### Xamarin Assets
 For Xamarin Android, the assets folder is supported. "NLog.config" in the assets folder will be loaded automatically.
 If the file name is different, then use:
-```
+```c#
 LogManager.Configuration = new XmlLoggingConfiguration("assets/someothername.config");
 ````
 
