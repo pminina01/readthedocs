@@ -63,6 +63,11 @@ max 10 depth
 ${exception:format=toString,Data:maxInnerExceptionLevel=10}
 ```
 
+### Log exception data with newline
+
+```
+${exception:format=data:exceptionDataSeparator=\r\n}
+```
 
 ## More Info and Examples
 For more information, see [How to properly log exceptions](How-to-log-exceptions).
