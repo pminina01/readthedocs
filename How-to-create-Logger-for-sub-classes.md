@@ -5,7 +5,7 @@ class BaseClass
 {
     protected BaseClass()
     {
-        Log = LogManager.GetLogger(GetType().FullName);
+        Log = LogManager.GetLogger(GetType().ToString());
     }
 
     protected Logger Log { get; private set; }
