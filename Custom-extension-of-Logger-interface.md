@@ -29,4 +29,4 @@ When creating a custom wrapper around the NLog Logger-interface, then the callsi
 Logger.Log(Type wrapperType, LogEventInfo logEvent)
 ```
 
-The custom wrapper should provide its own Type as wrapperType, and then the callsite logic will not see the custom wrapper as being the origin of the log-statement. If extending the NLog Logger-interface without providing the correct `loggerType`, then [Callsite](Callsite-layout-renderer) will stop working.
+The custom wrapper should provide its own Type as wrapperType, and then the callsite logic will not see the custom wrapper as being the origin of the log-statement. If extending the NLog Logger-interface without providing the correct `wrapperType`, then [Callsite](Callsite-layout-renderer) will stop working.
