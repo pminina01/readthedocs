@@ -112,7 +112,7 @@ External packages, not maintained by the NLog team.
 
 * [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) - [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
 
-* [${appsetting}](https://github.com/linmasaki/NLog.Appsetting.Standard) - [![Version](https://img.shields.io/nuget/v/NLog.Appsetting.Standard.svg)](https://www.nuget.org/packages/NLog.Appsetting.Standard) - `${appsetting}` for .NET Standard and Json config files.
+* [${appsetting}](https://github.com/linmasaki/NLog.Appsetting.Standard) - [![Version](https://img.shields.io/nuget/v/NLog.Appsetting.Standard.svg)](https://www.nuget.org/packages/NLog.Appsetting.Standard) - `${appsetting}` for .NET Standard and appsettings.json config files.
 
 
 ## Passing Custom Values to a Layout
