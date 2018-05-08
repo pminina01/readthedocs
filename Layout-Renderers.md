@@ -112,5 +112,8 @@ External packages, not maintained by the NLog team.
 
 * [${gelf}](https://github.com/farzadpanahi/NLog.GelfLayout) - [![Version](https://img.shields.io/nuget/v/NLog.GelfLayout.svg)](https://www.nuget.org/packages/NLog.GelfLayout) - Converts log to [GELF](http://www.graylog2.org/resources/gelf) format. 
 
+* [${appsetting}](https://github.com/linmasaki/NLog.Appsetting.Standard) - [![Version](https://img.shields.io/nuget/v/NLog.Appsetting.Standard.svg)](https://www.nuget.org/packages/NLog.Appsetting.Standard) - `${appsetting}` for .NET Standard and Json config files.
+
+
 ## Passing Custom Values to a Layout
 Even though the layout renderers provide many pre-defined values, you may need to pass application specific values to your [Layouts](Layouts). You can pass your own values in code by adding custom properties to the event. You then retrieve the value using the [${event-properties}](Event-Context-Layout-Renderer) renderer. See the documentation for the [${event-properties}](Event-Context-Layout-Renderer) for an example.
