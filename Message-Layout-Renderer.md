@@ -4,7 +4,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
 
 ## Configuration Syntax
 ```
-${message:exceptionSeparator=String:withException=Boolean}
+${message:exceptionSeparator=String:withException=Boolean:raw=Boolean}
 ```
 
 ## Parameters
