@@ -11,3 +11,4 @@ ${guid:format=String}
 ### Rendering Options
 * **format** - GUID format as accepted by Guid.ToString() method. Default: `N`
 * **GeneratedFromLogEvent** - Creates a special GUID from the LogEvent, so if the LogEvent is written to multiple targets, then all targets will get the same GUID for the LogEvent (Like a CorrelationId). Default: `False`
+  > Introduced with NLog 4.5
