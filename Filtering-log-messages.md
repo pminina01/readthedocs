@@ -7,7 +7,7 @@ With the use of `<filters>` you may ignore (blacklist) and/or allow (whitelist) 
 e.g.
 ```xml
 <logger name="*" writeTo="file">
-   <filters>
+  <filters>
     <when condition="length('${message}') > 100" action="Ignore" />
   </filters>
 </logger> 
@@ -16,7 +16,7 @@ e.g.
 ## Routing
 [Logging Rules](https://github.com/nlog/NLog/wiki/Configuration-file#rules) is the most efficient way to perform filtering using the name of the Logger.
 
-By not specifying `writeTo=` then it act like a blackhole with almost no overhead:
+By not specifying `writeTo=` then it act like a blackhole with almost no overhead. But if also needing custom filter logic, then one needs to use a [[Null target]].
 > NLog 4.5 allows one to specify an empty `writeTo=""`
 
 ```xml
