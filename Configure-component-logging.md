@@ -24,7 +24,7 @@ internal class MyLogManager
          string configFilePath = Path.ChangeExtension(thisAssembly.Location, ".nlog"); 
 
          LogFactory logFactory = new LogFactory();
-         logFactory.Configuration = XmlLoggingConfiguration(configFilePath, true, logFactory); 
+         logFactory.Configuration = new XmlLoggingConfiguration(configFilePath, true, logFactory); 
          return logFactory;
     }
 }
