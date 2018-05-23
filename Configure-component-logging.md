@@ -6,7 +6,7 @@ When creating LogFactory you need to explicitly pass the configuration (either f
 ```csharp
 internal class MyLogManager 
 { 
-    // A Logger dispenser for the current assembly 
+    // A Logger dispenser for the current assembly (Remember to call Flush on application exit)
     public static LogFactory Instance { get { return _instance.Value; } }
     private static Laze<LogFactory> _instance = new Lazy<LogFactory>(BuildLogFactory);
 
