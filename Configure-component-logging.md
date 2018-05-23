@@ -7,8 +7,9 @@ When creating LogFactory you need to explicitly pass the configuration (either f
 internal class MyLogManager 
 { 
     // A Logger dispenser for the current assembly 
-    public static readonly LogFactory Instance = new LogFactory(new XmlLoggingConfiguration(GetNLogConfigFilePath())); 
- 
+    public static LogFactory Instance { get { return _instance.Value; } }
+    private static Laze<LogFactory> _instance = new Lazy<LogFactory>(BuildLogFactory);
+
     // 
     // Use a config file located next to our current assembly dll 
     // eg, if the running assembly is c:\path\to\MyComponent.dll 
@@ -16,14 +17,16 @@ internal class MyLogManager
     // 
     // WARNING: This will not be appropriate for assemblies in the GAC 
     // 
-    private static string GetNLogConfigFilePath() 
-    { 
-        // Use name of current assembly to construct NLog config filename 
- 
-        Assembly thisAssembly = Assembly.GetExecutingAssembly(); 
- 
-        return Path.ChangeExtension(thisAssembly.Location, ".nlog"); 
-    } 
+    private static LogFactory BuildLogFactory()
+    {
+         // Use name of current assembly to construct NLog config filename 
+         Assembly thisAssembly = Assembly.GetExecutingAssembly(); 
+         string configFilePath = Path.ChangeExtension(thisAssembly.Location, ".nlog"); 
+
+         LogFactory logFactory = new LogFactory();
+         logFactory.Configuration = XmlLoggingConfiguration(configFilePath, true, logFactory); 
+         return logFactory;
+    }
 }
 ```
 Then all you need to do is to create loggers with:
