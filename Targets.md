@@ -98,8 +98,7 @@ Package|Version     |Description
 [ReflectInsight](https://github.com/reflectsoftware/reflectinsight-extensions-nlog)                 | [![Version](https://img.shields.io/nuget/v/ReflectSoftware.Insight.Extensions.NLog.svg)](https://www.nuget.org/packages/ReflectSoftware.Insight.Extensions.NLog/) | Writes NLog messages to www.reflectsoftware.com. 
 [RavenDB](https://github.com/kentcooper/NLog.Raven)                 | [![Version](https://img.shields.io/nuget/v/NLog.Raven.svg)](https://www.nuget.org/packages/Nlog.Raven/) | Writes NLog messages to [RavenDB](https://ravendb.net/). 
 [Sentry](https://github.com/CurtisInstruments/NLog.Targets.Sentry)                 | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Sentry3.svg)](https://www.nuget.org/packages/NLog.Targets.Sentry3) | Writes NLog messages to www.sentry.io 
-[Seq](https://github.com/datalust/nlog-targets-seq)                 | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Seq.svg)](https://www.nuget.org/packages/NLog.Targets.Seq) |
- Writes NLog messages to www.getseq.net
+[Seq](https://github.com/datalust/nlog-targets-seq)                 | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Seq.svg)](https://www.nuget.org/packages/NLog.Targets.Seq) | Writes NLog messages to www.getseq.net
 [SignalR](https://github.com/toddmeinershagen/NLog.SignalR)      | [![Version](https://img.shields.io/nuget/v/NLog.SignalR.svg)](https://www.nuget.org/packages/NLog.SignalR/) | Writes NLog messages to a SignalR hub.
 [Splunk](https://github.com/AlanBarber/NLog.Targets.Splunk)                   | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Splunk.svg)](https://www.nuget.org/packages/NLog.Targets.Splunk) | Writes NLog messages to Splunk
 [Syslog](https://github.com/graffen/NLog.Targets.Syslog)         | [![Version](https://img.shields.io/nuget/v/NLog.Targets.Syslog.svg)](https://www.nuget.org/packages/NLog.Targets.Syslog) | Writes NLog messages to Syslog.
