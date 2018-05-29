@@ -2,6 +2,8 @@ Writes log message to the Event Log.
 
 Supported in .NET and Mono
 
+For .NET Standard, use https://www.nuget.org/packages/NLog.WindowsEventLog
+
 ## Configuration Syntax
 ```xml
 <targets>
