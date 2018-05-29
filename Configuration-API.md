@@ -15,7 +15,6 @@ This sample demonstrates the programmatic creation of two targets: one is a colo
 using NLog;
 using NLog.Targets;
 using NLog.Config;
-using NLog.Win32.Targets;
 
 class Example
 {
@@ -24,26 +23,26 @@ class Example
         // Step 1. Create configuration object 
         var config = new LoggingConfiguration();
 
-        // Step 2. Create targets and add them to the configuration 
-        var consoleTarget = new ColoredConsoleTarget();
-        config.AddTarget("console", consoleTarget);
+        // Step 2. Create targets
+        var consoleTarget = new ColoredConsoleTarget("target1")
+        {
+            Layout = @"${date:format=HH\:mm\:ss} ${level} ${message} ${exception}"
+        };
+        config.AddTarget(consoleTarget);
 
-        var fileTarget = new FileTarget();
-        config.AddTarget("file", fileTarget);
+        var fileTarget = new FileTarget("target2")
+        {
+            FileName = "${basedir}/file.txt",
+            Layout = "${longdate} ${level} ${message}  ${exception}"
+        };
+        config.AddTarget(fileTarget);
 
-        // Step 3. Set target properties 
-        consoleTarget.Layout = @"${date:format=HH\:mm\:ss} ${logger} ${message}";
-        fileTarget.FileName = "${basedir}/file.txt";
-        fileTarget.Layout = "${message}";
 
-        // Step 4. Define rules
-        var rule1 = new LoggingRule("*", LogLevel.Debug, consoleTarget);
-        config.LoggingRules.Add(rule1);
+        // Step 3. Define rules
+        config.AddRuleForOneLevel(LogLevel.Error, fileTarget); // only errors to file
+        config.AddRuleForAllLevels(consoleTarget); // all to console
 
-        var rule2 = new LoggingRule("*", LogLevel.Debug, fileTarget);
-        config.LoggingRules.Add(rule2);
-
-        // Step 5. Activate the configuration
+        // Step 4. Activate the configuration
         LogManager.Configuration = config;
 
         // Example usage
@@ -54,6 +53,18 @@ class Example
         logger.Warn("warn log message");
         logger.Error("error log message");
         logger.Fatal("fatal log message");
+
+        //Example of logging exceptions
+
+        try
+        {
+
+        }
+        catch (Exception ex)
+        {
+            logger.Error(ex, "ow noos!");
+            throw;
+        }
     }
 }
 ```
