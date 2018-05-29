@@ -109,6 +109,20 @@ public class MyClass
     // alternatively you can call the Log() method
     // and pass log level as the parameter.
     logger.Log(LogLevel.Info, "Sample informational message");
+
+
+    // Example of logging an exception
+    try
+    {
+
+    }
+    catch (Exception ex)
+    {
+        logger.Error(ex, "ow noos!"); // render the exception with ${exception}
+        throw;
+    }
+
+
   }
 }
 ```
