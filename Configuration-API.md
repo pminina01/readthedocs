@@ -59,4 +59,4 @@ class Example
 ```
 
 ### Passing Custom Values
-Another simple example of additional functionality in code is the use of the [${eventproperties}](EventProperties-Layout-Renderer) layout renderer.
+Another simple example of additional functionality in code is the use of the [${event-properties}](EventProperties-Layout-Renderer) layout renderer.
