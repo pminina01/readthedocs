@@ -2,7 +2,7 @@ Writes log message to the Event Log.
 
 Supported in .NET and Mono
 
-For .NET Standard, use https://www.nuget.org/packages/NLog.WindowsEventLog
+For .NET Standard 2, use the [NLog.WindowsEventLog package](https://www.nuget.org/packages/NLog.WindowsEventLog)
 
 ## Configuration Syntax
 ```xml
