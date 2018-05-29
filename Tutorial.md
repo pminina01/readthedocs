@@ -50,12 +50,12 @@ To configure programmatically, then one can do this in code:
 ```csharp
 var config = new NLog.Config.LoggingConfiguration();
 
-var logfile = new NLog.Targets.FileTarget() { FileName = "file.txt", Name = "logfile" };
-var logconsole = new NLog.Targets.ConsoleTarget() { Name = "logconsole" };
-
-config.LoggingRules.Add(new NLog.Config.LoggingRule("*", LogLevel.Info, logconsole));
-config.LoggingRules.Add(new NLog.Config.LoggingRule("*", LogLevel.Debug, logfile));
-
+var logfile = new NLog.Targets.FileTarget("logfile") { FileName = "file.txt" };
+var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
+            
+config.AddRule(LogLevel.Info, LogLevel.Fatal, logconsole);
+config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+            
 NLog.LogManager.Configuration = config;
 ```
 
