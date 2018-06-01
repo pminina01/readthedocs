@@ -1,4 +1,4 @@
-NLog 4.5 introduces structured logging - also called semantic logging. This document describes how to use structural logging. The implementation in NLog uses the message templates rules and so it's also recommend to check: https://messagetemplates.org/
+NLog 4.5 introduces structured logging - also called semantic logging. This document describes how to use structural logging. The implementation in NLog uses the message templates rules, so it is recommended to check: https://messagetemplates.org/
 
 
 # Why structured logging
