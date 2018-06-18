@@ -206,7 +206,7 @@ NLog 4.5 makes it easy to setup archive logic to move/cleanup old files. You jus
 
 If the `fileName` is static and doesn't include a `${date}` layout, then you can use `archiveEvery="Day"` to ensure that it starts a new logfile every day. If the `fileName` does include `${date}` layout, then you should NOT configure `archiveEvery` (Unless it is `Year` for very special cases).
 
-If the logfile becomes very large and slow to view, then you can use `archiveAboveSize="10240"` to ensure that it starts a new logfile when filesize reaches a certain limit.
+If the logfile becomes very large and slow to view, then you can use `archiveAboveSize=` to ensure that it starts a new logfile when filesize reaches a certain limit.
 
 ```xml
 <?xml version="1.0" ?>
