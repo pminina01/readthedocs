@@ -1,10 +1,11 @@
-# Explicit NLog configuration loading
+# Loading NLog configuration from file
 NLog will automatically [scan for configuration files](Configuration-file#configuration-file-locations), but sometimes the platform requires explicit configuration loading like this:
 
 ```c#
 NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration("nlog.config");
 ```
 
+# Loading NLog configuration from string
 The configuration can also come from standard string like this:
 
 ```c#
