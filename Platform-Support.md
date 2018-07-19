@@ -1,11 +1,11 @@
 ## General
 Feature|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight
  -----| -----| -----| -----| -----| -----| -----| -----| -----| -----
-read app.config/web.config|✓ |✓ |✓ |✓ |||✓ ||
+read app.config/web.config|✓ |✓ |✓ ||||✓ ||
 autoloading .dll|✓ |✓ |✓ |1.5+ |✓ |✓ |✓ ||
 auto reload|✓ |✓ |✓ |1.5+ |||✓ ||
 stacktrace with source|✓ |✓ |✓ |1.5+|✓ |✓ |✓ ||
-fluent interface|||✓ |✓ |||?||
+fluent interface| | |✓ |✓ |||?||
 NLogTraceListener|✓ |✓ |✓ |2.0|||✓ ||
 
 > NetStandard 1.5 cannot perform autoload of DLLs from nuget-packages that places dlls in sub-folders.
@@ -106,7 +106,7 @@ MethodCall|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 NLogViewer|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |±|±: no UDP	
 Network|✓ |✓ |✓ |✓|✓ |✓ |✓ |✓ |✓ |	
 Null|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-OutputDebugString|✓ |✓ |✓ |✓ |||✓ |||	
+OutputDebugString|✓ |✓ |✓ |✓ |✓|✓|✓ |✓|✓|	
 PerformanceCounter|✓ |✓ |✓ ||||✓ |||	
 Trace|✓ |✓ |✓ |1.5+ |✓ |✓ |✓ |||	
 WebService|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
