@@ -71,6 +71,7 @@ External packages, not maintained by the NLog team.
 
 Package|Version     |Description
 -------|------------|------------------------------------------------
+[Amazon CloudWatch - AWS](https://github.com/aws/aws-logging-dotnet) | [![Version](https://img.shields.io/nuget/v/AWS.Logger.NLog.svg)](https://www.nuget.org/packages/AWS.Logger.NLog) | Writes NLog messages to Amazon CloudWatch Logs.
 [Amazon SNS](https://github.com/Takaloy/NLog.Targets.SNS) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.SNS.svg)](https://www.nuget.org/packages/NLog.Targets.SNS) | Writes NLog messages to Amazon SNS.
 [Amazon SQS](https://github.com/aireq/NLog.Targets.SQS) | [![Version](https://img.shields.io/nuget/v/NLog.Targets.SQS.svg)](https://www.nuget.org/packages/NLog.Targets.SQS) | Writes NLog messages to Amazon SQS.
 [AzureTableStorage](https://github.com/abkonsta/NLog.Extensions.AzureTableStorage) | [![Version](https://img.shields.io/nuget/v/NLog.Extensions.AzureTableStorage.svg)](https://www.nuget.org/packages/NLog.Extensions.AzureTableStorage/) | Writes NLog messages to Azure TableStorage
