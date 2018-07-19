@@ -1,7 +1,7 @@
 Outputs log messages through the [OutputDebugString](https://msdn.microsoft.com/da-dk/library/windows/desktop/aa363362.aspx) Win32 API. That can be monitored using [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview).
 
-Supported in .NET Framework, Mono and NetStandard
-> NetStandard translates into [System.Diagnostics.Debug.WriteLine](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)
+Supported in .NET Framework, Mono, NetStandard, Xamarin Android + iOS 
+> NetStandard, Xamarin Android + iOS translates into [System.Diagnostics.Debug.WriteLine](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)
 
 ## Configuration Syntax
 ```xml
