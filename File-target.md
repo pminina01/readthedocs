@@ -27,6 +27,7 @@ Supported in .NET, Silverlight, Compact Framework and Mono.
           enableFileDelete="Boolean"
           createDirs="Boolean"
           concurrentWrites="Boolean"
+          openFileFlushTimeout="Integer"
           openFileCacheTimeout="Integer"
           openFileCacheSize="Integer"
           networkWrites="Boolean"
@@ -177,7 +178,10 @@ Assuming that ConcurrentWriteAttemptDelay is 10 the time to wait will be: a rand
 
 * **bufferSize** - Log file buffer size in bytes. [Integer](Data-types#integer) Default: 32768  
 
-* **autoFlush** - Indicates whether to automatically flush the file buffers after each log message. [Boolean](Data-types) Default: True  
+* **autoFlush** - Indicates whether to automatically flush the file buffers after each log message. Disabling this will improve performance (See also **openFileFlushTimeout**).  [Boolean](Data-types) Default: True  
+
+* **openFileFlushTimeout** - Number of seconds between explicit flush of file buffers. Helps to ensure file buffers are eventually flushed when **autoFlush = false**. [Integer](Data-types#integer) Default: 0
+    > Introduced with NLog v4.5.7
 
 ## Examples
 ### Simple logging
