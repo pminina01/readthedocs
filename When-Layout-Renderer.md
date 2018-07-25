@@ -29,7 +29,7 @@ ${message:when=logger=='logger'}
 convert a layout string result to a bit (1 or 0) that can be inserted into a SQL bit field.:
 
 ```
-${when:when='${aspnet-request:serverVariable=HTTPS}' == 'on':inner=1:else:0}
+${when:when='${aspnet-request:serverVariable=HTTPS}' == 'on':inner=1:else=0}
 ```
 
 Write "Good" if the loglevel is trace/debug/info and otherwise "Bad":
