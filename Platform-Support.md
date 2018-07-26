@@ -66,7 +66,7 @@ Ticks|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Time|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 TraceActivityId|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
 Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-WindowsIdentity|✓ |✓ |✓ |± |✓ |✓ |✓ |||±: NLog.WindowsIdentity nuget package
+WindowsIdentity|✓ |✓ |✓ |1.5± |✓ |✓ |✓ |||±: NLog.WindowsIdentity nuget package
 
 ## Layout renderer (wrapped)
 Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
