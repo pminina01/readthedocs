@@ -66,7 +66,7 @@ Ticks|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |
 Time|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 TraceActivityId|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
 Variable|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-WindowsIdentity|✓ |✓ |✓ |1.5± |✓ |✓ |✓ |||±: NLog.WindowsIdentity nuget package
+WindowsIdentity|✓ |✓ |✓ |1.5± |✓ |✓ |✓ |||±: Nuget [NLog.WindowsIdentity](https://www.nuget.org/packages/NLog.WindowsIdentity/)
 
 ## Layout renderer (wrapped)
 Layout renderer|.NET 3.5|.NET 4.0|.NET 4.5|NetStandard|Xamarin iOs|Xamarin Android|Mono|WP8|Silverlight|Remarks	
@@ -97,9 +97,9 @@ Console|✓ |✓ |✓ |1.5+|±|±|✓ |±|±|±: no encoding
 Database|✓ |✓ |✓ |±|||✓ |||	±: no transactions or reading from .config
 Debug|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Debugger|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
-EventLog|✓ |✓ |✓ ||||✓ |||	
+EventLog|✓ |✓ |✓ ||||✓ |||±: Nuget [NLog.WindowsEventLog](https://www.nuget.org/packages/NLog.WindowsEventLog/)
 File|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
-LogReceiverWebService|✓ |✓ |✓ |±|||✓ ||✓ |±: NLog.WCF nuget package
+LogReceiverWebService|✓ |✓ |✓ |±|||✓ ||✓ |±: Nuget [NLog.WCF](https://www.nuget.org/packages/NLog.WCF/)
 Mail|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
 Memory|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 MethodCall|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
