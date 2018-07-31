@@ -97,7 +97,7 @@ Console|✓ |✓ |✓ |1.5+|±|±|✓ |±|±|±: no encoding
 Database|✓ |✓ |✓ |±|||✓ |||	±: no transactions or reading from .config
 Debug|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 Debugger|✓ |✓ |✓ ||✓ |✓ |✓ |✓ |✓ |	
-EventLog|✓ |✓ |✓ ||||✓ |||±: Nuget [NLog.WindowsEventLog](https://www.nuget.org/packages/NLog.WindowsEventLog/)
+EventLog|✓ |✓ |✓ |2.0+|||✓ |||±: Nuget [NLog.WindowsEventLog](https://www.nuget.org/packages/NLog.WindowsEventLog/)
 File|✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |✓ |	
 LogReceiverWebService|✓ |✓ |✓ |±|||✓ ||✓ |±: Nuget [NLog.WCF](https://www.nuget.org/packages/NLog.WCF/)
 Mail|✓ |✓ |✓ |2.0|✓ |✓ |✓ |||	
