@@ -9,8 +9,8 @@ NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration("nlog.co
 The configuration can also come from standard string like this:
 
 ```c#
-System.Xml.XmlDocument xmlDoc = new System.Xml.XmlDocument();
-xmlDoc.LoadXml(configXml);
 string currentDir = System.IO.Directory.GetCurrentDirectory();
-NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(xmlDoc.DocumentElement, currentDir);
+System.IO.StringReader sr = new System.IO.StringReader(xmlString);
+System.Xml.XmlReader xr = System.Xml.XmlReader.Create(sr);
+NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(xr, currentDir);
 ```
