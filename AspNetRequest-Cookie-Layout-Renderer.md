@@ -6,7 +6,7 @@ Supported in ASP.NET, ASP.NET Core and Mono
 
 ## Configuration Syntax
 ```
-${aspnet-request-cookie:cookieNames=String[]:valuesOnly=Boolean:outputFormat=String
+${aspnet-request-cookie:cookieNames=String[]:valuesOnly=Boolean:outputFormat=Enum
     :itemSeparator=String:valueSeparator=String:singleAsArray=Boolean}
 ```
 
