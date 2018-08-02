@@ -6,20 +6,20 @@ Supported in ASP.NET, ASP.NET Core and Mono
 
 ## Configuration Syntax
 ```
-${aspnet-request-cookie:CookieNames=String[]:OutputFormat=String
-    :ItemSeparator=String:ValueSeparator=String
-    :SingleAsArray=Boolean:ValuesOnly=Boolean}
+${aspnet-request-cookie:cookieNames=String[]:outputFormat=String
+    :itemSeparator=String:valueSeparator=String
+    :singleAsArray=Boolean:valuesOnly=Boolean}
 ```
 
 ## Parameters
 ### Rendering Options
-* **CookieNames** - Cookie key name(s). A list of keys can be passed as comma separated values, e.g.: `Key1,Key2`
+* **cookieNames** - Cookie key name(s). A list of keys can be passed as comma separated values, e.g.: `Key1,Key2`
 
 ### Formatting options
-* **OutputFormat** - Renders as flat string or JSON array. Possible values: `Flat`, `Json`. Default: `Flat`.
-* **ItemSeparator** Separator between items. Default: `,`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
-* **ValueSeparator** Separator between value and key. Default: `=`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
-* **SingleAsArray** Single item in array? If false, then a single item will be a single object. Only used when OutputFormat is `Json`. Default: `true`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
+* **outputFormat** - Renders as flat string or JSON array. Possible values: `Flat`, `Json`. Default: `Flat`.
+* **itemSeparator** Separator between items. Default: `,`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
+* **valueSeparator** Separator between value and key. Default: `=`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
+* **singleAsArray** Single item in array? If false, then a single item will be a single object. Only used when OutputFormat is `Json`. Default: `true`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
 * **ValuesOnly** Only render the values of the key/value pairs. Default: `false`. Introduced in NLog.Web / NLog.Web.AspNetCore 4.6
 
 
