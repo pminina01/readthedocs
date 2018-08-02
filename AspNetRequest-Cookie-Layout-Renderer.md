@@ -1,86 +1,107 @@
 Introduced in NLog.Web 4.3
 
-ASP.NET Cookie Variable. 
+ASP.NET Request Cookie key/value pairs. 
 
 Supported in ASP.NET, ASP.NET Core and Mono
 
 ## Configuration Syntax
 ```
-${aspnet-request-cookie:CookieNames=Keys:OutputFormat=format}
+${aspnet-request-cookie:CookieNames=String[]:OutputFormat=String
+    :ItemSeparator=String:ValueSeparator=String
+    :SingleAsArray=Boolean:ValuesOnly=Boolean}
 ```
 
 ## Parameters
 ### Rendering Options
-* **Keys** - Cookie name. A list of keys can be passed as a Comma separated value. Eg: Key1, Key2
+* **CookieNames** - Cookie key name(s). A list of keys can be passed as comma separated values, e.g.: `Key1,Key2`
 
 ### Formatting options
 * **OutputFormat** - Renders as flat string or JSON array. Possible values: `Flat`, `Json`. Default: `Flat`.
 * **ItemSeparator** Separator between items. Default: `,`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
 * **ValueSeparator** Separator between value and key. Default: `=`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
-* **SingleAsArray** Single item in array? If false, then a single item will be a single object. Only used when OutputFormat is `Json`. A `boolean` with default `true`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
-* **ValuesOnly** Only render the values of the key/value pairs. Introduced in NLog.Web / NLog.Web.AspNetCore 4.6
-
+* **SingleAsArray** Single item in array? If false, then a single item will be a single object. Only used when OutputFormat is `Json`. Default: `true`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
+* **ValuesOnly** Only render the values of the key/value pairs. Default: `false`. Introduced in NLog.Web / NLog.Web.AspNetCore 4.6
 
 
 ## Remarks
-Use this layout renderer to insert the value of the specified cookie stored in the ASP.NET Request Cookies Collection.
+Use this layout renderer to log the value of the specified cookie(s) stored in the ASP.NET Request Cookies collection.
 
 ## Examples
 
-Log the username in the session.
-
-In the C# code:
+In C# code:
 ```c#
 Request.Cookies["username"] = "johnDoe";
+Request.Cookies["id"] = "d4b20a34-6231-4201-83a6-c72599e41164";
 ```
 
-Config:
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <extensions>
-        <add assembly="NLog.Web" />
-    </extensions>
-
-    <targets>
-        <target name="logfile" xsi:type="File" fileName="file.txt" />
-    </targets>
-
-    <rules>
-        <logger name="*" minlevel="Info" writeTo="logfile" layout="${aspnet-request-cookie:CookieNames=username}" />
-    </rules>
-</nlog>
+### Log only `username` cookie in default Flat output format
 ```
-Will print 
+${aspnet-request-cookie:CookieNames=username}
+```
+Will print:
+```
+"username=JohnDoe"
+```
+
+### Log both cookies in default Flat output format
+```
+${aspnet-request-cookie:CookieNames=username,id}
+```
+Will print:
+```
+"username=JohnDoe,id=d4b20a34-6231-4201-83a6-c72599e41164"
+```
+
+### Log only `username` cookie in JSON output format
+```
+${aspnet-request-cookie:CookieNames=username:OutputFormat=JSON}
+```
+Will print:
+```json
+[{"username":"JohnDoe"}]
+```
+
+### Log both cookies in JSON output format
+```
+${aspnet-request-cookie:CookieNames=username,id:OutputFormat=JSON}
+```
+Will print:
+```json
+[{"username":"JohnDoe","id":"d4b20a34-6231-4201-83a6-c72599e41164"}]
+```
+
+### Log only `username` cookie in JSON output format with SingleAsArray=false
+```
+${aspnet-request-cookie:CookieNames=username:OutputFormat=JSON:SingleAsArray=false}
+```
+Will print:
+```json
+{"username":"JohnDoe"}
+```
+
+### Log only `username` cookie in Flat output format as value only
+```
+${aspnet-request-cookie:CookieNames=username:ValuesOnly=true}
+```
+Will print:
 ```
 "JohnDoe"
 ```
 
-In the C# code:
-```c#
-Request.Cookies["username"] = "johnDoe";
+### Log only `username` cookie in JSON output format as value only
 ```
-
-Config:
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <extensions>
-        <add assembly="NLog.Web" />
-    </extensions>
-
-    <targets>
-        <target name="logfile" xsi:type="File" fileName="file.txt" />
-    </targets>
-
-    <rules>
-        <logger name="*" minlevel="Info" writeTo="logfile" layout="${aspnet-request-cookie:CookieNames=username;OutputFormat=JSON}" />
-    </rules>
-</nlog>
+${aspnet-request-cookie:CookieNames=username:OutputFormat=JSON:ValuesOnly=true}
 ```
-Will print 
+Will print:
 ```json
-[{"username":"JohnDoe"}]
+["JohnDoe"]
+```
+
+### Log both cookies in JSON output format as value only
+```
+${aspnet-request-cookie:CookieNames=username:OutputFormat=JSON:ValuesOnly=true}
+```
+Will print:
+```json
+["JohnDoe","d4b20a34-6231-4201-83a6-c72599e41164"]
 ```
