@@ -8,9 +8,9 @@ ${assembly-version:name=string:type=Enum}
 ```
 ## Parameters
 
-* **name** - Display name of the assembly to retrieve a version from, as determined by its `FullName` property. The assembly will be loaded if needed. If not specified, will use (for .NET Full) the entry assembly or (for .NET Standard) the runtime framework (for example, for .NET Core 1.1 this layout renderer returned value "1.1"). Introduced in NLog 4.3.7.
+* **name** - Display name of the assembly to retrieve a version from, as determined by its `FullName` property. The assembly will be loaded if needed. If not specified, will use the entry assembly (this did not function correctly for .NET Core until NLog.Web.AspNetCore 4.6). Introduced in NLog 4.3.7.
 
-* **type** - Type of the assembly version value to retrieve. Default: Assembly. Introduced in NLog 4.5.
+* **type** - Type of the assembly version value to retrieve. Default: `Assembly`. Introduced in NLog 4.5. For ASP.NET, introduced in NLog.Web / NLog.Web.AspNetCore 4.6.
 
   Possible values:
   * **Assembly** - Assembly version. Value for `AssemblyVersion` attribute.
