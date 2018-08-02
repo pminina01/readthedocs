@@ -14,13 +14,11 @@ ${aspnet-request-cookie:CookieNames=Keys:OutputFormat=format}
 * **Keys** - Cookie name. A list of keys can be passed as a Comma separated value. Eg: Key1, Key2
 
 ### Formatting options
-* **OutputFormat** - Possible Values: `FLAT`, `JSON`. Default: `flat`. Renders as flat string or JSON object array.
-
-* **ItemSeparator** Separator between item. Only used Flat. `string` Default `,`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
-* **ValueSeparator** Separator between value and key. `string`  Default `=`. Only used Flat. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
-* **SingleAsArray** Single item in array? If false, then a single item will be an single object. Only used JSON. `boolean` Default `true`. Introducted in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
-
-
+* **OutputFormat** - Renders as flat string or JSON array. Possible values: `Flat`, `Json`. Default: `Flat`.
+* **ItemSeparator** Separator between items. Default: `,`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
+* **ValueSeparator** Separator between value and key. Default: `=`. Only applies when OutputFormat is `Flat`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
+* **SingleAsArray** Single item in array? If false, then a single item will be a single object. Only used when OutputFormat is `Json`. A `boolean` with default `true`. Introduced in NLog.Web.AspNetCore 4.4  / NLog.Web 4.5 
+* **ValuesOnly** Only render the values of the key/value pairs. Introduced in NLog.Web / NLog.Web.AspNetCore 4.6
 
 
 
