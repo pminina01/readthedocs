@@ -172,7 +172,7 @@ This effectively prevents files from being kept open.
 The actual delay is a random value between 0 and the value specified in this parameter. On each failed attempt the delay base is doubled up to ConcurrentWriteAttempts times.  
 Assuming that ConcurrentWriteAttemptDelay is 10 the time to wait will be: a random value between 0 and 10 milliseconds - 1st attempt a random value between 0 and 20 milliseconds - 2nd attempt a random value between 0 and 40 milliseconds - 3rd attempt a random value between 0 and 80 milliseconds - 4th attempt ... and so on.
 
-* **concurrentWriteAttempts** - Number of times the write is appended on the file before NLog discards the log message. [Integer](Data-types#integer) Default: 10  
+* **concurrentWriteAttempts** - Number of times the write is attempted on the file before NLog discards the log message. [Integer](Data-types#integer) Default: 10  
 
 * **cleanupFileName** - before writing to a file, the name of the file get checked for illegal characters (OS dependent). This can be costly if a lot of messages are written. The cleanup is cached for fixed names (no layout renderers). Set this to `false` for optimal performance (but beware of the file name, if it's wrong, nothing gets written). Default: `true`. Introduced in NLog 4.2.3.
 
