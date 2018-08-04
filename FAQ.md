@@ -4,7 +4,7 @@
 * **Why should I use a log library? I can just do `file.WriteLine()`**
   - Beside writing to files, you can write to many different targets, like databases, event viewer, trace etc. 
   - The output is templatable with many predefined template values. 
-  - With a simple configuration file you can decide runtime (after deployment), what to log and where! No need to restart the program or recyle the app pool!
+  - With a simple configuration file you can decide at runtime (after deployment), what to log and where! No need to restart the program or recycle the app pool!
 
 * **Why should I use NLog?**
   - NLog is fully written in C#, has many years of experience and is easy to extend!
