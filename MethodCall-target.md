@@ -37,7 +37,7 @@ Note: Since NLog 4.3 these parameters can be optional.
 ### Configure call of lambda at runtime
 > Introduced with NLog ver. 4.5.8
 
-One can make it call a user defined delegate like this:
+One can make it call a user defined delegate using [Configuration API](Configuration-API):
 
 ```c#
 public class Example
