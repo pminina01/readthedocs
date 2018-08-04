@@ -34,6 +34,24 @@ Note: Since NLog 4.3 these parameters can be optional.
 
 ## Examples
 
+### Configure call of lambda at runtime
+> Introduced with NLog ver. 4.5.8
+
+One can make it call a user defined delegate like this:
+
+```c#
+public class Example
+{
+    static void Main(string[] args)
+    {
+        MethodCallTarget target = new MethodCallTarget("MyTarget", (logEvent,parms) => Console.WriteLine(logEvent.FormattedMessage));
+        NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, LogLevel.Debug);
+        Logger logger = LogManager.GetLogger("Example");
+        logger.Info("log message");
+    }
+}
+```
+
 ### Configure call of static method with NLog.config
 In order to send all logs to a static method, use the following configuration file:
 ```xml
@@ -72,8 +90,6 @@ namespace SomeNamespace
 
 Names of parameters are not important, only their order is. The default type of each parameter is string, but it can be overridden by adding type attribute to `<parameter />` element.
 
-### 
-
 ### Configure call of static method at runtime
 It is also possible to configure logging using [Configuration API](Configuration-API):
 
@@ -104,24 +120,6 @@ public class Example
         Logger logger = LogManager.GetLogger("Example");
         logger.Debug("log message");
         logger.Error("error message");
-    }
-}
-```
-
-### Configure call of lambda at runtime
-> Introduced with NLog ver. 4.5.8
-
-It is also possible to just call a delegate, like this:
-
-```c#
-public class Example
-{
-    static void Main(string[] args)
-    {
-        MethodCallTarget target = new MethodCallTarget("MyTarget", (logEvent,parms) => Console.WriteLine(logEvent.FormattedMessage));
-        NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, LogLevel.Debug);
-        Logger logger = LogManager.GetLogger("Example");
-        logger.Info("log message");
     }
 }
 ```
