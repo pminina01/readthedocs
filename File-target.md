@@ -78,7 +78,7 @@ Caution: Enabling this option can considerably slow down your file logging in mu
 
 * **archiveFileName** - Name of the file to be used for an archive. [Layout](Layouts)  
 It may contain a special placeholder {#####} that will be replaced with a sequence of numbers depending on the archiving strategy. The number of hash characters used determines the number of numerical digits to be used for numbering files.  
-**warning** when deleting archives files is enabled (e.g. _maxArchiveFiles_ ), the folder of the archives should different than the log files.
+**Warning:** when deleting archives files is enabled (e.g. _maxArchiveFiles_ ), the folder of the archives should different than the log files.
 
 * **archiveNumbering** - Way file archives are numbered. See also [Archive Numbering Examples](#archive-numbering-examples)   
 Possible values:
