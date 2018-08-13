@@ -231,6 +231,8 @@ The optional attribute, `ignoreErrors="true"`, which defaults to `false`, can be
 
 Since NLog 4.4.2, wildcards (`*`) are allowed. E.g. `<include file="${basedir}/nlog-*.config"/>`
 
+A larger example can be found here: [XML config `<include />` example](XML-config-include-example)
+
 <a name="variables" />
 
 ## Variables
