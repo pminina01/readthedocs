@@ -17,7 +17,7 @@ Contains one target and needs `${productName}`
   
   <targets>
       <target name="file1" xsi:type="File" fileName="D:\logs\${productName}\${shortdate}.log" 
-          layout="${time} [${level:uppercase=true}] |${logger}| ${message} ${exception}|" />
+          layout="${time} [${level:uppercase=true}] |${logger}| ${message} ${exception}" />
   </targets>
   
 </nlog>
