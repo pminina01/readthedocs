@@ -40,11 +40,14 @@ e.g. in the root folder of your application. Contains in this example no targets
       autoReload="true"   
       internalLogLevel="Off" >
                
-  <variable name="productName" value="myProduct"/> <!-- override productName in includes -->
+
+  <!-- override productName in includes, so it could be used in d:\nlog-file.config -->
+  <variable name="productName" value="myProduct"/> 
                            
   <include file="D:\nlog-file.config"/>    
    
-  <variable name="myVar" value="myValue"/> <!-- note: will be set after the 2 includes are loaded -->
+  <!-- note: will be set after the include are loaded -->
+  <variable name="myVar" value="myValue"/> 
      
   <rules>      
     <logger name="*" minlevel="Info" writeTo="file1" enabled="false" />     
