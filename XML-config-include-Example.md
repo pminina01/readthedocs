@@ -9,10 +9,11 @@ Contains one target and needs `${productName}`
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"         >
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This file will be included. Note: Attributes on the "nlog" element are ignored for this file -->
 
     
-  <!-- this file will be included. Attibutes on the "nlog" element are ignored for this file -->
+
   <!-- the variable ${productName} must be defined in the main nlog.config -->
   
   <targets>
