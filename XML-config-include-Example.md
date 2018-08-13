@@ -16,9 +16,8 @@ Contains one target and needs `${productName}`
   <!-- the variable ${productName} must be defined in the main nlog.config -->
   
   <targets>
-  
-          <target name="file1" xsi:type="File" fileName="D:\logs\${productName}\${shortdate}.log" 
-          layout="${time} [${level:uppercase=true}] |${logger}| ${message} ${exception}|"/>
+      <target name="file1" xsi:type="File" fileName="D:\logs\${productName}\${shortdate}.log" 
+          layout="${time} [${level:uppercase=true}] |${logger}| ${message} ${exception}|" />
   </targets>
   
 </nlog>
@@ -51,8 +50,8 @@ e.g. in the root folder of your application. Contains in this example no targets
      
   <rules>      
     <logger name="*" minlevel="Info" writeTo="file1" enabled="false" />     
-    <logger name="PerformanceLogger" minlevel="Trace"  writeTo="file1" enabled="false">   <!-- not enabled, only when tracing -->
-    </logger> 
+    <logger name="PerformanceLogger" minlevel="Trace"  writeTo="file1" enabled="false" />   <!-- not enabled, only when tracing -->
+
   </rules>
 </nlog>
 
