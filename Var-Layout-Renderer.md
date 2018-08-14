@@ -4,7 +4,7 @@ Introduced in 4.1, see also [news post](http://nlog-project.org/2015/08/31/nlog-
 
 > If needing to modify global variables at runtime, then it is recommended to use the [[GDC layout renderer]] instead. Because NLog variables are not threadsafe, and should be seen as readonly variables. Also GDC will behave correctly if LoggingConfiguration should change.
 
-> It is faster to use NLog variables directly in config file (Ex. `${myvar}`), instead of using this layout renderer that performs dynamic lookup (Ex. `${var:myvar}`). 
+> It is faster to use NLog variables directly in config file (Ex. `${myvar}`), instead of using this layout renderer that always performs dynamic lookup (Ex. `${var:myvar}`). 
 
 ## Configuration Syntax
 ```
