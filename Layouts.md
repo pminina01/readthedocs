@@ -12,14 +12,7 @@ ${longdate}|${level:uppercase=true}|${logger}|${message}
 Several pre-defined layouts exist:
 
 
-### NLog package [![Version](https://img.shields.io/nuget/v/NLog.svg)](https://www.nuget.org/packages/NLog)
-
-* [CsvLayout](CsvLayout) - A specialized layout that renders CSV-formatted events.
-* [JsonLayout](JsonLayout) - A specialized layout that renders to JSON.
-* [LayoutWithHeaderAndFooter](LayoutWithHeaderAndFooter) - A specialized layout that supports header and footer.
-* [Log4JXmlEventLayout](Log4JXmlEventLayout) - A specialized layout that renders Log4j-compatible XML events.
-* [SimpleLayout](SimpleLayout) - Represents a string with embedded placeholders that can render contextual information.
-* [CompoundLayout](CompoundLayout) - A layout containing one or more nested layouts.
+All layouts could be found here: http://nlog-project.org/config/?tab=layouts
 
 ## Example
 
