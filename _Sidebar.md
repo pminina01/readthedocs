@@ -12,20 +12,7 @@
 
 ## Configuration
 
-* [Targets list](Targets), popular:
-  * [File](File-Target)
-  * [Database](Database-Target)
-  * [Colored Console](ColoredConsole-target)
-  * [Mail](Mail-Target)
-* [Layouts list](Layouts),  popular:
-  * [CSV](CsvLayout)
-  * [JSON](JsonLayout)
-* [Layout Renderers list](Layout-Renderers),  popular:
-  * [${message}](Message-Layout-Renderer)
-  * [${exception}](Exception-Layout-Renderer)
-  * [${logger}](Logger-Layout-Renderer)
-  * [${level}](Level-Layout-Renderer)
-  * [${date}](Date-Layout-Renderer)
+* [All targets, layouts and layout renderers](http://nlog-project.org/config/)
 
 ## Programmatic Configuration
 * [Tutorial Configuration API](Configuration-API)
