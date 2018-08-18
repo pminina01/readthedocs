@@ -3,7 +3,7 @@
 Welcome to the NLog documentation! Just start with the [tutorial](wiki/Tutorial) to log messages within minutes!
 
 
-For .Net Standard users a limited set is implemented. See the filter in the [search page](http://nlog-project.org/config/). To read more about  NetStandard, see [the docs from Microsoft](https://docs.microsoft.com/en-us/dotnet/articles/standard/library)
+For .NET Standard users a limited set is implemented. See the filter in the [search page](http://nlog-project.org/config/). To read more about .NET Standard, see [the docs from Microsoft](https://docs.microsoft.com/en-us/dotnet/articles/standard/library)
 
 For structured logging, introduced in NLog 4.5, see [How to use structured logging](How-to-use-structured-logging)
 
