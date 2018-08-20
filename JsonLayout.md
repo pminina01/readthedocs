@@ -26,7 +26,7 @@ Optional _encode_ parameter.
 You can disable JSON encoding by setting **encode="false"**. This will let you to write any string without JSON encoding. Including custom JSON (Ex. boolean/numeric values)
 
 ```xml
-<attribute name="Details" layout="${event-context:item=Details}" encode="false" />
+<attribute name="Details" layout="${event-properties:item=Details}" encode="false" />
 ```
 
 ## Parameters
