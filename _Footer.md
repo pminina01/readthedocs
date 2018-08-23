@@ -1,0 +1,1 @@
+All (XML) config options: http://nlog-project.org/config/
