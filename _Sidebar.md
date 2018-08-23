@@ -21,6 +21,7 @@
 ## Advanced
 * [Advanced Configuration file options](Configuration-file)
 * [Filtering log messages](Filtering-log-messages)
+* [NLog properties with Microsoft Extension Logging](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-properties-with-Microsoft-Extension-Logging)
 * [Using Time Sources](Time-Source)
 * [Installing targets](Installing-targets)
 * [Visual Studio support](Visual-Studio-support)
