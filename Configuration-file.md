@@ -75,7 +75,8 @@ The simplified format is the pure XML having the \<nlog /> element as its root. 
 
 Note that NLog config file is case-insensitive when not using namespaces and is case-sensitive when you use them. Intellisense only works with case-sensitive configurations.
 
-Configuration elements You can use the following elements as children to `<nlog />`. The first two elements from the list are required to be present in all NLog configuration files, the remaining ones are optional and can be useful in advanced scenarios.
+### Configuration elements  
+You can use the following elements as children to `<nlog />`. The first two elements from the list are required to be present in all NLog configuration files, the remaining ones are optional and can be useful in advanced scenarios.
  * `<targets />` – defines log targets/outputs
  * `<rules />` – defines log routing rules
  * `<extensions />` – loads NLog extensions from the *.dll file
