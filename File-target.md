@@ -80,7 +80,7 @@ Caution: Enabling this option can considerably slow down your file logging in mu
 It may contain a special placeholder {#####} that will be replaced with a sequence of numbers depending on the archiving strategy. The number of hash characters used determines the number of numerical digits to be used for numbering files.  
 **Warning: when deleting archives files is enabled (e.g. _maxArchiveFiles_ ), the folder of the archives should different than the log files. Otherwise, all content, not just logs, in the folder that is not log archives from the target will be deleted.**
 
-* **archiveNumbering** - Way file archives are numbered. See also [Archive Numbering Examples](FileTarget-Archive-Examples)   
+* **archiveNumbering** - Way file archives are numbered. See also [Archive Numbering Examples](FileTarget-Archive-Examples#archive-numbering-examples)   
 Possible values:
   * Rolling - Rolling style numbering (the most recent is always #0 then #1, ..., #N).
   * Sequence - Sequence style numbering. The most recent archive has the highest number.
