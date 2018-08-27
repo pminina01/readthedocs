@@ -4,11 +4,21 @@ Combines well with [FallbackGroup Target](https://github.com/NLog/NLog/wiki/Fall
 
 Supported in .NET, NetStandard2.X and Mono
 
-### .NET Core
+### MailKit
 
-The `SmtpClient` is not part of NetStandard1.X, instead one should install the package [NLog.MailKit](https://www.nuget.org/packages/NLog.MailKit):
+The `SmtpClient` is not part of NetStandard1.X. Also notice that the original [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient) of .NET is obsolete in favor of MailKit:
+
+![image](https://user-images.githubusercontent.com/5808377/44685633-351b0600-aa4c-11e8-9eec-48dd9fadb963.png)
+
+The NLog.MailKit is the Mail target implementation which uses MailKit. Including the NLog.MailKit package will replace the original mail target and has the same options as the original mail target
 
 - `Install-Package NLog.MailKit`
+
+or use
+
+```xml
+<PackageReference Include="NLog.MailKit" Version="3.0.0" />
+```
 
 And add to your nlog.config:
 
