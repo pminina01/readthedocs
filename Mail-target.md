@@ -2,7 +2,7 @@ Sends log messages by email using SMTP protocol.
 
 Combines well with [FallbackGroup Target](https://github.com/NLog/NLog/wiki/FallbackGroup-target) in order to create a fallback with multiple SMTP Hosts, example see [here](https://github.com/NLog/NLog/wiki/Mail-target#mail-target-wrapped-by-fallbackgroup-target).
 
-Supported in .NET, NetStandard2.X and Mono
+Supported in .NET, .NET Standard 2.x and Mono
 
 ### MailKit
 
