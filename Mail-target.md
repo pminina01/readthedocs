@@ -6,7 +6,7 @@ Supported in .NET, .NET Standard 2.x and Mono
 
 ### MailKit
 
-The `SmtpClient` is not part of NetStandard1.X. Also notice that the original [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient) of .NET is obsolete in favor of MailKit:
+The `SmtpClient` is not part of .NET Standard 1.x. Also notice that the original [SmtpClient](https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient) of .NET is obsolete in favor of MailKit:
 
 ![image](https://user-images.githubusercontent.com/5808377/44685633-351b0600-aa4c-11e8-9eec-48dd9fadb963.png)
 
