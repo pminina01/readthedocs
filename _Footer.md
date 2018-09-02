@@ -1,1 +1,2 @@
-All (XML) config options: https://nlog-project.org/config/
+- [Troubleshooting](https://github.com/nlog/nlog/wiki/Logging-troubleshooting)
+- All (XML) config options: https://nlog-project.org/config/
