@@ -224,7 +224,7 @@ Use `${message:raw=true}`
 ### Disabling Structured Logging
 NLog will by default attempt to parse log-events as structured log-events. This gives a minor overhead, that will not be noticable by most.
 
-It is possible to disable that NLog should not attempt to parse log-events as structured log-events with this xml-setting:
+It is possible to disable this behavior, telling NLog it should not attempt to parse log-events as structured log-events, with this xml-setting:
 
 ```xml
 <nlog parseMessageTemplates="false">
