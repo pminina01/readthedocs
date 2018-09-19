@@ -1,11 +1,11 @@
-Since NLog 4.4 there are two ways to create a custom layout renderer.
+_Since NLog 4.4 there are two ways to create a custom layout renderer._
 
-You could write a custom layout with one lambda function - it will be registered intermediately, or you could write a class which is easier to share across projects. 
+_You could write a custom layout with one lambda function - it will be registered intermediately, or you could write a class which is easier to share across projects._
 
 ## Lambda Function
 Introduced in NLog 4.4
 
-For some cases, it's easier to write a lambda function. 
+For simple cases, you could create a layout renderer with a lambda.
 
 The lambda function will accept 1 or 2 parameters and should return a `string`.
 
