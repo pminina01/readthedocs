@@ -16,8 +16,6 @@ ${configsetting:name=String:default=String}
 
 ## Example
 
-Example .config
-
 Example: appsettings.json:
 
 ```json
