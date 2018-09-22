@@ -1,6 +1,6 @@
 Value from the appsettings.json or other configuration in .NET Core
 
-Introduced NLog.Extensions.Logging 1.3 (note: NLog.Extensions.Logging  is dependency of NLog.Web.AspNetCore)
+Introduced NLog.Extensions.Logging 1.3 and NLog.Web.AspNetCore 4.7
 
 ## Configuration Syntax
 ```
