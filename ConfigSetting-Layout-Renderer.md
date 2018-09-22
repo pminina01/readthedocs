@@ -4,7 +4,7 @@ Introduced NLog.Extensions.Logging 1.3
 
 ## Configuration Syntax
 ```
-${appsetting:name=String:default=String}
+${configsetting:name=String:default=String}
 ```
 
 ## Parameters
