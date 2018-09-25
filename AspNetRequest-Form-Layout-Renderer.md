@@ -21,7 +21,7 @@ ${aspnet-request-form:include=String[]:exclude=String[]:outputFormat=Enum
 * **itemSeparator** Separator between items. Default: `,`. Only applies when OutputFormat is `Flat`.
 * **valueSeparator** Separator between value and key. Default: `=`. Only applies when OutputFormat is `Flat`.
 * **singleAsArray** Single item in array? If false, then a single item will be a single object. Only used when OutputFormat is `Json`. Default: `true`. 
-* **ValuesOnly** Only render the values of the key/value pairs. Default: `false`.
+* **valuesOnly** Only render the values of the key/value pairs. Default: `false`.
 
 
 ## Remarks
