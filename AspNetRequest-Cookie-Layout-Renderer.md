@@ -13,7 +13,7 @@ ${aspnet-request-cookie:cookieNames=String[]:outputFormat=Enum
 
 ## Parameters
 ### Rendering Options
-* **cookieNames** - Cookie key name(s). A list of keys can be passed as comma separated values, e.g.: `Key1,Key2`. Became optional in NLog.Web 4.3.1, where no value will log all key/value pairs.
+* **cookieNames** - Cookie key name(s). A list of keys can be passed as comma separated values, e.g.: `Key1,Key2`. Required.
 
 ### Formatting options
 * **outputFormat** - Renders as flat string or JSON array. Possible values: `Flat`, `Json`. Default: `Flat`.
