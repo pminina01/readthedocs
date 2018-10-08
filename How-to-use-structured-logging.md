@@ -98,6 +98,7 @@ The parameters will be serialized to the message (see Formatting of the message)
         <attribute name="time" layout="${longdate}" />
         <attribute name="level" layout="${level:upperCase=true}"/>
         <attribute name="message" layout="${message}" />
+        <attribute name="Logger" layout="${logger}" />
         <attribute name="orderid" layout="${event-properties:orderid}" />
       </layout>
 
@@ -112,6 +113,7 @@ For the JSON layout you could also use: `includeAllProperties`:
       <layout xsi:type="JsonLayout" includeAllProperties="true">
         <attribute name="time" layout="${longdate}" />
         <attribute name="level" layout="${level:upperCase=true}"/>
+        <attribute name="Logger" layout="${logger}" />
         <attribute name="message" layout="${message}" />
       </layout>
 
