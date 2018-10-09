@@ -1,4 +1,4 @@
-Matches when the calculated layout contains the specified substring. This filter is deprecated in favour of \<when /> which is based on contitions. 
+Matches when the calculated layout contains the specified substring. This filter is deprecated in favour of \<when /> which is based on conditions. 
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
 
