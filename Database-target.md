@@ -139,19 +139,10 @@ Each collection item is represented by \<parameter /> element with the following
 
 ## Example Configurations
 
-### SQL Server and ASP.NET Example Configuration
+### NLog and SQL Server Example Configuration
 ```xml
 <target name="database" xsi:type="Database">
-  <!--
-  Remarks:
-    The appsetting layouts require the NLog.Extended assembly.
-    The aspnet-* layouts require the NLog.Web assembly.
-    The Application value is determined by an AppName appSetting in Web.config.
-    The "NLogDb" connection string determines the database that NLog write to.
-    The create dbo.Log script in the comment below must be manually executed.
-  -->
-
-  <connectionStringName>NLogDb</connectionStringName>
+  <connectionString>server=localhost;Database=*****;user id=****;password=*****</connectionString>
 
   <!--
   Script for creating the dbo.Log table.
@@ -160,17 +151,10 @@ Each collection item is represented by \<parameter /> element with the following
   SET QUOTED_IDENTIFIER ON
   CREATE TABLE [dbo].[Log] (
 	  [Id] [int] IDENTITY(1,1) NOT NULL,
-	  [Application] [nvarchar](50) NOT NULL,
+	  [MachineName] [nvarchar](50) NOT NULL,
 	  [Logged] [datetime] NOT NULL,
 	  [Level] [nvarchar](50) NOT NULL,
 	  [Message] [nvarchar](max) NOT NULL,
-	  [UserName] [nvarchar](250) NULL,
-	  [ServerName] [nvarchar](max) NULL,
-	  [Port] [nvarchar](max) NULL,
-	  [Url] [nvarchar](max) NULL,
-	  [Https] [bit] NULL,
-	  [ServerAddress] [nvarchar](100) NULL,
-	  [RemoteAddress] [nvarchar](100) NULL,
 	  [Logger] [nvarchar](250) NULL,
 	  [Callsite] [nvarchar](max) NULL,
 	  [Exception] [nvarchar](max) NULL,
@@ -181,35 +165,18 @@ Each collection item is represented by \<parameter /> element with the following
       
   <commandText>
     insert into dbo.Log (
-      Application, Logged, Level, Message,
-      Username,
-      ServerName, Port, Url, Https,
-      ServerAddress, RemoteAddress,
+      MachineName, Logged, Level, Message,
       Logger, CallSite, Exception
     ) values (
-      @Application, @Logged, @Level, @Message,
-      @Username,
-      @ServerName, @Port, @Url, @Https,
-      @ServerAddress, @RemoteAddress,
+      @machineName, @Logged, @Level, @Message,
       @Logger, @Callsite, @Exception
     );
   </commandText>
 
-  <parameter name="@application" layout="${appsetting:name=AppName:default=Unknown\: set AppName in appSettings}" />
+  <parameter name="@machineName" layout="${machinename}" />
   <parameter name="@logged" layout="${date}" />
   <parameter name="@level" layout="${level}" />
   <parameter name="@message" layout="${message}" />
-
-  <parameter name="@username" layout="${identity}" />
-
-  <parameter name="@serverName" layout="${aspnet-request:serverVariable=SERVER_NAME}" />
-  <parameter name="@port" layout="${aspnet-request:serverVariable=SERVER_PORT}" />
-  <parameter name="@url" layout="${aspnet-request:serverVariable=HTTP_URL}" />
-  <parameter name="@https" layout="${when:inner=1:when='${aspnet-request:serverVariable=HTTPS}' == 'on'}${when:inner=0:when='${aspnet-request:serverVariable=HTTPS}' != 'on'}" />
-
-  <parameter name="@serverAddress" layout="${aspnet-request:serverVariable=LOCAL_ADDR}" />
-  <parameter name="@remoteAddress" layout="${aspnet-request:serverVariable=REMOTE_ADDR}:${aspnet-request:serverVariable=REMOTE_PORT}" />
-
   <parameter name="@logger" layout="${logger}" />
   <parameter name="@callSite" layout="${callsite}" />
   <parameter name="@exception" layout="${exception:tostring}" />
@@ -226,7 +193,7 @@ database logic to the database.
 ```xml
 <target name="db"
         xsi:type="Database"
-        connectionStringName="NLogConn"
+        connectionString="server=localhost;Database=*****;user id=****;password=*****"
         commandType="StoredProcedure"
         commandText="[dbo].[NLog_AddEntry_p]"
         >
