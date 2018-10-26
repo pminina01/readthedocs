@@ -52,7 +52,7 @@ Read more about using the [[Configuration File]].
   * Npgsql -
   * MySql.Data.MySqlClient
 
-  Note that provider invariant names are not supported on .NET CORE. Instead use a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the following tokens:
+  Note for .NET Core one should install the Nuget-package for the DbProvider (Ex. System.Data.SqlClient), and instead use the fully qualified name of the provider connection type (class implementing IDbConnection) or one of the following tokens:
   * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
   * oledb - OLEDB Data Provider
   * odbc - ODBC Data Provider
