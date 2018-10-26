@@ -42,34 +42,24 @@ Read more about using the [[Configuration File]].
 ### Connection Options
 * **dbUserName** - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
 
-* **dbProvider** - Name of the database provider. Required. Default: sqlserver  
-The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
+* **dbProvider** - Name of the database provider. Required. Default: sqlserver
+  The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
   * System.Data.SqlClient -
   * System.Data.SqlServerCe.3.5 -
   * System.Data.OracleClient - (deprecated in .NET Framework 4)
   * Oracle.DataAccess.Client -
   * System.Data.SQLite -
   * Npgsql -
-  * MySql.Data.MySqlClient -
+  * MySql.Data.MySqlClient
 
-Note that provider invariant names are not supported on .NET Compact Framework! Alternatively the parameter value > can be be a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the following tokens:
- * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
- * oledb - OLEDB Data Provider
- * odbc - ODBC Data Provider
+  Note that provider invariant names are not supported on .NET CORE. Instead use a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the following tokens:
+  * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
+  * oledb - OLEDB Data Provider
+  * odbc - ODBC Data Provider
 
-If you get the following error you might have to use the fully qualified name:
+  If you get the following error you might have to use the fully qualified name. See also [DbProvider Examples](#dbprovider-examples)
 
-```Error during initialization of Database Target[Database_wrapped] Could not load type '<Name Of DbProvider>' from assembly 'NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c'.```
-
-If there is still a problem, try to remove ```dbProvider```
-
-Example of using a fully qualified name with `Mono.Data.Sqlite`:
- 
-`dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"`
-
-Example of using a fully qualified name with `Microsoft.Data.Sqlite` (for dotnet core 2.0):
-
-`dbProvider="Microsoft.Data.Sqlite.SqliteConnection, Microsoft.Data.Sqlite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"`
+  ```Error during initialization of Database Target[Database_wrapped] Could not load type '<Name Of DbProvider>' from assembly 'NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c'.```
 
 * **useTransactions** - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
 
@@ -83,47 +73,7 @@ Example of using a fully qualified name with `Microsoft.Data.Sqlite` (for dotnet
 
 * **dbPassword** - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
 
-* **dbHost** - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)  
-
-### Installation Options
-See  [Installing targets](Installing-targets).
-
-_installDdlCommands_ - The installation DDL commands. [Collection](Data types)  . 
-Each collection item is represented by \<install-command /> element with the following attributes:
-  * _commandType_ - Type of the command. Required. Default: `text`  
-Possible values:
-    * StoredProcedure -
-    * TableDirect -
-    * Text -
-  * _connectionString_ - Connection string to run the command against. If not provided, connection string from the target is used. [Layout](Data types)  
-  * _ignoreFailures_ - Indicates whether to ignore failures. [Boolean](Data types)  
-  * _parameters_ - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Data types)  
-Each collection item is represented by <parameter /> element with the following attributes:
-    * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data types) Required.
-    * _name_ - Database parameter name. Required.
-    * _precision_ - Database parameter precision. [Byte](Data types) Default: 0
-    * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
-    * _size_ - Database parameter size. [Integer](Data types) Default: 0
-    * _text_ - Command text. [Layout](Data types) Required.  
-    * _installConnectionString_ - Connection string using for installation and uninstallation. If not provided, regular ConnectionString is being used. [Layout](Layout)  
-    * _uninstallDdlCommands_ - The uninstallation DDL commands. [Collection](Data types)  
-Each collection item is represented by \<uninstall-command /> element with the following attributes:
-      * _commandType_ - Type of the command. Required. Default: `text` 
-Possible values:
-        * `StoredProcedure` - `commandText` is the stored procedure name.
-        * `TableDirect` -
-        * `Text` - regular query
-      * _connectionString_ - Connection string to run the command against. If not provided, connection string from the target is used. [Layout](Layout)  
-      * _ignoreFailures_ - Indicates whether to ignore failures. [Boolean](Layout)  
-      * _parameters_ - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Layout)  
-Each collection item is represented by \<parameter /> element with the following attributes:
-        * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Layout) Required.
-        * _name_ - Database parameter name. Required.
-        * _precision_ - Database parameter precision. [Byte](Data types) Default: 0
-        * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
-        * _size_ - Database parameter size. [Integer](Data types) Default: 0
-        * _text_ - Command text. [Layout](Data types) Required.
-
+* **dbHost** - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)
 
 ### SQL Statement
 * **commandText** - Text of the SQL command to be run on each log level. [Layout](Data types) Required.  
@@ -131,11 +81,52 @@ Typically this is a SQL INSERT statement or a stored procedure call. It should u
 
 * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Data types)  
 Each collection item is represented by \<parameter /> element with the following attributes:
-* _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data types) Required.  
-* _name_ - Database parameter name. Required.
-* _precision_ - Database parameter precision. [Byte](Data types) Default: 0
-* _scale_ - Database parameter scale. [Byte](Data types) Default: 0
-* _size_ - Database parameter size. [Integer](Data types) Default: 0
+  * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data types) Required.  
+  * _name_ - Database parameter name. Required.
+  * _precision_ - Database parameter precision. [Byte](Data types) Default: 0
+  * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
+  * _size_ - Database parameter size. [Integer](Data types) Default: 0
+
+### Installation Options
+See  [Installing targets](Installing-targets).
+
+* **installConnectionString** - Connection string using for installation and uninstallation. If not provided, regular ConnectionString is being used. [Layout](Layout)  
+* **InstallDdlCommands** - The installation DDL commands. [Collection](Data types)  . 
+Each collection item is represented by \<install-command /> element with the following attributes:
+  * **commandType** - Type of the command. Required. Default: `text`  
+  Possible values:
+    * `StoredProcedure` - `Text` is the stored procedure name.
+    * `TableDirect` -
+    * `Text` - regular query
+  * **Text** - The command-text
+  * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Data types)  
+Each collection item is represented by <parameter /> element with the following attributes:
+    * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data types) Required.
+    * _name_ - Database parameter name. Required.
+    * _precision_ - Database parameter precision. [Byte](Data types) Default: 0
+    * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
+    * _size_ - Database parameter size. [Integer](Data types) Default: 0
+    * _text_ - Command text. [Layout](Data types) Required.  
+  * **connectionString** - Connection string to run the command against. If not provided, connection string from the target is used. [Layout](Data types)  
+  * **ignoreFailures** - Indicates whether to ignore failures. [Boolean](Data types)  
+* **uninstallDdlCommands** - The uninstallation DDL commands. [Collection](Data types)  
+Each collection item is represented by \<uninstall-command /> element with the following attributes:
+  * **commandType** - Type of the command. Required. Default: `text`  
+  Possible values:
+    * `StoredProcedure` - `Text` is the stored procedure name.
+    * `TableDirect` -
+    * `Text` - regular query
+  * **Text** - The command-text
+  * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Layout)  
+Each collection item is represented by \<parameter /> element with the following attributes:
+    * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Layout) Required.
+    * _name_ - Database parameter name. Required.
+    * _precision_ - Database parameter precision. [Byte](Data types) Default: 0
+    * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
+    * _size_ - Database parameter size. [Integer](Data types) Default: 0
+    * _text_ - Command text. [Layout](Data types) Required.
+  * **connectionString** - Connection string to run the command against. If not provided, connection string from the target is used. [Layout](Layout)  
+  * **ignoreFailures** - Indicates whether to ignore failures. [Boolean](Layout)  
 
 ## Example Configurations
 
@@ -262,14 +253,29 @@ BEGIN
 END
 ```
 
-### MySql and .NET Core
+### DbProvider Examples
 
-Installed this package [MySql.Data](https://www.nuget.org/packages/MySql.Data/7.0.6-IR31)
-
-with following settings
+#### MySql and .NET Core
+Install package: https://www.nuget.org/packages/MySql.Data/
 ```xml
-<target name="database" xsi:type="Database"
-             dbProvider="MySql.Data.MySqlClient.MySqlConnection, MySql.Data"
-             connectionString="server=localhost;Database=*****;user id=****;password=*****"
-             >
+dbProvider="MySql.Data.MySqlClient.MySqlConnection, MySql.Data"
+```
+
+#### Microsoft.Data.Sqlite and .NET Core
+Install package: https://www.nuget.org/packages/Microsoft.Data.SQLite/
+
+```xml
+dbProvider="Microsoft.Data.Sqlite.SqliteConnection, Microsoft.Data.Sqlite"
+```
+
+#### Oracle.ManagedDataAccess and .NET
+
+```xml
+dbProvider="Oracle.ManagedDataAccess.Client.OracleConnection, Oracle.ManagedDataAccess"
+```
+
+#### Mono.Data.Sqlite and .NET
+
+```xml
+dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite"
 ```
