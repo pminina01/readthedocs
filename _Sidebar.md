@@ -13,6 +13,10 @@
 ## Configuration
 
 * [All targets, layouts and layout renderers](http://nlog-project.org/config/)
+  * [[File-target]]
+  * [[ColoredConsole-target]]
+  * [[Database-target]]
+  * [[Mail-target]]
 
 ## Programmatic Configuration
 * [Tutorial Configuration API](Configuration-API)
