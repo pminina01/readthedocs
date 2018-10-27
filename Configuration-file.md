@@ -84,28 +84,21 @@ You can use the following elements as children to `<nlog />`. The first two elem
 <a name="log-levels" />
 
 ## Log levels
-The following are the allowed log levels (in descending order):
 
-* `Fatal`   
-* `Error` 
-* `Warn`  
-* `Info`
-* `Debug`
-* `Trace`
+Each log entry has a level. Also, logging is configured to allow entries of a certain level and higher to be logged. Entries of lower levels are ignored.
 
-Also to turn off logging, use `Off`
+The log levels, in descending order, are as follows:
 
-Examples when you could use which level:
-
-|Level|Example|
+|Level|Typical Use|
 ------|-------
-|Fatal|Highest level: important stuff down|
-|Error|For example application crashes / exceptions.|
-|Warn|Incorrect behavior but the application can continue |
+|Fatal|Something bad happened; application is going down|
+|Error|Something failed; application may or may not continue|
+|Warn|Something unexpected; application will continue|
 |Info|Normal behavior like mail sent, user updated profile etc.|
-|Debug|Executed queries, user authenticated, session expired|
-|Trace|Begin method X, end method X etc|
+|Debug|For debugging; executed query, user authenticated, session expired|
+|Trace|For trace debugging; begin method X, end method X|
 
+There is one more level, Off, which has the lowest value. As the minimum log level, it disables logging. It is not used to log an entry.
 
 <a name="targets" />
 
