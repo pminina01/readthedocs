@@ -76,6 +76,11 @@ Read more about using the [[Configuration File]].
 * **dbHost** - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. [Layout](Data types)
 
 ### SQL Statement
+* **commandType** - Type of the command. Required. Default: `text`  
+  Possible values:
+    * `StoredProcedure` - The _commandText_ is the stored procedure name.
+    * `TableDirect` -
+    * `Text` - regular query
 * **commandText** - Text of the SQL command to be run on each log level. [Layout](Data types) Required.  
 Typically this is a SQL INSERT statement or a stored procedure call. It should use the database-specific parameters (marked as @parameter for SQL server or :parameter for Oracle, other data providers have their own notation) and not the layout renderers, because the latter is prone to SQL injection attacks. The layout renderers should be specified as \<parameter /> elements instead.
 
