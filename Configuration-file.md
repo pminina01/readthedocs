@@ -91,7 +91,8 @@ You can use the following elements as children to `nlog`. `targets` and `rules` 
 <a name="targets" />
 
 # Targets
-The \<targets /> section defines log [Targets](Targets). Each target is represented by a \<target /> element. There are two attributes required for each target:
+
+The `targets` section defines log [Targets](Targets). Each target is represented by a `target` element. There are two attributes required for each target:
  * `name` – target name
  * `type` – target type – such as "File", "Database", "Mail". When using namespaces this attribute is named `xsi:type`.
 
@@ -99,7 +100,7 @@ In addition to these attributes, targets usually accept other parameters, which 
 
 For example – the [File target](File-target) accepts the `fileName` parameter which defines output file name and the [Console target](Console-target) has the `error` parameter which determines whether the diagnostic traces are written to standard error (stderr) instead of standard output (stdout) of the process.
 
-This example demonstrates a `<targets />` section which defines multiple targets: two files, one network target and OutputDebugString target:
+This example demonstrates a `targets` section which defines multiple targets: two files, one network target and OutputDebugString target:
 ```xml
 <targets>
   <target name="f1" xsi:type="File" fileName="file1.txt"/>
@@ -115,7 +116,7 @@ NLog provides many predefined [Targets](Targets). It’s actually very easy to c
 
 # Rules
 
-The `rules` section maps loggers to targets and [log levels](#log-levels). Rules are processed in sequential order. Multiple rules may apply to a logger. Use `final` to stop processing rules after a match is found.
+The `rules` section maps loggers to [targets](#targets) and [log levels](#log-levels). Rules are processed in sequential order. Multiple rules may apply to a logger. Use `final` to stop processing rules after a match is found.
 
 Wildcard matching is supported for the logger name. In other words, the rule `name` attribute may include wildcard characters.
 
