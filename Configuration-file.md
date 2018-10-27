@@ -1,8 +1,8 @@
 This page describes how to configure NLog via XML specification.
 
 # Contents
-[Configuration file locations](#configuration-file-locations)<br />
-[Configuration file format](#configuration-file-format)<br />
+[File locations](#configuration-file-locations)<br />
+[File layout](#configuration-file-format)<br />
 [Log levels](#log-levels)<br />
 [Targets](#targets)<br />
 [Rules](#rules)<br />
@@ -20,7 +20,7 @@ This page describes how to configure NLog via XML specification.
 
 <a name="configuration-file-locations" />
 
-## Configuration file locations
+## File locations
 At startup, NLog searches for its configuration in various files as described below. It loads the first nlog configuration found. Search ends when the first nlog configuration is found. NLog fails if no configuration is found.
 
 For a stand-alone *.exe application, files are searched as follows:
@@ -49,37 +49,42 @@ LogManager.Configuration = new XmlLoggingConfiguration("assets/someothername.con
 
 <a name="configuration-file-format" />
 
-## Configuration file format
-NLog supports two configuration file formats:
- 1. Configuration embedded within the standard *.exe.config or web.config file
- 2. Simplified configuration, stored in a separate file
+## File layout
 
-In the first variant, we use a standard configSections mechanism, which makes our file look like this:
+NLog configuration is formatted as XML and is either embedded in a Visual Studio project config file (app.config or web.config) or is a stand-alone XML file.
+
+To embed in a project config file, add an nlog `section` element under `configSections` and add an `nlog` element. For example:
+
 ```xml
 <configuration>
   <configSections>
     <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog"/>
   </configSections>
+  ...
   <nlog>
+  ...
   </nlog>
 </configuration>
 ```
+As a stand-alone file, the root element is `nlog`. For example:
 
-The simplified format is the pure XML having the \<nlog /> element as its root. The use of namespaces is optional, but it enables the Intellisense in Visual Studio.
 ```xml
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+...
 </nlog>
 ```
 
-Note that NLog config file is case-insensitive when not using namespaces and is case-sensitive when you use them. Intellisense only works with case-sensitive configurations.
+The use of an XML namespace is optional, but enables Intellisense in Visual Studio.
 
-### Configuration elements  
-You can use the following elements as children to `<nlog />`. The first two elements from the list are required to be present in all NLog configuration files, the remaining ones are optional and can be useful in advanced scenarios.
- * `<targets />` – defines log targets/outputs
- * `<rules />` – defines log routing rules
- * `<extensions />` – loads NLog extensions from the *.dll file
- * `<include />`– includes external configuration file
- * `<variable />` – sets the value of a configuration variable
+NLog config is case-insensitive when **not** using a namespace and is case-sensitive when using a namespace.
+
+### Top-level elements
+You can use the following elements as children to `nlog`. `targets` and `rules` are required in any configuration The others are optional and can be useful in advanced scenarios.
+ * `targets` – defines log targets/outputs
+ * `rules` – defines log routing rules
+ * `extensions` – loads NLog extensions from the *.dll file
+ * `include`– includes external configuration file
+ * `variable` – sets the value of a configuration variable
 
 <a name="log-levels" />
 
