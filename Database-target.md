@@ -2,7 +2,7 @@ Writes log messages to the database using an ADO.NET provider. The database oper
 
 Supported in .NET, Compact Framework and Mono
 
-.NET Core users: add the package System.Data.SqlClient for SQL server etc.
+.NET Core users: add the nuget-package System.Data.SqlClient for SQL server etc.
 
 ## Configuration Syntax
 ```xml
