@@ -42,6 +42,9 @@ Read more about using the [[Configuration File]].
 ### Connection Options
 * **dbProvider** - Name of the database provider. Required. Default: sqlserver
   The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
+  * sqlserver, mssql, microsoft or msde - Resolves to System.Data.SqlClient Data Provider
+  * oledb - OLEDB Data Provider (Not recognized on NetCore)
+  * odbc - ODBC Data Provider (Not recognized on NetCore)
   * System.Data.SqlClient -
   * System.Data.SqlServerCe.3.5 -
   * System.Data.OracleClient - (deprecated in .NET Framework 4)
@@ -49,13 +52,10 @@ Read more about using the [[Configuration File]].
   * System.Data.SQLite -
   * Npgsql -
   * MySql.Data.MySqlClient
-  * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
-  * oledb - OLEDB Data Provider
-  * odbc - ODBC Data Provider
 
-  Note for .NET Core one should install the Nuget-package for the DbProvider (Ex. System.Data.SqlClient), and instead use the fully qualified name of the provider connection type (class implementing IDbConnection).
+  Note for .NET Core one should install the Nuget-package for the DbProvider (Ex. System.Data.SqlClient), and instead use the fully qualified name of the provider connection type (class implementing IDbConnection). See also [DbProvider Examples](#dbprovider-examples)
 
-  If you get the following error in [[Internal-Logging]] then you might have to use the fully qualified name. See also [DbProvider Examples](#dbprovider-examples)
+  If you get the following error in [[Internal-Logging]] then you might have to use the fully qualified name. 
 
   ```Error during initialization of Database Target[Database_wrapped] Could not load type '<Name Of DbProvider>' from assembly 'NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c'.```
 
