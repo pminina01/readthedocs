@@ -40,8 +40,6 @@ Read more about using the [[Configuration File]].
   > Introduced with NLog v4.4.2. Default became `True` with NLog v4.5
 
 ### Connection Options
-* **dbUserName** - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
-
 * **dbProvider** - Name of the database provider. Required. Default: sqlserver
   The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
   * System.Data.SqlClient -
@@ -63,14 +61,16 @@ Read more about using the [[Configuration File]].
 
 * **useTransactions** - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.
 
+* **connectionString** - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
+
 * **connectionStringName** - Name of the connection string to lookup in app.config. The ProviderName of the connectionstring will be used to determine the SQL type. Since NLog 4.3 this  ProviderName attribute isn't required anymore and the `dbProvider` will be used as fallback.
   > Not supported on NetCore as app.config has been replaced with appsettings.json
-
-* **connectionString** - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. [Layout](Layout)  
 
 * **keepConnection** - Indicates whether to keep the database connection open between the log events. [Boolean](Data types) Default: `false`  
 
 * **dbDatabase** - Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string. [Layout](Data types)  
+
+* **dbUserName** - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. [Layout](Layout)  
 
 * **dbPassword** - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. [Layout](Data types)  
 
