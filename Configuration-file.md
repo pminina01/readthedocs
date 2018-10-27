@@ -22,25 +22,24 @@ All configuration of NLog can be done with a single XML file.
 <a name="configuration-file-locations" />
 
 ## Configuration file locations
-NLog attempts to automatically configure itself on startup, by looking for the configuration files in some standard places.
+At startup, NLog searches for its configuration in various files as described below. It loads the first nlog configuration found. Search ends when the first nlog configuration is found. NLog fails if no configuration is found.
 
-The following locations will be searched when executing a stand-alone *.exe application:
+For a stand-alone *.exe application, files are searched as follows:
 * standard application configuration file (usually applicationname.exe.config)
 * applicationname.exe.nlog in application’s directory
 * NLog.config in application’s directory (_Name sensitive; using docker dotnet core_)
 * NLog.dll.nlog in a directory where NLog.dll is located (only if NLog isn't installed in the GAC)
 
-In case of an ASP.NET application, the following files are searched:
+For an ASP.NET application, files are searched as follows:
 * standard web application file web.config
 * web.nlog located in the same directory as web.config
 * NLog.config in application’s directory
 * NLog.dll.nlog in a directory where NLog.dll is located (only if NLog isn't installed in the GAC)
 
-The .NET Compact Framework doesn’t recognize application configuration files (*.exe.config) nor environmental variables, so NLog only looks in these locations:
+For the .NET Compact Framework -- which doesn’t recognize application configuration files (*.exe.config) or environmental variables, files are searched as follows:
 * applicationname.exe.nlog in application’s directory
 * NLog.config in application’s directory
 * NLog.dll.nlog in a directory where NLog.dll is located  (only if NLog isn't installed in the GAC)
-
 
 ### Xamarin Assets
 For Xamarin Android, the assets folder is supported. "NLog.config" in the assets folder will be loaded automatically.
