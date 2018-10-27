@@ -229,15 +229,19 @@ A larger example can be found here: [XML config `<include />` example](XML-confi
 <a name="variables" />
 
 ## Variables
-Variables can be used to write complex or repeated expressions (such as file names) in a concise manner. To define a variable use the following syntax:
+Variables allow you to enhance configuration by accessing environment information and to simplify configuration by reducing repeated text. NLog defines variables that you can use in your configuration. Also, you can define and use custom variables.
+
+Define a custom variable as follows:
+
 ```xml
-<variable name="var" value="xxx" />
+<variable name="varname" value="xxx" />
 ```
 
-Once defined, variables can be used as if they were layout renderers – by using `${var}` syntax, as demonstrated in the following example:
+A variable is used via the `${varname}` syntax. The following example shows using a pre-defined variable `shortdate` and defining and using a custom variable `logDirectory`.
+
 ```xml
 <nlog>
-  <variable name="logDirectory" value="${basedir}/logs/${shortdate}"/>
+  <variable name="logDirectory" value="logs/${shortdate}"/>
   <targets>
     <target name="file1" xsi:type="File" fileName="${logDirectory}/file1.txt"/>
     <target name="file2" xsi:type="File" fileName="${logDirectory}/file2.txt"/>
@@ -245,16 +249,18 @@ Once defined, variables can be used as if they were layout renderers – by usin
 </nlog>
 ```
 
-Variables should be declared before the targets to be able to use them. Otherwise configuration initialization will fail.
+A variable must be defined before use. Otherwise configuration initialization will fail.
 
-NB: Since NLog 4.3 the `${basedir}` isn't needed anymore for relative paths.
+### New Variable Using Syntax
+NLog 4.1 introduced a new syntax for using a variable value:
 
-### Vars since NLog 4.1
-In  NLog 4.1 is a new method introduced to render the variable values. Use `${var:var1}` instead of `${var1}`.
+```xml
+${var:varname}
+```
 
 See [Variable layout renderer](https://github.com/NLog/NLog/wiki/Var-Layout-Renderer). 
 
-Why use this new method? With the variable layout renderer:
+Why use this new syntax? With the variable layout renderer:
 
 * Variables can be changed, deleted and created from the API
 * A default value can be configured for a variable, e.g. `${var:password:default=unknown}`
@@ -266,8 +272,6 @@ configuration, add `keepVariablesOnReload="true"` parameter to the configuration
    ...
 </nlog>
 ```
-
-
 
 <a name="automatic-reconfiguration" />
 
