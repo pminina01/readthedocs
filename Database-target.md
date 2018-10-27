@@ -43,8 +43,8 @@ Read more about using the [[Configuration File]].
 * **dbProvider** - Name of the database provider. Required. Default: sqlserver
   The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
   * sqlserver, mssql, microsoft or msde - Resolves to System.Data.SqlClient Data Provider
-  * oledb - OLEDB Data Provider (Not recognized on NetCore)
   * odbc - ODBC Data Provider (Not recognized on NetCore)
+  * oledb - OLEDB Data Provider (Not recognized on NetCore)
   * System.Data.SqlClient -
   * System.Data.SqlServerCe.3.5 -
   * System.Data.OracleClient - (deprecated in .NET Framework 4)
