@@ -50,7 +50,6 @@ Read more about using the [[Configuration File]].
 
   Note for .NET then one can also use the invariant name as registered in machine.config or app.config. Common values are (Not supported by NET Core):
    * System.Data.SqlClient -
-   * System.Data.SqlServerCe.3.5 -
    * System.Data.OracleClient - (deprecated in .NET Framework 4)
    * Oracle.DataAccess.Client -
    * System.Data.SQLite -
