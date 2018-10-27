@@ -9,23 +9,23 @@ Supported in .NET, Compact Framework and Mono
 <targets>
   <target xsi:type="Database"
           name="String"
-          dbUserName="Layout"
           dbProvider="String"
-          useTransactions="Boolean"
-          connectionStringName="String"
           connectionString="Layout"
+          connectionStringName="String"
           keepConnection="Boolean"
           dbDatabase="Layout"
+          dbUserName="Layout"
           dbPassword="Layout"
           dbHost="Layout"
-          installConnectionString="Layout"
-          commandText="Layout">
+          commandType="Enum"
+          commandText="Layout"
+          installConnectionString="Layout">
     <install-command commandType="Enum" connectionString="Layout" ignoreFailures="Boolean"
                  text="Layout"/><!-- repeated -->
     <uninstall-command commandType="Enum" connectionString="Layout" ignoreFailures="Boolean"
                    text="Layout"/><!-- repeated -->
-    <parameter layout="Layout" name="String" precision="Byte"
-         scale="Byte" size="Integer"/><!-- repeated -->
+    <parameter name="String" layout="Layout"
+         precision="Byte" scale="Byte" size="Integer"/><!-- repeated -->
   </target>
 </targets>
 ```
