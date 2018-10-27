@@ -6,10 +6,10 @@ This page describes how to configure NLog via XML specification.
 [Top-level elements](#top-level-elements)<br />
 [Targets](#targets)<br />
 [Rules](#rules)<br />
-[Log levels](#log-levels)<br />
 [Include files](#include-files)<br />
 [Variables](#variables)<br />
 [Layouts and layout renderers](#layouts-and-layout-renderers)<br />
+[Log levels](#log-levels)<br />
 [Automatic reconfiguration](#automatic-reconfiguration)<br />
 [Troubleshooting logging](#troubleshooting-logging)<br />
 [Asynchronous processing and wrapper targets](#asynchronous-processing-and-wrapper-targets)<br />
@@ -170,25 +170,6 @@ Messages from any class in the `Name.Space` namespace whose level is between `De
 
 In the simplest cases the entire logging configuration consists of a single `<target />` and a single `<logger />` rule that routes messages to this target depending on their level, but adding more targets and rules is very simple as the application grows.
 
-<a name="log-levels" />
-
-# Log levels
-
-Each log entry has a level. Also, logging is configured to allow entries of a certain level and higher to be logged. Entries of lower levels are ignored.
-
-The log levels, in descending order, are as follows:
-
-|Level|Typical Use|
-------|-------
-|Fatal|Something bad happened; application is going down|
-|Error|Something failed; application may or may not continue|
-|Warn|Something unexpected; application will continue|
-|Info|Normal behavior like mail sent, user updated profile etc.|
-|Debug|For debugging; executed query, user authenticated, session expired|
-|Trace|For trace debugging; begin method X, end method X|
-
-There is one more level, Off, which has the lowest value. As the minimum log level, it disables logging. It is not used to log an entry.
-
 <a name="include-files" />
 
 # Include files
@@ -278,6 +259,25 @@ As you can see, the ${logger} layout renderer was used in the fileName attribute
 * Other.Name.Space.Class1.txt
 * Other.Name.Space.Class2.txt
 * Other.Name.Space.Class3.txt
+
+<a name="log-levels" />
+
+# Log levels
+
+Each log entry has a level. Also, logging is configured to allow entries of a certain level and higher to be logged. Entries of lower levels are ignored.
+
+The log levels, in descending order, are as follows:
+
+|Level|Typical Use|
+------|-------
+|Fatal|Something bad happened; application is going down|
+|Error|Something failed; application may or may not continue|
+|Warn|Something unexpected; application will continue|
+|Info|Normal behavior like mail sent, user updated profile etc.|
+|Debug|For debugging; executed query, user authenticated, session expired|
+|Trace|For trace debugging; begin method X, end method X|
+
+There is one more level, Off, which has the lowest value. As the minimum log level, it disables logging. It is not used to log an entry.
 
 <a name="automatic-reconfiguration" />
 
