@@ -41,19 +41,21 @@ Read more about using the [[Configuration File]].
 
 ### Connection Options
 * **dbProvider** - Name of the database provider. Required. Default: sqlserver
-  The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:
+  Following values are recognized by default:
   * sqlserver, mssql, microsoft or msde - Resolves to System.Data.SqlClient Data Provider
   * odbc - ODBC Data Provider (Not recognized on NetCore)
   * oledb - OLEDB Data Provider (Not recognized on NetCore)
-  * System.Data.SqlClient -
-  * System.Data.SqlServerCe.3.5 -
-  * System.Data.OracleClient - (deprecated in .NET Framework 4)
-  * Oracle.DataAccess.Client -
-  * System.Data.SQLite -
-  * Npgsql -
-  * MySql.Data.MySqlClient
 
   Note for .NET Core one should install the Nuget-package for the DbProvider (Ex. System.Data.SqlClient), and instead use the fully qualified name of the provider connection type (class implementing IDbConnection). See also [DbProvider Examples](#dbprovider-examples)
+
+  Note for .NET then one can also use the invariant name as registered in machine.config or app.config. Common values are (Not supported by NET Core):
+   * System.Data.SqlClient -
+   * System.Data.SqlServerCe.3.5 -
+   * System.Data.OracleClient - (deprecated in .NET Framework 4)
+   * Oracle.DataAccess.Client -
+   * System.Data.SQLite -
+   * Npgsql -
+   * MySql.Data.MySqlClient
 
   If you get the following error in [[Internal-Logging]] then you might have to use the fully qualified name. 
 
