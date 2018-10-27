@@ -95,10 +95,10 @@ See  [Installing targets](Installing-targets).
 Each collection item is represented by \<install-command /> element with the following attributes:
   * **commandType** - Type of the command. Required. Default: `text`  
   Possible values:
-    * `StoredProcedure` - `Text` is the stored procedure name.
+    * `StoredProcedure` - The command-text is the stored procedure name.
     * `TableDirect` -
     * `Text` - regular query
-  * **Text** - The command-text
+  * **Text** - The command-text (Or stored procedure name)
   * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Data types)  
 Each collection item is represented by <parameter /> element with the following attributes:
     * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Data types) Required.
@@ -113,10 +113,10 @@ Each collection item is represented by <parameter /> element with the following 
 Each collection item is represented by \<uninstall-command /> element with the following attributes:
   * **commandType** - Type of the command. Required. Default: `text`  
   Possible values:
-    * `StoredProcedure` - `Text` is the stored procedure name.
+    * `StoredProcedure` - The command-text is the stored procedure name.
     * `TableDirect` -
     * `Text` - regular query
-  * **Text** - The command-text
+  * **Text** - The command-text (Or stored procedure name)
   * **parameters** - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. [Collection](Layout)  
 Each collection item is represented by \<parameter /> element with the following attributes:
     * _layout_ - Layout that should be use to calcuate the value for the parameter. [Layout](Layout) Required.
