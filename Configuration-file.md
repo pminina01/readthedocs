@@ -114,26 +114,34 @@ NLog provides many predefined [Targets](Targets). It’s actually very easy to c
 <a name="rules" />
 
 # Rules
-Log routing rules are defined in the `<rules />` section. It is a simple routing table, where we define the list of targets that should be written to for each combination of source/logger name and [log level](/nlog/nlog/wiki/Log-levels). Rules are processed starting with the first rule in the list. When a rule matches, log messages are directed to target(s) in that rule. If a rule is marked as `final`, rules below it are not processed.
 
-Each routing table entry is a \<logger /> element, which accepts the following attributes:
- * `name` – source/logger name (may include wildcard characters *)
- * `minlevel` – minimal log level for this rule to match
- * `maxlevel` – maximum log level for this rule to match
- * `level` – single log level for this rule to match
- * `levels` - comma separated list of log levels for this rule to match
- * `writeTo` – comma separated list of target that should be written to when this rule matches.
- * `final` – make this rule final. No further rules are processed when any final rule matches.
- * `enabled` - setting enabled to false allows to disable this rule. Disabled rules are ignored.
+The `rules` section maps loggers to targets and [log levels](#log-levels). Rules are processed in sequential order. Multiple rules may apply to a logger. Use `final` to stop processing rules after a match is found.
 
-In case a rule, defined in a XML configuration, contains more than one level related keyword (`level`, `levels`, `minLevel` and `maxLevel`) only the first level declaring keyword or set is used and the rest are ignored.
+Wildcard matching is supported for the logger name. In other words, the rule `name` attribute may include wildcard characters.
 
-The level related keywords are processed in the following order:
+The set of log levels defines which log entries will be logged. Entries logged with other levels will be ignored. The most common specifier may be `minLevel`. The other specifiers allow for more advanced configuration.
+
+A rule is a `logger` element with the following attributes:
+
+ * `name` – logger name pattern - may include wildcard characters (*)
+ * `minlevel` – minimal log level to log
+ * `maxlevel` – maximum log level to log
+ * `level` – single log level to log
+ * `levels` - comma separated list of log levels to log
+ * `writeTo` – comma separated list of targets that should be written to
+ * `final` – no rules are processed after a final rule matches
+ * `enabled` - set to `false` to disable the rule without deleting it
+
+If a rule contains more than one level-related keyword (`level`, `levels`, `minLevel` and `maxLevel`) only the first level declaring keyword or set is used and the rest are ignored.
+
+The level-related keywords are processed in the following order:
 
 1. `level` 
 2. `levels` 
 3. `minlevel` and `maxlevel` (minimum and maximum level keywords have the same priority)
 4. No keyword (All levels are logged)
+
+[Need clarification: is the first level-related keyword used as indicated first? Or is there a priority as indicated second (by the list)? Also, what is a level declaring set?]
 
 In case a rule is marked as `final` and contains any level related keywords, the `final` attribute applies only to the specified levels.
 
