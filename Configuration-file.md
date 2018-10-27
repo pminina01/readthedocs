@@ -237,7 +237,7 @@ Define a custom variable as follows:
 <variable name="varname" value="xxx" />
 ```
 
-A variable is used via the `${varname}` syntax. The following example shows using a pre-defined variable `shortdate` and defining and using a custom variable `logDirectory`.
+The value of a variable can be inserted into an attribute value via the `${varname}` syntax. A variable value can even be used to define the value another variable. The following example shows using a pre-defined variable `shortdate` and defining and using a custom variable `logDirectory`.
 
 ```xml
 <nlog>
@@ -249,29 +249,20 @@ A variable is used via the `${varname}` syntax. The following example shows usin
 </nlog>
 ```
 
-A variable must be defined before use. Otherwise configuration initialization will fail.
+With this syntax, a variable must be defined before use. Otherwise configuration initialization will fail.
 
-### New Variable Using Syntax
-NLog 4.1 introduced a new syntax for using a variable value:
+NLog 4.1 introduced a new syntax for using a variable value. See [Variable layout renderer](https://github.com/NLog/NLog/wiki/Var-Layout-Renderer). 
 
 ```xml
 ${var:varname}
 ```
 
-See [Variable layout renderer](https://github.com/NLog/NLog/wiki/Var-Layout-Renderer). 
-
-Why use this new syntax? With the variable layout renderer:
+This syntax provides the following advantages over the older syntax:
 
 * Variables can be changed, deleted and created from the API
 * A default value can be configured for a variable, e.g. `${var:password:default=unknown}`
-
-By default, variables are reset when the configuration reloads. In order to take the variables from current
-configuration, add `keepVariablesOnReload="true"` parameter to the configuration file (introduced in NLog 4.4).
-```xml
-<nlog keepVariablesOnReload="true">
-   ...
-</nlog>
-```
+* By default, variables are reset when the configuration reloads. In order to take the variables from current
+configuration, add `keepVariablesOnReload="true"` to the `nlog` element (introduced in NLog 4.4).
 
 <a name="automatic-reconfiguration" />
 
