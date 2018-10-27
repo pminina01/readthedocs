@@ -208,20 +208,21 @@ As you can see, the ${logger} layout renderer was used in the fileName attribute
 <a name="include-files" />
 
 ## Include files
-It’s sometimes desired to split the configuration file into many smaller ones. NLog provides an include file mechanism for that. To include an external file, you simply use `<include file=”…” />` element. It’s worth noting that the file attribute, just like most attributes in NLog config file(s), may include dynamic values using the familiar `${}` notation for layout renderers, so it’s possible to include different files based on environmental properties.
+NLog provides an include file feature so that configuration can be stored in multiple files. 
 
-The following configuration example demonstrates this, by loading a file whose name is derived from the name of the machine we’re running on.
 ```xml
-<nlog>
-  ...
-  <include file="${basedir}/${machinename}.config"/>
-  ...
-</nlog>
+<include file="nlog-common.config" />
 ```
 
-The optional attribute, `ignoreErrors="true"`, which defaults to `false`, can be added to prevent an exception from being thrown when the include file is not found or is not formatted correctly.  When setting `ignoreErrors="true"`, use the [Troubleshooting logging](#troubleshooting-logging) section to log errors.
+Like most attributes in NLog config, the file attribute may reference variables. The following example includes a file named the same as the machine that nlog is running on.
 
-Since NLog 4.4.2, wildcards (`*`) are allowed. E.g. `<include file="${basedir}/nlog-*.config"/>`
+```xml
+<include file="${machinename}.config"/>
+```
+
+Set the attribute `ignoreErrors` to `true` to prevent a startup failure if the include file cannot be loaded -- file not found, invalid XML, ....  Use the [Troubleshooting logging](#troubleshooting-logging) section to log errors. This attribute is optional and defaults to `false`.
+
+Since NLog 4.4.2, wildcards (`*`) are allowed. E.g. `<include file="nlog-*.config"/>`
 
 A larger example can be found here: [XML config `<include />` example](XML-config-include-example)
 
