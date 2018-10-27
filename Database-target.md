@@ -55,7 +55,7 @@ Read more about using the [[Configuration File]].
   * oledb - OLEDB Data Provider
   * odbc - ODBC Data Provider
 
-  If you get the following error you might have to use the fully qualified name. See also [DbProvider Examples](#dbprovider-examples)
+  If you get the following error in [[Internal-Logging]] then you might have to use the fully qualified name. See also [DbProvider Examples](#dbprovider-examples)
 
   ```Error during initialization of Database Target[Database_wrapped] Could not load type '<Name Of DbProvider>' from assembly 'NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c'.```
 
