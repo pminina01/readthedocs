@@ -265,7 +265,7 @@ As you can see, the ${logger} layout renderer was used in the fileName attribute
 
 # Log levels
 
-Each log entry has a level. Also, logging is configured to allow entries of a certain level and higher to be logged. Entries of lower levels are ignored.
+Each log entry has a level. And each logger is configured to include or ignore certain levels. A common configuration is to specify the minimum level where that level and higher levels are included. For example, if the minimum level is Info, then Info, Warn, Error and Fatal are logged, but Debug and Trace are ignored.
 
 The log levels, in descending order, are as follows:
 
