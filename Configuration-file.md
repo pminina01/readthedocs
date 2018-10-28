@@ -278,7 +278,7 @@ The log levels, in descending order, are as follows:
 |Debug|For debugging; executed query, user authenticated, session expired|
 |Trace|For trace debugging; begin method X, end method X|
 
-There is one more level, Off, which has the lowest value. As the minimum log level, it disables logging. It is not used to log an entry.
+There is one more level, Off. Since it is the highest value and is not used for entries, it disables logging when used as the minimum log level.
 
 <a name="automatic-reconfiguration" />
 
