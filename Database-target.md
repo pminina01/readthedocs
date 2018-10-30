@@ -164,20 +164,20 @@ Each collection item is represented by \<parameter /> element with the following
   <commandText>
     insert into dbo.Log (
       MachineName, Logged, Level, Message,
-      Logger, CallSite, Exception
+      Logger, Callsite, Exception
     ) values (
-      @machineName, @Logged, @Level, @Message,
+      @MachineName, @Logged, @Level, @Message,
       @Logger, @Callsite, @Exception
     );
   </commandText>
 
-  <parameter name="@machineName" layout="${machinename}" />
-  <parameter name="@logged" layout="${date}" />
-  <parameter name="@level" layout="${level}" />
-  <parameter name="@message" layout="${message}" />
-  <parameter name="@logger" layout="${logger}" />
-  <parameter name="@callSite" layout="${callsite}" />
-  <parameter name="@exception" layout="${exception:tostring}" />
+  <parameter name="@MachineName" layout="${machinename}" />
+  <parameter name="@Logged" layout="${date}" />
+  <parameter name="@Level" layout="${level}" />
+  <parameter name="@Message" layout="${message}" />
+  <parameter name="@Logger" layout="${logger}" />
+  <parameter name="@Callsite" layout="${callsite}" />
+  <parameter name="@Exception" layout="${exception:tostring}" />
 </target>
 ```
 
@@ -201,7 +201,7 @@ database logic to the database.
   <parameter name="@message"        layout="${message}" />
   <parameter name="@logger"         layout="${logger}" />
   <parameter name="@properties"     layout="${all-event-properties:separator=|}" />
-  <parameter name="@callSite"       layout="${callsite}" />
+  <parameter name="@callsite"       layout="${callsite}" />
   <parameter name="@exception"      layout="${exception:tostring}" />
 </target>
 ```
@@ -234,7 +234,7 @@ CREATE PROCEDURE [dbo].[NLog_AddEntry_p] (
   @message nvarchar(max),
   @logger nvarchar(300),
   @properties nvarchar(max),
-  @callSite nvarchar(300),
+  @callsite nvarchar(300),
   @exception nvarchar(max)
 ) AS
 BEGIN
@@ -245,7 +245,7 @@ BEGIN
     [Message],
     [Logger],
     [Properties],
-    [CallSite],
+    [Callsite],
     [Exception]
   ) VALUES (
     @machineName,
@@ -254,7 +254,7 @@ BEGIN
     @message,
     @logger,
     @properties,
-    @callSite,
+    @callsite,
     @exception
   );
 END
