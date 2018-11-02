@@ -131,13 +131,13 @@ A rule is a `logger` element with the following attributes:
  * `final` – no rules are processed after a final rule matches
  * `enabled` - set to `false` to disable the rule without deleting it
 
-Note: Although a rule is named `logger`, it is not _defining_ a logger. It is _referencing_ one or more loggers.
+Note: Although a rule is named `logger`, it does not _define_ a logger. It _references_ one or more loggers.
 
-A rule is mapped to a logger by matching the rule name pattern to a logger name. A rule `name` attribute may include wildcard characters (*) to match logger names by wildcard matching.
+A rule is mapped to a logger by matching the rule `name` pattern to a logger name. A rule `name` attribute may include wildcard characters (*) to match logger names by wildcard matching.
 
 Rules are processed in sequential order. Multiple rules may apply to a logger. Use `final` to stop processing rules after a match is found.
 
-A rule defines which log entry level(s) are logged. Entries logged with other levels are ignored. A commonly used specifier is `minLevel`. The other specifiers allow for more advanced configuration.
+A rule defines which log entry level(s) are logged. Entries with other levels are ignored. A commonly used specifier is `minLevel`. The other specifiers allow for more advanced configuration.
 
 If a rule contains more than one level-declaring attribute (`level`, `levels`, `minLevel` and `maxLevel`) only the first level-declaring attribute or set is used and the rest are ignored.
 
