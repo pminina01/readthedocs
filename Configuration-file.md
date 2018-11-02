@@ -88,6 +88,8 @@ You can use the following elements as children to `nlog`. `targets` and `rules` 
  * `include`– includes external configuration file
  * `variable` – sets the value of a configuration variable
 
+The simplest configuration consists of one `target` and one rule (`logger`) that routes messages to the target.
+
 <a name="targets" />
 
 # Targets
@@ -116,60 +118,69 @@ NLog provides many predefined [Targets](Targets). It’s actually very easy to c
 
 # Rules
 
-The `rules` section maps loggers to [targets](#targets) and [log levels](#log-levels). Rules are processed in sequential order. Multiple rules may apply to a logger. Use `final` to stop processing rules after a match is found.
-
-Wildcard matching is supported for the logger name. In other words, the rule `name` attribute may include wildcard characters.
-
-The set of log levels defines which log entries will be logged. Entries logged with other levels will be ignored. The most common specifier may be `minLevel`. The other specifiers allow for more advanced configuration.
+The `rules` section maps loggers to [targets](#targets) and [log levels](#log-levels). 
 
 A rule is a `logger` element with the following attributes:
 
  * `name` – logger name pattern - may include wildcard characters (*)
- * `minlevel` – minimal log level to log
- * `maxlevel` – maximum log level to log
- * `level` – single log level to log
- * `levels` - comma separated list of log levels to log
- * `writeTo` – comma separated list of targets that should be written to
+ * `minlevel` – minimal level to log
+ * `maxlevel` – maximum level to log
+ * `level` – single level to log
+ * `levels` - comma separated list of levels to log
+ * `writeTo` – comma separated list of targets to write to
  * `final` – no rules are processed after a final rule matches
  * `enabled` - set to `false` to disable the rule without deleting it
 
-If a rule contains more than one level-related keyword (`level`, `levels`, `minLevel` and `maxLevel`) only the first level declaring keyword or set is used and the rest are ignored.
+Note: Although a rule is named `logger`, it is not _defining_ a logger. It is _referencing_ one or more loggers.
 
-The level-related keywords are processed in the following order:
+A rule is mapped to a logger by matching the rule name pattern to a logger name. A rule `name` attribute may include wildcard characters (*) to match logger names by wildcard matching.
+
+Rules are processed in sequential order. Multiple rules may apply to a logger. Use `final` to stop processing rules after a match is found.
+
+A rule defines which log entry level(s) are logged. Entries logged with other levels are ignored. A commonly used specifier is `minLevel`. The other specifiers allow for more advanced configuration.
+
+If a rule contains more than one level-declaring attribute (`level`, `levels`, `minLevel` and `maxLevel`) only the first level-declaring attribute or set is used and the rest are ignored.
+
+The level-declaring attributes are processed in the following order:
 
 1. `level` 
-2. `levels` 
-3. `minlevel` and `maxlevel` (minimum and maximum level keywords have the same priority)
-4. No keyword (All levels are logged)
+1. `levels` 
+1. `minlevel` and `maxlevel` (these have the same priority)
+1. _none_ (all levels are logged)
 
-[Need clarification: is the first level-related keyword used as indicated first? Or is there a priority as indicated second (by the list)? Also, what is a level declaring set?]
+[Need clarification: Is the _sequentially_ first level-related attribute used? Or is the first _processed_ used? For example, given "minLevel=Warn level=Info", which is used?]
 
-In case a rule is marked as `final` and contains any level related keywords, the `final` attribute applies only to the specified levels.
+In case a rule is marked as `final` and contains any level-declaring attributes, the `final` attribute applies only to the specified levels.
 
 <a name="example-rules" />
 
 ## Example rules
-All messages from the `Class1` in the `Name.Space` whose level is `Debug` or higher are written to the "f1" target:
 ```xml
 <logger name="Name.Space.Class1" minlevel="Debug" writeTo="f1" />
 ```
 
-All messages from the `Class1` in the `Name.Space` whose level is either `Debug` or `Error` or higher are written to the "f1" target:
+Configures messages from the logger named "Name.Space.Class1" with level `Debug` and higher to be written to the "f1" target. 
+
+A logger can have any name, but in this case it was created by class "Class1" which is in namespace "Name.Space". See `LogManager.GetCurrentClassLogger()`.
+
 ```xml
 <logger name="Name.Space.Class1" levels="Debug,Error" writeTo="f1" />
 ```
 
-Messages from any class in the `Name.Space` namespace are written to both "f3" and "f4" targets regardless of their levels:
+Configures messages from the logger named "Name.Space.Class1" with level `Debug` or `Error` to be written to the "f1" target.
+
 ```xml
 <logger name="Name.Space.*" writeTo="f3,f4" />
 ```
 
-Messages from any class in the `Name.Space` namespace whose level is between `Debug` and `Error` (which makes it `Debug`, `Info`, `Warn`, `Error`) are rejected (as there’s no `writeTo` clause) and no further rules are processed for them (because of the `final="true"` setting)
+Configures messages from any class in the "Name.Space" namespace to be written to both "f3" and "f4" targets regardless of level.
+
 ```xml
 <logger name="Name.Space.*" minlevel="Debug" maxlevel="Error" final="true" />
+<logger name="*" writeTo="f1" />
 ```
 
-In the simplest cases the entire logging configuration consists of a single `<target />` and a single `<logger />` rule that routes messages to this target depending on their level, but adding more targets and rules is very simple as the application grows.
+Configures to ignore messages from any class in the `Name.Space` namespace with level between `Debug` and `Error` (which is `Debug`, `Info`, `Warn`, `Error`). The first rule selects loggers, but since there is no `writeTo`, these messages are not logged. And, since this rule contains 'final=true', the last rule does not apply to loggers matching the first rule.
 
 <a name="include-files" />
 
