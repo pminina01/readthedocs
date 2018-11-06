@@ -24,3 +24,4 @@ The following open source software projects are using or supporting NLog:
 * Nemo Documents - http://www.nemo-docs.com
 * Misk.com - https://www.misk.com/
 * VisioForge - http://www.visioforge.com
+* elmah.io - https://elmah.io
