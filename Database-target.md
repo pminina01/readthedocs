@@ -35,10 +35,6 @@ Read more about using the [[Configuration File]].
 ### General Options
 * **name** - Name of the target.
 
-### Performance Options
-* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
-  > Introduced with NLog v4.4.2. Default became `True` with NLog v4.5
-
 ### Connection Options
 * **dbProvider** - Name of the database provider. Required. Default: sqlserver
   Following values are recognized by default:
@@ -93,6 +89,10 @@ Each collection item is represented by \<parameter /> element with the following
   * _precision_ - Database parameter precision. [Byte](Data types) Default: 0
   * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
   * _size_ - Database parameter size. [Integer](Data types) Default: 0
+
+### Performance Options
+* **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
+  > Introduced with NLog v4.4.2. Default became `True` with NLog v4.5
 
 ### Installation Options
 See  [Installing targets](Installing-targets).
