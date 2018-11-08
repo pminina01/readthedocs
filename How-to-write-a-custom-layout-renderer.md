@@ -15,7 +15,7 @@ The lambda function will accept 1 or 2 parameters and should return a `string`.
 Examples 
 ```c#
 //register ${text-fixed}
-LayoutRenderer.Register("test-fixed", (logEvent) => "2");
+LayoutRenderer.Register("text-fixed", (logEvent) => "2");
 
 //register ${trace-identifier}
 LayoutRenderer.Register("trace-identifier", (logEvent) => HttpContext.Current.TraceIdentifier);
