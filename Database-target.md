@@ -268,6 +268,12 @@ Install package: https://www.nuget.org/packages/MySql.Data/
 dbProvider="MySql.Data.MySqlClient.MySqlConnection, MySql.Data"
 ```
 
+#### System.Data.SQLite and .NET Core
+Install package: https://www.nuget.org/packages/System.Data.SQLite
+```xml
+dbProvider="System.Data.SQLite.SQLiteConnection, System.Data.SQLite"
+```
+
 #### Microsoft.Data.Sqlite and .NET Core
 Install package: https://www.nuget.org/packages/Microsoft.Data.SQLite/
 
