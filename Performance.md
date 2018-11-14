@@ -6,6 +6,12 @@ There are some things to know for the optimal performance:
 - Don't write with multiple threads to multiple files. 
 - If even the small overhead of NLog is too much, use "Conditional logging", as described below.
 
+### Deferring message-formatting
+
+The goal is to defer the message-formatting so it becomes async. The async message-formatting requires that all parameters are immutable. To ensure that they don't change after having called the Logger (Ex logging an object and disposing the object afterwards should not log a disposed object).
+
+The NLog Logger (During the creation of LogEventInfo) checks whether all parameters are immutable / primitive. If one is complex-object, then message-formatting is not deferred.
+When having more than 5 parameters then it will skip the performance optimization, because checking the immutable state of the parameters has a cost.
 
 ### Conditional logging
 
