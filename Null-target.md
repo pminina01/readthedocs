@@ -25,6 +25,7 @@ Read more about using the [[Configuration File]].
 
 
 ## Example
+This example is useful for testing the performance of the NLog engine. Logging rule without any `writeTo=` option is much faster way to do filtering (Zero allocation).
 
 ```xml
 <targets>
