@@ -2,6 +2,7 @@
 
 When you get no log output from NLog, this can be because of the following reasons:
  1. NLog cannot find the configuration file. This can happen when the NLog.config file is configured with `Build Action = None` or `Copy to Output Directory = Do not copy` in Visual Studio. Set `Build Action = Content` and `Copy to Output Directory = Copy if newer` to fix this)
+It will also not find it if you configured NLog in your `Web.config`/`App.config`/etc. and some NuGet packages do just that without asking you on install. 
  2. Is your configuration file valid XML? 
  3. Logging rules are incorrect or no rules are defined
  4. Application tracing code is incorrect.
