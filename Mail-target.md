@@ -122,7 +122,7 @@ Possible values:
 
 * **pickupDirectoryLocation** - Gets or sets the folder where applications save mail messages to be processed by the local SMTP server (__introduced in NLog 4.2__).
 
-* **smtpDeliveryMethod** - Specifies how outgoing email messages will be handled (__introduced in NLog 4.2__). Default: Network 
+* **deliveryMethod** - Specifies how outgoing email messages will be handled (__introduced in NLog 4.2__). Default: Network 
 Possible values:
   * _Network_ - Email is sent through the network to an SMTP server.
   * _PickupDirectoryFromIis_ - Email is copied to the pickup directory used by a local Internet Information Services (IIS) for delivery.
