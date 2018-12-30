@@ -160,7 +160,7 @@ Setting this to false may improve performance a bit, but you'll receive an error
 ### Performance Tuning Options
 * **keepFileOpen** - Indicates whether to keep log file open instead of opening and closing it on each logging event. Changing this property to true will improve performance a lot, but will also keep the file handle locked. Consider setting _openFileCacheTimeout_ = 30 when enabling this, as it will allow archive operations and react to log file being deleted. [Boolean](Data-types) Default: False 
 
-* **concurrentWrites** - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host, when using _keepFileOpen_ = true. By using a special technique that lets it keep the files open from multiple processes. If only single process (and single AppDomain) application is logging, then it is faster to set to _concurrentWrites_ = False.  [Boolean](Data-types) Default: True
+* **concurrentWrites** - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host, when using _keepFileOpen_ = true. By using a special technique that lets it keep the files open from multiple processes. If only single process (and single AppDomain) application is logging, then it is faster to set to _concurrentWrites_ = False.  [Boolean](Data-types) Default: True. Note: in UWP this setting should be `false`
 
 * **openFileCacheTimeout** - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. [Integer](Data-types#integer) Default: -1  
 
