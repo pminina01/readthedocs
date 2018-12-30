@@ -3,6 +3,10 @@ Writes log messages to one or more files.
 Since NLog 4.3 the `${basedir}` isn't needed anymore for relative paths.
 
 Supported in .NET, Silverlight, Compact Framework and Mono.
+
+
+Note for UWP: set concurrentWrites=false. This is a known issue and we are trying to fix this in NLog 4.6
+
 ## Configuration Syntax
 ```xml
 <targets>
