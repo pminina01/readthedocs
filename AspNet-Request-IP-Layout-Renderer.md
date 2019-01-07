@@ -14,3 +14,7 @@ ${aspnet-request-ip}
 - _*CheckForwardedForHeader*_ - Should check value of X-Forwarded-For header (Default = false)
   > Introduced with NLog Web.AspNetCore 4.7.1 & NLog.Web 4.7.1
 
+## Remarks
+
+- AspNetCore - Uses underlying connection for this request. See [HttpContext.Connection.RemoteIpAddress](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext.connection)
+- AspNet - Returns the `REMOTE_ADDR`-ServerVariables
