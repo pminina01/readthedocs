@@ -9,3 +9,8 @@ Supported in ASP.NET &  ASP.NET Core.
 ${aspnet-request-ip}
 ```
 
+## Parameters
+
+- _*CheckForwardedForHeader*_ - Should check value of X-Forwarded-For header (Default = false)
+  > Introduced with NLog Web.AspNetCore 4.7.1 & NLog.Web 4.7.1
+
