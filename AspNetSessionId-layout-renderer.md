@@ -14,7 +14,9 @@ Add line to `ConfigureServices()` in `Startup.cs`
 public void ConfigureServices(IServiceCollection services)
 {
      ...
-     services.AddSession();
+    services.AddMvc();
+    services.AddSession(); // After AddMvc()
+    services.AddHttpContextAccessor();
      ...
 }
 ```
@@ -25,7 +27,8 @@ Add line to `Configure()` in `Startup.cs`
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
      ...
-     app.UseSession();
+    app.UseSession();  // Before UseMvc()
+    app.UseMvc();
      ...
 }
 ```
