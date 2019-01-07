@@ -12,3 +12,5 @@ ${aspnet-request-host}
 ## Remarks
 - ASP.NET Core returns the `Host`-Header
 - ASP.NET returns the `REMOTE_ADDR`-ServerVariable
+
+See also [[AspNet Request IP Layout Renderer]]
