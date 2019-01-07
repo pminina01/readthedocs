@@ -1,4 +1,4 @@
-ASP.NET WebRootPath 
+ASP.NET WebRootPath (wwwroot)
 
 Supported in [Asp.NET](https://docs.microsoft.com/dotnet/api/system.web.httpserverutility.mappath) and [Asp.NetCore](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.hosting.ihostingenvironment.webrootpath)
 
