@@ -10,4 +10,4 @@ ${aspnet-environment}
 ```
 
 ## Remarks
-The host automatically sets this property to the value of the "ASPNETCORE_ENVIRONMENT" environment variable, or "environment" as specified in any other configuration source.
+The host automatically sets this property to the value of the `ASPNETCORE_ENVIRONMENT` environment variable, or "environment" as specified in any other configuration source.
