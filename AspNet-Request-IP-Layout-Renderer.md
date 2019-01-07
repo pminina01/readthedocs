@@ -18,3 +18,5 @@ ${aspnet-request-ip}
 
 - AspNetCore - Uses underlying connection for this request. See [HttpContext.Connection.RemoteIpAddress](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext.connection)
 - AspNet - Returns the `REMOTE_ADDR`-ServerVariables
+
+See also [[AspNetRequest Host Layout Renderer]]
