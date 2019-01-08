@@ -84,7 +84,7 @@ The logger is not tied to a specific target. The messages written to one logger 
 ### Log levels
 Each log message has associated log level, which identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.
 
-NLog supports the following [log levels](Log-levels):
+NLog supports the following [log levels](Configuration-file#log-levels):
 * `Trace` - very detailed logs, which may include high-volume information such as protocol payloads. This log level is typically only enabled during development
 * `Debug` - debugging information, less detailed than trace, typically not enabled in production environment.
 * `Info` - information messages, which are normally enabled in production environment
