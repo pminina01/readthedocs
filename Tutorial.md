@@ -63,7 +63,7 @@ The rules
 
 See also [Configuration File](Configuration-file) or [Configuration API](Configuration-API)
 
-See also [List of NLog Targets](Targets#available-targets) for output.
+See also [Available NLog Targets](Targets#available-targets) for output.
 
 ## Writing log messages
 Example of how to acquire a logger and writing a message to the logger:
