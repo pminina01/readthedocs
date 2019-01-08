@@ -3,9 +3,9 @@ Targets are used to display, store, or pass log messages to another destination.
 
 NLog supports creating custom targets. For more information, see: [[Extending NLog|Extending-NLog]]
 
-## Targets
+## Available Targets
 
-All targets could be found here: http://nlog-project.org/config/?tab=targets
+List of NLog targets can found here: http://nlog-project.org/config/?tab=targets
 
 ## Writing your own target
 NLog supports custom target. For more information, see: [[Extending NLog|Extending-NLog]]
