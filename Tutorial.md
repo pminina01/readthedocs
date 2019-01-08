@@ -59,9 +59,11 @@ config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
 NLog.LogManager.Configuration = config;
 ```
 
+The rules 
+
 See also [Configuration File](Configuration-file) or [Configuration API](Configuration-API)
 
-See full list here: [[Targets]]
+See also [List of NLog Targets](Targets) for output.
 
 ## Writing log messages
 Example of how to acquire a logger and writing a message to the logger:
