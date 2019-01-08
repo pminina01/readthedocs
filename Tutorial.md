@@ -59,7 +59,7 @@ config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
 NLog.LogManager.Configuration = config;
 ```
 
-By using rules one can redirect logger output to the wanted output target. The rules also provides [filtering options](Filtering-log-messages#routing) to output only relevant logevents. Usually based on logger-name and loglevel (Ex. `name="*" minlevel="Trace"` means everything).
+The rules redirects logger output to the wanted output targets. The rules also provides [filtering options](Filtering-log-messages#routing) to output only relevant logevents. Usually based on logger-name and loglevel (Ex. `name="*" minlevel="Trace"` means everything).
 
 See also [Configuration File](Configuration-file) or [Configuration API](Configuration-API)
 
