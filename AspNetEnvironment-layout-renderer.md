@@ -1,1 +1,1 @@
-See https://github.com/NLog/NLog/wiki/AspNet-Environment-layout-renderer
+See [[AspNet-Environment-layout-renderer]]
