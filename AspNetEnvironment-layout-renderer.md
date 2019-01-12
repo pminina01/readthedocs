@@ -1,12 +1,1 @@
-ASP.NET Environment name. 
-
-Supported in ASP.NET Core
-
-## Configuration Syntax
-```
-${aspnet-environment}
-```
-
-
-## Remarks
-prints `HostingEnvironment.EnvironmentName`
+See https://github.com/NLog/NLog/wiki/AspNet-Environment-layout-renderer
