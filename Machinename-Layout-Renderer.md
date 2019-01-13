@@ -10,4 +10,4 @@ ${machinename}
 ## Remarks
 NetBIOS name is limited to MAX_COMPUTERNAME_LENGTH which is 15 for Windows.
 
-[${hostname}](HostName Layout Renderer) has support for the full DNS-name.
+[${hostname}](HostName-Layout-Renderer) has support for the full DNS-name.
