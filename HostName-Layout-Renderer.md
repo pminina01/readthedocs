@@ -8,4 +8,4 @@ ${hostname}
 ```
 
 ## Remarks
-See also [${machinename}](Machinename Layout Renderer) For NetBIOS name 
+See also [${machinename}](Machinename-Layout-Renderer) For NetBIOS name 
