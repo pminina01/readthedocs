@@ -1,4 +1,4 @@
-The [DNS HostName](https://docs.microsoft.com/dotnet/api/system.net.dns.gethostname#System_Net_Dns_GetHostName) that the process is running on. 
+The computer [DNS HostName](https://docs.microsoft.com/dotnet/api/system.net.dns.gethostname#System_Net_Dns_GetHostName) that the process is running on. 
 
 Supported in .NET and Mono.
 
