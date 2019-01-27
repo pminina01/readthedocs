@@ -1,12 +1,17 @@
 Value from the appsettings.json or other configuration in .NET Core
 
-Introduced NLog.Extensions.Logging 1.3 and NLog.Web.AspNetCore 4.7
+> Introduced NLog.Extensions.Logging 1.4.0 and NLog.Web.AspNetCore 4.8.0
 
----
- ℹ️  For .NET Core 2.1 Console application you need install the `NLog.Extensions.Configuration` package and include it
-to `<extensions>` tag in `nlog.config`
+## Register Configuration
+When calling `UseNLog()` from `NLog.Web.AspNetCore` or `NLog.Extensions.Hosting` then it will automatically register hosting environment configuration with `ConfigSettingLayoutRenderer`.
 
----
+To manual register the Microsoft Extension `IConfiguration` with `${configsetting}`:
+
+```c#
+IConfigurationRoot config = new ConfigurationBuilder()
+    .AddJsonFile(path: "AppSettings.json").Build();
+NLog.Extensions.Logging.ConfigSettingLayoutRenderer.DefaultConfiguration = config;
+```
 
 ## Configuration Syntax
 ```
