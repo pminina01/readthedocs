@@ -1,6 +1,6 @@
 Value from the appsettings.json or other configuration in .NET Core
 
-> Introduced NLog.Extensions.Logging 1.4.0 and NLog.Web.AspNetCore 4.8.0
+> Introduced with NLog.Extensions.Logging 1.4.0 and NLog.Web.AspNetCore 4.8.0
 
 ## Register Configuration
 When calling `UseNLog()` from `NLog.Web.AspNetCore` or `NLog.Extensions.Hosting` then it will automatically register hosting environment configuration with `ConfigSettingLayoutRenderer`.
