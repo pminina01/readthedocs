@@ -8,7 +8,7 @@ internal class MyLogManager
 { 
     // A Logger dispenser for the current assembly (Remember to call Flush on application exit)
     public static LogFactory Instance { get { return _instance.Value; } }
-    private static Laze<LogFactory> _instance = new Lazy<LogFactory>(BuildLogFactory);
+    private static Lazy<LogFactory> _instance = new Lazy<LogFactory>(BuildLogFactory);
 
     // 
     // Use a config file located next to our current assembly dll 
