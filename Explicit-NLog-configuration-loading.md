@@ -15,7 +15,7 @@ System.Xml.XmlReader xr = System.Xml.XmlReader.Create(sr);
 NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(xr, currentDir);
 ```
 
-# Loading NLog configuration from resource in Xamarin
+# Loading NLog configuration from Xamarin resource
 You need to put the NLog.config file into the library project, then edit file's properties - change the **build action** to **embedded resource**.
 
 ```c#
