@@ -40,3 +40,5 @@ or
 If you want multiple assemblies to share this MyLogManager – just make it a public class and get others to use it.
 
 You need to make sure that the configuration is properly closed when the process terminates (set MyLogManager.Instance.Configuration to null) or you may lose some log output. You may want to hook AppDomain.ProcessExit and AppDomain.DomainUnload events to turn off logging automatically. See the code of LogManager.cs for details.
+
+See Also: [[Explicit NLog configuration loading]]
