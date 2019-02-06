@@ -9,10 +9,9 @@ NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration("nlog.co
 The configuration can also come from standard string like this:
 
 ```c#
-string currentDir = System.IO.Directory.GetCurrentDirectory();
 System.IO.StringReader sr = new System.IO.StringReader(xmlString);
 System.Xml.XmlReader xr = System.Xml.XmlReader.Create(sr);
-NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(xr, currentDir);
+NLog.LogManager.Configuration = new NLog.Config.XmlLoggingConfiguration(xr, null);
 ```
 
 # Loading NLog configuration from Xamarin resource
