@@ -21,7 +21,7 @@ You need to put the NLog.config file into the library project, then edit file's 
 public static Stream GetEmbeddedResourceStream(Assembly assembly, string resourceFileName)
 {
   var resourcePaths = assembly.GetManifestResourceNames()
-    .Where(x => x.EndsWith(resourceFileName, StringComparison.CurrentCultureIgnoreCase))
+    .Where(x => x.EndsWith(resourceFileName, StringComparison.OrdinalIgnoreCase))
     .ToList();
   if (resourcePaths.Count == 1)
   {
