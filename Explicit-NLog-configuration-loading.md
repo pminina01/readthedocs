@@ -35,6 +35,6 @@ var nlogConfigFile = GetEmbeddedResourceStream(myAssembly, "NLog.config");
 if (nlogConfigFile != null)
 {
     var xmlReader = XmlReader.Create(nlogConfigFile);
-    LogManager.Configuration = new XmlLoggingConfiguration(xmlReader, res);
+    LogManager.Configuration = new XmlLoggingConfiguration(xmlReader, null);
 }
 ```
