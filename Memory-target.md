@@ -21,6 +21,8 @@ Read more about using the [[Configuration File]].
 * **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
   > Introduced with NLog v4.4.2. Default became `True` with NLog v4.5
 
+* **MaxLogsCount** Max count, will remove first if over this threshold.  Introduced with NLog v4.6. 0 means disabled (default) 
+
 ## Examples
 ### Logging to an array
 (snippet from    [Memory Simple Example.cs](https://github.com/NLog/NLog/blob/43eca983676d87f1d9d9f28872304236393827ba/examples/targets/Configuration%20API/Memory/Simple/Example.cs)  )
