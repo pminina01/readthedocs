@@ -25,7 +25,7 @@ Supported in .NET, Compact Framework and Mono
     <uninstall-command commandType="Enum" connectionString="Layout" ignoreFailures="Boolean"
                    text="Layout"/><!-- repeated -->
     <parameter name="String" layout="Layout"
-         precision="Byte" scale="Byte" size="Integer"/><!-- repeated -->
+         precision="Byte" scale="Byte" size="Integer" dbType="DbType value" format="string" /><!-- repeated -->
   </target>
 </targets>
 ```
@@ -89,6 +89,13 @@ Each collection item is represented by \<parameter /> element with the following
   * _precision_ - Database parameter precision. [Byte](Data types) Default: 0
   * _scale_ - Database parameter scale. [Byte](Data types) Default: 0
   * _size_ - Database parameter size. [Integer](Data types) Default: 0
+  * _dbType_ - One of the values of [DbType](https://docs.microsoft.com/en-us/dotnet/api/system.data.dbtype) (e.g. "int32", "decimal", "datetime2"), 
+  or a value of DBType like prefixed with the property name, e.g. "SqlDbType.NChar" will set the property "SqlDbType" on "NChar".
+  Another example: `"NpgsqlDbType.Json"` with NpgsqlParameter. 
+   Introduced in NLog 4.6
+  * _useRawValue_ - nullable boolean. Use the rawValue (from the IRawValue interface) for the value. `null` means yes for non-string-type, this is the default. Introduced in NLog 4.6
+  * _format_ - format for parsing the value when not using the rawValue, of if the rawValue conversion to has been failed. Introduced in NLog 4.6
+  * _culture_ - culture for parsing the value, analogous as "format". Introduced in NLog 4.6
 
 ### Performance Options
 * **OptimizeBufferReuse** - Reduce logging overhead, by allowing buffer reuse. Default: `True`
@@ -134,6 +141,14 @@ Each collection item is represented by \<parameter /> element with the following
     * _text_ - Command text. [Layout](Data types) Required.
   * **connectionString** - Connection string to run the command against. If not provided, connection string from the target is used. [Layout](Layout)  
   * **ignoreFailures** - Indicates whether to ignore failures. [Boolean](Layout)  
+
+
+## About DbType and IRawValue
+
+The DbType works as follows
+- NLog tries first if the Layout Renderer support IRawValue to get the non-string type. Then it will use the `IPropertyTypeConverter ` for converting to the desired dbType.
+- If that fails, NLog will render the layout render to string and then parse it (with usage of the optional format option).   Then it will also use the `IPropertyTypeConverter ` for converting to the desired dbType.
+
 
 ## Example Configurations
 
