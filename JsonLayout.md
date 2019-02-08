@@ -42,6 +42,8 @@ You can disable JSON encoding by setting **encode="false"**. This will let you t
 * **renderEmptyObject** - Gets or sets the option to render the empty object value `{}`, default `true`.
   > Introduced in NLog 4.3.7
 * **includeMdc** - Indicates whether to include contents of the [[MappedDiagnosticsContext|MDC-Layout-Renderer]] dictionary. Boolean
+  > Introduced in NLog 4.6
+* **IncludeGdc ** - Indicates whether to include contents of the [[GlobalDiagnosticsContext|GDC-Layout-Renderer]] dictionary. Boolean
   > Introduced in NLog 4.4.10
 * **includeMdlc** - Indicates whether to include contents of the async [[MappedDiagnosticsLogicalContext|MDLC-Layout-Renderer]] dictionary. Boolean
   > Introduced in NLog 4.4.10 (.NET 4.0 or 4.5 required)
