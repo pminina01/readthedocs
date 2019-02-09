@@ -20,6 +20,24 @@ ${event-properties:item=String:culture=String:format=String}
 
 
 ## Example
+
+### Structured logging way
+
+NLog 4.5+
+
+```c#
+logger.Info("Order {orderid} created for {user}", 42, "Kenny");
+```
+
+and in your NLog.config file:
+
+```
+${event-properties:item=orderId} -- renders "42"
+${event-properties:item=user} -- renders "Kenny"
+```
+
+### Properties way
+
 In C# class, create an event and add an element to the Properties dictionary (or the deprecated Context dictionary):
 ```csharp
 ...
