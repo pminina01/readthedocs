@@ -122,7 +122,7 @@ The `rules` section maps loggers to [targets](#targets) and [log levels](#log-le
 
 A rule is a `logger` element with the following attributes:
 
- * `name` – logger name pattern - may include wildcard characters (*)
+ * `name` – logger name pattern - may include wildcard characters (* and ?)
  * `minlevel` – minimal level to log
  * `maxlevel` – maximum level to log
  * `level` – single level to log
@@ -133,7 +133,27 @@ A rule is a `logger` element with the following attributes:
 
 Note: Although a rule is named `logger`, it does not _define_ a logger. It _references_ one or more loggers.
 
-A rule is mapped to a logger by matching the rule `name` pattern to a logger name. A rule `name` attribute may include wildcard characters (*) to match logger names by wildcard matching.
+A rule is mapped to a logger by matching the rule `name` pattern to a logger name. A rule `name` attribute may include wildcard characters (* and ?) to match logger names by wildcard matching.  
+ * `*` - matches 0 or more characters
+ * `?` - matches exactly 1 character
+
+Until NLog 4.6, are allowed only wildcards (*) at the beginning and/or at the end of the pattern.
+```xml
+<rules>
+  <logger name="*" minlevel="Info" writeTo="logconsole" />
+  <logger name="Name.Space.*" minlevel="Debug" writeTo="f1" />  
+  <logger name="*.Class1" minlevel="Trace" writeTo="f2" />
+  <logger name="*.Library.*" minlevel="Warn" writeTo="f3" />
+</rules>
+```
+Since NLog 4.6, wildcards (* and ?) are allowed in any position.
+```xml
+<rules>
+  <logger name="*TcpTestServer[*].Connection[07].*" minlevel="Trace" writeTo="logconsole" final="true" />
+  <logger name="*TcpTestServer[*].Connection[??].*" minlevel="Debug" writeTo="logconsole" final="true" />
+  <logger name="*" minlevel="Info" writeTo="logconsole" />
+</rules>
+```
 
 Rules are processed in sequential order. Multiple rules may apply to a logger. Use `final` to stop processing rules after a match is found.
 
