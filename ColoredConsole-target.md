@@ -12,6 +12,7 @@ Supported in .NET and Mono
           footer="Layout"
           useDefaultRowHighlightingRules="Boolean"
           errorStream="Boolean"
+          enableAnsiOutput="Boolean"
           detectConsoleAvailable="Boolean">
     <highlight-row backgroundColor="Enum" condition="Condition" foregroundColor="Enum"/><!-- repeated -->
     <highlight-word backgroundColor="Enum" foregroundColor="Enum" ignoreCase="Boolean"
@@ -148,6 +149,9 @@ Each collection item is represented by \<highlight-word /> element with the foll
 * **errorStream** - Indicates whether the error stream (stderr) should be used instead of the output stream (stdout). [Boolean](Data types) Default: False
 
 * **detectConsoleAvailable** - Indicates whether the console target should disable itself when no console detected. Boolean Default: `false` (introduced in 4.3.10 with default: `true`. Since NLog 4.4 default `false`)
+
+* **enableAnsiOutput** - Enables output using ANSI Color Codes. Needed for e.g. Visual Studio Code. Introduced in NLog 4.6
+
 
 ### Programmatic example
 
