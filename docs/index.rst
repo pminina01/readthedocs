@@ -1,5 +1,4 @@
-.. figure:: http://nlog-project.org/images/NLog.png
-   :alt: NLog
+.. figure:: https://nlog-project.org/images/NLog.png
 
    NLog
 
@@ -43,10 +42,10 @@ Configuration
 -  `All targets, layouts and layout
    renderers <http://nlog-project.org/config/>`__
 
-   -  `File-target <File-target>`__
-   -  `ColoredConsole-target <ColoredConsole-target>`__
-   -  `Database-target <Database-target>`__
-   -  `Mail-target <Mail-target>`__
+   -  `File <File-target>`__
+   -  `ColoredConsole <ColoredConsole-target>`__
+   -  `Database <Database-target>`__
+   -  `Mail <Mail-target>`__
 
 Programmatic Configuration
 --------------------------
