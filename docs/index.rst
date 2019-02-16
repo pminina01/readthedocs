@@ -43,10 +43,10 @@ Configuration
 -  `All targets, layouts and layout
    renderers <http://nlog-project.org/config/>`__
 
-   -  [[File-target]]
-   -  [[ColoredConsole-target]]
-   -  [[Database-target]]
-   -  [[Mail-target]]
+   -  `File-target <File-target>`__
+   -  `ColoredConsole-target <ColoredConsole-target>`__
+   -  `Database-target <Database-target>`__
+   -  `Mail-target <Mail-target>`__
 
 Programmatic Configuration
 --------------------------
@@ -74,5 +74,5 @@ Extending NLog
 -  `How to write a custom layout
    renderer <How-to-write-a-custom-layout-renderer>`__
 -  `Writing custom conditions <When-Filter#extensibility>`__
--  [[Properties constraints for custom extensions]]
+-  `Properties constraints for custom extensions <Properties-constraints-for-custom-extensions>`__
 -  `Register your custom component <Register-your-custom-component>`__
