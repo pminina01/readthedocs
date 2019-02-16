@@ -3,10 +3,8 @@ NLog documentation
 
 .. figure:: https://nlog-project.org/images/NLog.png
 
-   NLog
-
 Welcome to the NLog documentation! Just start with the
-`tutorial <wiki/Tutorial>`__ to log messages within minutes!
+`tutorial <Tutorial>`__ to log messages within minutes!
 
 For .NET Standard users a limited set is implemented. See the filter in
 the `search page <http://nlog-project.org/config/>`__. To read more
