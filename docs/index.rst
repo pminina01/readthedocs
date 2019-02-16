@@ -1,3 +1,6 @@
+NLog documentation
+=================================
+
 .. figure:: https://nlog-project.org/images/NLog.png
 
    NLog
@@ -18,10 +21,10 @@ Are you missing some targets, layout renderers or renderers in NLog?
 NLog <https://github.com/NLog/NLog#contributing>`__!
 
 
-`Home </NLog/NLog/wiki>`__
---------------------------
+Getting started
+------------------
 
--  `Getting started <Tutorial>`__
+-  `Getting started Tutorial <Tutorial>`__
 
    -  `Getting started .NET
       Core <https://github.com/NLog/NLog.web/wiki>`__
@@ -40,7 +43,7 @@ Configuration
 -------------
 
 -  `All targets, layouts and layout
-   renderers <http://nlog-project.org/config/>`__
+   renderers <https://nlog-project.org/config/>`__
 
    -  `File <File-target>`__
    -  `ColoredConsole <ColoredConsole-target>`__
@@ -51,7 +54,7 @@ Programmatic Configuration
 --------------------------
 
 -  `Tutorial Configuration API <Configuration-API>`__
--  `Sandcastle documentation <http://nlog-project.org/documentation/>`__
+-  `Sandcastle documentation <https://nlog-project.org/documentation/>`__
 
 Advanced
 --------
