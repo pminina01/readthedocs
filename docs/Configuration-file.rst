@@ -94,7 +94,7 @@ Top-level elements
 You can use the following elements as children to ``nlog``. ``targets``
 and ``rules`` are required in any configuration The others are optional
 and can be useful in advanced scenarios.
-* ``targets`` – defines log
+- ``targets`` – defines log
 targets/outputs
 * ``rules`` – defines log routing rules
 *
